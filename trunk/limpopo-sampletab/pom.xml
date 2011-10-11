@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>limpopo-sampletab</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>Limpopo SampleTab</name>
+	<description>Limopop parser extension for SampleTab file format</description>
+  <groupId>uk.ac.ebi.arrayexpress2</groupId>
+  <dependencies>
+  	<dependency>
+  		<groupId>uk.ac.ebi.arrayexpress2</groupId>
+  		<artifactId>limpopo</artifactId>
+  		<version>1.1.1-SNAPSHOT</version>
+  	</dependency>
+	<dependency>
+		<groupId>net.sourceforge.fluxion</groupId>
+		<artifactId>fluxion-spi</artifactId>
+		<version>1.0-alpha</version>
+		<exclusions>
+		    <exclusion>
+		        <groupId>owlapi</groupId>
+		        <artifactId>owlapi</artifactId>
+		    </exclusion>
+		    <exclusion>
+		        <groupId>commons-logging</groupId>
+		        <artifactId>commons-logging</artifactId>
+		    </exclusion>
+		</exclusions>
+	</dependency>
+  	
+    <!-- testing -->
+    <dependency>
+        <groupId>junit</groupId>
+        <artifactId>junit</artifactId>
+        <version>4.2</version>
+        <scope>test</scope>
+    </dependency>
+    <dependency>
+        <groupId>org.slf4j</groupId>
+        <artifactId>slf4j-log4j12</artifactId>
+        <version>1.6.0</version>
+        <scope>test</scope>
+    </dependency>
+    <dependency>
+        <groupId>log4j</groupId>
+        <artifactId>log4j</artifactId>
+        <version>1.2.14</version>
+        <scope>test</scope>
+    </dependency>
+  </dependencies>
+</project>
