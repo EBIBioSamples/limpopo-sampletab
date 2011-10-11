@@ -1,0 +1,32 @@
+﻿[MSI]
+Submission Title	Transcription profiling of wild type and DREB2C over-expression Arabidopsis plants
+Submission Identifier	GAE-MEXP-986
+Submission Description	We analysed DREB2C overexpressing Arabidopsis plants (35S:DREB2C-a line: S15, 35S:DREB2C-c line: S22)with cDNA microarray (A-MEXP-187).
+Submission Version	1.0
+Submission Release Date	2007-03-10
+Submission Modification Date	2011-10-10
+Submission Reference Layer	false
+
+
+
+Person Last Name	Yang
+Person First Name	Kyung Ae
+Person Email	colimpbl@naver.com
+
+Term Source Name	mo	ncbitax	The MGED Ontology	ArrayExpress	EFO	NEWT
+Term Source URI	http://mged.sourceforge.net/ontologies/MGEDontology.php	http://www.ncbi.nlm.nih.gov/Taxonomy/taxonomyhome.html	http://mged.sourceforge.net/ontologies/MGEDontology.php	http://www.ebi.ac.uk/arrayexpress	http://www.ebi.ac.uk/efo/	www.ebi.ac.uk/newt/
+
+Database Name	ArrayExpress
+Database URI	http://www.ebi.ac.uk/arrayexpress/experiments/E-MEXP-986
+Database ID	E-MEXP-986
+
+[SCD]
+Sample Name	Characteristic[BioSourceType]	Characteristic[GeneticModification]	Characteristic[Ecotype]	Characteristic[DevelopmentalStage]	Organism	Characteristic[Genotype]
+S22-1	fresh_sample	transformation	Columbia	1.02 Boyes key	Arabidopsis thaliana	DREB2C over-expression
+S15-2	fresh_sample	transformation	Columbia	1.02 Boyes key	Arabidopsis thaliana	DREB2C over-expression
+WT-4	fresh_sample		Columbia	1.02 Boyes key	Arabidopsis thaliana	wild_type
+S22-2	fresh_sample	transformation	Columbia	1.02 Boyes key	Arabidopsis thaliana	DREB2C over-expression
+WT-2	fresh_sample		Columbia	1.02 Boyes key	Arabidopsis thaliana	wild_type
+WT-3	fresh_sample		Columbia	1.02 Boyes key	Arabidopsis thaliana	wild_type
+WT-1	fresh_sample		Columbia	1.02 Boyes key	Arabidopsis thaliana	wild_type
+S15-1	fresh_sample	transformation	Columbia	1.02 Boyes key	Arabidopsis thaliana	DREB2C over-expression
