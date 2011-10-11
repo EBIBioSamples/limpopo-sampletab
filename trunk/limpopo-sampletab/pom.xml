@@ -49,4 +49,10 @@
         <scope>test</scope>
     </dependency>
   </dependencies>
+  <scm>
+  	<url>http://limpopo.svn.sourceforge.net/viewvc/limpopo</url>
+  	<connection>scm:svn:https://limpopo.svn.sourceforge.net/svnroot/limpopo</connection>
+  	<developerConnection>scm:svn:https://limpopo.svn.sourceforge.net/svnroot/limpopo</developerConnection>
+  </scm>
+  <url>http://limpopo.sourceforge.net</url>
 </project>
