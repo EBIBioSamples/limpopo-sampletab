@@ -11,12 +11,13 @@ import junit.framework.TestCase;
 import org.mged.magetab.error.ErrorCode;
 import org.mged.magetab.error.ErrorItem;
 
+import uk.ac.ebi.arrayexpress2.magetab.exception.ParseException;
 import uk.ac.ebi.arrayexpress2.magetab.listener.ErrorItemListener;
 import uk.ac.ebi.arrayexpress2.sampletab.datamodel.SampleData;
+import uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node.SCDNode;
 
 public class TestSampleTabParser extends TestCase {
-    private SampleTabParser parser;
-    private SampleTabParser<OutputStream> writingParser;
+    private SampleTabParser<SampleData> parser;
 
     private OutputStream outputStream;
 
@@ -25,19 +26,18 @@ public class TestSampleTabParser extends TestCase {
     private List<ErrorItem> errorItems = new ArrayList<ErrorItem>();
 
     public void setUp() {
-        parser = new SampleTabParser();
         outputStream = new ByteArrayOutputStream();
-        writingParser = new SampleTabParser<OutputStream>(outputStream);
         resource = getClass().getClassLoader().getResource("GAE-MEXP-986/sampletab.pre.txt");
+        resource = getClass().getClassLoader().getResource("GCR-autism/sampletab.pre.txt");
 
-        errorItems = new ArrayList<ErrorItem>();
-
+        parser = new SampleTabParser<SampleData>();
         parser.addErrorItemListener(new ErrorItemListener() {
 
             public void errorOccurred(ErrorItem item) {
                 errorItems.add(item);
             }
         });
+        
     }
 
     public void tearDown() {
@@ -47,9 +47,7 @@ public class TestSampleTabParser extends TestCase {
 
     public void testParse() {
         try {
-            System.out.println("Starting parsing...");
             SampleData sampledata = parser.parse(resource);
-
             if (!errorItems.isEmpty()) {
                 // there are error items, print them and fail
                 StringBuilder sb = new StringBuilder();
@@ -92,9 +90,15 @@ public class TestSampleTabParser extends TestCase {
             assertNotNull("SubmissionTitle must not be null", sampledata.msi.submissionTitle);
             assertNotSame("SubmissionTitle should not be an empty string", 
                           "", sampledata.msi.submissionTitle);
+            
             assertNotSame("SCD node count should not be zero", 0, sampledata.scd.getNodeCount());
+            ArrayList<SCDNode> nodes = new ArrayList<SCDNode>(sampledata.scd.getNodes("sample"));
+            assertNotSame("SCD node count should not be zero", 0, nodes.size());
+            assertNotNull("SCD node should be getable by index", nodes.get(0));
+            SCDNode node = nodes.get(0);
+            assertNotSame("SCD node attribute count should not be zero", 0, node.getAttributes().size());
         }
-        catch (Exception e) {
+        catch (ParseException e) {
             e.printStackTrace();
             fail();
         }

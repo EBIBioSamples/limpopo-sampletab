@@ -15,9 +15,6 @@ public class MSI {
     public volatile String submissionUpdateDate = "";
     public volatile String submissionReferenceLayer = "";
     
-    public volatile List<String> publicationDOI = new ArrayList<String>();
-    public volatile List<String> publicationPubMedID = new ArrayList<String>();
-    
     public volatile List<String> organizationName = new ArrayList<String>();
     public volatile List<String> organizationAddress = new ArrayList<String>();
     public volatile List<String> organizationURI = new ArrayList<String>();
@@ -29,6 +26,9 @@ public class MSI {
     public volatile List<String> personFirstName = new ArrayList<String>();
     public volatile List<String> personEmail = new ArrayList<String>();
     public volatile List<String> personRole = new ArrayList<String>();
+    
+    public volatile List<String> publicationDOI = new ArrayList<String>();
+    public volatile List<String> publicationPubMedID = new ArrayList<String>();
     
     public volatile List<String> termSourceName = new ArrayList<String>();
     public volatile List<String> termSourceURI = new ArrayList<String>();

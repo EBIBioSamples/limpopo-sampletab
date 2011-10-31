@@ -10,26 +10,28 @@ import uk.ac.ebi.arrayexpress2.magetab.exception.ParseException;
 import uk.ac.ebi.arrayexpress2.magetab.exception.UnmatchedTagException;
 import uk.ac.ebi.arrayexpress2.sampletab.datamodel.SCD;
 import uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node.SCDNode;
-import uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node.attribute.NamedAttribute;
+import uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node.attribute.CharacteristicAttribute;
+import uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node.attribute.CommentAttribute;
+import uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node.attribute.UnitAttribute;
 
 
-public abstract class NamedAttributeReader implements SCDAttributeReader {
+public class CommentAttributeReader implements SCDAttributeReader {
     private Logger log = LoggerFactory.getLogger(getClass());
-    
-    protected String namedAttribute = "BORIS";
-    protected abstract NamedAttribute getNewAttribute();
-    
+
     protected Logger getLog() {
         return log;
     }
 
     public boolean canRead(String firstHeader) {
-        return firstHeader.equals(namedAttribute);
+        return firstHeader.startsWith("comment");
     }
 
     public int assess(String[] header) {
         for (int i = 1; i < header.length; i++) {
-            if (header[i].equals("termsourceref")) {
+            if (header[i].startsWith("unit")) {
+                // ok
+            }
+            else if (header[i].equals("termsourceref")) {
                 // ok
             }
             else if (header[i].equals("termsourceid")) {
@@ -44,7 +46,6 @@ public abstract class NamedAttributeReader implements SCDAttributeReader {
         // iterated over every column, so must have reached the end
         return header.length - 1;
     }
-    
 
     public void readAttributes(String[] header,
                                String[] data,
@@ -52,19 +53,56 @@ public abstract class NamedAttributeReader implements SCDAttributeReader {
                                SCDNode parentNode,
                                int lineNumber,
                                int columnNumber) throws ParseException {
-        NamedAttribute attribute;
-        
+        // CommentAttribute to create
+    	CommentAttribute attribute;
+
         if (canRead(header[0])) {
             // make sure attribute is not empty
             if (data[0] != null && !data[0].equals("")) {
                 // first row, so make a new attribute node
-            	attribute = getNewAttribute();
-            	attribute.setAttributeValue(data[0]);
-            	
+            	attribute = new CommentAttribute();
+
+                String type =
+                        header[0].substring(header[0].lastIndexOf("[") + 1,
+                                            header[0].lastIndexOf("]"));
+                attribute.setAttributeValue(data[0]);
+                attribute.type = type;
+
                 // now do the rest
                 for (int i = 1; i < data.length;) {
-                	if (header[i].equals("termsourceref")) {
-                		attribute.termSourceREF = data[i];
+                    if (header[i].startsWith("unit")) {
+                        String unit_type =
+                                header[i].substring(header[i].lastIndexOf("[") + 1,
+                                                    header[i].lastIndexOf("]"));
+                        if (data[i] != null && !data[i].equals("")) {
+                            UnitAttribute unit = new UnitAttribute();
+                            unit.setAttributeValue(data[i]);
+                            unit.type = unit_type;
+
+                            for (int j = i + 1; j < data.length; j++) {
+                                if (header[j].equals("termsourceref")) {
+                                    unit.termSourceREF = data[j];
+                                }
+                                else if (header[j].equals("termsourceid")) {
+                                    unit.termSourceID = data[j];
+                                }
+                                else if (header[i + 1].equals("")) {
+                                    // skip the case where the header is an empty string
+                                }
+                                else {
+                                    break;
+                                }
+
+                                // update i to j
+                                i = j;
+                            }
+
+                            // and set the unit
+                            attribute.unit = unit;
+                        }
+                    }
+                    else if (header[i].equals("termsourceref")) {
+                    	attribute.termSourceREF = data[i];
                     }
                     else if (header[i].equals("termsourceid")) {
                     	attribute.termSourceID = data[i];
@@ -78,7 +116,6 @@ public abstract class NamedAttributeReader implements SCDAttributeReader {
                     }
                     i++;
                 }
-                
                 parentNode.addAttribute(attribute);
             }
         }

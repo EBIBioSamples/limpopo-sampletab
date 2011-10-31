@@ -33,7 +33,7 @@ public class CharacteristicAttributeReader implements SCDAttributeReader {
             else if (header[i].equals("termsourceref")) {
                 // ok
             }
-            else if (header[i].equals("termaccessionid")) {
+            else if (header[i].equals("termsourceid")) {
                 // ok
             }
             else {
@@ -53,19 +53,19 @@ public class CharacteristicAttributeReader implements SCDAttributeReader {
                                int lineNumber,
                                int columnNumber) throws ParseException {
         // CharacteristicsAttribute to create
-        CharacteristicAttribute characteristic;
+        CharacteristicAttribute attribute;
 
         if (canRead(header[0])) {
             // make sure attribute is not empty
             if (data[0] != null && !data[0].equals("")) {
                 // first row, so make a new attribute node
-                characteristic = new CharacteristicAttribute();
+            	attribute = new CharacteristicAttribute();
 
                 String type =
                         header[0].substring(header[0].lastIndexOf("[") + 1,
                                             header[0].lastIndexOf("]"));
-                characteristic.setAttributeValue(data[0]);
-                characteristic.type = type;
+                attribute.setAttributeValue(data[0]);
+                attribute.type = type;
 
                 // now do the rest
                 for (int i = 1; i < data.length;) {
@@ -97,14 +97,14 @@ public class CharacteristicAttributeReader implements SCDAttributeReader {
                             }
 
                             // and set the unit
-                            characteristic.unit = unit;
+                            attribute.unit = unit;
                         }
                     }
                     else if (header[i].equals("termsourceref")) {
-                        characteristic.termSourceREF = data[i];
+                    	attribute.termSourceREF = data[i];
                     }
                     else if (header[i].equals("termsourceid")) {
-                        characteristic.termSourceID = data[i];
+                    	attribute.termSourceID = data[i];
                     }
                     else if (header[i].equals("")) {
                         // skip the case where the header is an empty string
@@ -115,6 +115,7 @@ public class CharacteristicAttributeReader implements SCDAttributeReader {
                     }
                     i++;
                 }
+                parentNode.addAttribute(attribute);
             }
         }
         else {

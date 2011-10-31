@@ -2,6 +2,8 @@ package uk.ac.ebi.arrayexpress2.sampletab.parser;
 
 import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -17,6 +19,7 @@ import org.mged.magetab.error.ErrorItem;
 
 import uk.ac.ebi.arrayexpress2.magetab.converter.Converter;
 import uk.ac.ebi.arrayexpress2.magetab.exception.ParseException;
+import uk.ac.ebi.arrayexpress2.magetab.listener.ErrorItemListener;
 import uk.ac.ebi.arrayexpress2.magetab.listener.ProgressEvent;
 import uk.ac.ebi.arrayexpress2.magetab.listener.ProgressListener;
 import uk.ac.ebi.arrayexpress2.magetab.listener.ProgressListenerAdapter;
@@ -90,6 +93,11 @@ public class SampleTabParser<O> extends AbstractParser<SampleData> {
             throw new ParseException("Could not open a connection to " + msiURL.toString(), e);
         }
     }
+    
+    public SampleData parse(String filename) throws ParseException {
+        getLog().info("Starting parsing "+filename+"...");
+    	return parse(new File(filename));
+    }
 
 	public SampleData parse(InputStream dataIn) throws ParseException {
         return parse(dataIn, new SampleData());
@@ -108,6 +116,40 @@ public class SampleTabParser<O> extends AbstractParser<SampleData> {
             throw new ParseException("Parsing was interrupted", e);
         }
 	}
+
+    @Override
+    public void addErrorItemListener(ErrorItemListener listener) {
+        super.addErrorItemListener(listener);
+        msiParser.addErrorItemListener(listener);
+        scdParser.addErrorItemListener(listener);
+
+        // also register to the validator, if present
+        if (getValidator() != null) {
+            getValidator().addErrorItemListener(listener);
+        }
+
+        // also register to the converter, if present
+        if (getConverter() != null) {
+            getConverter().addErrorItemListener(listener);
+        }
+    }
+
+    @Override
+    public void removeErrorItemListener(ErrorItemListener listener) {
+        super.removeErrorItemListener(listener);
+        msiParser.removeErrorItemListener(listener);
+        scdParser.removeErrorItemListener(listener);
+
+        // also remove from the validator, if present
+        if (getValidator() != null) {
+            getConverter().removeErrorItemListener(listener);
+        }
+
+        // also remove from the converter, if present
+        if (getConverter() != null) {
+            getConverter().removeErrorItemListener(listener);
+        }
+    }
 
 	public SampleData parse(InputStream dataIn, SampleData target,
 			ExecutorService service) throws ParseException,
