@@ -2,6 +2,7 @@ package uk.ac.ebi.arrayexpress2.sampletab.parser;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Deque;
 import java.util.HashSet;
@@ -22,7 +23,6 @@ import uk.ac.ebi.arrayexpress2.magetab.parser.AbstractParser;
 import uk.ac.ebi.arrayexpress2.magetab.utils.MAGETABUtils;
 import uk.ac.ebi.arrayexpress2.sampletab.datamodel.SCD;
 import uk.ac.ebi.arrayexpress2.sampletab.handler.scd.SCDReadHandler;
-import uk.ac.ebi.arrayexpress2.sampletab.handler.scd.SCDReadInContextHandler;
 
 public class SCDParser extends AbstractParser<SCD> {
     public SCD parse(InputStream scdIn) throws ParseException {
@@ -105,21 +105,22 @@ public class SCDParser extends AbstractParser<SCD> {
         Collection<String> unreadableColumns = new HashSet<String>();
 
         // iterate over data contents
-        for (int lineNumber = 1; lineNumber < scdData.length; lineNumber++) {
-            String[] data = scdData[lineNumber];
-            // only parse non-empty, non-comment lines
-            if (data.length > 0 && !data[0].startsWith("#")) {
-                // create the task that generates graph handler tasks and queue it
-                createReadHandlerTasks(scd,
-                                       header,
-                                       data,
-                                       lineNumber,
-                                       unreadableColumns,
-                                       taskDeque,
-                                       listener);
-            }
+        if (scdData.length > 0){
+	        for (int lineNumber = 1; lineNumber < scdData.length; lineNumber++) {
+	            String[] data = scdData[lineNumber];
+	            // only parse non-empty, non-comment lines
+	            if (data.length > 0 && !data[0].startsWith("#")) {
+	                // create the task that generates graph handler tasks and queue it
+	                createReadHandlerTasks(scd,
+	                                       header,
+	                                       data,
+	                                       lineNumber,
+	                                       unreadableColumns,
+	                                       taskDeque,
+	                                       listener);
+	            }
+	        }
         }
-
         // submit all tasks in deque, block while tasks are still being submitted
         int taskCount = taskDeque.size();
         while (taskDeque.peek() != null) {
@@ -146,12 +147,27 @@ public class SCDParser extends AbstractParser<SCD> {
      * @param listener          the listener to use to track the progress of each handler
      */
     private void createReadHandlerTasks(final SCD scd,
-                                        final String[] header,
-                                        final String[] data,
+                                        final String[] headerIn,
+                                        final String[] dataIn,
                                         final int lineNumber,
                                         final Collection<String> unreadableColumns,
                                         final Deque<Callable<Void>> taskDeque,
                                         final DefaultHandlerListener listener) {
+
+        // clean header/dataPart to remove blank headers
+    	// TODO remove this once fully migrated to java code
+        ArrayList<String> headerArray = new ArrayList<String>();
+        ArrayList<String> dataArray = new ArrayList<String>();
+        int i = 0;
+        for (i=0; i<headerIn.length; i++){
+        	if (dataIn[i].length() != 0) {
+        		headerArray.add(headerIn[i]);
+        		dataArray.add(dataIn[i]);
+        	}
+        }
+        final String[] header = headerArray.toArray(new String[headerArray.size()]);
+        final String[] data = dataArray.toArray(new String[dataArray.size()]);
+    	
         getLog().trace("Creating handlers for " + header.toString());
 
         // start from 0-index column
@@ -179,15 +195,6 @@ public class SCDParser extends AbstractParser<SCD> {
                     // log a warning - we'll ignore this tag
                     getLog().warn(message);
 
-                    /*
-                    // fire error item
-                    ErrorItem error =
-                        ErrorItemFactory.getErrorItemFactory(getClass().getClassLoader())
-                            .generateErrorItem(
-                               message, -1, this.getClass());
-                    fireErrorItemEvent(error);
-                    */
-
                     unreadableColumns.add(headerPart[0]);
                 }
                 columnNumber++;
@@ -197,61 +204,29 @@ public class SCDParser extends AbstractParser<SCD> {
                 for (final SCDReadHandler handler : handlers) {
                     // the column we'll read to (from handler.assess())
                     int handlerReadsTo;
-                    if (handler instanceof SCDReadInContextHandler) {
-                        // ReadInContextHandlers require extra context
-                        // we actually need to supply the whole header and data, not the parts
+                    // how far ahead can this handler read?
+                    final int readsFrom = columnNumber;
+                    handlerReadsTo = handler.assess(headerPart);
 
-                        // how far ahead can this handler read?
-                        final int readsFrom = columnNumber;
-                        handlerReadsTo = ((SCDReadInContextHandler) handler).assessFrom(header, readsFrom) - readsFrom;
+                    // notify the listener of the next handler
+                    listener.addHandler(handler, dataPart);
 
-                        // notify the listener of the next handler
-                        listener.addHandler(handler, data);
-
-                        // add the listener to this handler if we've not already done so
-                        if (!handler.getListeners().contains(listener)) {
-                            handler.addListener(listener);
-                        }
-
-                        // add a task to handle this part of the graph
-                        taskDeque.add(new Callable<Void>() {
-                            public Void call() throws Exception {
-                                executeReadHandler(scd,
-                                                   header,
-                                                   data,
-                                                   lineNumber,
-                                                   readsFrom,
-                                                   handler);
-                                return null;
-                            }
-                        });
+                    // add the listener to this handler if we've not already done so
+                    if (!handler.getListeners().contains(listener)) {
+                        handler.addListener(listener);
                     }
-                    else {
-                        // how far ahead can this handler read?
-                        final int readsFrom = columnNumber;
-                        handlerReadsTo = handler.assess(headerPart);
-
-                        // notify the listener of the next handler
-                        listener.addHandler(handler, dataPart);
-
-                        // add the listener to this handler if we've not already done so
-                        if (!handler.getListeners().contains(listener)) {
-                            handler.addListener(listener);
+                    // add a task to handle this part of the graph
+                    taskDeque.add(new Callable<Void>() {
+                        public Void call() throws Exception {
+                            executeReadHandler(scd,
+                        		headerPart,
+                        		dataPart,
+                        		lineNumber,
+                        		readsFrom,
+                        		handler);
+                            return null;
                         }
-
-                        // add a task to handle this part of the graph
-                        taskDeque.add(new Callable<Void>() {
-                            public Void call() throws Exception {
-                                executeReadHandler(scd,
-                                                   headerPart,
-                                                   dataPart,
-                                                   lineNumber,
-                                                   readsFrom,
-                                                   handler);
-                                return null;
-                            }
-                        });
-                    }
+                    });
 
                     // update readTo if this handler can read further that any others
                     if (handlerReadsTo > readsTo) {
@@ -273,12 +248,7 @@ public class SCDParser extends AbstractParser<SCD> {
                                     SCDReadHandler scdReadHandler) {
         try {
             // read the data with the given handler
-            if (scdReadHandler instanceof SCDReadInContextHandler) {
-                ((SCDReadInContextHandler) scdReadHandler).readFrom(header, data, scd, lineNumber, columnNumber);
-            }
-            else {
-                scdReadHandler.read(header, data, scd, lineNumber, columnNumber);
-            }
+            scdReadHandler.read(header, data, scd, lineNumber, columnNumber);
         }
         catch (ParseException e) {
             // get error items from the exception

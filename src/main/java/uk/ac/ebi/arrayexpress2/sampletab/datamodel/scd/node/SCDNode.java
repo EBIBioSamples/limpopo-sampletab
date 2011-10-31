@@ -1,6 +1,9 @@
 package uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node;
 
+import java.util.List;
+
 import uk.ac.ebi.arrayexpress2.magetab.datamodel.graph.Node;
+import uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node.attribute.SCDNodeAttribute;
 
 public interface SCDNode extends Node {
     /**
@@ -17,4 +20,8 @@ public interface SCDNode extends Node {
      * @return the values for this node
      */
     String[] values();
+
+    void addAttribute(SCDNodeAttribute attribute);
+    
+    List<SCDNodeAttribute> getAttributes();
 }

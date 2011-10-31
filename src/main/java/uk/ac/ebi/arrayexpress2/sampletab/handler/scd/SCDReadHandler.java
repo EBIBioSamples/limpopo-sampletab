@@ -1,5 +1,6 @@
 package uk.ac.ebi.arrayexpress2.sampletab.handler.scd;
 
+import org.mged.magetab.error.ErrorCode;
 import org.mged.magetab.error.ErrorItem;
 import org.mged.magetab.error.ErrorItemFactory;
 
@@ -76,6 +77,7 @@ public abstract class SCDReadHandler extends AbstractHandler implements ReadHand
                 error.setLine(lineNumber);
                 error.setCol(columnNumber);
 
+                System.out.println(message+" line "+lineNumber+" col "+columnNumber);
                 // tag must be wrong
                 throw new UnmatchedTagException(false, message, error);
             }
@@ -97,6 +99,7 @@ public abstract class SCDReadHandler extends AbstractHandler implements ReadHand
                 // set location, line, column number on error item
                 error.setLine(lineNumber);
                 error.setCol(columnNumber);
+                System.out.println(message+" line "+lineNumber+" col "+columnNumber);
 
                 throw new IllegalLineLengthException(false, message, error);
             }
@@ -116,17 +119,17 @@ public abstract class SCDReadHandler extends AbstractHandler implements ReadHand
                     fireHandlingSucceededEvent(new HandlerEvent(this, HandlerEvent.Type.READ, data));
                 }
                 catch (ParseException e) {
-                    // fire listener failed event
+                    // fire listener failed event ...
                     fireHandlingFailedEvent(new HandlerEvent(this, HandlerEvent.Type.READ, data));
 
-                    // update each item with relevent location info
+                    // ... update each item with relevant location info ...
                     for (ErrorItem item : e.getErrorItems()) {
                         // set location, line, column number on error item
                         item.setLine(lineNumber);
                         item.setCol(columnNumber);
                     }
 
-                    // and rethrow exception
+                    // ... and re-throw exception
                     throw e;
                 }
             }

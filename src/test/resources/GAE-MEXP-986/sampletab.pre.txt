@@ -7,8 +7,6 @@ Submission Release Date	2007-03-10
 Submission Modification Date	2011-10-10
 Submission Reference Layer	false
 
-
-
 Person Last Name	Yang
 Person First Name	Kyung Ae
 Person Email	colimpbl@naver.com

@@ -7,7 +7,6 @@ import java.util.List;
 import uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node.attribute.SCDNodeAttribute;
 
 public class SampleNode extends AbstractSCDNode {
-    public String sampleName;
     public String sampleDescription;
     public String sampleAccession;
     public final List<SCDNodeAttribute> attributes = new ArrayList<SCDNodeAttribute>();
@@ -30,7 +29,7 @@ public class SampleNode extends AbstractSCDNode {
 
     public String[] values() {
         List<String> valuesList = new ArrayList<String>();
-        valuesList.add(sampleName);
+        valuesList.add(nodeName);
         if (sampleAccession != null) {
         	valuesList.add(sampleAccession);
         }
@@ -47,4 +46,12 @@ public class SampleNode extends AbstractSCDNode {
     public String getNodeType() {
         return "sample";
     }
+
+	public void addAttribute(SCDNodeAttribute attribute) {
+		attributes.add(attribute);
+	}
+
+	public List<SCDNodeAttribute> getAttributes() {
+		return attributes;
+	}
 }

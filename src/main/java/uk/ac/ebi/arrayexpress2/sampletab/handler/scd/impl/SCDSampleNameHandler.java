@@ -6,16 +6,25 @@ import uk.ac.ebi.arrayexpress2.sampletab.datamodel.SCD;
 import uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node.SampleNode;
 import uk.ac.ebi.arrayexpress2.sampletab.handler.scd.SCDReadHandler;
 import uk.ac.ebi.arrayexpress2.sampletab.handler.scd.node.attribute.CharacteristicAttributeReader;
-import uk.ac.ebi.arrayexpress2.sampletab.handler.scd.node.attribute.NamedAttributeReader;
+import uk.ac.ebi.arrayexpress2.sampletab.handler.scd.node.attribute.CommentAttributeReader;
+import uk.ac.ebi.arrayexpress2.sampletab.handler.scd.node.attribute.MaterialAttributeReader;
+import uk.ac.ebi.arrayexpress2.sampletab.handler.scd.node.attribute.OrganismAttributeReader;
+import uk.ac.ebi.arrayexpress2.sampletab.handler.scd.node.attribute.SexAttributeReader;
 
 @ServiceProvider
 public class SCDSampleNameHandler extends SCDReadHandler {
     private final CharacteristicAttributeReader characteristicAttributeReader;
-    private final NamedAttributeReader namedAttributeReader;
+    private final CommentAttributeReader commentAttributeReader;
+    private final OrganismAttributeReader organismAttributeReader;
+    private final SexAttributeReader sexAttributeReader;
+    private final MaterialAttributeReader materialAttributeReader;
 
     public SCDSampleNameHandler() {
         characteristicAttributeReader = new CharacteristicAttributeReader();
-        namedAttributeReader = new NamedAttributeReader();
+        commentAttributeReader = new CommentAttributeReader();
+        organismAttributeReader = new OrganismAttributeReader();
+        sexAttributeReader = new SexAttributeReader();
+        materialAttributeReader = new MaterialAttributeReader();
     }
 
     public boolean canReadHeader(String[] header) {
@@ -32,16 +41,19 @@ public class SCDSampleNameHandler extends SCDReadHandler {
                 // don't need to do anything here
             }
             else if (header[i].equals("organism")) {
-                i += assessAttribute(namedAttributeReader, header, i);
+                i += assessAttribute(organismAttributeReader, header, i);
             }
             else if (header[i].equals("sex")) {
-                i += assessAttribute(namedAttributeReader, header, i);
+                i += assessAttribute(sexAttributeReader, header, i);
+            }
+            else if (header[i].equals("material")) {
+                i += assessAttribute(materialAttributeReader, header, i);
             }
             else if (header[i].startsWith("characteristic")) {
                 i += assessAttribute(characteristicAttributeReader, header, i);
             }
             else if (header[i].startsWith("comment")) {
-                // don't need to do anything here
+                i += assessAttribute(commentAttributeReader, header, i);
             }
             else {
                 // got to something we don't recognise
@@ -67,44 +79,50 @@ public class SCDSampleNameHandler extends SCDReadHandler {
                 sample = new SampleNode();
                 sample.setNodeName(data[0]);
                 scd.addNode(sample);
+                
+		        // now do the rest
+		        for (int i = 1; i < data.length;) {
+		        	if (header[i].equals("sampledescription")) {
+		                sample.sampleDescription = data[i];
+		            }
+		        	else if (header[i].equals("sampleaccession")) {
+		                sample.sampleAccession = data[i];
+		            }
+		            else if (header[i].equals("organism")) {
+		                i += readAttribute(organismAttributeReader, header, data, scd, sample, lineNumber,
+		                        columnNumber + i, i);
+		            }
+		            else if (header[i].equals("sex")) {
+		                i += readAttribute(sexAttributeReader, header, data, scd, sample, lineNumber,
+		                        columnNumber + i, i);
+		            }
+		            else if (header[i].equals("material")) {
+		                i += readAttribute(materialAttributeReader, header, data, scd, sample, lineNumber,
+		                        columnNumber + i, i);
+		            }
+		            else if (header[i].startsWith("characteristic")) {
+		                i += readAttribute(characteristicAttributeReader, header, data, scd, sample, lineNumber,
+		                        columnNumber + i, i);
+		            }
+		            else if (header[i].startsWith("comment")) {
+		                i += readAttribute(commentAttributeReader, header, data, scd, sample, lineNumber,
+		                        columnNumber + i, i);
+		            }
+		            else {
+		                // got to something we don't recognise
+		                // this is either the end, or a bad column name
+		                // update the child node
+		                updateChildNode(header, data, sample, i);
+		                break;
+		            }
+		            i++;
+		        }
+		
+		        // iterated over every column, so must have reached the end
+		        // update node in SDRF
+		        scd.updateNode(sample);
             }
         }
 
-        // now do the rest
-        for (int i = 1; i < data.length;) {
-        	if (header[i].equals("sampledescription")) {
-                sample.sampleDescription = data[i];
-            }
-        	else if (header[i].equals("sampleaccession")) {
-                sample.sampleAccession = data[i];
-            }
-            else if (header[i].equals("organism")) {
-                i += readAttribute(namedAttributeReader, header, data, scd, sample, lineNumber,
-                        columnNumber + i, i);
-            }
-            else if (header[i].equals("sex")) {
-                i += readAttribute(namedAttributeReader, header, data, scd, sample, lineNumber,
-                        columnNumber + i, i);
-            }
-            else if (header[i].startsWith("characteristics")) {
-                i += readAttribute(characteristicAttributeReader, header, data, scd, sample, lineNumber,
-                                   columnNumber + i, i);
-            }
-            else if (header[i].startsWith("comment")) {
-            	
-            }
-            else {
-                // got to something we don't recognise
-                // this is either the end, or a bad column name
-                // update the child node
-                updateChildNode(header, data, sample, i);
-                break;
-            }
-            i++;
-        }
-
-        // iterated over every column, so must have reached the end
-        // update node in SDRF
-        scd.updateNode(sample);
     }
 }
