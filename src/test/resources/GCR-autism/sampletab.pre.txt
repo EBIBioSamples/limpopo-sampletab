@@ -1,0 +1,205 @@
+﻿[MSI]
+Submission Title	Coriell Cell Repositories																		
+Submission Identifier	GCR-autism																		
+Submission Description	The Coriell Cell Repositories provide essential research reagents to the scientific community by establishing, verifying, maintaining, and distributing cell cultures and DNA derived from cell cultures. These collections, supported by funds from the National Institutes of Health (NIH) and several foundations, are extensively utilized by research scientists around the world.																		
+Submission Version	1																		
+Submission Release Date	2011/07/22																		
+Submission Modification Date	2011/11/11																		
+Submission Reference Layer	true																		
+																																					
+Organization Name	Coriell Institute	EBI																	
+Organization Address	403 Haddon Avenue, New Jersey, 08103, USA	Wellcome Trust Genome Campus, Hinxton, Cambridge, CB10 1SD, UK																	
+Organization URI	ccr.coriell.org	www.ebi.ac.uk																	
+Organization Role	submitter	curator																	
+																			
+Person Last Name	Parkinson	Faulconbridge																	
+Person First Name	Helen	Adam																	
+Person Email	parkinson@ebi.ac.uk	faulcon@ebi.ac.uk																	
+																			
+Database Name	n/a																		
+Database URI	n/a																		
+																			
+[SCD]
+Sample Name	Comment[ExpansionLLot]	Characteristic[CellType]	Characteristic[OrganismPart]	Organism	Comment[Ethnicity]	Comment[GeographicOrigin]	Characteristic[Age]	Unit [TimeUnit]	Sex	Comment[ClinicallyAffectedStatus]	Comment[GeneticStatus]	Comment[FamilyRelationship]	Comment[Family]	Comment[FamilyMember]	Comment[ClinicalHistory]	Comment[BiopsySite]	Comment[TransformationType]	Comment[SampleType]	Characteristic[DiseaseType]
+AU10031	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		10	years	Male	Yes	affected with recessive disorder	twin brother	106	2	Autistic disorder	Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10030	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		10	years	Male	Yes	affected with recessive disorder	proband	106	1	Autistic disorder	Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10033	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		35	years	Male		obligate heterozygote	father	104	4		Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10032	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		10	years	Female	No	at risk or possible heterozygote	Unaffected dizygotic triplet sister	106	3		Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10035	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		35	years	Female		obligate heterozygote	mother	109	3	History of migraines	Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10034	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		2	years	Male		at risk or possible heterozygote	brother	107	2	Multiple congenital anomalies; macrocephaly; hypotonia; mild pulmonic stenosis; multicystic right kidney removed; negative MRI; 46,XY; negative for fragile X	Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10037	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		4	years	Female		at risk or possible heterozygote	sister	109	2	Language delay; atypical features of development	Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10036	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		4	years	Male	Yes	affected with recessive disorder	proband	109	1	Autistic disorder	Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10039	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		10	years	Female	Yes	affected with recessive disorder	proband	110	1	Autistic disorder	Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10038	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		12	years	Male	Yes	affected with recessive disorder	brother	110	2	Pervasive developmental disorder	Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10156	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		32	years	Female		obligate heterozygote	mother	132	6	Articulation difficulty	Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10157	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		5	years	Female		at risk or possible heterozygote	sister	132	4	Language delay	Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10154	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		60	years	Female	No	normal, unaffected	maternal grandmother	132	7		Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10155	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		28	years	Female			maternal aunt	132	8	Paranoid schizophrenia; on Depakote, Congentin, Zyprexa, and Zolof	Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10088	0	B-Lymphocyte	Blood	Homo sapiens	Asiatic Indian	EAST INDIAN	25	years	Female		obligate heterozygote	mother	122	2		Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10089	0	B-Lymphocyte	Blood	Homo sapiens	Asiatic Indian	EAST INDIAN	30	years	Male		obligate heterozygote	father	122	3		Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10150	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		28	years	Female		obligate heterozygote	mother	131	3		Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10151	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		31	years	Male		obligate heterozygote	step-father	131	4	Bipolar; received special educational services as a child; on Depakote and Serazone	Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10084	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		41	years	Female		obligate heterozygote	mother	119	3		Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10085	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		42	years	Male		obligate heterozygote	father	119	4		Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10086	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		4	years	Male		at risk or possible heterozygote	brother	119	2	Mild features of pervasive developmental disorder	Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10087	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		4	years	Male	Yes	affected with recessive disorder	proband	119	1	Autistic disorder	Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10080	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		36	years	Male		obligate heterozygote	father	115	3	History of depression	Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10081	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian	HISPANIC	74	years	Male	No	at risk or possible heterozygote	maternal grandfather	118	6		Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10082	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian	HISPANIC	58	years	Female	No	at risk or possible heterozygote	paternal grandmother	118	7		Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10083	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian	HISPANIC	62	years	Male	No	at risk or possible heterozygote	paternal grandfather	118	8		Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10028	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		36	years	Female		obligate heterozygote	mother	106	4		Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10029	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		42	years	Male		obligate heterozygote	father	106	5		Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10026	A	B-Lymphocyte	Blood	Homo sapiens	Caucasian	HUNGARIAN	4	years	Male	Yes	affected with recessive disorder	proband	105	1	Autistic disorder	Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10027	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian	HUNGARIAN	2	years	Male	Yes	affected with recessive disorder	brother	105	2	Autistic disorder	Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10024	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian	HUNGARIAN	29	years	Female		obligate heterozygote	mother	105	3		Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10025	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian	HUNGARIAN	36	years	Male		obligate heterozygote	father	105	4		Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10022	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		6	years	Male	Yes	affected with recessive disorder	brother	104	2	Autistic disorder	Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10023	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		33	years	Female		obligate heterozygote	mother	104	3		Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10020	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian				Male	No	normal, unaffected	paternal great uncle	101	7		Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10021	A	B-Lymphocyte	Blood	Homo sapiens	Caucasian		8	years	Male	Yes	affected with recessive disorder	proband	104	1	Autistic disorder	Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10121	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian	ENGLISH	57	years	Female	No	at risk or possible heterozygote	paternal grandmother	127	5		Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10120	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		4	years	Male	Yes	affected with recessive disorder	proband	107	1	Autistic disorder	Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10126	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		33	years	Female		obligate heterozygote	mother	127	3		Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10125	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		63	years	Male	No	at risk or possible heterozygote	maternal grandfather	127	8	Hypertension	Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10124	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		59	years	Female	No	at risk or possible heterozygote	maternal grandmother	127	7		Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10129	0	B-Lymphocyte	Blood	Homo sapiens	Asian	CHINESE	37	years	Male		obligate heterozygote	father	125	4		Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10128	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		3	years	Female	Yes	affected with recessive disorder	sister	127	2	Pervasive developmental disorder	Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10185	0	B-Lymphocyte	Blood	Homo sapiens	Hispanic/Latino		4	years	Male	Yes	affected with recessive disorder	brother	136	2	Autistic Disorder	Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10184	0	B-Lymphocyte	Blood	Homo sapiens	Hispanic/Latino		10	years	Male	Yes	affected with recessive disorder	proband	136	1	Autistic Disorder	Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10059	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		10	years	Male	Yes	affected with recessive disorder	proband	116	1	Asperger's disorder	Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10058	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		36	years	Female		obligate heterozygote	mother	116	3	Depression	Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10181	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		40	years	Female	No		paternal aunt	115	5	Depression; on Prosac	Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10180	A	B-Lymphocyte	Blood	Homo sapiens	Caucasian		56	years	Female	No		maternal aunt	135	7	Osteoporosis; malabsorption problem	Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10183	A	B-Lymphocyte	Blood	Homo sapiens	Hispanic/Latino		45	years	Female	No	obligate heterozygote	mother	136	3		Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10182	A	B-Lymphocyte	Blood	Homo sapiens	Caucasian		8	years	Male	Yes	affected with recessive disorder	paternal cousin	115	4	Pervasive developmental disorder	Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10053	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		38	years	Female		obligate heterozygote	mother	114	4		Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10052	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		76	years	Female	No	at risk or possible heterozygote	paternal grandmother	114	8	High blood pressure; on Coumidin; cardiac arrhythmia	Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10051	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		69	years	Male	No	at risk or possible heterozygote	maternal grandfather	114	7	High blood pressure	Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10050	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		61	years	Female	No	at risk or possible heterozygote	maternal grandmother	114	6	Arthritis	Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10057	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		3	years	Male	No	at risk or possible heterozygote	brother	114	3	Clinically unaffected	Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10056	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		6	years	Male	Yes	affected with recessive disorder	twin brother	114	2	Autistic disorder; mental retardation	Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10055	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		6	years	Male	Yes	affected with recessive disorder	proband	114	1	Autistic disorder; mental retardation	Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10054	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		36	years	Male		obligate heterozygote	father	114	5	High cholesterol	Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10130	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		9	years	Male	Yes	affected with recessive disorder	brother	126	2		Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10131	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		7	years	Male	Yes	affected with recessive disorder	brother	126	3		Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10132	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		71	years	Female	No	at risk or possible heterozygote	maternal grandmother	126	6	Adult onset diabetes; hypertension; on Glucophage, Glucotrol, Covera, and Coumadin	Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10133	0	B-Lymphocyte	Blood	Homo sapiens			72	years	Male	No	at risk or possible heterozygote	maternal grandfather	126	7	Hypertension; 3 CVAs; on Coumadin and Zestoretic	Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10134	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		39	years	Female		obligate heterozygote	mother	128	3	Hypothyroidism	Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10135	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		46	years	Male		obligate heterozygote	father	128	4		Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10136	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		7	years	Female	Yes	affected with recessive disorder	proband	128	1	Autistic disorder	Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10137	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		8	years	Male			brother	128	2	ADHD; obsessive/ritualistic	Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10138	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		74	years	Female	No	at risk or possible heterozygote	paternal grandmother	121	7		Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10139	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		39	years	Female		obligate heterozygote	mother	110	3	Obesity	Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10048	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		9	years	Female	No	at risk or possible heterozygote	sister	113	3	Clinically unaffected	Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10049	A	B-Lymphocyte	Blood	Homo sapiens	Caucasian		6	years	Male	Yes	affected with recessive disorder	proband	113	1	Autistic disorder	Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10040	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		42	years	Male		obligate heterozygote	father	111	3	Chronic motor tics; hyperactivity; distractability	Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10041	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		53	years	Female		obligate heterozygote	mother	112	3		Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10042	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		56	years	Male		obligate heterozygote	father	112	4		Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10043	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		26	years	Male	Yes	affected with recessive disorder	brother	112	1	Severe mental retardation; autistic-like features; atonic diplegia; legally blind; grand mal epilepsy; scoliosis surgery; fragile X negative	Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10044	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		22	years	Male	Yes	affected with recessive disorder	proband	112	2	Autistic disorder; seizure disorder; kyphosis; mild thoracic scoliosis; marked pectus excavatum; fragile X negative	Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10045	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		44	years	Female		obligate heterozygote	mother	113	4		Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10047	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		12	years	Female	Yes	affected with recessive disorder	sister	113	2	Pervasive developmental disorder	Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10109	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		39	years	Male		obligate heterozygote	father	124	5		Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10108	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		40	years	Female		obligate heterozygote	mother	124	4		Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10105	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		63	years	Female	No	at risk or possible heterozygote	maternal grandmother	124	6	Thyroid nodule	Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10104	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		4	years	Female		at risk or possible heterozygote	sister	111	5	Mild features of pervasive developmental disorder	Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10107	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		70	years	Female	No	at risk or possible heterozygote	paternal grandmother	124	8	Hypertension	Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10106	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		65	years	Male	No	at risk or possible heterozygote	maternal grandfather	124	7	Hypertension	Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10101	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		39	years	Male		obligate heterozygote	father	116	4	Very hyperactive, nervous type; seasonal allergies	Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10100	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		36	years	Male		obligate heterozygote	father	109	3		Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10103	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		6	years	Female	Yes	affected with recessive disorder	proband	111	1	Autistic disorder	Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10102	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		37	years	Female		obligate heterozygote	mother	111	2		Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10017	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		38	years	Female		obligate heterozygote	mother	103	2		Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10169	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		53	years	Female	No	obligate heterozygote	mother	135	3	Seizure disorder; petit mal; articulation difficulties	Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10168	A	B-Lymphocyte	Blood	Homo sapiens	Caucasian		82	years	Female	No		paternal grandmother	135	6	Diabetes mellitus; on oral meds; breast cancer with right mastectomy 14 years earlier	Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10167	A	B-Lymphocyte	Blood	Homo sapiens	Caucasian		79	years	Female	No		maternal grandmother	135	5		Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10166	0	B-Lymphocyte	Blood	Homo sapiens	Other	FILIPINO	2	years	Male			brother	134	2	Mild pervasive developmental disorder	Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10165	0	B-Lymphocyte	Blood	Homo sapiens	Other	FILIPINO	7	years	Male	Yes	affected with recessive disorder	proband	134	1	Autistic disorder	Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10164	0	B-Lymphocyte	Blood	Homo sapiens	Other	FILIPINO	35	years	Male	No	obligate heterozygote	father	134	4		Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10163	0	B-Lymphocyte	Blood	Homo sapiens	Other	FILIPINO	31	years	Female	No	obligate heterozygote	mother	134	3		Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10162	0	B-Lymphocyte	Blood	Homo sapiens	American Indian	LAGUNA	36	years	Male	No	obligate heterozygote	father	123	4	History of delayed language until age 5 years	Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10161	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		6	years	Male		at risk or possible heterozygote	brother	132	3	Atypical features; hyperactive; born at 39 weeks; RDS premature lungs on ECMO	Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10160	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		7	years	Male	Yes	affected with recessive disorder	proband	132	2	Autistic disorder	Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10118	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		13	years	Male	Yes	affected with recessive disorder	proband	126	1	Autistic disorder	Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10119	A	B-Lymphocyte	Blood	Homo sapiens	Caucasian		30	years	Male		obligate heterozygote	father	107	4		Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10112	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		10	years	Female	No	at risk or possible heterozygote	sister	124	3		Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10113	0	B-Lymphocyte	Blood	Homo sapiens	Asian	CHINESE	36	years	Female		obligate heterozygote	mother	125	3		Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10110	A	B-Lymphocyte	Blood	Homo sapiens	Caucasian		7	years	Male	Yes	affected with recessive disorder	proband	124	1	Pervasive developmental disorder	Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10111	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		5	years	Female		at risk or possible heterozygote	sister	124	2	Language delay; atypical behavioral features	Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10116	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		38	years	Female		obligate heterozygote	mother	126	4		Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10117	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		40	years	Male		obligate heterozygote	father	126	5		Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10114	0	B-Lymphocyte	Blood	Homo sapiens	Asian	CHINESE	5	years	Male	Yes	affected with recessive disorder	proband	125	1	Pervasive developmental disorder	Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10115	A	B-Lymphocyte	Blood	Homo sapiens	Asian	CHINESE	4	years	Male	Yes	affected with recessive disorder	brother	125	2	Pervasive developmental disorder	Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10178	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		9	years	Female	Yes	affected with recessive disorder	proband	133	1	Autistic Disorder	Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10179	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		47	years	Male	No	obligate heterozygote	father	133	4		Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10174	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		4	years	Male	Yes	affected with recessive disorder	proband	115	1	Autistic disorder	Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10175	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		30	years	Male	No	obligate heterozygote	father	132	9	Late talker - 3 years	Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10176	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		42	years	Female	No	obligate heterozygote	mother	133	3	Marfan syndrome	Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10177	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		12	years	Female			sister	133	2	Possible PDD; Marfan syndrome	Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10170	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		58	years	Male	No	obligate heterozygote	father	135	4		Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10171	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		28	years	Male	Yes	affected with recessive disorder	proband	135	1	Marfan syndrome; Asperger syndrome	Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10172	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		18	years	Male			brother	135	2	Seizure disorder; moderate mental retardation; PDD behaviors	Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10173	A	B-Lymphocyte	Blood	Homo sapiens	Caucasian		36	years	Female	No	obligate heterozygote	mother	115	2		Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10019	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		4	years	Male	Yes	affected with recessive disorder	proband	103	1	Autistic disorder; hypotonia; oral/ verbal apraxia	Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10018	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		9	years	Male	Yes	affected with recessive disorder	brother	103	4	Pervasive development disorder; low muscle tone	Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10075	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian	HISPANIC	42	years	Female		obligate heterozygote	mother	120	3		Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10074	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian	HISPANIC	59	years	Female	No	at risk or possible heterozygote	maternal grandmother	118	5		Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10077	0	B-Lymphocyte	Blood	Homo sapiens	Other		7	years	Female	Yes	affected with recessive disorder	proband	120	1	Autistic disorder; dizygotic	Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10076	A	B-Lymphocyte	Blood	Homo sapiens	Black		46	years	Male		obligate heterozygote	father	120	4		Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10071	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian	HISPANIC	35	years	Male		obligate heterozygote	father	118	4		Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10070	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian	HISPANIC	36	years	Female		obligate heterozygote	mother	118	3		Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10073	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian	HISPANIC	5	years	Male	Yes	affected with recessive disorder	brother	118	2	Autistic disorder	Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10072	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian	HISPANIC	7	years	Male	Yes	affected with recessive disorder	proband	118	1	Autistic disorder	Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10159	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		8	years	Male		at risk or possible heterozygote	brother	132	1	Atypical features of behavior; reading difficulty	Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10079	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		28	years	Female		obligate heterozygote	mother	107	3	Multiple sclerosis	Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10078	B	B-Lymphocyte	Blood	Homo sapiens	Other		7	years	Female	Yes	affected with recessive disorder	twin sister	120	2	Autistic disorder; dizygotic	Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10149	A	B-Lymphocyte	Blood	Homo sapiens	Caucasian		39	years	Male		obligate heterozygote	father	129	4		Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10148	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		26	years	Female	Yes	affected with recessive disorder	proband	130	1	Autistic disorder	Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10015	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		74	years	Female	No	at risk or possible heterozygote	paternal grandmother	102	5		Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10014	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		38	years	Male		obligate heterozygote	father	103	3		Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10013	A	B-Lymphocyte	Blood	Homo sapiens	Caucasian		44	years	Male		obligate heterozygote	father	102	4		Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10012	A	B-Lymphocyte	Blood	Homo sapiens	Other	FILIPINO	53	years	Female		obligate heterozygote	mother	102	3		Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10011	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		12	years	Female	Yes	affected with recessive disorder	twin sister	102	2	Autistic disorder	Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10010	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		12	years	Female	Yes	affected with recessive disorder	proband	102	1	Autistic disorder	Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10141	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		45	years	Male		at risk or possible heterozygote	maternal uncle	110	5	History of language delay; social immaturity	Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10140	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		46	years	Male		obligate heterozygote	father	110	4	Hypertension	Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10143	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		35	years	Female		obligate heterozygote	mother	129	3		Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10142	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		57	years	Female	No	at risk or possible heterozygote	paternal grandmother	126	8		Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10145	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		3	years	Male	Yes	affected with recessive disorder	brother	129	2	Pervasive developmental disorder	Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10144	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		4	years	Male	Yes	affected with recessive disorder	proband	129	1	Pervasive developmental disorder	Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10147	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		15	years	Male	Yes	affected with recessive disorder	brother	130	2	Autistic disorder	Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10146	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		49	years	Female		obligate heterozygote	mother	130	3	Dystonia	Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10158	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		4	years	Female		at risk or possible heterozygote	sister	132	5	Language delay	Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10016	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		71	years	Male	No	at risk or possible heterozygote	paternal grandfather	102	6		Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10062	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian	CZECH/ITALIAN	45	years	Male		obligate heterozygote	father	108	4		Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10063	0	B-Lymphocyte	Blood	Homo sapiens	Other		6	years	Male	Yes	affected with recessive disorder	proband	108	1	Pervasive developmental disorder	Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10060	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		5	years	Female		at risk or possible heterozygote	sister	116	2	ADHD; language difficulties; hyperactive; perseverative language	Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10061	0	B-Lymphocyte	Blood	Homo sapiens	Other	TRINIDADIAN	41	years	Female		obligate heterozygote	mother	108	3	Nephritis at age 6 years	Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10066	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		62	years	Male		obligate heterozygote	father	117	4		Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10067	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		31	years	Male	Yes	affected with recessive disorder	proband	117	1	Autistic disorder; mental retardation; on Haldol and Cogentin	Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10064	0	B-Lymphocyte	Blood	Homo sapiens	Other		4	years	Male		at risk or possible heterozygote	brother	108	2	Language delay; auditory processing difficulty	Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10065	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		55	years	Female		obligate heterozygote	mother	117	3		Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10068	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		29	years	Male	Yes	affected with recessive disorder	brother	117	2	Autistic disorder; seizure disorder; mental retardation; on Dilantin, Haldol, and Cogentin	Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10069	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		65	years	Female	No	at risk or possible heterozygote	maternal grandmother	111	4		Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10004	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		5	years	Male	Yes	affected with recessive disorder	twin brother	101	2	Autistic disorder	Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10005	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		37	years	Female		obligate heterozygote	mother	101	3	Shy	Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10006	A	B-Lymphocyte	Blood	Homo sapiens	Caucasian		38	years	Male		obligate heterozygote	father	101	4	Shy	Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10007	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		40	years	Female	No	normal, unaffected	paternal aunt	101	5		Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10000	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		6	years	Male	Yes	affected with recessive disorder	proband	100	1	Neurologically impaired; history of febrile seizure at age 10-14 months; CT scan and EEG were negative	Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10001	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		41	years	Female		obligate heterozygote	mother	100	2		Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10002	A	B-Lymphocyte	Blood	Homo sapiens	Caucasian		47	years	Male		obligate heterozygote	father	100	3	History of ETOH usage; irritable bowel; on Prosac	Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10003	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		5	years	Male	Yes	affected with recessive disorder	proband	101	1	Autistic disorder	Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10008	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		4	years	Female		at risk or possible heterozygote	sister	100	4	Mild pervasive developmental disorder	Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10009	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		8	years	Female		at risk or possible heterozygote	sister	101	6	History of selective mutism	Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10152	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		2	years	Female			step-sister	131	2	Developmental language disorder	Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10153	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		6	years	Male	Yes	affected with recessive disorder	proband	131	1	Pervasive developmental disorder	Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10099	0	B-Lymphocyte	Blood	Homo sapiens	Other		4	years	Male	Yes	affected with recessive disorder	proband	123	1	Pervasive developmental disorder	Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10098	0	B-Lymphocyte	Blood	Homo sapiens	Other		2	years	Female		at risk or possible heterozygote	sister	123	2	Delayed language	Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10097	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		36	years	Female		obligate heterozygote	mother	123	3		Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10096	A	B-Lymphocyte	Blood	Homo sapiens	Caucasian		68	years	Male	No	at risk or possible heterozygote	maternal grandfather	121	6	Rheumatoid arthritis onset at age 30	Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10095	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		66	years	Female	No	at risk or possible heterozygote	maternal grandmother	121	5	Short term memory loss	Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10094	A	B-Lymphocyte	Blood	Homo sapiens	Caucasian		5	years	Male	Yes	affected with recessive disorder	proband	121	2	Pervasive developmental disorder	Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10093	A	B-Lymphocyte	Blood	Homo sapiens	Caucasian		6	years	Male		at risk or possible heterozygote	brother	121	2	Mild pervasive developmental disorder	Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10092	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		39	years	Male		obligate heterozygote	father	121	4		Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10091	0	B-Lymphocyte	Blood	Homo sapiens	Caucasian		36	years	Female		obligate heterozygote	mother	121	3		Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
+AU10090	A	B-Lymphocyte	Blood	Homo sapiens	Asiatic Indian	EAST INDIAN	2	years	Male	Yes	affected with recessive disorder	proband	122	1	Pervasive developmental disorder	Peripheral vein	Epstein-Barr Virus	cell culture	AUTISTIC DISORDER
