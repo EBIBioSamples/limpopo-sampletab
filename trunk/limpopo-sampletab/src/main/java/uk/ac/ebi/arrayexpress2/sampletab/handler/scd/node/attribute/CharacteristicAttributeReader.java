@@ -77,7 +77,7 @@ public class CharacteristicAttributeReader implements SCDAttributeReader {
                             UnitAttribute unit = new UnitAttribute();
                             unit.setAttributeValue(data[i]);
                             unit.type = unit_type;
-
+                        	/*
                             for (int j = i + 1; j < data.length; j++) {
                                 if (header[j].equals("termsourceref")) {
                                     unit.termSourceREF = data[j];
@@ -95,7 +95,7 @@ public class CharacteristicAttributeReader implements SCDAttributeReader {
                                 // update i to j
                                 i = j;
                             }
-
+							*/
                             // and set the unit
                             attribute.unit = unit;
                         }

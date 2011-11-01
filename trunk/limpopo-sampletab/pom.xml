@@ -27,6 +27,11 @@
 			<name>Oxford e-Research Center</name>
 			<url>http://frog.oerc.ox.ac.uk:8080/artifactory/repo/</url>
 		</repository>
+		<repository>
+			<id>erroritem-repo</id>
+			<name>ErrorItem Mini-SF Repository</name>
+			<url>http://erroritem.sourceforge.net/maven/repo</url>
+		</repository>
 	</repositories>
 
 	<dependencies>
@@ -34,6 +39,12 @@
 			<groupId>uk.ac.ebi.arrayexpress2</groupId>
 			<artifactId>limpopo</artifactId>
 			<version>1.1.1-SNAPSHOT</version>
+		    <exclusions>
+		      <exclusion>
+				<groupId>org.isatools</groupId>
+				<artifactId>graph2tab</artifactId>
+		      </exclusion>
+		    </exclusions>
 		</dependency>
 		<dependency>
 			<groupId>net.sourceforge.fluxion</groupId>
@@ -53,7 +64,18 @@
 		<dependency>
 			<groupId>org.isatools</groupId>
 			<artifactId>graph2tab</artifactId>
-			<version>4.1</version>
+			<version>4.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>org.mged.magetab</groupId>
+			<artifactId>erroritem</artifactId>
+			<version>1.0</version>
+			<exclusions>
+				<exclusion>
+					<groupId>commons-logging</groupId>
+					<artifactId>commons-logging</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 
 

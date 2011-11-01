@@ -233,6 +233,8 @@ public class SCDParser extends AbstractParser<SCD> {
                         readsTo = handlerReadsTo;
                     }
                 }
+                //System.out.println(headerPart[0]);
+                //System.out.println(readsTo);
 
                 // update column number
                 columnNumber += readsTo;
