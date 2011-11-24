@@ -17,7 +17,9 @@ public class SampleTabWriter extends Writer {
 
 	public SampleTabWriter(Writer writer) {
         this.writer = writer;
+        getLog().debug("making MSIWriter");
         this.msiwriter = new MSIWriter(writer);
+        getLog().debug("making SCDWriter");
         this.scdwriter = new SCDWriter(writer);
 	}
 
