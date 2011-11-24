@@ -60,7 +60,7 @@
 		<dependency>
 			<groupId>org.isatools</groupId>
 			<artifactId>graph2tab</artifactId>
-			<version>4.1</version>
+			<version>4.1-SNAPSHOT</version>
 		</dependency>
 		<dependency>
 			<groupId>net.sourceforge.fluxion</groupId>
