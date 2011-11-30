@@ -6,7 +6,7 @@ import uk.ac.ebi.arrayexpress2.sampletab.datamodel.MSI;
 import uk.ac.ebi.arrayexpress2.sampletab.handler.msi.MSIReadHandler;
 
 @ServiceProvider
-public class SubmissionModificationDateHandler extends MSIReadHandler {
+public class SubmissionUpdateDateHandler extends MSIReadHandler {
     @Override
     public int getAllowedLength() {
         return 1;
@@ -18,6 +18,6 @@ public class SubmissionModificationDateHandler extends MSIReadHandler {
     }
 
     public boolean canReadHeader(String header) {
-        return header.equals("submissionmodificationdate");
+        return header.equals("submissionupdatedate");
     }
 }
