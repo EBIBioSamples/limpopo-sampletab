@@ -8,7 +8,7 @@ import uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node.attribute.SCDNodeAtt
 
 public class SampleNode extends AbstractSCDNode {
     public String sampleDescription;
-    public String sampleAccession;
+    public String sampleAccession; //TODO make getter/setter for this that checks value
     public final List<SCDNodeAttribute> attributes = new ArrayList<SCDNodeAttribute>();
 
     public String[] headers() {

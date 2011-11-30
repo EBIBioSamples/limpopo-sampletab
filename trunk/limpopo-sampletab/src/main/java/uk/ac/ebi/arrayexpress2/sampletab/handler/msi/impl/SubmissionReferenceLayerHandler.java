@@ -14,7 +14,7 @@ public class SubmissionReferenceLayerHandler extends MSIReadHandler {
 
     @Override
     protected void readValue(MSI msi, String value, int lineNumber, String... types) throws ParseException {
-    	msi.submissionReferenceLayer = value;
+    	msi.submissionReferenceLayer = (value.toLowerCase() == "true");
     }
 
     public boolean canReadHeader(String header) {
