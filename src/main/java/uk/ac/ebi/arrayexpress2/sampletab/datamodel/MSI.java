@@ -13,7 +13,7 @@ public class MSI {
     public volatile String submissionVersion = "1.0";
     public volatile String submissionReleaseDate = "";
     public volatile String submissionUpdateDate = "";
-    public volatile String submissionReferenceLayer = "";
+    public volatile Boolean submissionReferenceLayer = null;
     
     public volatile List<String> organizationName = new ArrayList<String>();
     public volatile List<String> organizationAddress = new ArrayList<String>();

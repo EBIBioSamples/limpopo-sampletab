@@ -43,7 +43,13 @@ public class MSIWriter extends Writer {
     	writeSingleField("Submission Identifier", msi.submissionIdentifier);
     	writeSingleField("Submission Description", msi.submissionDescription);
     	writeSingleField("Submission Version", msi.submissionVersion);
-    	writeSingleField("Submission Reference Layer", msi.submissionReferenceLayer);
+    	if (msi.submissionReferenceLayer == null){
+    		//do nothing
+    	} else if (msi.submissionReferenceLayer){
+        	writeSingleField("Submission Reference Layer", "true");    		
+    	} else {
+        	writeSingleField("Submission Reference Layer", "false");
+    	}
     	writeSingleField("Submission Release Date", msi.submissionReleaseDate);
     	writeSingleField("Submission Update Date", msi.submissionUpdateDate);
     	writeMultiField("Organization Name", msi.organizationName);
