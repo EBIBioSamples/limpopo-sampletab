@@ -64,10 +64,10 @@ public abstract class NamedAttributeReader implements SCDAttributeReader {
                 // now do the rest
                 for (int i = 1; i < data.length;) {
                 	if (header[i].equals("termsourceref")) {
-                		attribute.termSourceREF = data[i];
+                		attribute.setTermSourceREF(data[i]);
                     }
                     else if (header[i].equals("termsourceid")) {
-                    	attribute.termSourceID = data[i];
+                    	attribute.setTermSourceID(data[i]);
                     }
                     else if (header[i].equals("")) {
                         // skip the case where the header is an empty string
