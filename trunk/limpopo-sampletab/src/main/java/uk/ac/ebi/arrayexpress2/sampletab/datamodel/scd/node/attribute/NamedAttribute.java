@@ -4,9 +4,26 @@ import java.util.ArrayList;
 import java.util.List;
 
 public abstract class NamedAttribute extends AbstractNodeAttribute {
-    public String termSourceREF;
-    public String termSourceID;
-    public String name;
+	protected String termSourceREF;
+	protected String termSourceID;
+    
+    public String getTermSourceREF() {
+		return termSourceREF;
+	}
+
+	public void setTermSourceREF(String termSourceREF) {
+		this.termSourceREF = termSourceREF;
+	}
+
+	public String getTermSourceID() {
+		return termSourceID;
+	}
+
+	public void setTermSourceID(String termSourceID) {
+		this.termSourceID = termSourceID;
+	}
+
+	protected String name;
 
     public String getAttributeType() {
         return name;
