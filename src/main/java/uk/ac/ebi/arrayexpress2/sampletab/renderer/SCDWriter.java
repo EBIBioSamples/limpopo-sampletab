@@ -43,9 +43,9 @@ public class SCDWriter extends Writer {
     	writer.write("[SCD]\n");
     	Collection<SampleNode> nodes = scd.getNodes(SampleNode.class);
     	SCDTableBuilder tb = new SCDTableBuilder(nodes);
-		log.info("Starting SCDTableBuilder.getTable...");
+		log.debug("Starting to assemble table...");
     	List<List<String>> table = tb.getTable(); 
-		log.info("Table assembled");
+		log.debug("Table assembled");
         for (List<String> row : table) {
         	for (String entry : row){
     			if (entry != null){
