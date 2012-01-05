@@ -2,6 +2,7 @@ package uk.ac.ebi.arrayexpress2.sampletab.renderer;
 
 import java.io.IOException;
 import java.io.Writer;
+import java.text.SimpleDateFormat;
 import java.util.List;
 
 import org.slf4j.Logger;
@@ -14,6 +15,8 @@ public class MSIWriter extends Writer {
     private Writer writer;
 
     private Logger log = LoggerFactory.getLogger(getClass());
+    
+	private SimpleDateFormat simpledateformat = new SimpleDateFormat("yyyy/MM/dd");
 
 	public MSIWriter(Writer writer) {
         this.writer = writer;
@@ -50,8 +53,8 @@ public class MSIWriter extends Writer {
     	} else {
         	writeSingleField("Submission Reference Layer", "false");
     	}
-    	writeSingleField("Submission Release Date", msi.submissionReleaseDate);
-    	writeSingleField("Submission Update Date", msi.submissionUpdateDate);
+    	writeSingleField("Submission Release Date", simpledateformat.format(msi.submissionReleaseDate));
+    	writeSingleField("Submission Update Date", simpledateformat.format(msi.submissionUpdateDate));
     	writeMultiField("Organization Name", msi.organizationName);
     	writeMultiField("Organization Address", msi.organizationAddress);
     	writeMultiField("Organization URI", msi.organizationURI);
