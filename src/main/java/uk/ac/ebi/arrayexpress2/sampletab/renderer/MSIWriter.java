@@ -53,8 +53,12 @@ public class MSIWriter extends Writer {
     	} else {
         	writeSingleField("Submission Reference Layer", "false");
     	}
-    	writeSingleField("Submission Release Date", simpledateformat.format(msi.submissionReleaseDate));
-    	writeSingleField("Submission Update Date", simpledateformat.format(msi.submissionUpdateDate));
+    	if (msi.submissionReleaseDate != null){
+    		writeSingleField("Submission Release Date", simpledateformat.format(msi.submissionReleaseDate));
+    	}
+    	if (msi.submissionUpdateDate != null){
+    		writeSingleField("Submission Update Date", simpledateformat.format(msi.submissionUpdateDate));
+    	}
     	writeMultiField("Organization Name", msi.organizationName);
     	writeMultiField("Organization Address", msi.organizationAddress);
     	writeMultiField("Organization URI", msi.organizationURI);
