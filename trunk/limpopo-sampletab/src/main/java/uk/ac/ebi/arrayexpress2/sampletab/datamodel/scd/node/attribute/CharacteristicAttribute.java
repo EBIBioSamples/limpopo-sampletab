@@ -9,7 +9,15 @@ public class CharacteristicAttribute extends AbstractNodeAttribute {
     public UnitAttribute unit;
     public String termSourceREF;
     public String termSourceID;
-
+    
+    
+    public static CharacteristicAttribute makeNew(String name, String value){
+    	CharacteristicAttribute attrib = new CharacteristicAttribute();
+    	attrib.type = name;
+    	attrib.setAttributeValue(value);
+    	return attrib;
+    }
+    
     public String getAttributeType() {
         return "characteristics[" + type + "]";
     }

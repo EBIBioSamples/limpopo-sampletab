@@ -3,6 +3,7 @@ package uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node;
 import uk.ac.ebi.arrayexpress2.magetab.datamodel.graph.AbstractNode;
 
 public abstract class AbstractSCDNode extends AbstractNode implements SCDNode {
+	
     public String toString() {
         StringBuilder hb = new StringBuilder();
         for (String header : headers()) {
