@@ -13,7 +13,7 @@ public class SampleNode extends AbstractSCDNode {
 	public String sampleDescription;
 	public String sampleAccession; // TODO make getter/setter for this that
 									// checks value
-	public final List<SCDNodeAttribute> attributes = new ArrayList<SCDNodeAttribute>();
+	private final List<SCDNodeAttribute> attributes = new ArrayList<SCDNodeAttribute>();
 
 	public String[] headers() {
 		List<String> headersList = new ArrayList<String>();
@@ -49,6 +49,10 @@ public class SampleNode extends AbstractSCDNode {
 
 	public String getNodeType() {
 		return "sample";
+	}
+
+	public void addAttribute(SCDNodeAttribute attribute, int pos) {
+		attributes.add(pos, attribute);
 	}
 
 	public void addAttribute(SCDNodeAttribute attribute) {
