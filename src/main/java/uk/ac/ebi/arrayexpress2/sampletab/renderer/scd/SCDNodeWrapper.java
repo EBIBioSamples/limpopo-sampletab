@@ -2,11 +2,12 @@ package uk.ac.ebi.arrayexpress2.sampletab.renderer.scd;
 
 import org.isatools.tablib.export.graph2tab.DefaultAbstractNode;
 import org.isatools.tablib.export.graph2tab.DefaultTabValueGroup;
-import org.isatools.tablib.export.graph2tab.Node;
+//import org.isatools.tablib.export.graph2tab.Node;
 import org.isatools.tablib.export.graph2tab.TabValueGroup;
 
 import uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node.AbstractSCDNode;
 import uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node.SCDNode;
+import uk.ac.ebi.arrayexpress2.magetab.datamodel.graph.Node;
 
 import java.util.*;
 
@@ -39,32 +40,53 @@ public class SCDNodeWrapper extends DefaultAbstractNode {
     }
 
     @Override
-    public SortedSet<Node> getInputs() {
+    public SortedSet<org.isatools.tablib.export.graph2tab.Node> getInputs() {
         if (inputs != null) {
             return super.getInputs();
         }
-        inputs = new TreeSet<Node>();
-        /*
-        NodeFactory nodeFact = NodeFactory.getInstance();
-        for (uk.ac.ebi.arrayexpress2.magetab.datamodel.graph.Node in : base.getParentNodes()) {
-            inputs.add(nodeFact.getNode((AbstractSCDNode) in));
+        inputs = new TreeSet<org.isatools.tablib.export.graph2tab.Node>();
+        
+        SCDNodeFactory nodeFact = SCDNodeFactory.getInstance();
+        for (Node in : base.getParentNodes()) {
+        	if (in != null){
+        		inputs.add(nodeFact.getNode((SCDNode) in));
+        	}
         }
-        */
+        
         return super.getInputs();
     }
 
     @Override
-    public SortedSet<Node> getOutputs() {
+    public SortedSet<org.isatools.tablib.export.graph2tab.Node> getOutputs() {
         if (outputs != null) {
             return super.getOutputs();
         }
-        outputs = new TreeSet<Node>();
-        /*
-        NodeFactory nodeFact = NodeFactory.getInstance();
-        for (uk.ac.ebi.arrayexpress2.magetab.datamodel.graph.Node out : base.getChildNodes()) {
-            outputs.add(nodeFact.getNode((AbstractSCDNode) out));
+        outputs = new TreeSet<org.isatools.tablib.export.graph2tab.Node>();
+        
+        SCDNodeFactory nodeFact = SCDNodeFactory.getInstance();
+        for (Node out : base.getChildNodes()) {
+        	if (out != null){
+        		outputs.add(nodeFact.getNode((SCDNode) out));
+        	}
         }
-        */
+        
         return super.getOutputs();
     }
+    
+    @Override
+    public int getOrder() {
+    	System.out.println("SPAMANDEGGS!");
+        SCDNodeFactory nodeFact = SCDNodeFactory.getInstance();
+
+		int parentOrder = 100;
+		for (uk.ac.ebi.arrayexpress2.magetab.datamodel.graph.Node parentNode : base.getParentNodes()){
+			int thisParentOrder = nodeFact.getNode((SCDNode) parentNode).getOrder()+1;
+			if (thisParentOrder > parentOrder){
+				parentOrder = thisParentOrder;
+			}	
+		}
+		System.out.println("parentOrder "+parentOrder);
+		return parentOrder;
+    }
+    
 }

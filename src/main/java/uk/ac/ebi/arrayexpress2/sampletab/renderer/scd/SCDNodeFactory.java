@@ -3,13 +3,13 @@ package uk.ac.ebi.arrayexpress2.sampletab.renderer.scd;
 import org.isatools.tablib.export.graph2tab.AbstractNodeFactory;
 import uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node.SCDNode;
 
-public class NodeFactory extends AbstractNodeFactory<SCDNodeWrapper, SCDNode> {
-    private NodeFactory() {
+public class SCDNodeFactory extends AbstractNodeFactory<SCDNodeWrapper, SCDNode> {
+    private SCDNodeFactory() {
     }
 
-    private static final NodeFactory instance = new NodeFactory();
+    private static final SCDNodeFactory instance = new SCDNodeFactory();
 
-    public static NodeFactory getInstance() {
+    public static SCDNodeFactory getInstance() {
         return instance;
     }
 
