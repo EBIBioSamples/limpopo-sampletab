@@ -11,7 +11,7 @@ public class SCDTableBuilder extends TableBuilder {
     public SCDTableBuilder(Collection<? extends SCDNode> nodes) {
         super();
         this.nodes = new HashSet<Node>();
-        NodeFactory nodeFact = NodeFactory.getInstance();
+        SCDNodeFactory nodeFact = SCDNodeFactory.getInstance();
         //wrappers are created here by getNode method
         for (SCDNode node : nodes) {
             this.nodes.add(nodeFact.getNode(node));
