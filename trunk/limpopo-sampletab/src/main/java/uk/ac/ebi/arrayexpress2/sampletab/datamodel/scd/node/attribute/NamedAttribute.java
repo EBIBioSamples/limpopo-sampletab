@@ -22,6 +22,9 @@ public abstract class NamedAttribute extends AbstractNodeAttribute {
 	public void setTermSourceID(String termSourceID) {
 		this.termSourceID = termSourceID;
 	}
+	public void setTermSourceID(Integer termSourceID) {
+		this.termSourceID = termSourceID.toString();
+	}
 
 	protected String name;
 
