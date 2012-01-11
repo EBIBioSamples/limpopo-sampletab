@@ -51,7 +51,7 @@ public class SampleNode extends AbstractSCDNode {
 	}
 
 	public String getNodeType() {
-		return "sample";
+		return "samplename";
 	}
 
 	public void addAttribute(SCDNodeAttribute attribute, int pos) {
@@ -76,6 +76,7 @@ public class SampleNode extends AbstractSCDNode {
 	 *            the object to compare for equality
 	 * @return true if these objects are equal, false otherwise
 	 */
+	/*
     @Override
 	public boolean equals(Object other) {
 		if (other == null)
@@ -101,6 +102,6 @@ public class SampleNode extends AbstractSCDNode {
 				// two randomly chosen prime numbers
 				.append(this.getNodeType()).append(this.getNodeName())
 				.append(this.sampleAccession).toHashCode();
-	}
+	}*/
 
 }

@@ -10,6 +10,16 @@ public class CommentAttribute extends AbstractNodeAttribute {
     public String termSourceREF;
     public String termSourceID;
 
+    public CommentAttribute(){
+        super();
+    }
+    
+    public CommentAttribute(String name, String value){
+        super();
+        this.type = name;
+        this.setAttributeValue(value);
+    }
+    
     public String getAttributeType() {
         return "comment[" + type + "]";
     }

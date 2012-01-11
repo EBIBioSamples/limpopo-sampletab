@@ -27,8 +27,9 @@ public class TestSampleTabParser extends TestCase {
 
     public void setUp() {
         outputStream = new ByteArrayOutputStream();
-        resource = getClass().getClassLoader().getResource("GAE-MEXP-986/sampletab.pre.txt");
-        resource = getClass().getClassLoader().getResource("GCR-autism/sampletab.pre.txt");
+        //resource = getClass().getClassLoader().getResource("GAE-MEXP-986/sampletab.pre.txt");
+        //resource = getClass().getClassLoader().getResource("GCR-autism/sampletab.pre.txt");
+        resource = getClass().getClassLoader().getResource("dummy/sampletab.txt");
 
         parser = new SampleTabParser<SampleData>();
         parser.addErrorItemListener(new ErrorItemListener() {
@@ -92,7 +93,7 @@ public class TestSampleTabParser extends TestCase {
                           "", sampledata.msi.submissionTitle);
             
             assertNotSame("SCD node count should not be zero", 0, sampledata.scd.getNodeCount());
-            ArrayList<SCDNode> nodes = new ArrayList<SCDNode>(sampledata.scd.getNodes("sample"));
+            ArrayList<SCDNode> nodes = new ArrayList<SCDNode>(sampledata.scd.getNodes("samplename"));
             assertNotSame("SCD node count should not be zero", 0, nodes.size());
             assertNotNull("SCD node should be getable by index", nodes.get(0));
             SCDNode node = nodes.get(0);

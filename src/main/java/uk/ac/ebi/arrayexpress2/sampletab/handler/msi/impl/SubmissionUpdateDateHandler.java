@@ -27,6 +27,6 @@ public class SubmissionUpdateDateHandler extends MSIReadHandler {
     }
 
     public boolean canReadHeader(String header) {
-        return header.equals("submissionupdatedate");
+        return (header.equals("submissionupdatedate") || header.equals("submissionmodificationdate"));
     }
 }

@@ -47,8 +47,9 @@ public class SCDNodeWrapper extends DefaultAbstractNode {
         inputs = new TreeSet<org.isatools.tablib.export.graph2tab.Node>();
         
         SCDNodeFactory nodeFact = SCDNodeFactory.getInstance();
-        for (Node in : base.getParentNodes()) {
+        for (uk.ac.ebi.arrayexpress2.magetab.datamodel.graph.Node in : base.getParentNodes()) {
         	if (in != null){
+        	//if (in != null && in instanceof SCDNode ){
         		inputs.add(nodeFact.getNode((SCDNode) in));
         	}
         }
@@ -64,8 +65,9 @@ public class SCDNodeWrapper extends DefaultAbstractNode {
         outputs = new TreeSet<org.isatools.tablib.export.graph2tab.Node>();
         
         SCDNodeFactory nodeFact = SCDNodeFactory.getInstance();
-        for (Node out : base.getChildNodes()) {
+        for (uk.ac.ebi.arrayexpress2.magetab.datamodel.graph.Node out : base.getChildNodes()) {
         	if (out != null){
+            //if (out != null && out instanceof SCDNode){
         		outputs.add(nodeFact.getNode((SCDNode) out));
         	}
         }
