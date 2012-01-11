@@ -154,6 +154,10 @@ public class SCDParser extends AbstractParser<SCD> {
                                         final Deque<Callable<Void>> taskDeque,
                                         final DefaultHandlerListener listener) {
 
+    	if (headerIn.length != dataIn.length){
+    		throw new IllegalArgumentException("Length mismatch of headers and data ("+headerIn.length+" != "+dataIn.length+")");
+    	}
+    	
         // clean header/dataPart to remove blank headers
     	// TODO remove this once fully migrated to java code
         ArrayList<String> headerArray = new ArrayList<String>();
@@ -165,6 +169,7 @@ public class SCDParser extends AbstractParser<SCD> {
         		dataArray.add(dataIn[i]);
         	}
         }
+        
         final String[] header = headerArray.toArray(new String[headerArray.size()]);
         final String[] data = dataArray.toArray(new String[dataArray.size()]);
     	

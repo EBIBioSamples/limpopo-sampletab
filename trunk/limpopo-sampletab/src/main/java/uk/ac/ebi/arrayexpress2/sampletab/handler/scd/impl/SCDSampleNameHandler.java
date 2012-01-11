@@ -79,50 +79,50 @@ public class SCDSampleNameHandler extends SCDReadHandler {
                 sample = new SampleNode();
                 sample.setNodeName(data[0]);
                 scd.addNode(sample);
-                
-		        // now do the rest
-		        for (int i = 1; i < data.length;) {
-		        	if (header[i].equals("sampledescription")) {
-		                sample.sampleDescription = data[i];
-		            }
-		        	else if (header[i].equals("sampleaccession")) {
-		                sample.sampleAccession = data[i];
-		            }
-		            else if (header[i].equals("organism")) {
-		                i += readAttribute(organismAttributeReader, header, data, scd, sample, lineNumber,
-		                        columnNumber + i, i);
-		            }
-		            else if (header[i].equals("sex")) {
-		                i += readAttribute(sexAttributeReader, header, data, scd, sample, lineNumber,
-		                        columnNumber + i, i);
-		            }
-		            else if (header[i].equals("material")) {
-		                i += readAttribute(materialAttributeReader, header, data, scd, sample, lineNumber,
-		                        columnNumber + i, i);
-		            }
-		            else if (header[i].startsWith("characteristic")) {
-		                i += readAttribute(characteristicAttributeReader, header, data, scd, sample, lineNumber,
-		                        columnNumber + i, i);
-		            }
-		            else if (header[i].startsWith("comment")) {
-		                i += readAttribute(commentAttributeReader, header, data, scd, sample, lineNumber,
-		                        columnNumber + i, i);
-		            }
-		            else {
-		                // got to something we don't recognise
-		                // this is either the end, or a bad column name
-		                // update the child node
-		                updateChildNode(header, data, sample, i);
-		                break;
-		            }
-		            i++;
-		        }
-		
-		        // iterated over every column, so must have reached the end
-		        // update node in SDRF
-		        scd.updateNode(sample);
             }
         }
+                
+        // now do the rest
+        for (int i = 1; i < data.length;) {
+        	if (header[i].equals("sampledescription")) {
+                sample.sampleDescription = data[i];
+            }
+        	else if (header[i].equals("sampleaccession")) {
+                sample.sampleAccession = data[i];
+            }
+            else if (header[i].equals("organism")) {
+                i += readAttribute(organismAttributeReader, header, data, scd, sample, lineNumber,
+                        columnNumber + i, i);
+            }
+            else if (header[i].equals("sex")) {
+                i += readAttribute(sexAttributeReader, header, data, scd, sample, lineNumber,
+                        columnNumber + i, i);
+            }
+            else if (header[i].equals("material")) {
+                i += readAttribute(materialAttributeReader, header, data, scd, sample, lineNumber,
+                        columnNumber + i, i);
+            }
+            else if (header[i].startsWith("characteristic")) {
+                i += readAttribute(characteristicAttributeReader, header, data, scd, sample, lineNumber,
+                        columnNumber + i, i);
+            }
+            else if (header[i].startsWith("comment")) {
+                i += readAttribute(commentAttributeReader, header, data, scd, sample, lineNumber,
+                        columnNumber + i, i);
+            }
+            else {
+                // got to something we don't recognise
+                // this is either the end, or a bad column name
+                // update the child node
+                updateChildNode(header, data, sample, i);
+                break;
+            }
+            i++;
+        }
+
+        // iterated over every column, so must have reached the end
+        // update node in SDRF
+        scd.updateNode(sample);
 
     }
 }
