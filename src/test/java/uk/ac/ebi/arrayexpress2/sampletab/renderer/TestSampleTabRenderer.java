@@ -57,10 +57,10 @@ public class TestSampleTabRenderer extends TestCase {
         SampleNode sample = new SampleNode();
         sample.setNodeName(value);
 
-        System.out.println("unresolved.getNodeType() == "+unresolved.getNodeType());
-        System.out.println("unresolved.getNodeName() == "+unresolved.getNodeName());
-        System.out.println("sample.getNodeType() == "+sample.getNodeType());
-        System.out.println("sample.getNodeName() == "+sample.getNodeName());
+        //System.out.println("unresolved.getNodeType() == "+unresolved.getNodeType());
+        //System.out.println("unresolved.getNodeName() == "+unresolved.getNodeName());
+        //System.out.println("sample.getNodeType() == "+sample.getNodeType());
+        //System.out.println("sample.getNodeName() == "+sample.getNodeName());
         
         assertTrue("nodes unequal", unresolved.equals(sample));
         assertTrue("nodes unequal reversed", sample.equals(unresolved));
