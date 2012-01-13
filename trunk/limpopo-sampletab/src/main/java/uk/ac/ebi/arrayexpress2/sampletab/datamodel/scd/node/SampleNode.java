@@ -3,13 +3,6 @@ package uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.SortedSet;
-
-import org.apache.commons.lang.builder.EqualsBuilder;
-import org.apache.commons.lang.builder.HashCodeBuilder;
-import org.isatools.tablib.export.graph2tab.Node;
-import org.isatools.tablib.export.graph2tab.TabValueGroup;
-
 import uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node.attribute.SCDNodeAttribute;
 
 public class SampleNode extends AbstractSCDNode {
