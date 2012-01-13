@@ -2,14 +2,12 @@ package uk.ac.ebi.arrayexpress2.sampletab.renderer;
 
 import java.io.IOException;
 import java.io.Writer;
-import java.text.SimpleDateFormat;
 import java.util.List;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import uk.ac.ebi.arrayexpress2.sampletab.datamodel.MSI;
-import uk.ac.ebi.arrayexpress2.sampletab.datamodel.SampleData;
 
 public class MSIWriter extends Writer {
 	private Writer writer;
