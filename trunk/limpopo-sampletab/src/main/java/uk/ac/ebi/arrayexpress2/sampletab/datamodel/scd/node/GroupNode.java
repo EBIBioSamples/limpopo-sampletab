@@ -11,6 +11,14 @@ public class GroupNode extends AbstractSCDNode {
     public String grouupAccession; //TODO make getter/setter for this that checks value
     public final List<SCDNodeAttribute> attributes = new ArrayList<SCDNodeAttribute>();
 
+    public GroupNode(){
+    	
+    }
+    
+    public GroupNode(String name){
+    	this.setNodeName(name);    	
+    }
+    
 	public void addSample(SampleNode sample){
 		addParentNode(sample);
 	}
