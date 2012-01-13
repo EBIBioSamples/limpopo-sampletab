@@ -3,10 +3,19 @@ package uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node.attribute;
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class NamedAttribute extends AbstractNodeAttribute {
+public class NamedAttribute extends AbstractNodeAttribute {
 	protected String termSourceREF;
 	protected String termSourceID;
     
+	public NamedAttribute(){
+		
+	}
+	
+	public NamedAttribute(String name, String value){
+		this.name = name;
+		this.setAttributeValue(value);		
+	}
+	
     public String getTermSourceREF() {
 		return termSourceREF;
 	}

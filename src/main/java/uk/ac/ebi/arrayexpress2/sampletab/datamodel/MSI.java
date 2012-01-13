@@ -1,5 +1,6 @@
 package uk.ac.ebi.arrayexpress2.sampletab.datamodel;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
@@ -17,6 +18,7 @@ import uk.ac.ebi.arrayexpress2.sampletab.datamodel.msi.Publication;
 import uk.ac.ebi.arrayexpress2.sampletab.datamodel.msi.TermSource;
 
 public class MSI {
+	
 	public volatile String submissionTitle = "";
 	public volatile String submissionDescription = "";
 	public volatile String submissionIdentifier = "";
@@ -59,5 +61,22 @@ public class MSI {
 	
 	protected Logger getLog() {
 		return log;
+	}
+	
+	//convenience methods
+	public String getSubmissionReleaseDateAsString(){
+		if (this.submissionReleaseDate == null){
+			return "";
+		}
+		SimpleDateFormat simpledateformat = new SimpleDateFormat("yyyy/MM/dd");
+		return simpledateformat.format(this.submissionReleaseDate);
+	}
+	
+	public String getSubmissionUpdateDateAsString(){
+		if (this.submissionUpdateDate == null){
+			return "";
+		}
+		SimpleDateFormat simpledateformat = new SimpleDateFormat("yyyy/MM/dd");
+		return simpledateformat.format(this.submissionUpdateDate);
 	}
 }
