@@ -12,10 +12,11 @@ public class GroupNode extends AbstractSCDNode {
     public final List<SCDNodeAttribute> attributes = new ArrayList<SCDNodeAttribute>();
 
     public GroupNode(){
-    	
+        super();
     }
     
     public GroupNode(String name){
+        this();
     	this.setNodeName(name);    	
     }
     
