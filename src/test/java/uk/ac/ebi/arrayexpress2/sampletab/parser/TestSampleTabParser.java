@@ -22,18 +22,21 @@ public class TestSampleTabParser extends TestCase {
     private OutputStream outputStream;
 
     private URL resource;
+    private URL resource_ae;
+    private URL resource_corriel;
+    private URL resource_imsr;
 
     private List<ErrorItem> errorItems = new ArrayList<ErrorItem>();
 
     public void setUp() {
         outputStream = new ByteArrayOutputStream();
-        //resource = getClass().getClassLoader().getResource("GAE-MEXP-986/sampletab.pre.txt");
-        //resource = getClass().getClassLoader().getResource("GCR-autism/sampletab.pre.txt");
+        resource_ae = getClass().getClassLoader().getResource("GAE-MEXP-986/sampletab.pre.txt");
+        resource_corriel = getClass().getClassLoader().getResource("GCR-autism/sampletab.pre.txt");
+        resource_imsr = getClass().getClassLoader().getResource("GMS-HAR/sampletab.pre.txt");
         resource = getClass().getClassLoader().getResource("dummy/sampletab.txt");
 
         parser = new SampleTabParser<SampleData>();
         parser.addErrorItemListener(new ErrorItemListener() {
-
             public void errorOccurred(ErrorItem item) {
                 errorItems.add(item);
             }
@@ -47,8 +50,26 @@ public class TestSampleTabParser extends TestCase {
     }
 
     public void testParse() {
+        doParse(resource);
+    }
+    
+    //this causes the fail
+    public void testParseAE() {
+        doParse(resource_ae);
+    }
+    
+    public void testParseCorriel() {
+        doParse(resource_corriel);
+    }
+    
+    //this also causes fail
+    public void testParseIMSR() {
+        doParse(resource_imsr);
+    }
+    
+    private void doParse(URL url){
         try {
-            SampleData sampledata = parser.parse(resource);
+            SampleData sampledata = parser.parse(url);
             if (!errorItems.isEmpty()) {
                 // there are error items, print them and fail
                 StringBuilder sb = new StringBuilder();
