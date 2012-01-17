@@ -19,24 +19,50 @@ import uk.ac.ebi.arrayexpress2.sampletab.parser.SampleTabParser;
 import junit.framework.TestCase;
 
 public class TestSampleTabRenderer extends TestCase {
-    private SampleTabParser<SampleData> parser;
     private SampleTabWriter sampletabwriter;
     private SampleData sampledata;
     private StringWriter out;
     private URL resource;
 
     public void setUp() {
-        //resource = getClass().getClassLoader().getResource("GAE-MEXP-986/sampletab.pre.txt");
-    	//resource = getClass().getClassLoader().getResource("GCR-ninds/sampletab.pre.txt");
-        resource = getClass().getClassLoader().getResource("dummy/sampletab.txt");
-        parser = new SampleTabParser<SampleData>();
+		out = new StringWriter();
+		//create a dummy file content to use
+		sampledata = new SampleData();
+        sampledata.msi.submissionTitle = "dummy";
+        
+        SampleNode parent = new SampleNode();
+        parent.setNodeName("parent");
+        CommentAttribute comment = new CommentAttribute();
+        comment.type = "stuff";
+        comment.setAttributeValue("stuff");
+        parent.addAttribute(comment);
+        
+        SampleNode child = new SampleNode();
+        child.setNodeName("child");
+        comment = new CommentAttribute();
+        comment.type = "morestuff";
+        comment.setAttributeValue("morestuff");
+        child.addAttribute(comment);
+
+        child.addParentNode(parent);
+        parent.addChildNode(child);
+        
         try {
-			sampledata = parser.parse(resource);
-		} catch (ParseException e) {
+            sampledata.scd.addNode(parent);
+        } catch (ParseException e) {
             e.printStackTrace();
             fail();
-		}
-		out = new StringWriter();
+        }  
+        
+        parent = new SampleNode();
+        parent.setNodeName("nonparent");
+        try {
+            sampledata.scd.addNode(parent);
+        } catch (ParseException e) {
+            e.printStackTrace();
+            fail();
+        }  
+		
     }
     
     public void tearDown() throws Exception{
@@ -82,49 +108,18 @@ public class TestSampleTabRenderer extends TestCase {
 	}
 	
 	public void testDerrivedFrom(){
-		SampleData st = new SampleData();
-		st.msi.submissionTitle = "dummy";
-		
-		SampleNode parent = new SampleNode();
-		parent.setNodeName("parent");
-		CommentAttribute comment = new CommentAttribute();
-		comment.type = "stuff";
-		comment.setAttributeValue("stuff");
-		parent.addAttribute(comment);
-		
-		SampleNode child = new SampleNode();
-		child.setNodeName("child");
-		comment = new CommentAttribute();
-		comment.type = "morestuff";
-		comment.setAttributeValue("morestuff");
-		child.addAttribute(comment);
-
-		child.addParentNode(parent);
-		parent.addChildNode(child);
-		
-		try {
-			st.scd.addNode(parent);
-		} catch (ParseException e) {
-            e.printStackTrace();
-            fail();
-		}  
 		
 		BufferedWriter screen = new BufferedWriter(new OutputStreamWriter(System.out));
 
 		SampleTabWriter sampletabwriterscreen = new SampleTabWriter(screen);
 		try {
-			sampletabwriterscreen.write(st);
+			sampletabwriterscreen.write(sampledata);
+            //sampletabwriterscreen.flush();
 		} catch (IOException e) {
             e.printStackTrace();
             fail();
 		}
 		
-//		try {
-//			sampletabwriterscreen.flush();
-//		} catch (IOException e) {
-//            e.printStackTrace();
-//            fail();
-//		}
 	}
 	
 }

@@ -24,4 +24,5 @@ Database ID
 
 [SCD]
 Sample Name	Organism	Sample Name	Organism
-parent	human	child	also human
+parentA	human	childA	also human
+nonparentB	human			
