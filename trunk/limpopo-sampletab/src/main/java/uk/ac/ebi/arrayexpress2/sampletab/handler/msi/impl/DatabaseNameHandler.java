@@ -8,7 +8,7 @@ import uk.ac.ebi.arrayexpress2.sampletab.handler.msi.MSIReadHandler;
 @ServiceProvider
 public class DatabaseNameHandler extends MSIReadHandler {
     @Override
-    protected void readValue(MSI msi, String value, int lineNumber, String... types) throws ParseException {
+    protected void readValue(MSI msi, String value, int lineNumber, String... types) {
     	msi.databaseName.add(value);
     }
 

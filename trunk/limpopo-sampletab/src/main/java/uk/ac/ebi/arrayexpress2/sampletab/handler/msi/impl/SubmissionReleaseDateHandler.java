@@ -16,13 +16,13 @@ public class SubmissionReleaseDateHandler extends MSIReadHandler {
     }
 
     @Override
-    protected void readValue(MSI msi, String value, int lineNumber, String... types) throws ParseException {
+    protected void readValue(MSI msi, String value, int lineNumber, String... types)  {
     	try {
     		//TODO check synchronization of this
 			msi.submissionUpdateDate = simpledateformat.parse(value);
 		} catch (java.text.ParseException e) {
-			//re-throw as an ae2 exception rather than java exception.
-			throw new ParseException();
+            //TODO report this better
+		    //do nothing
 		}
     }
 
