@@ -19,7 +19,6 @@ import uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node.SCDNode;
 public class TestSampleTabParser extends TestCase {
     private SampleTabParser<SampleData> parser;
 
-    private OutputStream outputStream;
 
     private URL resource;
     private URL resource_ae;
@@ -29,7 +28,6 @@ public class TestSampleTabParser extends TestCase {
     private List<ErrorItem> errorItems = new ArrayList<ErrorItem>();
 
     public void setUp() {
-        outputStream = new ByteArrayOutputStream();
         resource_ae = getClass().getClassLoader().getResource("GAE-MEXP-986/sampletab.pre.txt");
         resource_corriel = getClass().getClassLoader().getResource("GCR-autism/sampletab.pre.txt");
         resource_imsr = getClass().getClassLoader().getResource("GMS-HAR/sampletab.pre.txt");
@@ -50,26 +48,26 @@ public class TestSampleTabParser extends TestCase {
     }
 
     public void testParse() {
-        doParse(resource);
+    	SampleData st = doParse(resource);
+    	assertSame("Submission Reference Layer", true, st.msi.submissionReferenceLayer);
     }
     
-    //this causes the fail
     public void testParseAE() {
-        doParse(resource_ae);
+    	SampleData st = doParse(resource_ae);
     }
     
     public void testParseCorriel() {
-        doParse(resource_corriel);
+    	SampleData st = doParse(resource_corriel);
     }
     
-    //this also causes fail
     public void testParseIMSR() {
-        doParse(resource_imsr);
+        SampleData st = doParse(resource_imsr);
     }
     
-    private void doParse(URL url){
+    private SampleData doParse(URL url){
+        SampleData sampledata = null;
         try {
-            SampleData sampledata = parser.parse(url);
+            sampledata = parser.parse(url);
             if (!errorItems.isEmpty()) {
                 // there are error items, print them and fail
                 StringBuilder sb = new StringBuilder();
@@ -113,17 +111,18 @@ public class TestSampleTabParser extends TestCase {
             assertNotSame("SubmissionTitle should not be an empty string", 
                           "", sampledata.msi.submissionTitle);
             
-            assertNotSame("SCD node count should not be zero", 0, sampledata.scd.getNodeCount());
+            assertNotSame("SCD node count", 0, sampledata.scd.getNodeCount());
             ArrayList<SCDNode> nodes = new ArrayList<SCDNode>(sampledata.scd.getNodes("samplename"));
-            assertNotSame("SCD node count should not be zero", 0, nodes.size());
-            assertNotNull("SCD node should be getable by index", nodes.get(0));
+            assertNotSame("SCD nodes.size()", 0, nodes.size());
+            assertNotNull("SCD node by index", nodes.get(0));
             SCDNode node = nodes.get(0);
-            assertNotSame("SCD node attribute count should not be zero", 0, node.getAttributes().size());
+            assertNotSame("SCD node attribute count", 0, node.getAttributes().size());
         }
         catch (ParseException e) {
             e.printStackTrace();
             fail();
         }
+        return sampledata;
     }
 
 }
