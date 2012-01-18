@@ -3,6 +3,7 @@ Submission Title	dummy
 Submission Identifier	
 Submission Description	
 Submission Version	1.0
+Submission Reference Layer	true
 Organization Name
 Organization Address
 Organization URI
