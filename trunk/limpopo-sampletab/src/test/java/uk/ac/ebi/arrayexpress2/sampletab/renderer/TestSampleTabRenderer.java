@@ -107,19 +107,19 @@ public class TestSampleTabRenderer extends TestCase {
 		}
 	}
 	
-	public void testDerrivedFrom(){
-		
-		BufferedWriter screen = new BufferedWriter(new OutputStreamWriter(System.out));
-
-		SampleTabWriter sampletabwriterscreen = new SampleTabWriter(screen);
-		try {
-			sampletabwriterscreen.write(sampledata);
-            //sampletabwriterscreen.flush();
-		} catch (IOException e) {
-            e.printStackTrace();
-            fail();
-		}
-		
-	}
+//	public void testDerrivedFrom(){
+//		
+//		BufferedWriter screen = new BufferedWriter(new OutputStreamWriter(System.out));
+//
+//		SampleTabWriter sampletabwriterscreen = new SampleTabWriter(screen);
+//		try {
+//			sampletabwriterscreen.write(sampledata);
+//            //sampletabwriterscreen.flush();
+//		} catch (IOException e) {
+//            e.printStackTrace();
+//            fail();
+//		}
+//		
+//	}
 	
 }

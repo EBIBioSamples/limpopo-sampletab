@@ -7,6 +7,7 @@ import uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node.SampleNode;
 import uk.ac.ebi.arrayexpress2.sampletab.handler.scd.SCDReadHandler;
 import uk.ac.ebi.arrayexpress2.sampletab.handler.scd.node.attribute.CharacteristicAttributeReader;
 import uk.ac.ebi.arrayexpress2.sampletab.handler.scd.node.attribute.CommentAttributeReader;
+import uk.ac.ebi.arrayexpress2.sampletab.handler.scd.node.attribute.DatabaseAttributeReader;
 import uk.ac.ebi.arrayexpress2.sampletab.handler.scd.node.attribute.MaterialAttributeReader;
 import uk.ac.ebi.arrayexpress2.sampletab.handler.scd.node.attribute.OrganismAttributeReader;
 import uk.ac.ebi.arrayexpress2.sampletab.handler.scd.node.attribute.SexAttributeReader;
@@ -18,6 +19,7 @@ public class SCDSampleNameHandler extends SCDReadHandler {
     private final OrganismAttributeReader organismAttributeReader;
     private final SexAttributeReader sexAttributeReader;
     private final MaterialAttributeReader materialAttributeReader;
+    private final DatabaseAttributeReader databaseAttributeReader;
 
     public SCDSampleNameHandler() {
         characteristicAttributeReader = new CharacteristicAttributeReader();
@@ -25,6 +27,7 @@ public class SCDSampleNameHandler extends SCDReadHandler {
         organismAttributeReader = new OrganismAttributeReader();
         sexAttributeReader = new SexAttributeReader();
         materialAttributeReader = new MaterialAttributeReader();
+        databaseAttributeReader = new DatabaseAttributeReader();
     }
 
     public boolean canReadHeader(String[] header) {
@@ -48,6 +51,9 @@ public class SCDSampleNameHandler extends SCDReadHandler {
             }
             else if (header[i].equals("material")) {
                 i += assessAttribute(materialAttributeReader, header, i);
+            }
+            else if (header[i].equals("databasename")) {
+                i += assessAttribute(databaseAttributeReader, header, i);
             }
             else if (header[i].startsWith("characteristic")) {
                 i += assessAttribute(characteristicAttributeReader, header, i);
@@ -100,6 +106,10 @@ public class SCDSampleNameHandler extends SCDReadHandler {
             }
             else if (header[i].equals("material")) {
                 i += readAttribute(materialAttributeReader, header, data, scd, sample, lineNumber,
+                        columnNumber + i, i);
+            }
+            else if (header[i].equals("databasename")) {
+                i += readAttribute(databaseAttributeReader, header, data, scd, sample, lineNumber,
                         columnNumber + i, i);
             }
             else if (header[i].startsWith("characteristic")) {
