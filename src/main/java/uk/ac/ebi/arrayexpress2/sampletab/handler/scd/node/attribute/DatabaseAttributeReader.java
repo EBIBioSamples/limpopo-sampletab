@@ -11,29 +11,30 @@ import uk.ac.ebi.arrayexpress2.magetab.exception.UnmatchedTagException;
 import uk.ac.ebi.arrayexpress2.sampletab.datamodel.SCD;
 import uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node.SCDNode;
 import uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node.attribute.AbstractNodeAttribute;
-import uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node.attribute.NamedAttribute;
+import uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node.attribute.DatabaseAttribute;
 
 
-public abstract class NamedAttributeReader implements SCDAttributeReader {
+public class DatabaseAttributeReader implements SCDAttributeReader {
     private Logger log = LoggerFactory.getLogger(getClass());
-    
-    protected String namedAttribute = null;
-    protected abstract AbstractNodeAttribute getNewAttribute();
+        
+    protected AbstractNodeAttribute getNewAttribute() {
+        return new DatabaseAttribute();
+    }
     
     protected Logger getLog() {
         return log;
     }
 
     public boolean canRead(String firstHeader) {
-        return firstHeader.equals(namedAttribute);
+        return firstHeader.equals("databasename");
     }
 
     public int assess(String[] header) {
         for (int i = 1; i < header.length; i++) {
-            if (header[i].equals("termsourceref")) {
+            if (header[i].equals("databaseid")) {
                 // ok
             }
-            else if (header[i].equals("termsourceid")) {
+            else if (header[i].equals("databaseuri")) {
                 // ok
             }
             else {
@@ -53,22 +54,22 @@ public abstract class NamedAttributeReader implements SCDAttributeReader {
                                SCDNode parentNode,
                                int lineNumber,
                                int columnNumber) throws ParseException {
-        NamedAttribute attribute;
-        
+        DatabaseAttribute attribute;
+
         if (canRead(header[0])) {
             // make sure attribute is not empty
             if (data[0] != null && !data[0].equals("")) {
                 // first row, so make a new attribute node
-            	attribute = (NamedAttribute) getNewAttribute();
+            	attribute = (DatabaseAttribute) getNewAttribute();
             	attribute.setAttributeValue(data[0]);
             	
                 // now do the rest
                 for (int i = 1; i < data.length;) {
-                	if (header[i].equals("termsourceref")) {
-                		attribute.setTermSourceREF(data[i]);
+                	if (header[i].equals("databaseid")) {
+                		attribute.databaseID = data[i];
                     }
-                    else if (header[i].equals("termsourceid")) {
-                    	attribute.setTermSourceID(data[i]);
+                    else if (header[i].equals("databaseuri")) {
+                        attribute.databaseURI = data[i];
                     }
                     else if (header[i].equals("")) {
                         // skip the case where the header is an empty string
