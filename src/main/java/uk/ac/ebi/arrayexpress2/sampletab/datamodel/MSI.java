@@ -21,7 +21,7 @@ public class MSI {
 	public volatile String submissionVersion = "1.0";
 	public volatile Date submissionReleaseDate = null;
 	public volatile Date submissionUpdateDate = null;
-	public volatile Boolean submissionReferenceLayer = null;
+	public volatile Boolean submissionReferenceLayer = false;
 
 	public volatile List<String> organizationName = new ArrayList<String>();
 	public volatile List<String> organizationAddress = new ArrayList<String>();
