@@ -15,6 +15,7 @@ import uk.ac.ebi.arrayexpress2.magetab.exception.ParseException;
 import uk.ac.ebi.arrayexpress2.magetab.listener.ErrorItemListener;
 import uk.ac.ebi.arrayexpress2.sampletab.datamodel.SampleData;
 import uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node.SCDNode;
+import uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node.attribute.SCDNodeAttribute;
 
 public class TestSampleTabParser extends TestCase {
     private SampleTabParser<SampleData> parser;
@@ -48,7 +49,22 @@ public class TestSampleTabParser extends TestCase {
     }
 
     public void testParse() {
-    	SampleData st = doParse(resource);
+        SampleData st = doParse(resource);
+        
+        //check database handler
+        SCDNode node = st.scd.getNode("childA", "samplename");
+        assertNotSame("Node childA is not null", null, node);
+        String dbname = null;
+        SCDNodeAttribute dbattr = null;
+        for (SCDNodeAttribute attr : node.getAttributes()){
+            if (attr.getAttributeType().equals("Database Name"))
+                dbattr = attr;
+        }
+        assertNotSame("Attribute DatabaseName is not null", null, dbattr);
+        dbname = dbattr.getAttributeValue();
+        assertEquals("Check parsed DatabaseName", "bobdb", dbname);
+        
+        //check submission reference layer handler
     	assertSame("Submission Reference Layer", true, st.msi.submissionReferenceLayer);
     }
     
