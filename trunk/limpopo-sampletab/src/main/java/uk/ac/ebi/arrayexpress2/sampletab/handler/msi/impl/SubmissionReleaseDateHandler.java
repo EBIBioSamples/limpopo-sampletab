@@ -19,7 +19,7 @@ public class SubmissionReleaseDateHandler extends MSIReadHandler {
     protected void readValue(MSI msi, String value, int lineNumber, String... types)  {
     	try {
     		//TODO check synchronization of this
-			msi.submissionUpdateDate = simpledateformat.parse(value);
+			msi.submissionReleaseDate = simpledateformat.parse(value);
 		} catch (java.text.ParseException e) {
             //TODO report this better
 		    //do nothing

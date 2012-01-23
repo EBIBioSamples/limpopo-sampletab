@@ -126,6 +126,8 @@ public class TestSampleTabParser extends TestCase {
             assertNotNull("SubmissionTitle must not be null", sampledata.msi.submissionTitle);
             assertNotSame("SubmissionTitle should not be an empty string", 
                           "", sampledata.msi.submissionTitle);
+            assertNotSame("Submission Release Date should not be null", "", sampledata.msi.submissionReleaseDate);
+            assertNotSame("Submission Release Date should not be blank", "", sampledata.msi.getSubmissionReleaseDateAsString());
             
             assertNotSame("SCD node count", 0, sampledata.scd.getNodeCount());
             ArrayList<SCDNode> nodes = new ArrayList<SCDNode>(sampledata.scd.getNodes("samplename"));

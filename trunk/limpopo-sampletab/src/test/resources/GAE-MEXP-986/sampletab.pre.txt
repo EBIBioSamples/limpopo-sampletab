@@ -3,8 +3,8 @@ Submission Title	Transcription profiling of wild type and DREB2C over-expression
 Submission Identifier	GAE-MEXP-986
 Submission Description	We analysed DREB2C overexpressing Arabidopsis plants (35S:DREB2C-a line: S15, 35S:DREB2C-c line: S22)with cDNA microarray (A-MEXP-187).
 Submission Version	1.0
-Submission Release Date	2007-03-10
-Submission Modification Date	2011-10-10
+Submission Release Date	2007/03/10
+Submission Modification Date	2011/10/10
 Submission Reference Layer	false
 
 Person Last Name	Yang
