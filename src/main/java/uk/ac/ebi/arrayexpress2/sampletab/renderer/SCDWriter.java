@@ -47,9 +47,13 @@ public class SCDWriter extends Writer {
     	List<List<String>> table = tb.getTable(); 
 		log.debug("Table assembled");
         for (List<String> row : table) {
-        	for (String entry : row){
-    			if (entry != null){
-    				writer.write(entry);
+        	for (String value : row){
+    			if (value != null){
+    			    //purge all stange characters
+    			    value = value.replace("\"", "");
+                    value = value.replace("\n", "");
+                    value = value.replace("\t", "");
+    				writer.write(value);
     			}
     	    	writer.write("\t");        		
         	}

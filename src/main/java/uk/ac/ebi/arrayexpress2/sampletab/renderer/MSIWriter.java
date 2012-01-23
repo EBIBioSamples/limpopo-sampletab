@@ -90,6 +90,10 @@ public class MSIWriter extends Writer {
 			for (String value : values) {
 				writer.write("\t");
 				if (value != null) {
+                    //purge all stange characters
+				    value = value.replace("\"", "");
+                    value = value.replace("\n", "");
+                    value = value.replace("\t", "");
 					writer.write(value);
 				}
 			}
