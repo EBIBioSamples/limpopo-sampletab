@@ -9,6 +9,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import uk.ac.ebi.arrayexpress2.sampletab.datamodel.SCD;
+import uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node.SCDNode;
 import uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node.SampleNode;
 import uk.ac.ebi.arrayexpress2.sampletab.renderer.scd.SCDTableBuilder;
 
@@ -41,8 +42,7 @@ public class SCDWriter extends Writer {
 
     public void write(SCD scd) throws IOException{
     	writer.write("[SCD]\n");
-    	Collection<SampleNode> nodes = scd.getNodes(SampleNode.class);
-    	SCDTableBuilder tb = new SCDTableBuilder(nodes);
+    	SCDTableBuilder tb = new SCDTableBuilder(scd.getRootNodes());
 		log.debug("Starting to assemble table...");
     	List<List<String>> table = tb.getTable(); 
 		log.debug("Table assembled");

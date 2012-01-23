@@ -8,7 +8,7 @@ import uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node.attribute.SCDNodeAtt
 
 public class GroupNode extends AbstractSCDNode {
     public String groupDescription;
-    public String grouupAccession; //TODO make getter/setter for this that checks value
+    public String groupAccession; //TODO make getter/setter for this that checks value
     public final List<SCDNodeAttribute> attributes = new ArrayList<SCDNodeAttribute>();
 
     public GroupNode(){
@@ -20,14 +20,16 @@ public class GroupNode extends AbstractSCDNode {
     	this.setNodeName(name);    	
     }
     
-	public void addSample(SampleNode sample){
-		addParentNode(sample);
+	public void addSample(SCDNode sample){
+	    //TODO verify it is a sample not another group
+		this.addParentNode(sample);
+        sample.addChildNode(this);
 	}
     
     public String[] headers() {
         List<String> headersList = new ArrayList<String>();
         headersList.add("Group Name");
-        if (grouupAccession != null) {
+        if (groupAccession != null) {
             headersList.add("Group Accession");
         }
         if (groupDescription != null) {
@@ -43,8 +45,8 @@ public class GroupNode extends AbstractSCDNode {
     public String[] values() {
         List<String> valuesList = new ArrayList<String>();
         valuesList.add(nodeName);
-        if (grouupAccession != null) {
-        	valuesList.add(grouupAccession);
+        if (groupAccession != null) {
+        	valuesList.add(groupAccession);
         }
         if (groupDescription != null) {
         	valuesList.add(groupDescription);
