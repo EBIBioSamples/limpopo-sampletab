@@ -7,10 +7,16 @@ public class SCDNodeFactory extends AbstractNodeFactory<SCDNodeWrapper, SCDNode>
     private SCDNodeFactory() {
     }
 
-    private static final SCDNodeFactory instance = new SCDNodeFactory();
+    private static SCDNodeFactory instance = new SCDNodeFactory();
 
     public static SCDNodeFactory getInstance() {
         return instance;
+    }
+    
+    public static void clear(){
+        //recreate singleton instance.
+        //caching causes problems laying out multiple graphs in the same VM
+        instance = new SCDNodeFactory();
     }
 
     @Override
