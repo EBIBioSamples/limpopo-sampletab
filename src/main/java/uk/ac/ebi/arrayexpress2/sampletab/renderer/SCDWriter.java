@@ -11,6 +11,7 @@ import org.slf4j.LoggerFactory;
 import uk.ac.ebi.arrayexpress2.sampletab.datamodel.SCD;
 import uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node.SCDNode;
 import uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node.SampleNode;
+import uk.ac.ebi.arrayexpress2.sampletab.renderer.scd.SCDNodeFactory;
 import uk.ac.ebi.arrayexpress2.sampletab.renderer.scd.SCDTableBuilder;
 
 public class SCDWriter extends Writer {
@@ -59,5 +60,7 @@ public class SCDWriter extends Writer {
         	}
 	    	writer.write("\n");
         }
+        //recreate the node factory to flush its internal cache
+        SCDNodeFactory.clear();
     }
 }
