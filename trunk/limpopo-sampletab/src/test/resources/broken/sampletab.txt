@@ -1,0 +1,30 @@
+[MSI]
+Submission Title	dummy
+Submission Identifier	
+Submission Description	
+Submission Version	1.0
+Submission Reference Layer	true
+Submission Release Date	2100/04/01
+Organization Name
+Organization Address
+Organization URI
+Organization Email
+Organization Role
+Person Last Name
+Person Initials
+Person First Name
+Person Email
+Person Role
+Publication DOI
+Publication PubMed ID
+Term Source Name
+Term Source URI
+Term Source Version
+Database Name
+Database URI
+Database ID
+
+[SCD]
+Sample Name	Organism	Sample Name	Organism	
+parentA	human	childA	also human	bobdb	bob101	www.bob.ac.uk/101
+nonparentB	human			
