@@ -29,11 +29,13 @@ public abstract class SCDReadHandler extends AbstractHandler implements ReadHand
 
         // if every element of data is empty, read nothing
         boolean noData = true;
-        for (int i = 0; i < assess(header); i++) {
-            String d = data[i];
-            if (!d.isEmpty()) {
-                noData = false;
-                break;
+        if (data.length > 0){
+            for (int i = 0; i < assess(header); i++) {
+                String d = data[i];
+                if (!d.isEmpty()) {
+                    noData = false;
+                    break;
+                }
             }
         }
 
@@ -45,7 +47,7 @@ public abstract class SCDReadHandler extends AbstractHandler implements ReadHand
                     ErrorItemFactory.getErrorItemFactory(getClass().getClassLoader())
                             .generateErrorItem(
                                     message,
-                                    -1,
+                                    501,
                                     this.getClass());
 
             // fire listener failed event
@@ -67,7 +69,7 @@ public abstract class SCDReadHandler extends AbstractHandler implements ReadHand
                         ErrorItemFactory.getErrorItemFactory(getClass().getClassLoader())
                                 .generateErrorItem(
                                         message,
-                                        -1,
+                                        503,
                                         this.getClass());
 
                 // fire listener failed event
@@ -90,7 +92,7 @@ public abstract class SCDReadHandler extends AbstractHandler implements ReadHand
                         ErrorItemFactory.getErrorItemFactory(getClass().getClassLoader())
                                 .generateErrorItem(
                                         message,
-                                        -1,
+                                        515,
                                         this.getClass());
 
                 // fire listener failed event

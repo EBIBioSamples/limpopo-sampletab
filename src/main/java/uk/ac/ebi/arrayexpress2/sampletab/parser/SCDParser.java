@@ -154,35 +154,17 @@ public class SCDParser extends AbstractParser<SCD> {
                                         final Deque<Callable<Void>> taskDeque,
                                         final DefaultHandlerListener listener) {
 
-    	if (headerIn.length < dataIn.length){
-    		throw new IllegalArgumentException("Length mismatch of headers and data ("+headerIn.length+" != "+dataIn.length+")");
-    	}
-    	
-        // clean header/dataPart to remove blank headers
-    	// TODO remove this once fully migrated to java code
-        ArrayList<String> headerArray = new ArrayList<String>();
-        ArrayList<String> dataArray = new ArrayList<String>();
-        for (int i = 0; i < dataIn.length; i++){
-        	if (dataIn[i].length() != 0) {
-        		headerArray.add(headerIn[i]);
-        		dataArray.add(dataIn[i]);
-        	}
-        }
-        
-        final String[] header = headerArray.toArray(new String[headerArray.size()]);
-        final String[] data = dataArray.toArray(new String[dataArray.size()]);
-    	
-        getLog().trace("Creating handlers for " + header.toString());
+        getLog().trace("Creating handlers for " + headerIn.toString());
 
         // start from 0-index column
         int columnNumber = 0;
 
         // find any handlers for this line data
-        while (columnNumber < header.length) {
+        while (columnNumber < headerIn.length) {
             // get the next part of the header
-            final String[] headerPart = MAGETABUtils.extractRange(header, columnNumber);
+            final String[] headerPart = MAGETABUtils.extractRange(headerIn, columnNumber);
             // get the next part of the data
-            final String[] dataPart = MAGETABUtils.extractRange(data, columnNumber);
+            final String[] dataPart = MAGETABUtils.extractRange(dataIn, columnNumber);
 
             // get the handler(s) for this part of the graph
             Collection<SCDReadHandler> handlers = HandlerLoader.getHandlerLoader().getReadHandlersOfType(SCDReadHandler.class, headerPart);
