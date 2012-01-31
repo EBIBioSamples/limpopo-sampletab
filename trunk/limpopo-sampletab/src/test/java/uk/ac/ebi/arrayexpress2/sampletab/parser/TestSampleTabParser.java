@@ -34,8 +34,8 @@ public class TestSampleTabParser extends TestCase {
         resource_imsr = getClass().getClassLoader().getResource("GMS-HAR/sampletab.pre.txt");
         resource = getClass().getClassLoader().getResource("dummy/sampletab.txt");
         resource_broken = getClass().getClassLoader().getResource("broken/sampletab.txt");
-        errorItems = new ArrayList<ErrorItem>();
         parser = new SampleTabParser<SampleData>();
+        errorItems = new ArrayList<ErrorItem>();
         parser.addErrorItemListener(new ErrorItemListener() {
             public void errorOccurred(ErrorItem item) {
                 errorItems.add(item);
