@@ -22,7 +22,7 @@ public class CharacteristicAttribute extends AbstractNodeAttribute {
     
     
     public String getAttributeType() {
-        return "characteristics[" + type + "]";
+        return "characteristic[" + type + "]";
     }
 
     public String[] headers() {

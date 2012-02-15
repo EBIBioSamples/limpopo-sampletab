@@ -41,7 +41,7 @@ public class MSIParser extends AbstractParser<MSI> {
     
 
     public MSI parse(InputStream msiIn, MSI msi, ExecutorService service) throws ParseException {
-        getLog().info("Starting MSI parsing...");
+        getLog().debug("Starting MSI parsing...");
         fireParsingStartedEvent(new ProgressEvent());
 
         try {
