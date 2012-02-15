@@ -93,7 +93,7 @@ public class SampleTabParser<O> extends AbstractParser<SampleData> {
     }
     
     public SampleData parse(String filename) throws ParseException {
-        getLog().info("Starting parsing "+filename+"...");
+        getLog().debug("Starting parsing "+filename+"...");
     	return parse(new File(filename));
     }
 
@@ -226,14 +226,14 @@ public class SampleTabParser<O> extends AbstractParser<SampleData> {
 
             // trigger validate
             if (getValidator() != null) {
-                getLog().info("Doing validation with " + getValidator().getClass().getSimpleName());
+                getLog().debug("Doing validation with " + getValidator().getClass().getSimpleName());
                 getValidator().validate(target, service);
             }
 
             // trigger convert
             if (getConverter() != null) {
                 for (O outputResource : outputResources) {
-                    getLog().info("Doing conversion to " + outputResource.getClass().getSimpleName() +
+                    getLog().debug("Doing conversion to " + outputResource.getClass().getSimpleName() +
                                           " with " + getConverter().getClass().getSimpleName());
                     getConverter().convert(target, outputResource, service);
                 }
@@ -343,7 +343,7 @@ public class SampleTabParser<O> extends AbstractParser<SampleData> {
         }
 
         public void parsingCompleted(ProgressEvent evt) {
-            getLog().info("Parsed MSI successfully");
+            getLog().debug("Parsed MSI successfully");
             flag.setMSITasksAdded(true);
             flag.setMSIFinished(true);
 
@@ -374,7 +374,7 @@ public class SampleTabParser<O> extends AbstractParser<SampleData> {
         }
 
         public void parsingCompleted(ProgressEvent evt) {
-            getLog().info("Parsed SCD successfully");
+            getLog().debug("Parsed SCD successfully");
             flag.setSCDFinished(true);
 
             // fire a completion event on this parser if all done

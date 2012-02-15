@@ -16,13 +16,16 @@ public class SubmissionUpdateDateHandler extends MSIReadHandler {
     }
 
     @Override
-    protected void readValue(MSI msi, String value, int lineNumber, String... types)  {
+    protected void readValue(MSI msi, String value, int lineNumber, String... types) throws ParseException  {
+        
+        if (!value.matches("[0-9]{2,4}/[0-9]{1,2}/[0-9]{1,2}"))
+            throw new ParseException("Invalid SubmissionUpdateDate \""+value+"\"");
+        
     	try {
     		//TODO check synchronization of this
 			msi.submissionUpdateDate = simpledateformat.parse(value);
 		} catch (java.text.ParseException e) {
-		    //TODO report this better
-		    //do nothing
+            throw new ParseException(e);
 		}
     }
 

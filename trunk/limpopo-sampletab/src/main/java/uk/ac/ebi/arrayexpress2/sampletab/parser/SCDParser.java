@@ -43,7 +43,7 @@ public class SCDParser extends AbstractParser<SCD> {
     }
     
     public SCD parse(InputStream scdIn, SCD scd, ExecutorService service) throws ParseException {
-        getLog().info("Starting SCD parsing...");
+        getLog().debug("Starting SCD parsing...");
         fireParsingStartedEvent(new ProgressEvent());
 
         try {
