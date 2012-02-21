@@ -61,21 +61,19 @@ public class MSI {
 	
 	//convenience methods
 	public String getSubmissionReleaseDateAsString(){
-//		if (this.submissionReleaseDate == null){
-//			return "";
-//		}
+        SimpleDateFormat simpledateformat = new SimpleDateFormat("yyyy/MM/dd");
 	    if (this.submissionReleaseDate == null) {
-	        throw new NullPointerException("submissionReleaseDate is null");
+	        log.warn("submissionReleaseDate is null");
+	        return simpledateformat.format(new Date());
 	    }
-		SimpleDateFormat simpledateformat = new SimpleDateFormat("yyyy/MM/dd");
 		return simpledateformat.format(this.submissionReleaseDate);
 	}
 	
 	public String getSubmissionUpdateDateAsString(){
+        SimpleDateFormat simpledateformat = new SimpleDateFormat("yyyy/MM/dd");
 		if (this.submissionUpdateDate == null){
 		    return this.getSubmissionReleaseDateAsString();
 		}
-		SimpleDateFormat simpledateformat = new SimpleDateFormat("yyyy/MM/dd");
 		return simpledateformat.format(this.submissionUpdateDate);
 	}
 }

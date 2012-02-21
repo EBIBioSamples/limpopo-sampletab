@@ -9,7 +9,7 @@ import uk.ac.ebi.arrayexpress2.sampletab.handler.msi.MSIReadHandler;
 
 @ServiceProvider
 public class SubmissionUpdateDateHandler extends MSIReadHandler {
-	private SimpleDateFormat simpledateformat = new SimpleDateFormat("yyyy/MM/dd");
+    public static SimpleDateFormat simpledateformat = new SimpleDateFormat("yyyy/MM/dd");
     @Override
     public int getAllowedLength() {
         return 1;
@@ -17,13 +17,13 @@ public class SubmissionUpdateDateHandler extends MSIReadHandler {
 
     @Override
     protected void readValue(MSI msi, String value, int lineNumber, String... types) throws ParseException  {
-        
         if (!value.matches("[0-9]{2,4}/[0-9]{1,2}/[0-9]{1,2}"))
             throw new ParseException("Invalid SubmissionUpdateDate \""+value+"\"");
         
     	try {
-    		//TODO check synchronization of this
-			msi.submissionUpdateDate = simpledateformat.parse(value);
+            synchronized (simpledateformat){
+                msi.submissionUpdateDate = simpledateformat.parse(value);
+            }
 		} catch (java.text.ParseException e) {
             throw new ParseException(e);
 		}
