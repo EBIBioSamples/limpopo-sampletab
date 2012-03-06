@@ -37,7 +37,6 @@ public class Database {
 			.append(this.getURI(), other.getURI())
 			.append(this.getID(), other.getID())
 			.isEquals();
-
 	}
 
 	public int hashCode() {
