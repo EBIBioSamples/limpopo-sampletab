@@ -2,7 +2,9 @@ package uk.ac.ebi.arrayexpress2.sampletab.datamodel;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Date;
+import java.util.LinkedHashSet;
 import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -42,16 +44,16 @@ public class MSI {
 	public volatile List<String> termSourceURI = new ArrayList<String>();
 	public volatile List<String> termSourceVersion = new ArrayList<String>();
 
-	public volatile List<String> databaseName = new ArrayList<String>();
-	public volatile List<String> databaseURI = new ArrayList<String>();
-	public volatile List<String> databaseID = new ArrayList<String>();
+//	public volatile List<String> databaseName = new ArrayList<String>();
+//	public volatile List<String> databaseURI = new ArrayList<String>();
+//	public volatile List<String> databaseID = new ArrayList<String>();
 
 	//TODO finish implementing collection-based substructures
 //	public volatile Collection<Organization> organizations = new LinkedHashSet<Organization>();
 //	public volatile Collection<Person> persons = new LinkedHashSet<Person>();
 //	public volatile Collection<Publication> publications = new LinkedHashSet<Publication>();
 //	public volatile Collection<TermSource> termSources = new LinkedHashSet<TermSource>();
-//	public volatile Collection<Database> databases = new LinkedHashSet<Database>();
+	public volatile Collection<Database> databases = new LinkedHashSet<Database>();
 
 	private Logger log = LoggerFactory.getLogger(getClass());
 	
