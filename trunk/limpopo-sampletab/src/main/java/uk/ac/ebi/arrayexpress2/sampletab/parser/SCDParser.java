@@ -31,6 +31,7 @@ public class SCDParser extends AbstractParser<SCD> {
 
     public SCD parse(InputStream scdIn, SCD scd) throws ParseException {
         ExecutorService service = Executors.newSingleThreadExecutor();
+        //ExecutorService service = Executors.newCachedThreadPool();
         SCD result = parse(scdIn, scd, service);
         try {
             service.shutdown();
@@ -98,6 +99,13 @@ public class SCDParser extends AbstractParser<SCD> {
         // create handler tasks for each line, store them temporarily in a deque to be queued for execution
         final BlockingDeque<Callable<Void>> taskDeque = new LinkedBlockingDeque<Callable<Void>>();
 
+        if (scdData.length == 0){
+            String message = "No SCD headers found.";
+            getLog().error(message);
+            fireParsingFailedEvent(new ProgressEvent());
+            return;
+        }
+        
         // retain header (first row), needs to go to each handler
         final String[] header = MAGETABUtils.digestHeaders(scdData[0]);
 

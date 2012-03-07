@@ -104,6 +104,7 @@ public class SampleTabParser<O> extends AbstractParser<SampleData> {
 	public SampleData parse(InputStream dataIn, SampleData target)
 			throws ParseException {
         ExecutorService service = Executors.newSingleThreadExecutor();
+        //ExecutorService service = Executors.newCachedThreadPool();
         try {
         	SampleData result = parse(dataIn, target, service);
             service.shutdown();
@@ -177,9 +178,9 @@ public class SampleTabParser<O> extends AbstractParser<SampleData> {
         try {
         	String line;
 	        while ((line = in.readLine()) != null) {
-	        		if (line.contains("[MSI]")){
+	        		if (buffer == null && line.contains("[MSI]")){
 	        			buffer = msiBuffer;
-	        		} else if (line.contains("SCD")){
+	        		} else if (buffer == msiBuffer && line.contains("[SCD]")){
 	        			buffer = scdBuffer;
 	        		} else if (buffer != null){
 	        			buffer.append(line);
