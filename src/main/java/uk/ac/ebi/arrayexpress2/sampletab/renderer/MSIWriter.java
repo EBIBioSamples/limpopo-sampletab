@@ -2,12 +2,15 @@ package uk.ac.ebi.arrayexpress2.sampletab.renderer;
 
 import java.io.IOException;
 import java.io.Writer;
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import uk.ac.ebi.arrayexpress2.sampletab.datamodel.MSI;
+import uk.ac.ebi.arrayexpress2.sampletab.datamodel.msi.Database;
 
 public class MSIWriter extends Writer {
 	private Writer writer;
@@ -39,6 +42,9 @@ public class MSIWriter extends Writer {
 	public void write(MSI msi) throws IOException {
 		writer.write("[MSI]\n");
 		writeSingleField("Submission Title", msi.submissionTitle);
+		if(msi.submissionIdentifier == null || msi.submissionIdentifier.trim().length() == 0){
+		    log.error("Submission Identifier is invalid");
+		}
 		writeSingleField("Submission Identifier", msi.submissionIdentifier);
 		writeSingleField("Submission Description", msi.submissionDescription);
 		writeSingleField("Submission Version", msi.submissionVersion);
@@ -53,6 +59,7 @@ public class MSIWriter extends Writer {
 				msi.getSubmissionReleaseDateAsString());
 		writeSingleField("Submission Update Date",
 				msi.getSubmissionUpdateDateAsString());
+		
 		writeMultiField("Organization Name", msi.organizationName);
 		writeMultiField("Organization Address", msi.organizationAddress);
 		writeMultiField("Organization URI", msi.organizationURI);
@@ -68,9 +75,7 @@ public class MSIWriter extends Writer {
 		writeMultiField("Term Source Name", msi.termSourceName);
 		writeMultiField("Term Source URI", msi.termSourceURI);
 		writeMultiField("Term Source Version", msi.termSourceVersion);
-		writeMultiField("Database Name", msi.databaseName);
-		writeMultiField("Database URI", msi.databaseURI);
-		writeMultiField("Database ID", msi.databaseID);
+		writeDatabases(msi.databases);
 	}
 
 	public void writeSingleField(String heading, String value)
@@ -99,5 +104,30 @@ public class MSIWriter extends Writer {
 			}
 			writer.write("\n");
 		}
+	}
+	
+	public void writeDatabases(Collection<Database> databases)
+        throws IOException {
+	    if (databases != null){
+	        List<Database> dbs = new ArrayList<Database>(databases);
+	        writer.write("Database Name\t");
+	        for (Database db : dbs){
+	            writer.write(db.getName());
+                writer.write("\t");
+	        }
+            writer.write("\n");
+            writer.write("Database ID\t");
+            for (Database db : dbs){
+                writer.write(db.getID());
+                writer.write("\t");
+            }
+            writer.write("\n");
+            writer.write("Database URI\t");
+            for (Database db : dbs){
+                writer.write(db.getURI());
+                writer.write("\t");
+            }
+            writer.write("\n");
+	    }
 	}
 }
