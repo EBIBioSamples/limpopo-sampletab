@@ -4,10 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class UnitAttribute extends AbstractNodeAttribute {
+public class UnitAttribute extends AbstractNodeAttributeOntology {
     public String type;
-    public String termSourceREF;
-    public String termSourceID;
 
     public String getAttributeType() {
         return "unit[" + type + "]";
@@ -16,10 +14,10 @@ public class UnitAttribute extends AbstractNodeAttribute {
     public String[] headers() {
         List<String> headersList = new ArrayList<String>();
         headersList.add("Unit[" + type + "]");
-        if (termSourceREF != null) {
+        if (getTermSourceREF() != null) {
             headersList.add("Term Source Ref");
         }
-        if (termSourceID != null) {
+        if (getTermSourceID() != null) {
             headersList.add("Term Source ID");
         }
         String[] result = new String[headersList.size()];
@@ -29,11 +27,11 @@ public class UnitAttribute extends AbstractNodeAttribute {
     public String[] values() {
         List<String> valuesList = new ArrayList<String>();
         valuesList.add(getAttributeValue());
-        if (termSourceREF != null) {
-            valuesList.add(termSourceREF);
+        if (getTermSourceREF() != null) {
+            valuesList.add(getTermSourceREF());
         }
-        if (termSourceID != null) {
-            valuesList.add(termSourceID);
+        if (getTermSourceID() != null) {
+            valuesList.add(getTermSourceID());
         }
         String[] result = new String[valuesList.size()];
         return valuesList.toArray(result);

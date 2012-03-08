@@ -101,10 +101,10 @@ public class CharacteristicAttributeReader implements SCDAttributeReader {
                         }
                     }
                     else if (header[i].equals("termsourceref")) {
-                    	attribute.termSourceREF = data[i];
+                    	attribute.setTermSourceREF(data[i]);
                     }
                     else if (header[i].equals("termsourceid")) {
-                    	attribute.termSourceID = data[i];
+                    	attribute.setTermSourceID(data[i]);
                     }
                     else if (header[i].equals("")) {
                         // skip the case where the header is an empty string

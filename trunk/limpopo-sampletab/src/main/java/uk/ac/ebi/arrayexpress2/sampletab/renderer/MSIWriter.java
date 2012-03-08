@@ -112,19 +112,25 @@ public class MSIWriter extends Writer {
 	        List<Database> dbs = new ArrayList<Database>(databases);
 	        writer.write("Database Name\t");
 	        for (Database db : dbs){
-	            writer.write(db.getName());
+                if (db.getName() != null){
+                    writer.write(db.getName());
+                }
                 writer.write("\t");
 	        }
             writer.write("\n");
             writer.write("Database ID\t");
             for (Database db : dbs){
-                writer.write(db.getID());
+                if (db.getID() != null){
+                    writer.write(db.getID());
+                }
                 writer.write("\t");
             }
             writer.write("\n");
             writer.write("Database URI\t");
             for (Database db : dbs){
-                writer.write(db.getURI());
+                if (db.getURI() != null){
+                    writer.write(db.getURI());
+                }
                 writer.write("\t");
             }
             writer.write("\n");

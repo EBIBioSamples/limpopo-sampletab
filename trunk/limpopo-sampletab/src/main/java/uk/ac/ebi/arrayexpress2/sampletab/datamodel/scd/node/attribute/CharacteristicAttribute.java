@@ -4,11 +4,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class CharacteristicAttribute extends AbstractNodeAttribute {
+public class CharacteristicAttribute extends AbstractNodeAttributeOntology {
     public String type;
     public UnitAttribute unit;
-    public String termSourceREF;
-    public String termSourceID;
     
     public CharacteristicAttribute(){
         super();
@@ -31,10 +29,10 @@ public class CharacteristicAttribute extends AbstractNodeAttribute {
         if (unit != null) {
             Collections.addAll(headersList, unit.headers());
         }
-        if (termSourceREF != null) {
+        if (getTermSourceREF() != null) {
             headersList.add("Term Source Ref");
         }
-        if (termSourceID != null) {
+        if (getTermSourceID() != null) {
             headersList.add("Term Source ID");
         }
         String[] result = new String[headersList.size()];
@@ -47,11 +45,11 @@ public class CharacteristicAttribute extends AbstractNodeAttribute {
         if (unit != null) {
             Collections.addAll(valuesList, unit.values());
         }
-        if (termSourceREF != null) {
-            valuesList.add(termSourceREF);
+        if (getTermSourceREF() != null) {
+            valuesList.add(getTermSourceREF());
         }
-        if (termSourceID != null) {
-            valuesList.add(termSourceID);
+        if (getTermSourceID() != null) {
+            valuesList.add(getTermSourceID());
         }
         String[] result = new String[valuesList.size()];
         return valuesList.toArray(result);
