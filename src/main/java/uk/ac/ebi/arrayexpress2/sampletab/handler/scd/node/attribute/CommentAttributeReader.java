@@ -81,10 +81,10 @@ public class CommentAttributeReader implements SCDAttributeReader {
 
                             for (int j = i + 1; j < data.length; j++) {
                                 if (header[j].equals("termsourceref")) {
-                                    unit.termSourceREF = data[j];
+                                    unit.setTermSourceREF(data[j]);
                                 }
                                 else if (header[j].equals("termsourceid")) {
-                                    unit.termSourceID = data[j];
+                                    unit.setTermSourceID(data[j]);
                                 }
                                 else if (header[i + 1].equals("")) {
                                     // skip the case where the header is an empty string
@@ -102,10 +102,10 @@ public class CommentAttributeReader implements SCDAttributeReader {
                         }
                     }
                     else if (header[i].equals("termsourceref")) {
-                    	attribute.termSourceREF = data[i];
+                    	attribute.setTermSourceREF(data[i]);
                     }
                     else if (header[i].equals("termsourceid")) {
-                    	attribute.termSourceID = data[i];
+                    	attribute.setTermSourceID(data[i]);
                     }
                     else if (header[i].equals("")) {
                         // skip the case where the header is an empty string

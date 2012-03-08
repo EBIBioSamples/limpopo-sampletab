@@ -3,9 +3,9 @@ package uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node.attribute;
 import java.util.ArrayList;
 import java.util.List;
 
-public class NamedAttribute extends AbstractNodeAttribute {
-	protected String termSourceREF;
-	protected String termSourceID;
+public class NamedAttribute extends AbstractNodeAttributeOntology {
+
+    protected String name;
     
 	public NamedAttribute(){
 		
@@ -15,27 +15,7 @@ public class NamedAttribute extends AbstractNodeAttribute {
 		this.name = name;
 		this.setAttributeValue(value);		
 	}
-	
-    public String getTermSourceREF() {
-		return termSourceREF;
-	}
 
-	public void setTermSourceREF(String termSourceREF) {
-		this.termSourceREF = termSourceREF;
-	}
-
-	public String getTermSourceID() {
-		return termSourceID;
-	}
-
-	public void setTermSourceID(String termSourceID) {
-		this.termSourceID = termSourceID;
-	}
-	public void setTermSourceID(Integer termSourceID) {
-		this.termSourceID = termSourceID.toString();
-	}
-
-	protected String name;
 
     public String getAttributeType() {
         return name;
@@ -44,10 +24,10 @@ public class NamedAttribute extends AbstractNodeAttribute {
     public String[] headers() {
         List<String> headersList = new ArrayList<String>();
         headersList.add(getAttributeType());
-        if (termSourceREF != null) {
+        if (getTermSourceREF() != null) {
             headersList.add("Term Source Ref");
         }
-        if (termSourceID != null) {
+        if (getTermSourceID() != null) {
             headersList.add("Term Source ID");
         }
         String[] result = new String[headersList.size()];
@@ -57,11 +37,11 @@ public class NamedAttribute extends AbstractNodeAttribute {
     public String[] values() {
         List<String> valuesList = new ArrayList<String>();
         valuesList.add(getAttributeValue());
-        if (termSourceREF != null) {
-            valuesList.add(termSourceREF);
+        if (getTermSourceREF() != null) {
+            valuesList.add(getTermSourceREF());
         }
-        if (termSourceID != null) {
-            valuesList.add(termSourceID);
+        if (getTermSourceID() != null) {
+            valuesList.add(getTermSourceID());
         }
         String[] result = new String[valuesList.size()];
         return valuesList.toArray(result);
