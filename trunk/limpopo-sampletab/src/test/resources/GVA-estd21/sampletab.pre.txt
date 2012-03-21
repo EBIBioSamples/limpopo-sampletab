@@ -1,0 +1,32 @@
+[MSI]
+Submission Title	Wheeler et al 2008
+Submission Identifier	GVA-estd21
+Submission Description	We sequenced the genome of James D. Watson to a read depth of 7.4 using massively parallel sequencing. We used Agilent oligo aCGH to detect 23 copy number variations in the range of 26 kb - 1.6 Mb.
+Submission Version	1.0
+Submission Reference Layer	false
+Submission Release Date	2012/03/21
+Submission Update Date	2012/03/21
+Organization Name	Human Genome Sequencing Center Baylor College of Medicine
+Organization Address	
+Organization URI	
+Organization Email	
+Organization Role	submitter
+Person Last Name	Gibbs
+Person Initials	
+Person First Name	Richard
+Person Email	agibbs@bcm.tmc.edu
+Person Role	submitter
+Publication DOI	
+Publication PubMed ID	18421352
+Term Source Name
+Term Source URI
+Term Source Version
+Database Name	DGVa	
+Database ID	estd21	
+Database URI		
+
+[SCD]
+Sample Name	Sex	Organism	Sample Name	Material	Comment[Source]	Group Name	Group Description	Count	Organism	
+Subject NA10851	Male	9606	NA10851	DNA						
+Subject Standard reference Caucasian male, Kleberg Cytogen	Male	9606	Standard reference Caucasian male, Kleberg Cytogen	DNA						
+Subject WATSON	Male	9606	WATSON	DNA		Group 1	Test single sample	1	9606	

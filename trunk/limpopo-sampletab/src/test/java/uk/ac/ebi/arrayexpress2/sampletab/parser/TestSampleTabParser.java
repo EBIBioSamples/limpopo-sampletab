@@ -24,6 +24,7 @@ public class TestSampleTabParser extends TestCase {
     private URL resource_broken;
     private URL resource_ae;
     private URL resource_corriel;
+    private URL resource_dgva;
     private URL resource_imsr;
 
     private List<ErrorItem> errorItems;
@@ -32,6 +33,8 @@ public class TestSampleTabParser extends TestCase {
         resource_ae = getClass().getClassLoader().getResource("GAE-MEXP-986/sampletab.pre.txt");
         resource_corriel = getClass().getClassLoader().getResource("GCR-autism/sampletab.pre.txt");
         resource_imsr = getClass().getClassLoader().getResource("GMS-HAR/sampletab.pre.txt");
+        resource_dgva = getClass().getClassLoader().getResource("GVA-estd21/sampletab.pre.txt");
+        
         resource = getClass().getClassLoader().getResource("dummy/sampletab.txt");
         resource_broken = getClass().getClassLoader().getResource("broken/sampletab.txt");
         parser = new SampleTabParser<SampleData>();
@@ -102,13 +105,22 @@ public class TestSampleTabParser extends TestCase {
         }
     }
 
-    public void testParseIMSR() {
+//    public void testParseIMSR() {
 //        try {
 //            SampleData st = doParse(resource_imsr);
 //        } catch (ParseException e) {
 //            e.printStackTrace();
 //            fail();
 //        }
+//    }
+
+    public void testParseDGVa() {
+        try {
+            SampleData st = doParse(resource_dgva);
+        } catch (ParseException e) {
+            e.printStackTrace();
+            fail();
+        }
     }
 
     private SampleData doParse(URL url) throws ParseException {
