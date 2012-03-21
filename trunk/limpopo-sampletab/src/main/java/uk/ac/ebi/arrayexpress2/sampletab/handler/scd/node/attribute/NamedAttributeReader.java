@@ -11,7 +11,7 @@ import uk.ac.ebi.arrayexpress2.magetab.exception.UnmatchedTagException;
 import uk.ac.ebi.arrayexpress2.sampletab.datamodel.SCD;
 import uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node.SCDNode;
 import uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node.attribute.AbstractNodeAttribute;
-import uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node.attribute.NamedAttribute;
+import uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node.attribute.AbstractNamedAttribute;
 
 
 public abstract class NamedAttributeReader implements SCDAttributeReader {
@@ -53,13 +53,13 @@ public abstract class NamedAttributeReader implements SCDAttributeReader {
                                SCDNode parentNode,
                                int lineNumber,
                                int columnNumber) throws ParseException {
-        NamedAttribute attribute;
+        AbstractNamedAttribute attribute;
         
         if (canRead(header[0])) {
             // make sure attribute is not empty
             if (data[0] != null && !data[0].equals("")) {
                 // first row, so make a new attribute node
-            	attribute = (NamedAttribute) getNewAttribute();
+            	attribute = (AbstractNamedAttribute) getNewAttribute();
             	attribute.setAttributeValue(data[0]);
             	
                 // now do the rest

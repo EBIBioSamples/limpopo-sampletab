@@ -1,19 +1,20 @@
 package uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node.attribute;
 
-public class MaterialAttribute extends AbstractNamedAttribute {
+public class ChildOfAttribute extends AbstractRelationshipAttribute {
 
-    public static String name = "Material";
+    private static String name = "ChildOf";
     
-    public MaterialAttribute(){
+    public ChildOfAttribute() {
         super();
     }
-
-    public MaterialAttribute(String attributeValue) {
-        super(attributeValue);
+    
+    public ChildOfAttribute(String value) {
+        super(value);
     }
 
     //need to keep this getter because value being get has been overriden
     public String getAttributeType() {
         return name;
     }
+
 }

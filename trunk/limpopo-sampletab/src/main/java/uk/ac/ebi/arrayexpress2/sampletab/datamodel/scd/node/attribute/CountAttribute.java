@@ -1,15 +1,15 @@
 package uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node.attribute;
 
-public class MaterialAttribute extends AbstractNamedAttribute {
+public class CountAttribute extends AbstractNamedAttribute {
 
-    public static String name = "Material";
+    private static String name = "Count";
     
-    public MaterialAttribute(){
+    public CountAttribute(){
         super();
     }
-
-    public MaterialAttribute(String attributeValue) {
-        super(attributeValue);
+    
+    public CountAttribute(int value) {
+        super(""+value);
     }
 
     //need to keep this getter because value being get has been overriden
