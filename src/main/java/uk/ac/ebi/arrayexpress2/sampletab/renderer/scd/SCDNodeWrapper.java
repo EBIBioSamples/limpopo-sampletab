@@ -77,7 +77,6 @@ public class SCDNodeWrapper extends DefaultAbstractNode {
     
     @Override
     public int getOrder() {
-    	System.out.println("SPAMANDEGGS!");
         SCDNodeFactory nodeFact = SCDNodeFactory.getInstance();
 
 		int parentOrder = 100;
@@ -87,7 +86,6 @@ public class SCDNodeWrapper extends DefaultAbstractNode {
 				parentOrder = thisParentOrder;
 			}	
 		}
-		System.out.println("parentOrder "+parentOrder);
 		return parentOrder;
     }
     
