@@ -9,6 +9,15 @@ public class Database {
 	private final String uri;
 
 	public Database(String name, String uri, String id) {
+        if (name != null && name.equals("")){
+            name = null;
+        }
+        if (uri != null && uri.equals("")){
+            uri = null;
+        }
+        if (id != null && id.equals("")){
+            id = null;
+        }
 		this.name = name;
 		this.uri = uri;
 		this.id = id;
@@ -40,7 +49,7 @@ public class Database {
 	}
 
 	public int hashCode() {
-		return new HashCodeBuilder(13, 31) // two randomly chosen prime numbers
+		return new HashCodeBuilder(13, 31) // two prime numbers
 			.append(this.getName())
 			.append(this.getURI())
 			.append(this.getID())
