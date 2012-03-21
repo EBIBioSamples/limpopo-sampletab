@@ -1,11 +1,19 @@
 package uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node.attribute;
 
-public class SexAttribute extends NamedAttribute {
+public class SexAttribute extends AbstractNamedAttribute {
 
-    public String name = "Sex";
+    private static String name = "Sex";
     
-    @Override
+    public SexAttribute(){
+        super();
+    }
+    
+    public SexAttribute(String attributeValue) {
+        super(attributeValue);
+    }
+
+    //need to keep this getter because value being get has been overriden
     public String getAttributeType() {
-        return "Sex";
+        return name;
     }
 }
