@@ -7,7 +7,7 @@ public class Publication {
 	private final String doi;
 	private final String pubmedid;
 
-	public Publication(String doi, String pubmedid) {
+	public Publication(String pubmedid, String doi) {
 		this.doi = doi;
 		this.pubmedid = pubmedid;
 	}

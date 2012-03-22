@@ -11,6 +11,7 @@ import org.slf4j.LoggerFactory;
 
 import uk.ac.ebi.arrayexpress2.sampletab.datamodel.MSI;
 import uk.ac.ebi.arrayexpress2.sampletab.datamodel.msi.Database;
+import uk.ac.ebi.arrayexpress2.sampletab.datamodel.msi.Publication;
 
 public class MSIWriter extends Writer {
 	private Writer writer;
@@ -70,8 +71,7 @@ public class MSIWriter extends Writer {
 		writeMultiField("Person First Name", msi.personFirstName);
 		writeMultiField("Person Email", msi.personEmail);
 		writeMultiField("Person Role", msi.personRole);
-		writeMultiField("Publication DOI", msi.publicationDOI);
-		writeMultiField("Publication PubMed ID", msi.publicationPubMedID);
+        writePublications(msi.publications);
 		writeMultiField("Term Source Name", msi.termSourceName);
 		writeMultiField("Term Source URI", msi.termSourceURI);
 		writeMultiField("Term Source Version", msi.termSourceVersion);
@@ -136,4 +136,27 @@ public class MSIWriter extends Writer {
             writer.write("\n");
 	    }
 	}
+    
+    public void writePublications(Collection<Publication> publications)
+        throws IOException {
+        if (publications != null){
+            List<Publication> pubs = new ArrayList<Publication>(publications);
+            writer.write("Publication PubMed ID\t");
+            for (Publication pub : pubs){
+                if (pub.getPubMedID() != null){
+                    writer.write(pub.getPubMedID());
+                }
+                writer.write("\t");
+            }
+            writer.write("\n");
+            writer.write("Publication DOI\t");
+            for (Publication pub : pubs){
+                if (pub.getDOI() != null){
+                    writer.write(pub.getDOI());
+                }
+                writer.write("\t");
+            }
+            writer.write("\n");
+        }
+    }
 }
