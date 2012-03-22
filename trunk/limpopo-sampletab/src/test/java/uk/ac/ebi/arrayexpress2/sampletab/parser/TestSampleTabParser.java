@@ -1,7 +1,9 @@
 package uk.ac.ebi.arrayexpress2.sampletab.parser;
 
 import java.io.ByteArrayOutputStream;
+import java.io.IOException;
 import java.io.OutputStream;
+import java.io.StringWriter;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
@@ -11,11 +13,13 @@ import junit.framework.TestCase;
 import org.mged.magetab.error.ErrorCode;
 import org.mged.magetab.error.ErrorItem;
 
+import uk.ac.ebi.arrayexpress2.magetab.datamodel.graph.UnresolvedPlaceholderNode;
 import uk.ac.ebi.arrayexpress2.magetab.exception.ParseException;
 import uk.ac.ebi.arrayexpress2.magetab.listener.ErrorItemListener;
 import uk.ac.ebi.arrayexpress2.sampletab.datamodel.SampleData;
 import uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node.SCDNode;
 import uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node.attribute.SCDNodeAttribute;
+import uk.ac.ebi.arrayexpress2.sampletab.renderer.SampleTabWriter;
 
 public class TestSampleTabParser extends TestCase {
     private SampleTabParser<SampleData> parser;
@@ -59,6 +63,9 @@ public class TestSampleTabParser extends TestCase {
         } catch (ParseException e) {
             e.printStackTrace();
             fail();
+        } catch (IOException e) {
+            e.printStackTrace();
+            fail();
         }
 
         // check database handler
@@ -84,6 +91,9 @@ public class TestSampleTabParser extends TestCase {
         } catch (ParseException e) {
             e.printStackTrace();
             fail();
+        } catch (IOException e) {
+            e.printStackTrace();
+            fail();
         }
     }
 
@@ -93,6 +103,9 @@ public class TestSampleTabParser extends TestCase {
             fail(); // if exception not thrown
         } catch (ParseException e) {
             System.out.println(e);
+        } catch (IOException e) {
+            e.printStackTrace();
+            fail();
         }
     }
 
@@ -100,6 +113,9 @@ public class TestSampleTabParser extends TestCase {
         try {
             SampleData st = doParse(resource_corriel);
         } catch (ParseException e) {
+            e.printStackTrace();
+            fail();
+        } catch (IOException e) {
             e.printStackTrace();
             fail();
         }
@@ -111,6 +127,9 @@ public class TestSampleTabParser extends TestCase {
 //        } catch (ParseException e) {
 //            e.printStackTrace();
 //            fail();
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//            fail();
 //        }
 //    }
 
@@ -120,10 +139,13 @@ public class TestSampleTabParser extends TestCase {
         } catch (ParseException e) {
             e.printStackTrace();
             fail();
+        } catch (IOException e) {
+            e.printStackTrace();
+            fail();
         }
     }
 
-    private SampleData doParse(URL url) throws ParseException {
+    private SampleData doParse(URL url) throws ParseException, IOException {
         SampleData sampledata = null;
         sampledata = parser.parse(url);
         if (!errorItems.isEmpty()) {
@@ -174,6 +196,14 @@ public class TestSampleTabParser extends TestCase {
         assertNotNull("SCD node by index", nodes.get(0));
         SCDNode node = nodes.get(0);
         assertNotSame("SCD node attribute count", 0, node.getAttributes().size());
+        
+        for (SCDNode node1 : sampledata.scd.getAllNodes()){
+            assertNotSame("Found an UnresolvedPlaceholderNode", UnresolvedPlaceholderNode.class, node1.getClass());
+        }
+        
+        //check it can be written out again
+        SampleTabWriter w = new SampleTabWriter(new StringWriter());
+        w.write(sampledata);
         return sampledata;
     }
 
