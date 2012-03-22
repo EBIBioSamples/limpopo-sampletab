@@ -13,7 +13,6 @@ import uk.ac.ebi.arrayexpress2.sampletab.handler.msi.MSIReadHandler;
 public class DatabaseNameHandler extends MSIReadHandler {
     @Override
     public void read(String header, String[] data, MSI msi, int lineNumber, int columnNumber) throws ParseException {
-        //TODO finish
         fireHandlingStartedEvent(new HandlerEvent(this, HandlerEvent.Type.READ, data));
         //ensure it is a list at this point so that it is ordered
         //will always be if created by parser, otherwise not 
