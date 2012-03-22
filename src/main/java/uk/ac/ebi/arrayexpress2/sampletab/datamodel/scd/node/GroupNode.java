@@ -59,7 +59,7 @@ public class GroupNode extends AbstractSCDNode {
     }
     
     public String getNodeType() {
-        return "group";
+        return "groupname";
     }
 
 	public void addAttribute(SCDNodeAttribute attribute) {
