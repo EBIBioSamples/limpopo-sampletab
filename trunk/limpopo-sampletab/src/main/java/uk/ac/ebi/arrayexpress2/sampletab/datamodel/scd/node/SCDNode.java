@@ -2,11 +2,9 @@ package uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node;
 
 import java.util.List;
 
-import uk.ac.ebi.arrayexpress2.magetab.datamodel.graph.Node;
-//import org.isatools.tablib.export.graph2tab.Node;
 import uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node.attribute.SCDNodeAttribute;
 
-public interface SCDNode extends Node {
+public interface SCDNode extends uk.ac.ebi.arrayexpress2.magetab.datamodel.graph.Node {
     /**
      * Returns a string array representing the headers of this node and all it's attributes.
      *
