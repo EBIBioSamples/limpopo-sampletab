@@ -16,15 +16,14 @@ public class DatabaseNameHandler extends MSIReadHandler {
         fireHandlingStartedEvent(new HandlerEvent(this, HandlerEvent.Type.READ, data));
         //ensure it is a list at this point so that it is ordered
         //will always be if created by parser, otherwise not 
-        List<Database> dbs = (List<Database>) msi.databases;
         
         for (int i = 0; i < data.length; i++){
-            while (i >= dbs.size()){
-                dbs.add(new Database(null, null, null));
+            while (i >= msi.databases.size()){
+                msi.databases.add(new Database(null, null, null));
             }
-            String dburi = dbs.get(i).getURI();
-            String dbid = dbs.get(i).getID();
-            dbs.set(i, new Database(data[i], dburi, dbid));
+            String dburi = msi.databases.get(i).getURI();
+            String dbid = msi.databases.get(i).getID();
+            msi.databases.set(i, new Database(data[i], dburi, dbid));
         }
         
         fireHandlingSucceededEvent(new HandlerEvent(this, HandlerEvent.Type.READ, data));

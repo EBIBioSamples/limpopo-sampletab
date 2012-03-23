@@ -15,15 +15,14 @@ public class PublicationPubMedIDHandler extends MSIReadHandler {
     public void read(String header, String[] data, MSI msi, int lineNumber, int columnNumber) throws ParseException {
         fireHandlingStartedEvent(new HandlerEvent(this, HandlerEvent.Type.READ, data));
         //ensure it is a list at this point so that it is ordered
-        //will always be if created by parser, otherwise not 
-        List<Publication> dbs = (List<Publication>) msi.publications;
-        
+        //will always be if created by parser, otherwise not         
         for (int i = 0; i < data.length; i++){
-            while (i >= dbs.size()){
-                dbs.add(new Publication(null, null));
+            while (i >= msi.publications.size()){
+                msi.publications.add(new Publication(null, null));
             }
-            String doi = dbs.get(i).getPubMedID();
-            dbs.set(i, new Publication(data[i], doi));
+            String doi = msi.publications.get(i).getDOI();
+            msi.publications.set(i, new Publication(data[i], doi));
+            System.out.println("handled PubMedIDs "+data[i]);
         }
         
         fireHandlingSucceededEvent(new HandlerEvent(this, HandlerEvent.Type.READ, data));

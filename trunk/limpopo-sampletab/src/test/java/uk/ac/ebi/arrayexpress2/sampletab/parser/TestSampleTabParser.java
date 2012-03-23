@@ -80,6 +80,8 @@ public class TestSampleTabParser extends TestCase {
         assertNotSame("Attribute DatabaseName is not null", null, dbattr);
         dbname = dbattr.getAttributeValue();
         assertEquals("Check parsed DatabaseName", "bobdb", dbname);
+        
+        assertEquals("Check PubMedID", "666", st.msi.publications.get(0).getPubMedID());
 
         // check submission reference layer handler
         assertSame("Submission Reference Layer", true, st.msi.submissionReferenceLayer);
