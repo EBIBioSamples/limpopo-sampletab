@@ -138,28 +138,28 @@ public class MSIWriter extends Writer {
             //convert back so it has consistent order
             List<TermSource> tss = new ArrayList<TermSource>(new HashSet<TermSource>(termsources));
 	        writer.write("Term Source Name\t");
-	        for (TermSource db : tss){
-                if (db.getName() != null){
-                    writer.write(db.getName());
+	        for (TermSource ts : tss){
+                if (ts.getName() != null && ts.getName().trim().length() > 0){
+                    writer.write(ts.getName());
                     writer.write("\t");
                 }
 	        }
             writer.write("\n");
             writer.write("Term Source URI\t");
-            for (TermSource db : tss){
-                if (db.getName() != null){
-                    if (db.getURI() != null){
-                        writer.write(db.getURI());
+            for (TermSource ts : tss){
+                if (ts.getName() != null && ts.getName().trim().length() > 0){
+                    if (ts.getURI() != null){
+                        writer.write(ts.getURI());
                     }
                     writer.write("\t");
                 }
             }
             writer.write("\n");
             writer.write("Term Source Version\t");
-            for (TermSource db : tss){
-                if (db.getName() != null){
-                    if (db.getVersion() != null){
-                        writer.write(db.getVersion());
+            for (TermSource ts : tss){
+                if (ts.getName() != null && ts.getName().trim().length() > 0){
+                    if (ts.getVersion() != null){
+                        writer.write(ts.getVersion());
                     }
                     writer.write("\t");
                 }
