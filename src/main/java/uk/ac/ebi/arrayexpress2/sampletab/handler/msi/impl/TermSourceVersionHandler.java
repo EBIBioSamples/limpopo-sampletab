@@ -16,15 +16,14 @@ public class TermSourceVersionHandler extends MSIReadHandler {
         fireHandlingStartedEvent(new HandlerEvent(this, HandlerEvent.Type.READ, data));
         //ensure it is a list at this point so that it is ordered
         //will always be if created by parser, otherwise not 
-        List<TermSource> tss = (List<TermSource>) msi.termSources;
         
         for (int i = 0; i < data.length; i++){
-            while (i >= tss.size()){
-                tss.add(new TermSource(null, null, null));
+            while (i >= msi.termSources.size()){
+                msi.termSources.add(new TermSource(null, null, null));
             }
-            String tsname = tss.get(i).getName();
-            String tsuri = tss.get(i).getURI();
-            tss.set(i, new TermSource(tsname, tsuri, data[i]));
+            String tsname = msi.termSources.get(i).getName();
+            String tsuri = msi.termSources.get(i).getURI();
+            msi.termSources.set(i, new TermSource(tsname, tsuri, data[i]));
         }
         
         fireHandlingSucceededEvent(new HandlerEvent(this, HandlerEvent.Type.READ, data));

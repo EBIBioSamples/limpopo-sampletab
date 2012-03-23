@@ -134,29 +134,35 @@ public class MSIWriter extends Writer {
 	public void writeTermSources(Collection<TermSource> termsources)
         throws IOException {
 	    if (termsources != null){
-	        List<TermSource> tss = new ArrayList<TermSource>(termsources);
+            //convert to hashset to remove duplicates
+            //convert back so it has consistent order
+            List<TermSource> tss = new ArrayList<TermSource>(new HashSet<TermSource>(termsources));
 	        writer.write("Term Source Name\t");
 	        for (TermSource db : tss){
                 if (db.getName() != null){
                     writer.write(db.getName());
+                    writer.write("\t");
                 }
-                writer.write("\t");
 	        }
             writer.write("\n");
             writer.write("Term Source URI\t");
             for (TermSource db : tss){
-                if (db.getURI() != null){
-                    writer.write(db.getURI());
+                if (db.getName() != null){
+                    if (db.getURI() != null){
+                        writer.write(db.getURI());
+                    }
+                    writer.write("\t");
                 }
-                writer.write("\t");
             }
             writer.write("\n");
             writer.write("Term Source Version\t");
             for (TermSource db : tss){
-                if (db.getVersion() != null){
-                    writer.write(db.getVersion());
+                if (db.getName() != null){
+                    if (db.getVersion() != null){
+                        writer.write(db.getVersion());
+                    }
+                    writer.write("\t");
                 }
-                writer.write("\t");
             }
             writer.write("\n");
 	    }
