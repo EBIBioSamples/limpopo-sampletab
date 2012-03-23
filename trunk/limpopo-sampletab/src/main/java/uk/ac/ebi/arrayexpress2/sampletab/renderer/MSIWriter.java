@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.io.Writer;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.HashSet;
 import java.util.List;
 
 import org.slf4j.Logger;
@@ -12,6 +13,7 @@ import org.slf4j.LoggerFactory;
 import uk.ac.ebi.arrayexpress2.sampletab.datamodel.MSI;
 import uk.ac.ebi.arrayexpress2.sampletab.datamodel.msi.Database;
 import uk.ac.ebi.arrayexpress2.sampletab.datamodel.msi.Publication;
+import uk.ac.ebi.arrayexpress2.sampletab.datamodel.msi.TermSource;
 
 public class MSIWriter extends Writer {
 	private Writer writer;
@@ -72,9 +74,7 @@ public class MSIWriter extends Writer {
 		writeMultiField("Person Email", msi.personEmail);
 		writeMultiField("Person Role", msi.personRole);
         writePublications(msi.publications);
-		writeMultiField("Term Source Name", msi.termSourceName);
-		writeMultiField("Term Source URI", msi.termSourceURI);
-		writeMultiField("Term Source Version", msi.termSourceVersion);
+        writeTermSources(msi.termSources);
 		writeDatabases(msi.databases);
 	}
 
@@ -105,18 +105,74 @@ public class MSIWriter extends Writer {
 			writer.write("\n");
 		}
 	}
-	
-	public void writeDatabases(Collection<Database> databases)
+    
+    public void writePublications(Collection<Publication> publications)
         throws IOException {
-	    if (databases != null){
-	        List<Database> dbs = new ArrayList<Database>(databases);
-	        writer.write("Database Name\t");
-	        for (Database db : dbs){
+        if (publications != null){
+            //convert to hashset to remove duplicates
+            //convert back so it has consistent order
+            List<Publication> pubs = new ArrayList<Publication>(new HashSet<Publication>(publications));
+            writer.write("Publication PubMed ID\t");
+            for (Publication pub : pubs){
+                if (pub.getPubMedID() != null){
+                    writer.write(pub.getPubMedID());
+                }
+                writer.write("\t");
+            }
+            writer.write("\n");
+            writer.write("Publication DOI\t");
+            for (Publication pub : pubs){
+                if (pub.getDOI() != null){
+                    writer.write(pub.getDOI());
+                }
+                writer.write("\t");
+            }
+            writer.write("\n");
+        }
+    }
+	
+	public void writeTermSources(Collection<TermSource> termsources)
+        throws IOException {
+	    if (termsources != null){
+	        List<TermSource> tss = new ArrayList<TermSource>(termsources);
+	        writer.write("Term Source Name\t");
+	        for (TermSource db : tss){
                 if (db.getName() != null){
                     writer.write(db.getName());
                 }
                 writer.write("\t");
 	        }
+            writer.write("\n");
+            writer.write("Term Source URI\t");
+            for (TermSource db : tss){
+                if (db.getURI() != null){
+                    writer.write(db.getURI());
+                }
+                writer.write("\t");
+            }
+            writer.write("\n");
+            writer.write("Term Source Version\t");
+            for (TermSource db : tss){
+                if (db.getVersion() != null){
+                    writer.write(db.getVersion());
+                }
+                writer.write("\t");
+            }
+            writer.write("\n");
+	    }
+	}
+    
+    public void writeDatabases(Collection<Database> databases)
+        throws IOException {
+        if (databases != null){
+            List<Database> dbs = new ArrayList<Database>(databases);
+            writer.write("Database Name\t");
+            for (Database db : dbs){
+                if (db.getName() != null){
+                    writer.write(db.getName());
+                }
+                writer.write("\t");
+            }
             writer.write("\n");
             writer.write("Database ID\t");
             for (Database db : dbs){
@@ -130,29 +186,6 @@ public class MSIWriter extends Writer {
             for (Database db : dbs){
                 if (db.getURI() != null){
                     writer.write(db.getURI());
-                }
-                writer.write("\t");
-            }
-            writer.write("\n");
-	    }
-	}
-    
-    public void writePublications(Collection<Publication> publications)
-        throws IOException {
-        if (publications != null){
-            List<Publication> pubs = new ArrayList<Publication>(publications);
-            writer.write("Publication PubMed ID\t");
-            for (Publication pub : pubs){
-                if (pub.getPubMedID() != null){
-                    writer.write(pub.getPubMedID());
-                }
-                writer.write("\t");
-            }
-            writer.write("\n");
-            writer.write("Publication DOI\t");
-            for (Publication pub : pubs){
-                if (pub.getDOI() != null){
-                    writer.write(pub.getDOI());
                 }
                 writer.write("\t");
             }
