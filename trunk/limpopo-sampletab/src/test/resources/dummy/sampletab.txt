@@ -17,9 +17,9 @@ Person Email
 Person Role
 Publication DOI	doi
 Publication PubMed ID	666
-Term Source Name
-Term Source URI
-Term Source Version
+Term Source Name	term	term
+Term Source URI	a	a
+Term Source Version	1	1
 Database Name
 Database URI
 Database ID
