@@ -82,6 +82,8 @@ public class TestSampleTabParser extends TestCase {
         assertEquals("Check parsed DatabaseName", "bobdb", dbname);
         
         assertEquals("Check PubMedID", "666", st.msi.publications.get(0).getPubMedID());
+        
+        //assertEquals("Check term source similarity", 1, st.msi.termSources.size());
 
         // check submission reference layer handler
         assertSame("Submission Reference Layer", true, st.msi.submissionReferenceLayer);

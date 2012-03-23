@@ -40,19 +40,21 @@ public class Organization {
 	}
 
 	public boolean equals(Organization other) {
-		if (other == null)
+		if (other == null) {
 			return false;
-		else if (other == this)
+		} else if (other == this) {
 			return true;
-
-		return new EqualsBuilder()
-			.append(this.getName(), other.getName())
-			.append(this.getAddress(), other.getAddress())
-			.append(this.getURI(), other.getURI())
-			.append(this.getEmail(), other.getEmail())
-			.append(this.getRole(), other.getRole())
-			.isEquals();
-
+        } else if (!this.getClass().isInstance(other)){
+            return false;
+        } else {
+    		return new EqualsBuilder()
+    			.append(this.getName(), other.getName())
+    			.append(this.getAddress(), other.getAddress())
+    			.append(this.getURI(), other.getURI())
+    			.append(this.getEmail(), other.getEmail())
+    			.append(this.getRole(), other.getRole())
+    			.isEquals();
+        }
 	}
 
 	public int hashCode() {

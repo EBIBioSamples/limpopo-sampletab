@@ -40,19 +40,22 @@ public class Person {
 	}
 
 	public boolean equals(Person other) {
-		if (other == null)
+		if (other == null) {
 			return false;
-		else if (other == this)
+		} else if (other == this) {
 			return true;
-
-		return new EqualsBuilder()
-			.append(this.getFirstName(), other.getFirstName())
-			.append(this.getInitials(), other.getInitials())
-			.append(this.getLastName(), other.getLastName())
-			.append(this.getEmail(), other.getEmail())
-			.append(this.getRole(), other.getRole())
-			.isEquals();
-
+        } else if (!this.getClass().isInstance(other)) {
+            return false;
+        } else {
+    
+    		return new EqualsBuilder()
+    			.append(this.getFirstName(), other.getFirstName())
+    			.append(this.getInitials(), other.getInitials())
+    			.append(this.getLastName(), other.getLastName())
+    			.append(this.getEmail(), other.getEmail())
+    			.append(this.getRole(), other.getRole())
+    			.isEquals();
+        }
 	}
 
 	public int hashCode() {

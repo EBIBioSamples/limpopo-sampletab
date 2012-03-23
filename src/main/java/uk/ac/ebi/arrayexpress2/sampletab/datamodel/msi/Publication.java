@@ -21,16 +21,19 @@ public class Publication {
 	}
 
 	public boolean equals(Publication other) {
-		if (other == null)
+		if (other == null){
 			return false;
-		else if (other == this)
+		} else if (other == this) {
 			return true;
+        } else if (!this.getClass().isInstance(other)){
+            return false;
+		} else {
 
 		return new EqualsBuilder()
 			.append(this.getDOI(), other.getDOI())
 			.append(this.getPubMedID(), other.getPubMedID())
 			.isEquals();
-
+		}
 	}
 
 	public int hashCode() {

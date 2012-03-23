@@ -36,16 +36,20 @@ public class Database {
 	}
 
 	public boolean equals(Database other) {
-		if (other == null)
+		if (other == null) {
 			return false;
-		else if (other == this)
+		} else if (other == this) {
 			return true;
-
-		return new EqualsBuilder()
-			.append(this.getName(), other.getName())
-			.append(this.getURI(), other.getURI())
-			.append(this.getID(), other.getID())
-			.isEquals();
+        } else if (!this.getClass().isInstance(other)){
+            return false;
+        } else {
+    
+    		return new EqualsBuilder()
+    			.append(this.getName(), other.getName())
+    			.append(this.getURI(), other.getURI())
+    			.append(this.getID(), other.getID())
+    			.isEquals();
+            }
 	}
 
 	public int hashCode() {
