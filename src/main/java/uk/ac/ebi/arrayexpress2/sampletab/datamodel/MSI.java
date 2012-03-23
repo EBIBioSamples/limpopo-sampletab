@@ -37,16 +37,15 @@ public class MSI {
 	public List<String> personEmail = new ArrayList<String>();
 	public List<String> personRole = new ArrayList<String>();
 
-	public List<String> termSourceName = new ArrayList<String>();
-	public List<String> termSourceURI = new ArrayList<String>();
-	public List<String> termSourceVersion = new ArrayList<String>();
-
+	//these have to be created as arrays so the parsing works correctly
+	//however, may be converted to sets on writing
+	
 	//TODO finish implementing collection-based substructures
-//	public final Collection<Organization> organizations = new ArrayList<Organization>();
-//	public final Collection<Person> persons = new ArrayList<Person>();
-//  public final Collection<TermSource> termSources = new ArrayList<TermSource>();
-	public final Collection<Publication> publications = new ArrayList<Publication>();
-	public final Collection<Database> databases = new ArrayList<Database>();
+//	public Collection<Organization> organizations = new ArrayList<Organization>();
+//	public Collection<Person> persons = new ArrayList<Person>();
+    public Collection<TermSource> termSources = new ArrayList<TermSource>();
+	public Collection<Publication> publications = new ArrayList<Publication>();
+	public Collection<Database> databases = new ArrayList<Database>();
 
 	private Logger log = LoggerFactory.getLogger(getClass());
 	
