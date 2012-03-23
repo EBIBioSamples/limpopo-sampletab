@@ -45,10 +45,10 @@ public class MSI {
 	public volatile List<String> termSourceVersion = new ArrayList<String>();
 
 	//TODO finish implementing collection-based substructures
-//	public volatile Collection<Organization> organizations = new LinkedHashSet<Organization>();
-//	public volatile Collection<Person> persons = new LinkedHashSet<Person>();
-	public volatile Collection<Publication> publications = new LinkedHashSet<Publication>();
-//	public volatile Collection<TermSource> termSources = new LinkedHashSet<TermSource>();
+//	public volatile Collection<Organization> organizations = new ArrayList<Organization>();
+//	public volatile Collection<Person> persons = new ArrayList<Person>();
+	public volatile Collection<Publication> publications = new ArrayList<Publication>();
+//	public volatile Collection<TermSource> termSources = new ArrayList<TermSource>();
 	public volatile Collection<Database> databases = new ArrayList<Database>();
 
 	private Logger log = LoggerFactory.getLogger(getClass());
