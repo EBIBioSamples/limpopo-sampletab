@@ -25,31 +25,28 @@ public class MSI {
 	public volatile Date submissionUpdateDate = null;
 	public volatile Boolean submissionReferenceLayer = false;
 
-	public volatile List<String> organizationName = new ArrayList<String>();
-	public volatile List<String> organizationAddress = new ArrayList<String>();
-	public volatile List<String> organizationURI = new ArrayList<String>();
-	public volatile List<String> organizationEmail = new ArrayList<String>();
-	public volatile List<String> organizationRole = new ArrayList<String>();
+	public List<String> organizationName = new ArrayList<String>();
+	public List<String> organizationAddress = new ArrayList<String>();
+	public List<String> organizationURI = new ArrayList<String>();
+	public List<String> organizationEmail = new ArrayList<String>();
+	public List<String> organizationRole = new ArrayList<String>();
 
-	public volatile List<String> personLastName = new ArrayList<String>();
-	public volatile List<String> personInitials = new ArrayList<String>();
-	public volatile List<String> personFirstName = new ArrayList<String>();
-	public volatile List<String> personEmail = new ArrayList<String>();
-	public volatile List<String> personRole = new ArrayList<String>();
+	public List<String> personLastName = new ArrayList<String>();
+	public List<String> personInitials = new ArrayList<String>();
+	public List<String> personFirstName = new ArrayList<String>();
+	public List<String> personEmail = new ArrayList<String>();
+	public List<String> personRole = new ArrayList<String>();
 
-//	public volatile List<String> publicationDOI = new ArrayList<String>();
-//	public volatile List<String> publicationPubMedID = new ArrayList<String>();
-
-	public volatile List<String> termSourceName = new ArrayList<String>();
-	public volatile List<String> termSourceURI = new ArrayList<String>();
-	public volatile List<String> termSourceVersion = new ArrayList<String>();
+	public List<String> termSourceName = new ArrayList<String>();
+	public List<String> termSourceURI = new ArrayList<String>();
+	public List<String> termSourceVersion = new ArrayList<String>();
 
 	//TODO finish implementing collection-based substructures
-//	public volatile Collection<Organization> organizations = new ArrayList<Organization>();
-//	public volatile Collection<Person> persons = new ArrayList<Person>();
-	public volatile Collection<Publication> publications = new ArrayList<Publication>();
-//	public volatile Collection<TermSource> termSources = new ArrayList<TermSource>();
-	public volatile Collection<Database> databases = new ArrayList<Database>();
+//	public final Collection<Organization> organizations = new ArrayList<Organization>();
+//	public final Collection<Person> persons = new ArrayList<Person>();
+//  public final Collection<TermSource> termSources = new ArrayList<TermSource>();
+	public final Collection<Publication> publications = new ArrayList<Publication>();
+	public final Collection<Database> databases = new ArrayList<Database>();
 
 	private Logger log = LoggerFactory.getLogger(getClass());
 	
