@@ -6,7 +6,9 @@ import java.io.OutputStream;
 import java.io.StringWriter;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import junit.framework.TestCase;
 
@@ -17,6 +19,8 @@ import uk.ac.ebi.arrayexpress2.magetab.datamodel.graph.UnresolvedPlaceholderNode
 import uk.ac.ebi.arrayexpress2.magetab.exception.ParseException;
 import uk.ac.ebi.arrayexpress2.magetab.listener.ErrorItemListener;
 import uk.ac.ebi.arrayexpress2.sampletab.datamodel.SampleData;
+import uk.ac.ebi.arrayexpress2.sampletab.datamodel.msi.Publication;
+import uk.ac.ebi.arrayexpress2.sampletab.datamodel.msi.TermSource;
 import uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node.SCDNode;
 import uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node.attribute.SCDNodeAttribute;
 import uk.ac.ebi.arrayexpress2.sampletab.renderer.SampleTabWriter;
@@ -81,9 +85,13 @@ public class TestSampleTabParser extends TestCase {
         dbname = dbattr.getAttributeValue();
         assertEquals("Check parsed DatabaseName", "bobdb", dbname);
         
-        assertEquals("Check PubMedID", "666", st.msi.publications.get(0).getPubMedID());
+        List<Publication> pubs = new ArrayList<Publication>();
+        pubs.addAll(st.msi.publications);
+        assertEquals("Check PubMedID", "666", pubs.get(0).getPubMedID());
         
-        //assertEquals("Check term source similarity", 1, st.msi.termSources.size());
+        Set<TermSource> tss = new HashSet<TermSource>();
+        tss.addAll(st.msi.termSources);
+        assertEquals("Check term source similarity", 1, tss.size());
 
         // check submission reference layer handler
         assertSame("Submission Reference Layer", true, st.msi.submissionReferenceLayer);
