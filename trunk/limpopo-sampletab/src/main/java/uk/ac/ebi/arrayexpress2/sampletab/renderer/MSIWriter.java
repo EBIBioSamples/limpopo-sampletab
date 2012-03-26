@@ -171,7 +171,7 @@ public class MSIWriter extends Writer {
     public void writeDatabases(Collection<Database> databases)
         throws IOException {
         if (databases != null){
-            List<Database> dbs = new ArrayList<Database>(databases);
+            List<Database> dbs = new ArrayList<Database>(new HashSet<Database>(databases));
             writer.write("Database Name\t");
             for (Database db : dbs){
                 if (db.getName() != null){

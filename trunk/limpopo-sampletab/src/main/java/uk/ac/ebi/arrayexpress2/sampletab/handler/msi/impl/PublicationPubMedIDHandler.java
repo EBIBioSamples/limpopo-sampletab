@@ -22,7 +22,6 @@ public class PublicationPubMedIDHandler extends MSIReadHandler {
             }
             String doi = msi.publications.get(i).getDOI();
             msi.publications.set(i, new Publication(data[i], doi));
-            System.out.println("handled PubMedIDs "+data[i]);
         }
         
         fireHandlingSucceededEvent(new HandlerEvent(this, HandlerEvent.Type.READ, data));
