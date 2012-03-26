@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -111,7 +112,10 @@ public class MSIWriter extends Writer {
         if (publications != null){
             //convert to hashset to remove duplicates
             //convert back so it has consistent order
-            List<Publication> pubs = new ArrayList<Publication>(new HashSet<Publication>(publications));
+            Set<Publication> pubset = new HashSet<Publication>();
+            pubset.addAll(publications);
+            List<Publication> pubs = new ArrayList<Publication>();
+            pubs.addAll(pubset);
             writer.write("Publication PubMed ID\t");
             for (Publication pub : pubs){
                 if (pub.getPubMedID() != null){
@@ -136,7 +140,11 @@ public class MSIWriter extends Writer {
 	    if (termsources != null){
             //convert to hashset to remove duplicates
             //convert back so it has consistent order
-            List<TermSource> tss = new ArrayList<TermSource>(new HashSet<TermSource>(termsources));
+            Set<TermSource> tsset = new HashSet<TermSource>();
+            tsset.addAll(termsources);
+            List<TermSource> tss = new ArrayList<TermSource>();
+            tss.addAll(tsset);
+            
 	        writer.write("Term Source Name\t");
 	        for (TermSource ts : tss){
                 if (ts.getName() != null && ts.getName().trim().length() > 0){

@@ -17,9 +17,9 @@ Person Email
 Person Role
 Publication DOI	doi
 Publication PubMed ID	666
-Term Source Name	term	term
-Term Source URI	a	a
-Term Source Version	1	1
+Term Source Name	The MGED Ontology	The MGED Ontology
+Term Source URI	http://mged.sourceforge.net/ontologies/MGEDontology.php	http://mged.sourceforge.net/ontologies/MGEDontology.php
+Term Source Version
 Database Name
 Database URI
 Database ID
