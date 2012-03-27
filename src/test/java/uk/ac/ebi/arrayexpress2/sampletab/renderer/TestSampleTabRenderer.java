@@ -1,8 +1,6 @@
 package uk.ac.ebi.arrayexpress2.sampletab.renderer;
 
-import java.io.BufferedWriter;
 import java.io.IOException;
-import java.io.OutputStreamWriter;
 import java.io.StringWriter;
 import java.net.URL;
 import java.util.HashMap;
@@ -15,14 +13,12 @@ import uk.ac.ebi.arrayexpress2.magetab.exception.ParseException;
 import uk.ac.ebi.arrayexpress2.sampletab.datamodel.SampleData;
 import uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node.SampleNode;
 import uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node.attribute.CommentAttribute;
-import uk.ac.ebi.arrayexpress2.sampletab.parser.SampleTabParser;
 import junit.framework.TestCase;
 
 public class TestSampleTabRenderer extends TestCase {
     private SampleTabWriter sampletabwriter;
     private SampleData sampledata;
     private StringWriter out;
-    private URL resource;
 
     public void setUp() {
 		out = new StringWriter();

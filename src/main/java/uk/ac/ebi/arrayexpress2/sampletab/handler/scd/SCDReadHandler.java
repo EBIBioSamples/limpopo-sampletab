@@ -1,6 +1,5 @@
 package uk.ac.ebi.arrayexpress2.sampletab.handler.scd;
 
-import org.mged.magetab.error.ErrorCode;
 import org.mged.magetab.error.ErrorItem;
 import org.mged.magetab.error.ErrorItemFactory;
 

@@ -1,7 +1,5 @@
 package uk.ac.ebi.arrayexpress2.sampletab.handler.msi.impl;
 
-import java.util.List;
-
 import net.sourceforge.fluxion.spi.ServiceProvider;
 import uk.ac.ebi.arrayexpress2.magetab.exception.ParseException;
 import uk.ac.ebi.arrayexpress2.magetab.handler.listener.HandlerEvent;
