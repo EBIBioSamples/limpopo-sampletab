@@ -9,17 +9,17 @@ public class TermSource {
 	private final String version;
 
 	public TermSource(String name, String uri, String version) {
-		if (name == null)
+		if (name == null || name.trim().length() == 0)
 		    this.name = null;
 		else
 		    this.name = name.trim();
 
-        if (uri == null)
+        if (uri == null || uri.trim().length() == 0)
             this.uri = null;
         else
             this.uri = uri.trim();
         
-        if (version == null)
+        if (version == null || version.trim().length() == 0)
             this.version = null;
         else
             this.version = version.trim();

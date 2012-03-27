@@ -9,18 +9,20 @@ public class Database {
 	private final String uri;
 
 	public Database(String name, String uri, String id) {
-        if (name != null && name.equals("")){
-            name = null;
-        }
-        if (uri != null && uri.equals("")){
-            uri = null;
-        }
-        if (id != null && id.equals("")){
-            id = null;
-        }
-		this.name = name;
-		this.uri = uri;
-		this.id = id;
+        if (name == null || name.trim().length() == 0)
+            this.name = null;
+        else
+            this.name = name.trim();
+        
+        if (uri == null || uri.trim().length() == 0)
+            this.uri = null;
+        else
+            this.uri = uri.trim();
+        
+        if (id == null || id.trim().length() == 0)
+            this.id = null;
+        else
+            this.id = id.trim();
 	}
 
     public String getName() {

@@ -25,7 +25,7 @@ public class TestTermSource extends TestCase {
     private TermSource b;
     
     public void setUp() {
-		a1 = new TermSource("a", "666", null);
+		a1 = new TermSource("a", "666", "");
         a2 = new TermSource("a", "666", null);
         b = new TermSource("b", "555", null);
     }

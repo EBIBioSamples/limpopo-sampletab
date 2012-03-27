@@ -12,11 +12,30 @@ public class Organization {
 
 	public Organization(String name, String address, String uri, String email,
 			String role) {
-		this.name = name;
-		this.address = address;
-		this.uri = uri;
-		this.email = email;
-		this.role = role;
+        if (name == null || name.trim().length() == 0)
+            this.name = null;
+        else
+            this.name = name.trim();
+
+        if (address == null || address.trim().length() == 0)
+            this.address = null;
+        else
+            this.address = address.trim();
+
+        if (uri == null || uri.trim().length() == 0)
+            this.uri = null;
+        else
+            this.uri = uri.trim();
+
+        if (email == null || email.trim().length() == 0)
+            this.email = null;
+        else
+            this.email = email.trim();
+
+        if (role == null || role.trim().length() == 0)
+            this.role = null;
+        else
+            this.role = role.trim();
 	}
 
 	public String getName() {

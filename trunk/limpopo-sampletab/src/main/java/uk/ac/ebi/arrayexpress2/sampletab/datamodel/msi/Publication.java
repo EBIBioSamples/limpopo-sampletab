@@ -8,8 +8,16 @@ public class Publication {
 	private final String pubmedid;
 
 	public Publication(String pubmedid, String doi) {
-		this.doi = doi;
-		this.pubmedid = pubmedid;
+        if (doi == null || doi.trim().length() == 0)
+            this.doi = null;
+        else
+            this.doi = doi.trim();
+
+        if (pubmedid == null || pubmedid.trim().length() == 0)
+            this.pubmedid = null;
+        else
+            //TODO cut to integer only
+            this.pubmedid = pubmedid.trim();
 	}
 
 	public String getDOI() {
