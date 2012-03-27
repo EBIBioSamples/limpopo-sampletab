@@ -12,11 +12,30 @@ public class Person {
 
 	public Person(String lastname, String initials, String firstname, String email,
 			String role) {
-		this.lastname = lastname;
-		this.initials = initials;
-		this.firstname = firstname;
-		this.email = email;
-		this.role = role;
+        if (lastname == null || lastname.trim().length() == 0)
+            this.lastname = null;
+        else
+            this.lastname = lastname.trim();
+        
+        if (initials == null || initials.trim().length() == 0)
+            this.initials = null;
+        else
+            this.initials = initials.trim();
+        
+        if (firstname == null || firstname.trim().length() == 0)
+            this.firstname = null;
+        else
+            this.firstname = firstname.trim();
+        
+        if (email == null || email.trim().length() == 0)
+            this.email = null;
+        else
+            this.email = email.trim();
+        
+        if (role == null || role.trim().length() == 0)
+            this.role = null;
+        else
+            this.role = role.trim();
 	}
 
 	public String getLastName() {
