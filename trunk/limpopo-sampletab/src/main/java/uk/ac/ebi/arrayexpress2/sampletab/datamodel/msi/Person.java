@@ -10,7 +10,7 @@ public class Person {
 	private final String email;
 	private final String role;
 
-	public Person(String lastname, String initials, String firstname, String uri, String email,
+	public Person(String lastname, String initials, String firstname, String email,
 			String role) {
 		this.lastname = lastname;
 		this.initials = initials;

@@ -25,24 +25,10 @@ public class MSI {
 	public volatile Date submissionUpdateDate = null;
 	public volatile Boolean submissionReferenceLayer = false;
 
-	public List<String> organizationName = new ArrayList<String>();
-	public List<String> organizationAddress = new ArrayList<String>();
-	public List<String> organizationURI = new ArrayList<String>();
-	public List<String> organizationEmail = new ArrayList<String>();
-	public List<String> organizationRole = new ArrayList<String>();
-
-	public List<String> personLastName = new ArrayList<String>();
-	public List<String> personInitials = new ArrayList<String>();
-	public List<String> personFirstName = new ArrayList<String>();
-	public List<String> personEmail = new ArrayList<String>();
-	public List<String> personRole = new ArrayList<String>();
-
 	//these have to be created as lists so the parsing works correctly
 	//however, may be converted to sets on writing
-	
-	//TODO finish implementing collection-based substructures
-//	public List<Organization> organizations = new ArrayList<Organization>();
-//	public List<Person> persons = new ArrayList<Person>();
+	public List<Organization> organizations = new ArrayList<Organization>();
+	public List<Person> persons = new ArrayList<Person>();
     public List<TermSource> termSources = new ArrayList<TermSource>();
 	public List<Publication> publications = new ArrayList<Publication>();
 	public List<Database> databases = new ArrayList<Database>();

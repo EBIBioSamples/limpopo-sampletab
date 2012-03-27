@@ -1,8 +1,10 @@
 package uk.ac.ebi.arrayexpress2.sampletab.parser;
 
+import java.io.BufferedWriter;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
+import java.io.OutputStreamWriter;
 import java.io.StringWriter;
 import java.net.URL;
 import java.util.ArrayList;
@@ -148,6 +150,11 @@ public class TestSampleTabParser extends TestCase {
     public void testParseDGVa() {
         try {
             SampleData st = doParse(resource_dgva);
+//            BufferedWriter tmplog = new BufferedWriter(new OutputStreamWriter(System.out));
+//            SampleTabWriter w = new SampleTabWriter(tmplog);
+//            w.write(st);
+//            tmplog.flush();
+//            tmplog.close();
         } catch (ParseException e) {
             e.printStackTrace();
             fail();
