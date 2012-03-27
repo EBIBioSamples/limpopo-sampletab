@@ -82,61 +82,65 @@ public class SCDGroupNameHandler extends SCDReadHandler {
     public void readData(String[] header, String[] data, SCD scd, int lineNumber, int columnNumber)
             throws ParseException {
         GroupNode group;
+        boolean newGroup = false; 
 
         // first row, so lookup or make a new source
         synchronized (scd) {
             group = scd.getNode(data[0], GroupNode.class);
             if (group == null) {
+                newGroup = true;
                 group = new GroupNode();
                 group.setNodeName(data[0]);
                 scd.addNode(group);
             }
         }
                 
-        // now do the rest
-        for (int i = 1; i < data.length;) {
-        	if (header[i].equals("groupdescription")) {
-                group.groupDescription = data[i];
+        // now do the rest if a new group was created
+        if (newGroup) {
+            for (int i = 1; i < data.length;) {
+            	if (header[i].equals("groupdescription")) {
+                    group.groupDescription = data[i];
+                }
+            	else if (header[i].equals("groupaccession")) {
+                    group.groupAccession = data[i];
+                }
+                else if (header[i].equals("organism")) {
+                    i += readAttribute(organismAttributeReader, header, data, scd, group, lineNumber,
+                            columnNumber + i, i);
+                }
+                else if (header[i].equals("sex")) {
+                    i += readAttribute(sexAttributeReader, header, data, scd, group, lineNumber,
+                            columnNumber + i, i);
+                }
+                else if (header[i].equals("material")) {
+                    i += readAttribute(materialAttributeReader, header, data, scd, group, lineNumber,
+                            columnNumber + i, i);
+                }
+                else if (header[i].equals("databasename")) {
+                    i += readAttribute(databaseAttributeReader, header, data, scd, group, lineNumber,
+                            columnNumber + i, i);
+                }
+                else if (header[i].startsWith("characteristic")) {
+                    i += readAttribute(characteristicAttributeReader, header, data, scd, group, lineNumber,
+                            columnNumber + i, i);
+                }
+                else if (header[i].startsWith("comment")) {
+                    i += readAttribute(commentAttributeReader, header, data, scd, group, lineNumber,
+                            columnNumber + i, i);
+                }
+                else if (header[i].startsWith("count")) {
+                    i += readAttribute(countAttributeReader, header, data, scd, group, lineNumber,
+                            columnNumber + i, i);
+                }
+                else {
+                    // got to something we don't recognise
+                    // this is either the end, or a bad column name
+                    // update the child node
+                    updateChildNode(header, data, group, i);
+                    break;
+                }
+                i++;
             }
-        	else if (header[i].equals("groupaccession")) {
-                group.groupAccession = data[i];
-            }
-            else if (header[i].equals("organism")) {
-                i += readAttribute(organismAttributeReader, header, data, scd, group, lineNumber,
-                        columnNumber + i, i);
-            }
-            else if (header[i].equals("sex")) {
-                i += readAttribute(sexAttributeReader, header, data, scd, group, lineNumber,
-                        columnNumber + i, i);
-            }
-            else if (header[i].equals("material")) {
-                i += readAttribute(materialAttributeReader, header, data, scd, group, lineNumber,
-                        columnNumber + i, i);
-            }
-            else if (header[i].equals("databasename")) {
-                i += readAttribute(databaseAttributeReader, header, data, scd, group, lineNumber,
-                        columnNumber + i, i);
-            }
-            else if (header[i].startsWith("characteristic")) {
-                i += readAttribute(characteristicAttributeReader, header, data, scd, group, lineNumber,
-                        columnNumber + i, i);
-            }
-            else if (header[i].startsWith("comment")) {
-                i += readAttribute(commentAttributeReader, header, data, scd, group, lineNumber,
-                        columnNumber + i, i);
-            }
-            else if (header[i].startsWith("count")) {
-                i += readAttribute(countAttributeReader, header, data, scd, group, lineNumber,
-                        columnNumber + i, i);
-            }
-            else {
-                // got to something we don't recognise
-                // this is either the end, or a bad column name
-                // update the child node
-                updateChildNode(header, data, group, i);
-                break;
-            }
-            i++;
         }
 
         // iterated over every column, so must have reached the end
