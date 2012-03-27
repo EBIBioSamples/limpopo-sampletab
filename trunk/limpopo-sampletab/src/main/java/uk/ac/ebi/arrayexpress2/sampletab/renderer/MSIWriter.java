@@ -131,7 +131,7 @@ public class MSIWriter extends Writer {
             writer.write("\n");
             writer.write("Organization Email\t");
             for (Organization org : orgs){
-                if (org.getURI() != null){
+                if (org.getEmail() != null){
                     writer.write(org.getEmail());
                 }
                 writer.write("\t");
@@ -139,7 +139,7 @@ public class MSIWriter extends Writer {
             writer.write("\n");
             writer.write("Organization Role\t");
             for (Organization org : orgs){
-                if (org.getURI() != null){
+                if (org.getRole() != null){
                     writer.write(org.getRole());
                 }
                 writer.write("\t");
