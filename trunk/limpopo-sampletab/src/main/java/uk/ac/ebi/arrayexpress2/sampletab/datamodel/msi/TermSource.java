@@ -1,7 +1,6 @@
 package uk.ac.ebi.arrayexpress2.sampletab.datamodel.msi;
 
 import org.apache.commons.lang.builder.EqualsBuilder;
-import org.apache.commons.lang.builder.HashCodeBuilder;
 
 public class TermSource {
 	private final String name;

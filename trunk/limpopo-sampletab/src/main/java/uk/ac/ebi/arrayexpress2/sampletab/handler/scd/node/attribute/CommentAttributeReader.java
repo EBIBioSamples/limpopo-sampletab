@@ -10,7 +10,6 @@ import uk.ac.ebi.arrayexpress2.magetab.exception.ParseException;
 import uk.ac.ebi.arrayexpress2.magetab.exception.UnmatchedTagException;
 import uk.ac.ebi.arrayexpress2.sampletab.datamodel.SCD;
 import uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node.SCDNode;
-import uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node.attribute.CharacteristicAttribute;
 import uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node.attribute.CommentAttribute;
 import uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node.attribute.UnitAttribute;
 

@@ -2,7 +2,6 @@ package uk.ac.ebi.arrayexpress2.sampletab.parser;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Deque;
 import java.util.HashSet;

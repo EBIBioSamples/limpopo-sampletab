@@ -5,10 +5,7 @@ import org.isatools.tablib.export.graph2tab.DefaultTabValueGroup;
 //import org.isatools.tablib.export.graph2tab.Node;
 import org.isatools.tablib.export.graph2tab.TabValueGroup;
 
-import uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node.AbstractSCDNode;
 import uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node.SCDNode;
-import uk.ac.ebi.arrayexpress2.magetab.datamodel.graph.Node;
-
 import java.util.*;
 
 
