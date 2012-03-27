@@ -13,6 +13,8 @@ import org.slf4j.LoggerFactory;
 
 import uk.ac.ebi.arrayexpress2.sampletab.datamodel.MSI;
 import uk.ac.ebi.arrayexpress2.sampletab.datamodel.msi.Database;
+import uk.ac.ebi.arrayexpress2.sampletab.datamodel.msi.Organization;
+import uk.ac.ebi.arrayexpress2.sampletab.datamodel.msi.Person;
 import uk.ac.ebi.arrayexpress2.sampletab.datamodel.msi.Publication;
 import uk.ac.ebi.arrayexpress2.sampletab.datamodel.msi.TermSource;
 
@@ -63,17 +65,9 @@ public class MSIWriter extends Writer {
 				msi.getSubmissionReleaseDateAsString());
 		writeSingleField("Submission Update Date",
 				msi.getSubmissionUpdateDateAsString());
-		
-		writeMultiField("Organization Name", msi.organizationName);
-		writeMultiField("Organization Address", msi.organizationAddress);
-		writeMultiField("Organization URI", msi.organizationURI);
-		writeMultiField("Organization Email", msi.organizationEmail);
-		writeMultiField("Organization Role", msi.organizationRole);
-		writeMultiField("Person Last Name", msi.personLastName);
-		writeMultiField("Person Initials", msi.personInitials);
-		writeMultiField("Person First Name", msi.personFirstName);
-		writeMultiField("Person Email", msi.personEmail);
-		writeMultiField("Person Role", msi.personRole);
+
+        writeOrganizations(msi.organizations);
+        writePersons(msi.persons);
         writePublications(msi.publications);
         writeTermSources(msi.termSources);
 		writeDatabases(msi.databases);
@@ -106,6 +100,99 @@ public class MSIWriter extends Writer {
 			writer.write("\n");
 		}
 	}
+    
+    public void writeOrganizations(Collection<Organization> organizations)
+        throws IOException {
+        if (organizations != null){
+            List<Organization> orgs = new ArrayList<Organization>(new HashSet<Organization>(organizations));
+            writer.write("Organization Name\t");
+            for (Organization org : orgs){
+                if (org.getName() != null){
+                    writer.write(org.getName());
+                }
+                writer.write("\t");
+            }
+            writer.write("\n");
+            writer.write("Organization Address\t");
+            for (Organization org : orgs){
+                if (org.getAddress() != null){
+                    writer.write(org.getAddress());
+                }
+                writer.write("\t");
+            }
+            writer.write("\n");
+            writer.write("Organization URI\t");
+            for (Organization org : orgs){
+                if (org.getURI() != null){
+                    writer.write(org.getURI());
+                }
+                writer.write("\t");
+            }
+            writer.write("\n");
+            writer.write("Organization Email\t");
+            for (Organization org : orgs){
+                if (org.getURI() != null){
+                    writer.write(org.getURI());
+                }
+                writer.write("\t");
+            }
+            writer.write("\n");
+            writer.write("Organization Role\t");
+            for (Organization org : orgs){
+                if (org.getURI() != null){
+                    writer.write(org.getURI());
+                }
+                writer.write("\t");
+            }
+            writer.write("\n");
+        }
+    }
+
+    public void writePersons(Collection<Person> persons)
+        throws IOException {
+        if (persons != null){
+            List<Person> pers = new ArrayList<Person>(new HashSet<Person>(persons));
+            writer.write("Person Last Name\t");
+            for (Person per : pers){
+                if (per.getLastName() != null){
+                    writer.write(per.getLastName());
+                }
+                writer.write("\t");
+            }
+            writer.write("\n");
+            writer.write("Person Initials\t");
+            for (Person per : pers){
+                if (per.getInitials() != null){
+                    writer.write(per.getInitials());
+                }
+                writer.write("\t");
+            }
+            writer.write("Person First Name\t");
+            for (Person per : pers){
+                if (per.getFirstName() != null){
+                    writer.write(per.getFirstName());
+                }
+                writer.write("\t");
+            }
+            writer.write("\n");
+            writer.write("Person Email\t");
+            for (Person per : pers){
+                if (per.getEmail() != null){
+                    writer.write(per.getEmail());
+                }
+                writer.write("\t");
+            }
+            writer.write("\n");
+            writer.write("Person Role\t");
+            for (Person per : pers){
+                if (per.getRole() != null){
+                    writer.write(per.getRole());
+                }
+                writer.write("\t");
+            }
+            writer.write("\n");
+        }
+    }
     
     public void writePublications(Collection<Publication> publications)
         throws IOException {
