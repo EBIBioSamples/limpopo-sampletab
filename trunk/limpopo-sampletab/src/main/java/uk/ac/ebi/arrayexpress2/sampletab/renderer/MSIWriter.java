@@ -167,6 +167,7 @@ public class MSIWriter extends Writer {
                 }
                 writer.write("\t");
             }
+            writer.write("\n");
             writer.write("Person First Name\t");
             for (Person per : pers){
                 if (per.getFirstName() != null){
