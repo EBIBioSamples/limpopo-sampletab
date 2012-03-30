@@ -15,9 +15,9 @@ import uk.ac.ebi.arrayexpress2.sampletab.datamodel.msi.TermSource;
 
 public class MSI {
 	
-	public volatile String submissionTitle = "";
-	public volatile String submissionDescription = "";
-	public volatile String submissionIdentifier = "";
+	public volatile String submissionTitle = null;
+	public volatile String submissionDescription = null;
+	public volatile String submissionIdentifier = null;
 	public volatile String submissionVersion = "1.0";
 	public volatile Date submissionReleaseDate = null;
 	public volatile Date submissionUpdateDate = null;
