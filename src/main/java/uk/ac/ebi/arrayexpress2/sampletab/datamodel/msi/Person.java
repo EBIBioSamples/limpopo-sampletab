@@ -58,7 +58,8 @@ public class Person {
 		return role;
 	}
 
-	public boolean equals(Person other) {
+    @Override
+	public boolean equals(Object other) {
 		if (other == null) {
 			return false;
 		} else if (other == this) {
@@ -66,19 +67,19 @@ public class Person {
         } else if (!this.getClass().isInstance(other)) {
             return false;
         } else {
-    
+        	Person pother = (Person) other;
     		return new EqualsBuilder()
-    			.append(this.getFirstName(), other.getFirstName())
-    			.append(this.getInitials(), other.getInitials())
-    			.append(this.getLastName(), other.getLastName())
-    			.append(this.getEmail(), other.getEmail())
-    			.append(this.getRole(), other.getRole())
+    			.append(this.getFirstName(), pother.getFirstName())
+    			.append(this.getInitials(), pother.getInitials())
+    			.append(this.getLastName(), pother.getLastName())
+    			.append(this.getEmail(), pother.getEmail())
+    			.append(this.getRole(), pother.getRole())
     			.isEquals();
         }
 	}
 
 	public int hashCode() {
-		return new HashCodeBuilder(13, 31) // two randomly chosen prime numbers
+		return new HashCodeBuilder(13, 83) // two randomly chosen prime numbers
 			.append(this.getFirstName())
 			.append(this.getInitials())
 			.append(this.getLastName())

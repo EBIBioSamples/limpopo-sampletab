@@ -37,7 +37,8 @@ public class Database {
 		return uri;
 	}
 
-	public boolean equals(Database other) {
+    @Override
+	public boolean equals(Object other) {
 		if (other == null) {
 			return false;
 		} else if (other == this) {
@@ -45,11 +46,11 @@ public class Database {
         } else if (!this.getClass().isInstance(other)){
             return false;
         } else {
-    
+        	Database dother = (Database) other;
     		return new EqualsBuilder()
-    			.append(this.getName(), other.getName())
-    			.append(this.getURI(), other.getURI())
-    			.append(this.getID(), other.getID())
+    			.append(this.getName(), dother.getName())
+    			.append(this.getURI(), dother.getURI())
+    			.append(this.getID(), dother.getID())
     			.isEquals();
             }
 	}

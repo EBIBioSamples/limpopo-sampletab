@@ -5,18 +5,18 @@ import java.util.Set;
 
 import junit.framework.TestCase;
 
-public class TestTermSource extends TestCase {
+public class TestPerson extends TestCase {
 
-    private TermSource a1;
-    private TermSource a2;
-    private TermSource b;
-    private Set<TermSource> testset;
+    private Person a1;
+    private Person a2;
+    private Person b;
+    private Set<Person> testset; 
     
     public void setUp() {
-		a1 = new TermSource("a", "666", "");
-        a2 = new TermSource("a", "666", null);
-        b = new TermSource("b", "555", null);
-        testset = new HashSet<TermSource>();
+		a1 = new Person("a", "", "A", "", "");
+        a2 = new Person("a", null, "A", null, null);
+        b = new Person("b", "", "B", null, null);
+        testset = new HashSet<Person>();
     }
     
     public void tearDown() throws Exception{
