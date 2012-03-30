@@ -28,7 +28,8 @@ public class Publication {
 		return pubmedid;
 	}
 
-	public boolean equals(Publication other) {
+    @Override
+	public boolean equals(Object other) {
 		if (other == null){
 			return false;
 		} else if (other == this) {
@@ -36,11 +37,11 @@ public class Publication {
         } else if (!this.getClass().isInstance(other)){
             return false;
 		} else {
-
-		return new EqualsBuilder()
-			.append(this.getDOI(), other.getDOI())
-			.append(this.getPubMedID(), other.getPubMedID())
-			.isEquals();
+        	Publication pother = (Publication) other;
+			return new EqualsBuilder()
+				.append(this.getDOI(), pother.getDOI())
+				.append(this.getPubMedID(), pother.getPubMedID())
+				.isEquals();
 		}
 	}
 

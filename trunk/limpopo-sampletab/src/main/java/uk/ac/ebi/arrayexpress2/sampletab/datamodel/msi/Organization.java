@@ -58,7 +58,8 @@ public class Organization {
 		return role;
 	}
 
-	public boolean equals(Organization other) {
+    @Override
+	public boolean equals(Object other) {
 		if (other == null) {
 			return false;
 		} else if (other == this) {
@@ -66,12 +67,13 @@ public class Organization {
         } else if (!this.getClass().isInstance(other)){
             return false;
         } else {
+        	Organization oother = (Organization) other;
     		return new EqualsBuilder()
-    			.append(this.getName(), other.getName())
-    			.append(this.getAddress(), other.getAddress())
-    			.append(this.getURI(), other.getURI())
-    			.append(this.getEmail(), other.getEmail())
-    			.append(this.getRole(), other.getRole())
+    			.append(this.getName(), oother.getName())
+    			.append(this.getAddress(), oother.getAddress())
+    			.append(this.getURI(), oother.getURI())
+    			.append(this.getEmail(), oother.getEmail())
+    			.append(this.getRole(), oother.getRole())
     			.isEquals();
         }
 	}

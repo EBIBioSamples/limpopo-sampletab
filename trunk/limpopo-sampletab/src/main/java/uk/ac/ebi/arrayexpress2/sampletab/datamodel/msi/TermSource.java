@@ -1,6 +1,7 @@
 package uk.ac.ebi.arrayexpress2.sampletab.datamodel.msi;
 
 import org.apache.commons.lang.builder.EqualsBuilder;
+import org.apache.commons.lang.builder.HashCodeBuilder;
 
 public class TermSource {
 	private final String name;
@@ -57,12 +58,11 @@ public class TermSource {
 
 	@Override
 	public int hashCode() {
-	    return 7;
-//		return new HashCodeBuilder(13, 83) // two randomly chosen prime numbers
-//			.append(this.getName())
-//			.append(this.getURI())
-//			.append(this.getVersion())
-//			.toHashCode();
+		return new HashCodeBuilder(13, 83) // two randomly chosen prime numbers
+			.append(this.getName())
+			.append(this.getURI())
+			.append(this.getVersion())
+			.toHashCode();
 	}
 
 }
