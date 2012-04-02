@@ -1,0 +1,83 @@
+ -----
+ Introduction
+ -----
+ Adam Faulconbridge
+ -----
+ 28/03/2012
+ -----
+
+The LIMPOPO SampleTab Parser
+
+ The LIMPOPO SampleTab Parser is a Java library intended as a simple one-stop
+ solution for SampleTab parsing, validating, and programmatic object modelling.
+
+ It comes equipped with an internal, thread safe object model that represents
+ the MSI as lists of objects and SCD as a comprehensive graph. 
+
+ The LIMPOPO parser is very easy to use, requiring just a few lines of code to
+ parse SampleTab documents. The LIMPOPO object model can also easily be populated programmatically.
+
+ The parser is readily extensible using a plug-in mechanism to provide additional
+ parsing functionality, validation, or the ability to convert SampleTab documents into
+ your own object model.
+
+* Installation
+
+ To use the SampleTab parser in your own code, you can either download the parser
+ binary directly {{{https://sourceforge.net/projects/limpopo/files/}here}} or
+ configure a dependency on it using maven.
+
+ There are two versions - the basic version doesn't include any of the project's
+ dependencies, and the "assembly" version comes with dependencies pre-bundled.
+ If you use the basic version, you will need to include the required
+ dependencies: these are listed {{{dependencies.html}here}}.
+
+ If you use Maven, you don't need to worry about dependency management - if you
+ want to add a LIMPOPO as a dependency of your own Maven project, you can
+ add the following repository to your pom.xml file:
+
+--------
+  <repositories>
+    <repository>
+      <id>limpopo-repo</id>
+      <name>Limpopo Mini-SF Repository</name>
+      <url>http://limpopo.sourceforge.net/maven/repo</url>
+    </repository>
+  </repositories>
+---------
+
+ Then simply add a dependency on LIMPOPO like so:
+
+---------
+  <dependencies>
+    <dependency>
+      <groupId>uk.ac.ebi.arrayexpress2</groupId>
+      <artifactId>limpopo-sampletab</artifactId>
+      <version>1.1.1</version>
+    </dependency>
+  </dependencies>
+---------
+
+ There are several versions available.  Check the {{{release.html}Release Notes}}
+ for more information.
+
+* Usage
+
+ To use the parser in you application is simple, just import the relevant
+ package and declare some code similar to the following:
+
+--------
+ SampleTabParser parser = new SampleTabParser();
+
+ File sampletabFile = new File("/path/to/sampletab");
+ SampleData sampledata = parser.parse(sampletabFile);
+--------
+
+ You can then extract data from the investigation using various public fields,
+ so for example:
+
+--------
+ String title = sampledata.msi.submissionTitle;
+--------
+
+ Simple as that!

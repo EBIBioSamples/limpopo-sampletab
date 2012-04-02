@@ -45,12 +45,13 @@
 			<url>http://limpopo.sourceforge.net/maven/repo</url>
 		</repository>
 	</repositories>
+
 	<dependencies>
 		<dependency>
 			<groupId>uk.ac.ebi.arrayexpress2</groupId>
 			<artifactId>limpopo</artifactId>
-<!-- 			<version>1.1.2-SNAPSHOT</version> -->
- 			<version>1.1.1</version>
+			<!-- <version>1.1.2-SNAPSHOT</version> -->
+			<version>1.1.1</version>
 			<exclusions>
 				<exclusion>
 					<groupId>org.isatools</groupId>
@@ -109,6 +110,47 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
+
+	<reporting>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-project-info-reports-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>jxr-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</reporting>
+
+	<licenses>
+		<license>
+			<name>GNU Lesser General Public License</name>
+			<url>http://www.gnu.org/copyleft/lesser.html</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+
+	<developers>
+		<developer>
+			<id>faulcon</id>
+			<name>Adam Faulconbridge</name>
+			<email>faulcon@ebi.ac.uk</email>
+			<organization>EBI</organization>
+			<organizationUrl>http://www.ebi.ac.uk</organizationUrl>
+			<roles>
+				<role>Developer</role>
+			</roles>
+			<timezone>0</timezone>
+			<properties />
+		</developer>
+	</developers>
+
 	<build>
 		<plugins>
 			<plugin>
