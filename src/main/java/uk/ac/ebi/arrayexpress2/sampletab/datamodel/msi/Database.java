@@ -3,11 +3,22 @@ package uk.ac.ebi.arrayexpress2.sampletab.datamodel.msi;
 import org.apache.commons.lang.builder.EqualsBuilder;
 import org.apache.commons.lang.builder.HashCodeBuilder;
 
+/**
+ * Representation of an database cross-reference used in {@link SampleTab} {@link MSI}.
+ * 
+ * Is immutable, comparable, and hashable.
+ * 
+ * @author Adam Faulconbridge
+ */
 public class Database {
 	private final String name;
 	private final String id;
 	private final String uri;
 
+	/**
+	 * Will accept null values and convert zero-length strings to null. This is needed 
+	 * so that they can be built up line-by-line when reading from a file.
+	 */
 	public Database(String name, String uri, String id) {
         if (name == null || name.trim().length() == 0)
             this.name = null;

@@ -5,6 +5,9 @@ import java.util.Collections;
 import java.util.List;
 import uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node.attribute.SCDNodeAttribute;
 
+/**
+ * This represents a sample object.
+ */
 public class SampleNode extends AbstractSCDNode {
 	public String sampleDescription;
 	public String sampleAccession; // TODO make getter/setter for this that

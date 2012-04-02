@@ -13,6 +13,17 @@ import uk.ac.ebi.arrayexpress2.sampletab.datamodel.msi.Person;
 import uk.ac.ebi.arrayexpress2.sampletab.datamodel.msi.Publication;
 import uk.ac.ebi.arrayexpress2.sampletab.datamodel.msi.TermSource;
 
+/**
+ * Meta-Submission Information in a SampleTab File.
+ * 
+ * Information relating to the submission can be altered directly in an MSI object.
+ * 
+ * Other MSI objects are stored as public lists.
+ * 
+ * 
+ * Read from a SampleTab file by {@Link uk.ac.ebi.arrayexpress2.sampletab.parser.MSIParser} and written out
+ * by {@link uk.ac.ebi.arrayexpress2.renderer.MSIWriter}.
+ */
 public class MSI {
 	
 	public volatile String submissionTitle = null;
