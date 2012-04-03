@@ -1,14 +1,14 @@
 package uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node.attribute;
 
-public class ChildOfAttribute extends AbstractRelationshipAttribute {
+public class DerivedFromAttribute extends AbstractRelationshipAttribute {
 
-    private static String name = "Child Of";
+    private static String name = "Derived From";
     
-    public ChildOfAttribute() {
+    public DerivedFromAttribute() {
         super();
     }
     
-    public ChildOfAttribute(String value) {
+    public DerivedFromAttribute(String value) {
         super(value);
     }
 
