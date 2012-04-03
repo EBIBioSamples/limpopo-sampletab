@@ -91,10 +91,10 @@ public class SCDSampleNameHandler extends SCDReadHandler {
         // now do the rest
         for (int i = 1; i < data.length;) {
         	if (header[i].equals("sampledescription")) {
-                sample.sampleDescription = data[i];
+                sample.setSampleDescription(data[i]);
             }
         	else if (header[i].equals("sampleaccession")) {
-                sample.sampleAccession = data[i];
+                sample.setSampleAccession(data[i]);
             }
             else if (header[i].equals("organism")) {
                 i += readAttribute(organismAttributeReader, header, data, scd, sample, lineNumber,

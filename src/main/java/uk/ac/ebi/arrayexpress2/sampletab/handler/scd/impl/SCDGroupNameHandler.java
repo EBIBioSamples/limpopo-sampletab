@@ -99,10 +99,10 @@ public class SCDGroupNameHandler extends SCDReadHandler {
         if (newGroup) {
             for (int i = 1; i < data.length;) {
             	if (header[i].equals("groupdescription")) {
-                    group.groupDescription = data[i];
+                    group.setGroupDescription(data[i]);
                 }
             	else if (header[i].equals("groupaccession")) {
-                    group.groupAccession = data[i];
+                    group.setGroupAccession(data[i]);
                 }
                 else if (header[i].equals("organism")) {
                     i += readAttribute(organismAttributeReader, header, data, scd, group, lineNumber,
