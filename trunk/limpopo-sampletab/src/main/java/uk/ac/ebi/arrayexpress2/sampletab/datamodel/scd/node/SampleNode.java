@@ -7,11 +7,18 @@ import uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node.attribute.SCDNodeAtt
 
 /**
  * This represents a sample object.
+ * 
+ * Three attributes are built into this object "Sample Name, "Sample Accession" 
+ * and "Sample Description". All other attributes should be added through an 
+ * addAttribute method.
+ * 
+ * When samples are derived from each other, the addChildNode and addParentNode
+ * methods should be used. Note that these are not reciprocal so both
+ * must be called to function correctly.
  */
 public class SampleNode extends AbstractSCDNode {
-	public String sampleDescription;
-	public String sampleAccession; // TODO make getter/setter for this that
-									// checks value
+	private String sampleDescription = null;
+	private String sampleAccession = null;
 	private final List<SCDNodeAttribute> attributes = new ArrayList<SCDNodeAttribute>();
 
 	public String[] headers() {
@@ -46,6 +53,11 @@ public class SampleNode extends AbstractSCDNode {
 		return valuesList.toArray(result);
 	}
 
+	/**
+	 * Returns the type of this node. This should be a lowercased 
+	 * and space-removed version of the first column header so
+	 * that parsing works.
+	 */
 	public String getNodeType() {
 		return "samplename";
 	}
@@ -68,42 +80,25 @@ public class SampleNode extends AbstractSCDNode {
 		return attributes;
 	}
 
-	/**
-	 * {@link #Node}  are determined to be equal() if they are of the same class, have
-	 * the same {@link #getNodeType()} value and the same {@link #getNodeName()}
-	 * value. SampleNodes have the additional restriction that their
-	 * {@link #sampleAccession} should be equal as well.
-	 * 
-	 * @param obj
-	 *            the object to compare for equality
-	 * @return true if these objects are equal, false otherwise
-	 */
-	/*
-    @Override
-	public boolean equals(Object other) {
-		if (other == null)
-			return false;
-		else if (other == this)
-			return true;
+    public String getSampleDescription() {
+        return sampleDescription;
+    }
 
-		if (other instanceof SampleNode) {
-			SampleNode that = (SampleNode) other;
-			return new EqualsBuilder()
-					.append(this.getNodeType(), that.getNodeType())
-					.append(this.getNodeName(), that.getNodeName())
-					.append(this.sampleAccession, that.sampleAccession)
-					.isEquals();
-		} else {
-			return false;
-		}
-	}
+    public void setSampleDescription(String sampleDescription) {
+        sampleDescription = sampleDescription.trim();
+        if (sampleDescription.length() == 0)
+            sampleDescription = null;
+        this.sampleDescription = sampleDescription;
+    }
 
-    @Override
-	public int hashCode() {
-		return new HashCodeBuilder(11, 31)
-				// two randomly chosen prime numbers
-				.append(this.getNodeType()).append(this.getNodeName())
-				.append(this.sampleAccession).toHashCode();
-	}*/
+    public String getSampleAccession() {
+        return sampleAccession;
+    }
 
+    public void setSampleAccession(String sampleAccession) {
+        sampleAccession = sampleAccession.trim();
+        if (sampleAccession.length() == 0)
+            sampleAccession = null;
+        this.sampleAccession = sampleAccession;
+    }
 }
