@@ -85,9 +85,11 @@ public class SampleNode extends AbstractSCDNode {
     }
 
     public void setSampleDescription(String sampleDescription) {
-        sampleDescription = sampleDescription.trim();
-        if (sampleDescription.length() == 0)
-            sampleDescription = null;
+        if (sampleDescription != null){
+            sampleDescription = sampleDescription.trim();
+            if (sampleDescription.length() == 0)
+                sampleDescription = null;
+        }
         this.sampleDescription = sampleDescription;
     }
 
@@ -96,9 +98,11 @@ public class SampleNode extends AbstractSCDNode {
     }
 
     public void setSampleAccession(String sampleAccession) {
-        sampleAccession = sampleAccession.trim();
-        if (sampleAccession.length() == 0)
-            sampleAccession = null;
+        if (sampleAccession != null){
+            sampleAccession = sampleAccession.trim();
+            if (sampleAccession.length() == 0)
+                sampleAccession = null;
+        }
         this.sampleAccession = sampleAccession;
     }
 }

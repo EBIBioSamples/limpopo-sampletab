@@ -91,9 +91,11 @@ public class GroupNode extends AbstractSCDNode {
     }
 
     public void setGroupDescription(String groupDescription) {
-        groupDescription = groupDescription.trim();
-        if (groupDescription.length() == 0)
-            groupDescription = null;
+        if (groupDescription != null){
+            groupDescription = groupDescription.trim();
+            if (groupDescription.length() == 0)
+                groupDescription = null;
+        }
         this.groupDescription = groupDescription;
     }
 
@@ -102,9 +104,11 @@ public class GroupNode extends AbstractSCDNode {
     }
 
     public void setGroupAccession(String groupAccession) {
-        groupAccession = groupAccession.trim();
-        if (groupAccession.length() == 0)
-            groupAccession = null;
+        if (groupAccession != null ){
+            groupAccession = groupAccession.trim();
+            if (groupAccession.length() == 0)
+                groupAccession = null;
+        }
         this.groupAccession = groupAccession;
     }
 }
