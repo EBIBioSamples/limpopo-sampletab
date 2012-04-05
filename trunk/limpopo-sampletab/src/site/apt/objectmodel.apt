@@ -1,0 +1,22 @@
+ -----
+ Introduction
+ -----
+ Adam Faulconbridge
+ -----
+ 03/04/2012
+ -----
+ 
+Limpopo SampleTab Object Model
+
+ The Limpopo SampleTab Object Model is similar to the Limpopo MageTab Object Model and represents 
+ SampleTab files.
+ 
+ There are three major components - the MSI section, the SCD graph of samples and groups, and 
+ the attributes belonging to samples and groups. 
+ 
+ The first two of these are summarised in the UML diagram below. A SampleData class object unites the 
+ two sections of a SampleTab file, which are also represented as single objects (MSI and SCD).
+ The MSI object contains submission information itself with links to each of the sub-sections that 
+ have their own object representation of entries.
+ 
+[images/SampleData.png] UML of MSI and graph of samples and groups.
