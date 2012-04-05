@@ -1,6 +1,6 @@
 [MSI]
-Submission Title	dummy
-Submission Identifier	
+Submission Title	"something is a dummy"
+Submission Identifier	AnIdent
 Submission Description	
 Submission Version	1.0
 Submission Reference Layer	true

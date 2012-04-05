@@ -12,6 +12,8 @@ import junit.framework.TestCase;
 
 import org.mged.magetab.error.ErrorCode;
 import org.mged.magetab.error.ErrorItem;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import uk.ac.ebi.arrayexpress2.magetab.datamodel.graph.UnresolvedPlaceholderNode;
 import uk.ac.ebi.arrayexpress2.magetab.exception.ParseException;
@@ -200,6 +202,7 @@ public class TestSampleTabParser extends TestCase {
 
         // check msi title is not null
         assertNotNull("SubmissionTitle must not be null", sampledata.msi.submissionTitle);
+        assertNotNull("SubmissionIdentifier must not be null", sampledata.msi.submissionIdentifier);
         assertNotSame("SubmissionTitle should not be an empty string", "", sampledata.msi.submissionTitle);
         assertNotSame("Submission Release Date should not be null", "", sampledata.msi.submissionReleaseDate);
         assertNotSame("Submission Release Date should not be blank", "",

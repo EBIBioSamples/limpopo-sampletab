@@ -50,7 +50,8 @@ public class SCDParser extends AbstractParser<SCD> {
             getLog().debug("Tabulating SCD data...");
             String[][] scdData = MAGETABUtils.readTabDelimitedInputStream(scdIn,
                                                                            DEFAULT_ENCODING,
-                                                                           isStrippingEscaping());
+                                                                           isStrippingEscaping(),
+                                                                           false);
             getLog().debug("Tabulated " + scdData.length + " lines of SCD data");
             read(scdData, scd, service);
 
