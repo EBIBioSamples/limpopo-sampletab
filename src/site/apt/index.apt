@@ -15,7 +15,8 @@ The LIMPOPO SampleTab Parser
  the MSI as lists of objects and SCD as a comprehensive graph. 
 
  The LIMPOPO parser is very easy to use, requiring just a few lines of code to
- parse SampleTab documents. The LIMPOPO object model can also easily be populated programmatically.
+ parse SampleTab documents. The LIMPOPO object model can also easily be populated 
+ programmatically.
 
  The parser is readily extensible using a plug-in mechanism to provide additional
  parsing functionality, validation, or the ability to convert SampleTab documents into
@@ -80,4 +81,6 @@ The LIMPOPO SampleTab Parser
  String title = sampledata.msi.submissionTitle;
 --------
 
- Simple as that!
+ Simple as that! 
+ 
+ Further information on the Limpopo Object Model is {{{objectmodel.html} here}}.
