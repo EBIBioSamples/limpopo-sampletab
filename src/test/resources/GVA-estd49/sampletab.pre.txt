@@ -1,0 +1,32 @@
+[MSI]
+Submission Title	Gusev et al 2009
+Submission Identifier	GVA-estd49
+Submission Description	We present GERMLINE, a robust algorithm for identifying segmental sharing indicative of recent common ancestry between pairs of individuals. We use GERMLINE to comprehensively survey hidden relatedness both in the HapMap as well as in a densely typed island population of 3000 individuals. We bolster these results by demonstrating novel applications of precise analysis of hidden relatedness for identification and resolution of phasing errors and exposing polymorphic deletions that are otherwise challenging to detect.
+Submission Version	1.0
+Submission Reference Layer	false
+Submission Release Date	2012/04/02
+Submission Update Date	2012/04/02
+Organization Name	Department of Computer Science, Columbia University, New York, New York 10027, USA	
+Organization Address		
+Organization URI		
+Organization Email		
+Organization Role	submitter	
+Person Last Name	Peer	
+Person Initials		
+Person First Name	Itsik	
+Person Email	itsik@cs.columbia.edu	
+Person Role	submitter	
+Publication PubMed ID	18971310	
+Publication DOI		
+Term Source Name	
+Term Source URI	
+Term Source Version	
+Database Name	DGVa	
+Database ID	estd49	
+Database URI		
+
+[SCD]
+Group Name	Group Description	Count	Organism	Sample Name	Sex	Characteristic[Ethnicity]	Organism	Sample Name	Material	Comment[Source]	Group Name	Group Description	Organism	
+Group 1	2906 Islandes from Kosrae	2906	9606											
+				Subject NA06985	Female	UTAH/MORMON	9606	NA06985	DNA		Group 2	HapMap 270 30 trio parent pairs from the CEU and YRI populations, and 45 unrelated individuals from the JPT and CHB populations.	9606	
+				Subject NA06991	Female	UTAH/MORMON	9606	NA06991	DNA		Group 2	HapMap 270 30 trio parent pairs from the CEU and YRI populations, and 45 unrelated individuals from the JPT and CHB populations.	9606
