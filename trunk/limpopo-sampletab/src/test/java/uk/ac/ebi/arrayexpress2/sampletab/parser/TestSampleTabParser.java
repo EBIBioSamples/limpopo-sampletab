@@ -1,6 +1,10 @@
 package uk.ac.ebi.arrayexpress2.sampletab.parser;
 
+import java.io.BufferedWriter;
+import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStreamWriter;
 import java.io.StringWriter;
 import java.net.URL;
 import java.util.ArrayList;
@@ -21,7 +25,10 @@ import uk.ac.ebi.arrayexpress2.magetab.listener.ErrorItemListener;
 import uk.ac.ebi.arrayexpress2.sampletab.datamodel.SampleData;
 import uk.ac.ebi.arrayexpress2.sampletab.datamodel.msi.Publication;
 import uk.ac.ebi.arrayexpress2.sampletab.datamodel.msi.TermSource;
+import uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node.GroupNode;
 import uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node.SCDNode;
+import uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node.SampleNode;
+import uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node.attribute.OrganismAttribute;
 import uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node.attribute.SCDNodeAttribute;
 import uk.ac.ebi.arrayexpress2.sampletab.renderer.SampleTabWriter;
 
@@ -41,7 +48,7 @@ public class TestSampleTabParser extends TestCase {
         resource_ae = getClass().getClassLoader().getResource("GAE-MEXP-986/sampletab.pre.txt");
         resource_corriel = getClass().getClassLoader().getResource("GCR-autism/sampletab.pre.txt");
         resource_imsr = getClass().getClassLoader().getResource("GMS-HAR/sampletab.pre.txt");
-        resource_dgva = getClass().getClassLoader().getResource("GVA-estd21/sampletab.pre.txt");
+        resource_dgva = getClass().getClassLoader().getResource("GVA-estd1/sampletab.pre.txt");
         
         resource = getClass().getClassLoader().getResource("dummy/sampletab.txt");
         resource_broken = getClass().getClassLoader().getResource("broken/sampletab.txt");
@@ -63,7 +70,7 @@ public class TestSampleTabParser extends TestCase {
     public void testParse() {
         SampleData st = null;
         try {
-            st = doParse(resource);
+            st = doParse(resource.openStream());
         } catch (ParseException e) {
             e.printStackTrace();
             fail();
@@ -99,7 +106,7 @@ public class TestSampleTabParser extends TestCase {
 
     public void testParseAE() {
         try {
-            SampleData st = doParse(resource_ae);
+            SampleData st = doParse(resource_ae.openStream());
         } catch (ParseException e) {
             e.printStackTrace();
             fail();
@@ -111,7 +118,7 @@ public class TestSampleTabParser extends TestCase {
 
     public void testParseBroken() {
         try {
-            SampleData st = doParse(resource_broken);
+            SampleData st = doParse(resource_broken.openStream());
             fail(); // if exception not thrown
         } catch (ParseException e) {
             System.out.println(e);
@@ -123,7 +130,7 @@ public class TestSampleTabParser extends TestCase {
 
     public void testParseCorriel() {
         try {
-            SampleData st = doParse(resource_corriel);
+            SampleData st = doParse(resource_corriel.openStream());
         } catch (ParseException e) {
             e.printStackTrace();
             fail();
@@ -146,8 +153,9 @@ public class TestSampleTabParser extends TestCase {
 //    }
 
     public void testParseDGVa() {
+        SampleData st = null;
         try {
-            SampleData st = doParse(resource_dgva);
+            st = doParse(resource_dgva.openStream());
 //            BufferedWriter tmplog = new BufferedWriter(new OutputStreamWriter(System.out));
 //            SampleTabWriter w = new SampleTabWriter(tmplog);
 //            w.write(st);
@@ -160,11 +168,21 @@ public class TestSampleTabParser extends TestCase {
             e.printStackTrace();
             fail();
         }
+        
+        GroupNode s = st.scd.getNode("G1", GroupNode.class);
+        SCDNodeAttribute a = s.getAttributes().get(0);
+        assertTrue(OrganismAttribute.class.isInstance(a));
+        
+        OrganismAttribute o = (OrganismAttribute) a;
+        
+        assertEquals("9606", o.getTermSourceID());
+        assertEquals("NCBI Taxonomy", o.getTermSourceREF());
+        
     }
 
-    private SampleData doParse(URL url) throws ParseException, IOException {
+    private SampleData doParse(InputStream is) throws ParseException, IOException {
         SampleData sampledata = null;
-        sampledata = parser.parse(url);
+        sampledata = parser.parse(is);
         if (!errorItems.isEmpty()) {
             // there are error items, print them and fail
             StringBuilder sb = new StringBuilder();
