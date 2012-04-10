@@ -1,5 +1,7 @@
 package uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node.attribute;
 
+import uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node.attribute.AbstractNamedAttribute ;
+
 public class OrganismAttribute extends AbstractNamedAttribute {
 
     private static String name = "Organism";
@@ -11,7 +13,7 @@ public class OrganismAttribute extends AbstractNamedAttribute {
     public OrganismAttribute(String taxname, String termsourceref, Integer termsourceid) {
         super(taxname);
         this.setTermSourceREF(termsourceref);
-        this.setTermSourceID(termsourceid);
+        this.setTermSourceID(termsourceid.toString());
     }
 
     public OrganismAttribute(String taxname) {

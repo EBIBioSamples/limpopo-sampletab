@@ -42,15 +42,15 @@ public class SampleTabParser<O> extends AbstractParser<SampleData> {
     }
     
     public SampleTabParser(O... outputResources) {
-        this(new SampleTabValidator(), new SampleTabConverter<O>(), outputResources);
+        this(null, null, outputResources);
     }
     
     public SampleTabParser(Validator<SampleData> validator) {
-        this(validator, new SampleTabConverter<O>());
+        this(validator, null);
     }
     
     public SampleTabParser(Converter<SampleData, O> converter, O... outputResources) {
-        this(new SampleTabValidator(), converter, outputResources);
+        this(null, converter, outputResources);
     }
     
     public SampleTabParser(Validator<SampleData> validator,
@@ -190,6 +190,7 @@ public class SampleTabParser<O> extends AbstractParser<SampleData> {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        getLog().info("read from source");
         
         String msiString = msiBuffer.toString();
         InputStream msiInput = new StringBufferInputStream(msiString);

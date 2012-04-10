@@ -29,7 +29,7 @@ public abstract class SCDReadHandler extends AbstractHandler implements ReadHand
         // if every element of data is empty, read nothing
         boolean noData = true;
         if (data.length > 0){
-            for (int i = 0; i < assess(header); i++) {
+            for (int i = 0; i < assess(header) && i < data.length; i++) {
                 String d = data[i];
                 if (!d.isEmpty()) {
                     noData = false;
