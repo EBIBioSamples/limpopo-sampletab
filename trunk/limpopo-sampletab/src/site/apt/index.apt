@@ -54,17 +54,14 @@ The LIMPOPO SampleTab Parser
     <dependency>
       <groupId>uk.ac.ebi.arrayexpress2</groupId>
       <artifactId>limpopo-sampletab</artifactId>
-      <version>1.1.1</version>
+      <version>0.0.1-SNAPSHOT</version>
     </dependency>
   </dependencies>
 ---------
 
- There are several versions available.  Check the {{{release.html}Release Notes}}
- for more information.
-
 * Usage
 
- To use the parser in you application is simple, just import the relevant
+ Using the parser in an application is simple; import the relevant
  package and declare some code similar to the following:
 
 --------
@@ -81,6 +78,17 @@ The LIMPOPO SampleTab Parser
  String title = sampledata.msi.submissionTitle;
 --------
 
+ Sample and group objects can be accessed by the following:
+ 
+--------
+ SampleNode sample = sampledata.scd.getNode("samplename", SampleNode.class);
+ GroupNode sample = sampledata.scd.getNode("groupname", GroupNode.class);
+ for (SCDNodeAttribute attribute : sample.attributes){
+   String key = attribute.getAttributeType();
+   String value = attribute.getAttributeValue();
+ }
+--------
+
  Simple as that! 
  
- Further information on the Limpopo Object Model is {{{objectmodel.html} here}}.
+ Further information on the Limpopo Object Model is {{{./objectmodel.html} here}}.

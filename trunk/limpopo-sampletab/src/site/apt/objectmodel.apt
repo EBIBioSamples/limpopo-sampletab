@@ -7,6 +7,7 @@
  -----
  
 Limpopo SampleTab Object Model
+{objectmodel}
 
  The Limpopo SampleTab Object Model is similar to the Limpopo MageTab Object Model and represents 
  SampleTab files.
@@ -16,7 +17,19 @@ Limpopo SampleTab Object Model
  
  The first two of these are summarised in the UML diagram below. A SampleData class object unites the 
  two sections of a SampleTab file, which are also represented as single objects (MSI and SCD).
- The MSI object contains submission information itself with links to each of the sub-sections that 
- have their own object representation of entries.
  
-[images/SampleData.png] UML of MSI and graph of samples and groups.
+ The MSI object contains submission information itself with links to each of the sub-sections that 
+ have their own object representation of entries. 
+ 
+[images/UML_MSI.png] UML of MSI object model.
+
+ The SCD object model shares many of its underlying functionallity with the Limpopo SampleTab SDRF object model.
+ This can cause it to appear more complex than it is.
+
+[images/UML_SCD.png] UML of SCD object model.
+
+ The most commonly used features of the SCD object mode are:
+
+ * SCD.getNode() and SCD.getNodes() methods to access node objects.
+ 
+ * SCDNode.getAttributes() and SCDNode.addAttribute() methods as implemented in SampleNode and GroupNode to access attributes. 
