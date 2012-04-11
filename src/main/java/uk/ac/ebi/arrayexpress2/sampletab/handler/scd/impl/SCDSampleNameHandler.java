@@ -6,6 +6,7 @@ import uk.ac.ebi.arrayexpress2.sampletab.datamodel.SCD;
 import uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node.SampleNode;
 import uk.ac.ebi.arrayexpress2.sampletab.handler.scd.SCDReadHandler;
 import uk.ac.ebi.arrayexpress2.sampletab.handler.scd.node.attribute.CharacteristicAttributeReader;
+import uk.ac.ebi.arrayexpress2.sampletab.handler.scd.node.attribute.ChildOfAttributeReader;
 import uk.ac.ebi.arrayexpress2.sampletab.handler.scd.node.attribute.CommentAttributeReader;
 import uk.ac.ebi.arrayexpress2.sampletab.handler.scd.node.attribute.DatabaseAttributeReader;
 import uk.ac.ebi.arrayexpress2.sampletab.handler.scd.node.attribute.MaterialAttributeReader;
@@ -20,6 +21,7 @@ public class SCDSampleNameHandler extends SCDReadHandler {
     private final SexAttributeReader sexAttributeReader;
     private final MaterialAttributeReader materialAttributeReader;
     private final DatabaseAttributeReader databaseAttributeReader;
+    private final ChildOfAttributeReader childOfAttributeReader;
 
     public SCDSampleNameHandler() {
         characteristicAttributeReader = new CharacteristicAttributeReader();
@@ -28,6 +30,7 @@ public class SCDSampleNameHandler extends SCDReadHandler {
         sexAttributeReader = new SexAttributeReader();
         materialAttributeReader = new MaterialAttributeReader();
         databaseAttributeReader = new DatabaseAttributeReader();
+        childOfAttributeReader = new ChildOfAttributeReader();
     }
 
     public boolean canReadHeader(String[] header) {
@@ -60,6 +63,9 @@ public class SCDSampleNameHandler extends SCDReadHandler {
             }
             else if (header[i].startsWith("comment")) {
                 i += assessAttribute(commentAttributeReader, header, i);
+            }
+            else if (header[i].startsWith("childof")) {
+                i += assessAttribute(childOfAttributeReader, header, i);
             }
             else {
                 // got to something we don't recognise
@@ -118,6 +124,10 @@ public class SCDSampleNameHandler extends SCDReadHandler {
             }
             else if (header[i].startsWith("comment")) {
                 i += readAttribute(commentAttributeReader, header, data, scd, sample, lineNumber,
+                        columnNumber + i, i);
+            }
+            else if (header[i].startsWith("childof")) {
+                i += readAttribute(childOfAttributeReader, header, data, scd, sample, lineNumber,
                         columnNumber + i, i);
             }
             else {
