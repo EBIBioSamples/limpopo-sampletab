@@ -80,8 +80,8 @@ public class TestSampleTabParser extends TestCase {
         }
 
         // check database handler
-        SCDNode node = st.scd.getNode("childA", "samplename");
-        assertNotSame("Node childA is not null", null, node);
+        SCDNode node = st.scd.getNode("sampleA", SampleNode.class);
+        assertNotSame("Node sampleA is not null", null, node);
         String dbname = null;
         SCDNodeAttribute dbattr = null;
         for (SCDNodeAttribute attr : node.getAttributes()) {

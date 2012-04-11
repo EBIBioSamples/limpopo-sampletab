@@ -5,7 +5,9 @@ import uk.ac.ebi.arrayexpress2.sampletab.datamodel.SCD;
 import uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node.SCDNode;
 
 public interface SCDAttributeReader {
-	
+	//each attribute reader must be added to SCDSampleNameHandler or SCDGroupNameHandler
+    
+    
     boolean canRead(String firstHeader);
 
     int assess(String[] header);

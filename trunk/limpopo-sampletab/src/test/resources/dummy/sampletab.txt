@@ -25,6 +25,6 @@ Database URI
 Database ID
 
 [SCD]
-Sample Name	Organism	Sample Name	Organism	Database Name	Database ID	Database URI
-parentA	human	childA	also human	bobdb	bob101	www.bob.ac.uk/101
-nonparentB	human			
+Sample Name	Organism	Sample Name	Organism	Database Name	Database ID	Database URI	Child Of 
+childA	human	sampleA	also human	bobdb	bob101	www.bob.ac.uk/101	parentB
+parentB	human			
