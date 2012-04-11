@@ -17,6 +17,8 @@
                   href="https://sourceforge.net/projects/limpopo/" />
             <item name="Documentation"
                   href="index.html" />
+            <item name="Object Model"
+                  href="objectmodel.html" />
         </links>
 
         <menu ref="reports" />
