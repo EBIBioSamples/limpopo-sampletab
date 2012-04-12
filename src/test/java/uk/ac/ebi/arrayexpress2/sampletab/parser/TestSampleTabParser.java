@@ -41,6 +41,7 @@ public class TestSampleTabParser extends TestCase {
     private URL resource_corriel;
     private URL resource_dgva;
     private URL resource_imsr;
+    private URL resource_groups;
 
     private List<ErrorItem> errorItems;
 
@@ -52,6 +53,7 @@ public class TestSampleTabParser extends TestCase {
         
         resource = getClass().getClassLoader().getResource("dummy/sampletab.txt");
         resource_broken = getClass().getClassLoader().getResource("broken/sampletab.txt");
+        resource_groups = getClass().getClassLoader().getResource("groups/sampletab.txt");
         parser = new SampleTabParser<SampleData>();
         errorItems = new ArrayList<ErrorItem>();
         parser.addErrorItemListener(new ErrorItemListener() {
@@ -102,6 +104,23 @@ public class TestSampleTabParser extends TestCase {
 
         // check submission reference layer handler
         assertSame("Submission Reference Layer", true, st.msi.submissionReferenceLayer);
+    }
+    
+    public void testGroups() {
+
+        SampleData st = null;
+        try {
+            st = doParse(resource_groups.openStream());
+        } catch (ParseException e) {
+            e.printStackTrace();
+            fail();
+        } catch (IOException e) {
+            e.printStackTrace();
+            fail();
+        }
+
+        assertEquals("Number of groups", 4, st.scd.getNodes(GroupNode.class).size());
+        
     }
 
     public void testParseAE() {
