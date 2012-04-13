@@ -186,8 +186,11 @@ public class SCDParser extends AbstractParser<SCD> {
                             "will be skipped - no handler can read data from this column in it's current location.  " +
                             "Skipping.";
 
-                    // log a warning - we'll ignore this tag
-                    getLog().warn(message);
+                    if (headerPart[0].trim().length() > 0){
+                        // log a warning - we'll ignore this tag
+                        // only log the warning if its not a blank column
+                        getLog().warn(message);
+                    }
 
                     unreadableColumns.add(headerPart[0]);
                 }

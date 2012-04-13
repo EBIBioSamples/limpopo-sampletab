@@ -190,7 +190,7 @@ public class SampleTabParser<O> extends AbstractParser<SampleData> {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        getLog().info("read from source");
+        getLog().debug("read from source");
         
         String msiString = msiBuffer.toString();
         InputStream msiInput = new StringBufferInputStream(msiString);
