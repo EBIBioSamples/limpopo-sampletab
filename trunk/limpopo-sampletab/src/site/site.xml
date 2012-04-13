@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <project name="LIMPOPO SampleTab Parser">
 
-    <bannerLeft>
-        <src>/images/atlas-ebi-logo.png</src>
-        <href>/index.html</href>
-    </bannerLeft>
-
     <body>
         <!-- links to native sourceforge site -->
         <links>
