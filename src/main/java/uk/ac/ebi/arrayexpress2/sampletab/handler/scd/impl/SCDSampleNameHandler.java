@@ -9,6 +9,7 @@ import uk.ac.ebi.arrayexpress2.sampletab.handler.scd.node.attribute.Characterist
 import uk.ac.ebi.arrayexpress2.sampletab.handler.scd.node.attribute.ChildOfAttributeReader;
 import uk.ac.ebi.arrayexpress2.sampletab.handler.scd.node.attribute.CommentAttributeReader;
 import uk.ac.ebi.arrayexpress2.sampletab.handler.scd.node.attribute.DatabaseAttributeReader;
+import uk.ac.ebi.arrayexpress2.sampletab.handler.scd.node.attribute.DerivedFromAttributeReader;
 import uk.ac.ebi.arrayexpress2.sampletab.handler.scd.node.attribute.MaterialAttributeReader;
 import uk.ac.ebi.arrayexpress2.sampletab.handler.scd.node.attribute.OrganismAttributeReader;
 import uk.ac.ebi.arrayexpress2.sampletab.handler.scd.node.attribute.SexAttributeReader;
@@ -22,6 +23,7 @@ public class SCDSampleNameHandler extends SCDReadHandler {
     private final MaterialAttributeReader materialAttributeReader;
     private final DatabaseAttributeReader databaseAttributeReader;
     private final ChildOfAttributeReader childOfAttributeReader;
+    private final DerivedFromAttributeReader derivedFromAttributeReader;
 
     public SCDSampleNameHandler() {
         characteristicAttributeReader = new CharacteristicAttributeReader();
@@ -31,6 +33,7 @@ public class SCDSampleNameHandler extends SCDReadHandler {
         materialAttributeReader = new MaterialAttributeReader();
         databaseAttributeReader = new DatabaseAttributeReader();
         childOfAttributeReader = new ChildOfAttributeReader();
+        derivedFromAttributeReader = new DerivedFromAttributeReader();
     }
 
     public boolean canReadHeader(String[] header) {
@@ -66,6 +69,9 @@ public class SCDSampleNameHandler extends SCDReadHandler {
             }
             else if (header[i].startsWith("childof")) {
                 i += assessAttribute(childOfAttributeReader, header, i);
+            }
+            else if (header[i].startsWith("derivedfrom")) {
+                i += assessAttribute(derivedFromAttributeReader, header, i);
             }
             else {
                 // got to something we don't recognise
