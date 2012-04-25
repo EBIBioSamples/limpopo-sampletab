@@ -28,6 +28,7 @@ import uk.ac.ebi.arrayexpress2.sampletab.datamodel.msi.TermSource;
 import uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node.GroupNode;
 import uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node.SCDNode;
 import uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node.SampleNode;
+import uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node.attribute.DatabaseAttribute;
 import uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node.attribute.OrganismAttribute;
 import uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node.attribute.SCDNodeAttribute;
 import uk.ac.ebi.arrayexpress2.sampletab.renderer.SampleTabWriter;
@@ -41,6 +42,7 @@ public class TestSampleTabParser extends TestCase {
     private URL resource_corriel;
     private URL resource_dgva;
     private URL resource_imsr;
+    private URL resource_sra;
     private URL resource_groups;
 
     private List<ErrorItem> errorItems;
@@ -50,6 +52,7 @@ public class TestSampleTabParser extends TestCase {
         resource_corriel = getClass().getClassLoader().getResource("GCR-autism/sampletab.pre.txt");
         resource_imsr = getClass().getClassLoader().getResource("GMS-HAR/sampletab.pre.txt");
         resource_dgva = getClass().getClassLoader().getResource("GVA-estd1/sampletab.pre.txt");
+        resource_sra = getClass().getClassLoader().getResource("GEN-ERP001075/sampletab.pre.txt");
         
         resource = getClass().getClassLoader().getResource("dummy/sampletab.txt");
         resource_broken = getClass().getClassLoader().getResource("broken/sampletab.txt");
@@ -132,6 +135,45 @@ public class TestSampleTabParser extends TestCase {
         } catch (IOException e) {
             e.printStackTrace();
             fail();
+        }
+    }
+
+    public void testParseSRA() {
+        SampleData st = null;
+        try {
+            st = doParse(resource_sra.openStream());
+        } catch (ParseException e) {
+            e.printStackTrace();
+            fail();
+            return;
+        } catch (IOException e) {
+            e.printStackTrace();
+            fail();
+            return;
+        }
+        
+        if (st != null){
+            for (SampleNode s : st.scd.getNodes(SampleNode.class)){
+                boolean hasDatabase = false;
+                for (SCDNodeAttribute a : s.getAttributes()){
+                    if (DatabaseAttribute.class.isInstance(a)){
+                        hasDatabase = true;
+                    }
+                }
+                assertTrue(hasDatabase);
+            }
+            
+            SampleTabWriter w;
+            StringWriter sw = new StringWriter();
+            w = new SampleTabWriter(sw);
+            try {
+                w.write(st);
+                w.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+                fail();
+            }
+            //System.out.println(sw.toString());
         }
     }
 
