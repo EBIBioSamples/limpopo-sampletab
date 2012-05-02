@@ -136,6 +136,10 @@ public class SCDSampleNameHandler extends SCDReadHandler {
                 i += readAttribute(childOfAttributeReader, header, data, scd, sample, lineNumber,
                         columnNumber + i, i);
             }
+            else if (header[i].startsWith("derivedfrom")) {
+                i += readAttribute(derivedFromAttributeReader, header, data, scd, sample, lineNumber,
+                        columnNumber + i, i);
+            }
             else {
                 // got to something we don't recognise
                 // this is either the end, or a bad column name
