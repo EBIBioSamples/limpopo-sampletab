@@ -12,6 +12,7 @@ import uk.ac.ebi.arrayexpress2.sampletab.handler.scd.node.attribute.DatabaseAttr
 import uk.ac.ebi.arrayexpress2.sampletab.handler.scd.node.attribute.DerivedFromAttributeReader;
 import uk.ac.ebi.arrayexpress2.sampletab.handler.scd.node.attribute.MaterialAttributeReader;
 import uk.ac.ebi.arrayexpress2.sampletab.handler.scd.node.attribute.OrganismAttributeReader;
+import uk.ac.ebi.arrayexpress2.sampletab.handler.scd.node.attribute.SameAsAttributeReader;
 import uk.ac.ebi.arrayexpress2.sampletab.handler.scd.node.attribute.SexAttributeReader;
 
 @ServiceProvider
@@ -24,6 +25,7 @@ public class SCDSampleNameHandler extends SCDReadHandler {
     private final DatabaseAttributeReader databaseAttributeReader;
     private final ChildOfAttributeReader childOfAttributeReader;
     private final DerivedFromAttributeReader derivedFromAttributeReader;
+    private final SameAsAttributeReader sameAsAttributeReader;
 
     public SCDSampleNameHandler() {
         characteristicAttributeReader = new CharacteristicAttributeReader();
@@ -34,6 +36,7 @@ public class SCDSampleNameHandler extends SCDReadHandler {
         databaseAttributeReader = new DatabaseAttributeReader();
         childOfAttributeReader = new ChildOfAttributeReader();
         derivedFromAttributeReader = new DerivedFromAttributeReader();
+        sameAsAttributeReader = new SameAsAttributeReader();
     }
 
     public boolean canReadHeader(String[] header) {
@@ -72,6 +75,9 @@ public class SCDSampleNameHandler extends SCDReadHandler {
             }
             else if (header[i].startsWith("derivedfrom")) {
                 i += assessAttribute(derivedFromAttributeReader, header, i);
+            }
+            else if (header[i].startsWith("sameas")) {
+                i += assessAttribute(sameAsAttributeReader, header, i);
             }
             else {
                 // got to something we don't recognise
@@ -138,6 +144,10 @@ public class SCDSampleNameHandler extends SCDReadHandler {
             }
             else if (header[i].startsWith("derivedfrom")) {
                 i += readAttribute(derivedFromAttributeReader, header, data, scd, sample, lineNumber,
+                        columnNumber + i, i);
+            }
+            else if (header[i].startsWith("sameas")) {
+                i += readAttribute(sameAsAttributeReader, header, data, scd, sample, lineNumber,
                         columnNumber + i, i);
             }
             else {
