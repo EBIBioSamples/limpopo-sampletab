@@ -29,7 +29,7 @@ public class MSI {
 	public volatile String submissionTitle = null;
 	public volatile String submissionDescription = null;
 	public volatile String submissionIdentifier = null;
-	public volatile String submissionVersion = "1.0";
+	public volatile String submissionVersion = "1.2";
 	public volatile Date submissionReleaseDate = null;
 	public volatile Date submissionUpdateDate = null;
 	public volatile Boolean submissionReferenceLayer = false;
@@ -48,7 +48,12 @@ public class MSI {
 		return log;
 	}
 	
-	//convenience methods
+	/**
+	 * Returns the submission release date in a yyy/MM/dd format, or 
+	 * the current date if no release date is specified. 
+	 * 
+	 *  @return String
+	 */
 	public String getSubmissionReleaseDateAsString(){
         SimpleDateFormat simpledateformat = new SimpleDateFormat("yyyy/MM/dd");
 	    if (this.submissionReleaseDate == null) {
@@ -57,12 +62,36 @@ public class MSI {
 	    }
 		return simpledateformat.format(this.submissionReleaseDate);
 	}
-	
+
+    
+    /**
+     * Returns the submission update date in a yyy/MM/dd format, or 
+     * the current date if no update date is specified. 
+     * 
+     *  @return String
+     */
 	public String getSubmissionUpdateDateAsString(){
         SimpleDateFormat simpledateformat = new SimpleDateFormat("yyyy/MM/dd");
 		if (this.submissionUpdateDate == null){
 		    return this.getSubmissionReleaseDateAsString();
 		}
 		return simpledateformat.format(this.submissionUpdateDate);
+	}
+	
+	/**
+	 * Either adds the provided TermSource and returns its name 
+	 * or returns the name of an existing TermSource with the same URI.
+	 * 
+     *  @return String
+	 */
+	public String getOrAddTermSource(TermSource termSource){
+	    for (TermSource ts : termSources){
+	        if (ts.getURI().equals(termSource.getURI())){
+	            return ts.getName();
+	        }
+	    }
+	    //termSource is not already in MSI, add it
+	    termSources.add(termSource);
+	    return termSource.getName();
 	}
 }
