@@ -6,6 +6,8 @@ import org.isatools.tablib.export.graph2tab.DefaultTabValueGroup;
 import org.isatools.tablib.export.graph2tab.TabValueGroup;
 
 import uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node.SCDNode;
+import uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node.attribute.SCDNodeAttribute;
+
 import java.util.*;
 
 
@@ -30,9 +32,81 @@ public class SCDNodeWrapper extends DefaultAbstractNode {
         }
 
         List<TabValueGroup> result = new ArrayList<TabValueGroup>();
+        /*
         for (int i = 0; i < headers.length; i++) {
             result.add(new DefaultTabValueGroup(headers[i], values[i]));
         }
+        return result;
+        */
+        
+        //work out what headers are part of the node, and not any attributes
+        List<String> headersList = new ArrayList<String>(base.headers().length);
+        for(String header : base.headers()){
+            headersList.add(header);
+        }
+        int firstAttrHeaderIndex = base.headers().length;
+        if (base.getAttributes().size() > 0){
+            String firstNonBase = base.getAttributes().get(0).headers()[0];
+            firstAttrHeaderIndex = headersList.indexOf(firstNonBase);
+            //System.out.println(">>> "+firstNonBase+" ("+firstAttrHeaderIndex+")");
+        }
+
+        //create a value group for the node itself
+        TabValueGroup tail = null;
+        TabValueGroup head = null;
+        for (int i = firstAttrHeaderIndex-1; i >= 0; i--) {
+            if (tail == null){
+                head = new DefaultTabValueGroup(headers[i], values[i]);
+            } else {
+                head = new DefaultTabValueGroup(headers[i], values[i], tail);
+            }
+            tail = head;
+        }
+        if (head != null){
+            result.add(head);
+        }
+        
+        //now create value groups for each of the node attributes
+        //e.g.
+        /*
+        * <pre>
+        *   TabValueGroup ( 
+        *     header = "Characteristics [ Type ]" 
+        *     value = "value1"
+        *     tail = ( 
+        *       TabValueGroup (
+        *         header = "Term Source REF"
+        *         value = "source1"
+        *         tail = (
+        *           TabValueGroup (
+        *             header = "Term Accession"
+        *             value = "acc1"
+        *           )
+        *         )
+        *       )
+        *     )
+        *   )
+        * </pre>
+        */
+        for(SCDNodeAttribute attr : base.getAttributes()){
+            headers = attr.headers();
+            values = attr.values();
+            head = null;
+            tail = null;
+            
+            for (int i = headers.length-1; i >= 0; i--) {
+                if (tail == null){
+                    head = new DefaultTabValueGroup(headers[i], values[i]);
+                } else {
+                    head = new DefaultTabValueGroup(headers[i], values[i], tail);
+                }
+                tail = head;
+            }
+            if (head != null){
+                result.add(head);
+            }
+        }
+        
         return result;
     }
 
