@@ -60,8 +60,8 @@ public class TermSource {
     		TermSource tsother = (TermSource) other;
     		return new EqualsBuilder()
     			.append(this.getName(), tsother.getName())
-    			.append(this.getURI(), tsother.getURI())
-    			.append(this.getVersion(), tsother.getVersion())
+    			//.append(this.getURI(), tsother.getURI())
+    			//.append(this.getVersion(), tsother.getVersion())
     			.isEquals();
 		}
 
@@ -71,8 +71,8 @@ public class TermSource {
 	public int hashCode() {
 		return new HashCodeBuilder(13, 83) // two randomly chosen prime numbers
 			.append(this.getName())
-			.append(this.getURI())
-			.append(this.getVersion())
+			//.append(this.getURI())
+			//.append(this.getVersion())
 			.toHashCode();
 	}
 
