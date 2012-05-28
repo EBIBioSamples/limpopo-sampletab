@@ -86,12 +86,15 @@ public class MSI {
 	 */
 	public String getOrAddTermSource(TermSource termSource){
 	    for (TermSource ts : termSources){
-	        if (ts.getURI().equals(termSource.getURI())){
+	        if ((ts.getURI() == null && termSource.getURI() == null) 
+	                || (ts.getURI()!= null && ts.getURI().equals(termSource.getURI()))){
 	            return ts.getName();
 	        }
 	    }
 	    //termSource is not already in MSI, add it
-	    termSources.add(termSource);
+	    if (!termSources.contains(termSource)){
+	        termSources.add(termSource);
+	    }
 	    return termSource.getName();
 	}
 }
