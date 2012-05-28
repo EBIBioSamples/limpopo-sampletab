@@ -226,12 +226,13 @@ public class MSIWriter extends Writer {
 	public void writeTermSources(Collection<TermSource> termsources)
         throws IOException {
 	    if (termsources != null){
-            //convert to hashset to remove duplicates
-            //convert back so it has consistent order
-            Set<TermSource> tsset = new HashSet<TermSource>();
-            tsset.addAll(termsources);
+            //remove duplicates with consistent order
             List<TermSource> tss = new ArrayList<TermSource>();
-            tss.addAll(tsset);
+            for (TermSource ts : termsources){
+                if (!tss.contains(ts)){
+                    tss.add(ts);
+                }
+            }
             
 	        writer.write("Term Source Name\t");
 	        for (TermSource ts : tss){
