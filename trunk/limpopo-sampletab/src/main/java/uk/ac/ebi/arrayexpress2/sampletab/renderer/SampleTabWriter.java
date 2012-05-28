@@ -6,22 +6,22 @@ import java.io.Writer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import uk.ac.ebi.arrayexpress2.magetab.exception.ValidateException;
+import uk.ac.ebi.arrayexpress2.magetab.validator.Validator;
 import uk.ac.ebi.arrayexpress2.sampletab.datamodel.SampleData;
 
 public class SampleTabWriter extends Writer {
-    private Writer writer;
-    private MSIWriter msiwriter;
-    private SCDWriter scdwriter;
+    private final Writer writer;
+    private final MSIWriter msiwriter;
+    private final SCDWriter scdwriter;
 
     private Logger log = LoggerFactory.getLogger(getClass());
 
-	public SampleTabWriter(Writer writer) {
+    public SampleTabWriter(Writer writer) {
         this.writer = writer;
-        getLog().debug("making MSIWriter");
         this.msiwriter = new MSIWriter(writer);
-        getLog().debug("making SCDWriter");
         this.scdwriter = new SCDWriter(writer);
-	}
+    }
 
     protected Logger getLog() {
         return log;
