@@ -38,7 +38,7 @@ public class SampleTabParser<O> extends AbstractParser<SampleData> {
     private final SCDParser scdParser;
 
     public SampleTabParser() {
-        this(new SampleTabValidator());
+        this(null, null, null);
     }
     
     public SampleTabParser(O... outputResources) {
