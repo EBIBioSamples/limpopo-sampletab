@@ -102,17 +102,26 @@ public class SampleTabParser<O> extends AbstractParser<SampleData> {
 	}
 	
 	public SampleData parse(InputStream dataIn, SampleData target)
-			throws ParseException {
+			throws ParseException {      
+        
+
         ExecutorService service = Executors.newSingleThreadExecutor();
-        //ExecutorService service = Executors.newCachedThreadPool();
         try {
-        	SampleData result = parse(dataIn, target, service);
-            service.shutdown();
-            service.awaitTermination(Integer.MAX_VALUE, TimeUnit.SECONDS);
-            return result;
+            return parse(dataIn, target, service);
         }
         catch (InterruptedException e) {
             throw new ParseException("Parsing was interrupted", e);
+        }
+        finally {
+            service.shutdown();
+            try {
+                service.awaitTermination(Integer.MAX_VALUE, TimeUnit.SECONDS);
+            }
+            catch (InterruptedException e) {
+                // take drastic measures to terminate
+                getLog().warn("Service shutdown was interrupted, forcing termination");
+                service.shutdownNow();
+            }
         }
 	}
 
