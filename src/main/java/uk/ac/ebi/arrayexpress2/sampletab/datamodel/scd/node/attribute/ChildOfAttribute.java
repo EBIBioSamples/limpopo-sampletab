@@ -11,7 +11,7 @@ public class ChildOfAttribute extends AbstractRelationshipAttribute {
 
     public ChildOfAttribute() {
         super();
-        log.warn("ChildOf attributes may be deprecated in the future.");
+        //log.warn("ChildOf attributes may be deprecated in the future.");
     }
     
     public ChildOfAttribute(String value) {

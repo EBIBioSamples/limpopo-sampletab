@@ -18,7 +18,7 @@ public abstract class AbstractNamedAttribute extends AbstractNodeAttributeOntolo
         List<String> headersList = new ArrayList<String>();
         headersList.add(getAttributeType());
         if (getTermSourceREF() != null) {
-            headersList.add("Term Source Ref");
+            headersList.add("Term Source REF");
         }
         if (getTermSourceID() != null) {
             headersList.add("Term Source ID");
