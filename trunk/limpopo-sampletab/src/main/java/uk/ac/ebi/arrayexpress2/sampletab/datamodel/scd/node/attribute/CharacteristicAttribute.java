@@ -30,7 +30,7 @@ public class CharacteristicAttribute extends AbstractNodeAttributeOntology {
             Collections.addAll(headersList, unit.headers());
         }
         if (getTermSourceREF() != null) {
-            headersList.add("Term Source Ref");
+            headersList.add("Term Source REF");
         }
         if (getTermSourceID() != null) {
             headersList.add("Term Source ID");
