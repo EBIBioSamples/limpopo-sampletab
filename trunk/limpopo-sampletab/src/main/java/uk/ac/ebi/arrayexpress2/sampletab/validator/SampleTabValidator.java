@@ -1,19 +1,15 @@
 package uk.ac.ebi.arrayexpress2.sampletab.validator;
 
-import java.io.IOException;
-import java.io.InputStream;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.List;
-import java.util.Properties;
 import java.util.Set;
 
 import org.mged.magetab.error.ErrorItem;
 import org.mged.magetab.error.ErrorItemFactory;
-import org.mged.magetab.error.ErrorItemImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

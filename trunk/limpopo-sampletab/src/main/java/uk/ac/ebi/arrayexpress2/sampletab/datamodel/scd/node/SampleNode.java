@@ -19,7 +19,6 @@ import uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node.attribute.SCDNodeAtt
 public class SampleNode extends AbstractSCDNode {
 	private String sampleDescription = null;
 	private String sampleAccession = null;
-	private final List<SCDNodeAttribute> attributes = new ArrayList<SCDNodeAttribute>();
 
 	public String[] headers() {
 		List<String> headersList = new ArrayList<String>();
@@ -60,38 +59,6 @@ public class SampleNode extends AbstractSCDNode {
 	 */
 	public String getNodeType() {
 		return "samplename";
-	}
-
-	public void addAttribute(SCDNodeAttribute attribute, int pos) {
-        //check it does not already exist?
-	    boolean exists = false;
-	    for (SCDNodeAttribute a : attributes){
-	        if (a.getAttributeType().equals(attribute.getAttributeType()) 
-	                && a.getAttributeValue().equals(attribute.getAttributeValue())){
-	            exists = true;
-	            break;
-	        }
-	    }
-	    
-	    if (!exists){
-	        attributes.add(pos, attribute);
-	    }
-	}
-
-	public void addAttribute(SCDNodeAttribute attribute) {
-        //check it does not already exist?
-        boolean exists = false;
-        for (SCDNodeAttribute a : attributes){
-            if (a.getAttributeType().equals(attribute.getAttributeType()) 
-                    && a.getAttributeValue().equals(attribute.getAttributeValue())){
-                exists = true;
-                break;
-            }
-        }
-        
-        if (!exists){
-            attributes.add(attribute);
-        }
 	}
 	
 	public void removeAttribute(SCDNodeAttribute attribute){
