@@ -11,7 +11,7 @@ import uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node.attribute.SCDNodeAtt
  * 
  * Three attributes are built into this object "Group Name, "Group Accession" 
  * and "Group Description". All other attributes should be added through an 
- * addAttribute method.
+ * addAttribute method. 
  * 
  * Samples can be added to the group by the addSample method. This calls the
  * corresponding addParentNode and addChildNode methods, which should not be
@@ -20,7 +20,6 @@ import uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node.attribute.SCDNodeAtt
 public class GroupNode extends AbstractSCDNode {
     private String groupDescription;
     private String groupAccession; //TODO make getter/setter for this that checks value
-    public final List<SCDNodeAttribute> attributes = new ArrayList<SCDNodeAttribute>();
 
     public GroupNode(){
         super();
@@ -77,10 +76,6 @@ public class GroupNode extends AbstractSCDNode {
     public String getNodeType() {
         return "groupname";
     }
-
-	public void addAttribute(SCDNodeAttribute attribute) {
-		attributes.add(attribute);
-	}
 
 	public List<SCDNodeAttribute> getAttributes() {
 		return attributes;
