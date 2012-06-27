@@ -21,6 +21,10 @@ public abstract class AbstractNodeAttributeOntology extends AbstractNodeAttribut
     }
     
     public void setTermSourceIDInteger(Integer termSourceID) {
-        this.termSourceID = termSourceID.toString();
+        if (termSourceID == null){
+            this.termSourceID = null;
+        } else {
+            this.termSourceID = termSourceID.toString();
+        }
     }
 }
