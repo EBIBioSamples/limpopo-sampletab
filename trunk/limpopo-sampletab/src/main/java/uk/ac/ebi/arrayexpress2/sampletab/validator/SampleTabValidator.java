@@ -132,6 +132,20 @@ public class SampleTabValidator extends AbstractValidator<SampleData> {
             }
         }
         
+        //check all term source ref have a term source id
+        for (SCDNode scdnode : sampledata.scd.getAllNodes()){
+            for (SCDNodeAttribute attr : scdnode.getAttributes()){
+                if (AbstractNodeAttributeOntology.class.isInstance(attr)){
+                    AbstractNodeAttributeOntology attrOnt = (AbstractNodeAttributeOntology) attr;
+
+                    if (attrOnt.getTermSourceREF() != null && attrOnt.getTermSourceREF().trim().length() > 0){
+                        if (attrOnt.getTermSourceID() == null || attrOnt.getTermSourceID().trim().length() == 0){
+                            errors.add(getErrorItemFromCode(attrOnt.getTermSourceREF()+" : "+attrOnt.getAttributeValue(), 1538));
+                        }
+                    }
+                }
+            }
+        }
         
         //some warnings...
         if (sampledata.msi.submissionTitle == null){
