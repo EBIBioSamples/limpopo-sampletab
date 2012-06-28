@@ -28,14 +28,14 @@ public class SampleTabSaferParser extends SampleTabParser<SampleData> {
 	public SampleTabSaferParser(Validator<SampleData> validator) {
         super(validator);
         //make a listener to put error items in the list
-        super.addErrorItemListener(new ErrorItemListener() {
+        addErrorItemListener(new ErrorItemListener() {
             public void errorOccurred(ErrorItem item) {
                 errorItems.add(item);
             }
         });
     }
 
-    public synchronized SampleData parse(InputStream dataIn, SampleData target)
+    public SampleData parse(InputStream dataIn, SampleData target)
 			throws ParseException {      
         
 
@@ -43,7 +43,7 @@ public class SampleTabSaferParser extends SampleTabParser<SampleData> {
         ExecutorService service = Executors.newSingleThreadExecutor();
         
         try { 
-            sd = super.parse(dataIn, target, service);
+            sd = parse(dataIn, target, service);
             if (errorItems.size() > 0){
                 throw new ParseException(true, errorItems.size()+" error items detected", errorItems.toArray(new ErrorItem[]{}));
             }
