@@ -16,19 +16,20 @@ import uk.ac.ebi.arrayexpress2.magetab.listener.ErrorItemListener;
 import uk.ac.ebi.arrayexpress2.magetab.validator.Validator;
 import uk.ac.ebi.arrayexpress2.sampletab.datamodel.SampleData;
 
-public class SampleTabSaferParser extends SampleTabParser<SampleData> {
+public class SampleTabSaferParser {
     private final List<ErrorItem> errorItems = new ArrayList<ErrorItem>();
+    private final SampleTabParser<SampleData> parser;
 
     public Logger log = LoggerFactory.getLogger(getClass());
 
     public SampleTabSaferParser() {
-        this(null);
+        parser = new SampleTabParser<SampleData>();
     }
 	
 	public SampleTabSaferParser(Validator<SampleData> validator) {
-        super(validator);
+        parser = new SampleTabParser<SampleData>(validator);
         //make a listener to put error items in the list
-        addErrorItemListener(new ErrorItemListener() {
+        parser.addErrorItemListener(new ErrorItemListener() {
             public void errorOccurred(ErrorItem item) {
                 errorItems.add(item);
             }
@@ -43,7 +44,7 @@ public class SampleTabSaferParser extends SampleTabParser<SampleData> {
         ExecutorService service = Executors.newSingleThreadExecutor();
         
         try { 
-            sd = parse(dataIn, target, service);
+            sd = parser.parse(dataIn, target, service);
             if (errorItems.size() > 0){
                 throw new ParseException(true, errorItems.size()+" error items detected", errorItems.toArray(new ErrorItem[]{}));
             }
