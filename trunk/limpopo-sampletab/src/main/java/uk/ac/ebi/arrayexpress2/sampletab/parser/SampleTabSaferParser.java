@@ -1,6 +1,10 @@
 package uk.ac.ebi.arrayexpress2.sampletab.parser;
 
+import java.io.File;
+import java.io.IOException;
 import java.io.InputStream;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ExecutorService;
@@ -36,9 +40,33 @@ public class SampleTabSaferParser {
         });
     }
 
+    public SampleData parse(File msiFile) throws ParseException {
+        try {
+            return parse(msiFile.toURI().toURL());
+        }
+        catch (MalformedURLException e) {
+            throw new ParseException("File '" + msiFile.getAbsolutePath() + " could not be resolved to a valid URL", e);
+        }
+    }
+
+    public SampleData parse(URL msiURL) throws ParseException {
+        try {
+            return parse(msiURL.openStream());
+        }
+        catch (IOException e) {
+            throw new ParseException("Could not open a connection to " + msiURL.toString(), e);
+        }
+    }
+    
+    public SampleData parse(String filename) throws ParseException {
+        log.debug("Starting parsing "+filename+"...");
+        return parse(new File(filename));
+    }
+    
     public SampleData parse(InputStream dataIn) throws ParseException {
         return parse(dataIn, new SampleData());
     }
+    
     public SampleData parse(InputStream dataIn, SampleData target)
 			throws ParseException {      
         
