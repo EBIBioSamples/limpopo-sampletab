@@ -36,6 +36,9 @@ public class SampleTabSaferParser {
         });
     }
 
+    public SampleData parse(InputStream dataIn) throws ParseException {
+        return parse(dataIn, new SampleData());
+    }
     public SampleData parse(InputStream dataIn, SampleData target)
 			throws ParseException {      
         
