@@ -1,11 +1,8 @@
 package uk.ac.ebi.arrayexpress2.sampletab.validator;
 
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 
 import org.mged.magetab.error.ErrorItem;
-import org.mged.magetab.error.ErrorItemImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -16,8 +13,9 @@ public class LoadValidator extends SampleTabValidator {
 
     private Logger log = LoggerFactory.getLogger(getClass());
     
-    public void validate(SampleData sampledata) throws ValidateException {
-        List<ErrorItem> errors = new ArrayList<ErrorItem>();
+    public synchronized void validate(SampleData sampledata) throws ValidateException {
+        errors.clear();
+        
         try {
             super.validate(sampledata);
         } catch (ValidateException e){
@@ -30,6 +28,8 @@ public class LoadValidator extends SampleTabValidator {
         if (sampledata.msi.submissionReleaseDate.after(now)){
             errors.add(getErrorItemFromCode(1528));
         }
+        
+        //TODO check all samples are in at least one group
         
         //if we have errors, throw an exception for them
         if (errors.size() > 0){
