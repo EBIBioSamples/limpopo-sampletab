@@ -16,29 +16,34 @@ import org.slf4j.LoggerFactory;
 import uk.ac.ebi.arrayexpress2.magetab.exception.ValidateException;
 import uk.ac.ebi.arrayexpress2.magetab.validator.AbstractValidator;
 import uk.ac.ebi.arrayexpress2.sampletab.datamodel.SampleData;
+import uk.ac.ebi.arrayexpress2.sampletab.datamodel.msi.Database;
+import uk.ac.ebi.arrayexpress2.sampletab.datamodel.msi.Organization;
 import uk.ac.ebi.arrayexpress2.sampletab.datamodel.msi.Publication;
 import uk.ac.ebi.arrayexpress2.sampletab.datamodel.msi.TermSource;
 import uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node.SCDNode;
 import uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node.attribute.AbstractNodeAttributeOntology;
+import uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node.attribute.DatabaseAttribute;
 import uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node.attribute.SCDNodeAttribute;
 
 public class SampleTabValidator extends AbstractValidator<SampleData> {
+    
+
+    protected final List<ErrorItem> errors = new ArrayList<ErrorItem>();
     
     private Logger log = LoggerFactory.getLogger(getClass());
     
     private ErrorItemFactory errorFactory = ErrorItemFactory.getErrorItemFactory(); 
     
-    public ErrorItem getErrorItemFromCode(int errorCode){
+    protected ErrorItem getErrorItemFromCode(int errorCode){
         return getErrorItemFromCode("", errorCode);
     }
     
-    public ErrorItem getErrorItemFromCode(String errorMessage, int errorCode){
+    protected ErrorItem getErrorItemFromCode(String errorMessage, int errorCode){
         ErrorItem error = errorFactory.generateErrorItem(errorMessage, errorCode, this.getClass());
         return error;
     }
     
-	public void validate(SampleData sampledata) throws ValidateException {        
-        List<ErrorItem> errors = new ArrayList<ErrorItem>();
+	public synchronized void validate(SampleData sampledata) throws ValidateException {      
 
         Date now = new Date();
 
@@ -132,9 +137,9 @@ public class SampleTabValidator extends AbstractValidator<SampleData> {
             }
         }
         
-        //check all term source ref have a term source id
         for (SCDNode scdnode : sampledata.scd.getAllNodes()){
             for (SCDNodeAttribute attr : scdnode.getAttributes()){
+                //check all term source ref have a term source id
                 if (AbstractNodeAttributeOntology.class.isInstance(attr)){
                     AbstractNodeAttributeOntology attrOnt = (AbstractNodeAttributeOntology) attr;
 
@@ -144,6 +149,36 @@ public class SampleTabValidator extends AbstractValidator<SampleData> {
                         }
                     }
                 }
+                //check all database URI references have a valid URI
+                if (DatabaseAttribute.class.isInstance(attr)){
+                    DatabaseAttribute attrDb = (DatabaseAttribute) attr;
+                    try {
+                        new URI(attrDb.databaseURI);
+                    } catch (URISyntaxException e) {
+                        //invalid URI 
+                        errors.add(getErrorItemFromCode(attrDb.databaseURI, 1540));
+                    }
+                }
+            }
+        }
+        
+        //check organization URIs are actually URIs
+        for (Organization o : sampledata.msi.organizations){
+            try {
+                new URI(o.getURI());
+            } catch (URISyntaxException e) {
+                //invalid URI 
+                errors.add(getErrorItemFromCode(o.getURI(), 1539));
+            }
+        }
+        
+        //check database URIs are actually URIs
+        for (Database d : sampledata.msi.databases){
+            try {
+                new URI(d.getURI());
+            } catch (URISyntaxException e) {
+                //invalid URI 
+                errors.add(getErrorItemFromCode(d.getURI(), 1540));
             }
         }
         
