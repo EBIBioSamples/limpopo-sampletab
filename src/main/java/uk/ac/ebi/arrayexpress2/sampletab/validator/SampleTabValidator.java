@@ -48,7 +48,7 @@ public class SampleTabValidator extends AbstractValidator<SampleData> {
         Date now = new Date();
 
         //Submission Update Date must be in the past
-        if (sampledata.msi.submissionUpdateDate.after(now)){
+        if (sampledata.msi.submissionUpdateDate != null && sampledata.msi.submissionUpdateDate.after(now)){
             errors.add(getErrorItemFromCode(1529));
         }
         
