@@ -30,8 +30,8 @@ public class MSI {
 	public volatile String submissionDescription = null;
 	public volatile String submissionIdentifier = null;
 	public volatile String submissionVersion = "1.2";
-	public volatile Date submissionReleaseDate = null;
-	public volatile Date submissionUpdateDate = null;
+	public volatile Date submissionReleaseDate = new Date();
+	public volatile Date submissionUpdateDate = new Date();
 	public volatile Boolean submissionReferenceLayer = false;
 
 	//these have to be created as lists so the parsing works correctly
