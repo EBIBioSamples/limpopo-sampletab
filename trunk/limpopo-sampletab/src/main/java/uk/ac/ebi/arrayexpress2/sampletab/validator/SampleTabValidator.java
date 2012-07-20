@@ -164,11 +164,13 @@ public class SampleTabValidator extends AbstractValidator<SampleData> {
         
         //check organization URIs are actually URIs
         for (Organization o : sampledata.msi.organizations){
-            try {
-                new URI(o.getURI());
-            } catch (URISyntaxException e) {
-                //invalid URI 
-                errors.add(getErrorItemFromCode(o.getURI(), 1539));
+            if (o.getURI() != null) {
+                try {
+                    new URI(o.getURI());
+                } catch (URISyntaxException e) {
+                    //invalid URI 
+                    errors.add(getErrorItemFromCode(o.getURI(), 1539));
+                }
             }
         }
         
