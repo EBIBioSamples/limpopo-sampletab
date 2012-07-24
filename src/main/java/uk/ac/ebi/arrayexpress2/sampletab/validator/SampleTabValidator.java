@@ -152,11 +152,16 @@ public class SampleTabValidator extends AbstractValidator<SampleData> {
                 //check all database URI references have a valid URI
                 if (DatabaseAttribute.class.isInstance(attr)){
                     DatabaseAttribute attrDb = (DatabaseAttribute) attr;
-                    try {
-                        new URI(attrDb.databaseURI);
-                    } catch (URISyntaxException e) {
-                        //invalid URI 
-                        errors.add(getErrorItemFromCode(attrDb.databaseURI, 1540));
+                    if (attrDb.databaseURI == null){
+                        //do nothing, or raise error?
+                        //errors.add(getErrorItemFromCode(d.getURI(), 1540));
+                    } else {
+                        try {
+                            new URI(attrDb.databaseURI);
+                        } catch (URISyntaxException e) {
+                            //invalid URI 
+                            errors.add(getErrorItemFromCode(attrDb.databaseURI, 1540));
+                        }
                     }
                 }
             }
@@ -176,11 +181,16 @@ public class SampleTabValidator extends AbstractValidator<SampleData> {
         
         //check database URIs are actually URIs
         for (Database d : sampledata.msi.databases){
-            try {
-                new URI(d.getURI());
-            } catch (URISyntaxException e) {
-                //invalid URI 
-                errors.add(getErrorItemFromCode(d.getURI(), 1540));
+            if (d.getURI() == null){
+                //do nothing, or raise error?
+                //errors.add(getErrorItemFromCode(d.getURI(), 1540));
+            } else {
+                try {
+                    new URI(d.getURI());
+                } catch (URISyntaxException e) {
+                    //invalid URI 
+                    errors.add(getErrorItemFromCode(d.getURI(), 1540));
+                }
             }
         }
         
