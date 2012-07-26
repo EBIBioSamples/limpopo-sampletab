@@ -1,12 +1,14 @@
 package uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 import org.isatools.tablib.export.graph2tab.TabValueGroup;
 //import org.isatools.tablib.export.graph2tab.DefaultAbstractNode;
 import uk.ac.ebi.arrayexpress2.magetab.datamodel.graph.AbstractNode;
 import uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node.attribute.SCDNodeAttribute;
+import uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node.attribute.SCDNodeAttributeComparator;
 
 
 
@@ -45,9 +47,9 @@ public abstract class AbstractSCDNode extends AbstractNode implements SCDNode {
             return;
         }
         //check it does not already exist
-        for (SCDNodeAttribute a : attributes){
-            if (a.getAttributeType().equals(attribute.getAttributeType()) 
-                    && a.getAttributeValue().equals(attribute.getAttributeValue())){
+        Comparator<SCDNodeAttribute> c = new SCDNodeAttributeComparator();
+        for (SCDNodeAttribute a : attributes) {
+            if (c.compare(attribute, a) == 0 ) {
                 return;
             }
         }
