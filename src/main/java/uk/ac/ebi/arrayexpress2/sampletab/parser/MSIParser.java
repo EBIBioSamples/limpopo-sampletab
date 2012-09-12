@@ -21,7 +21,8 @@ import uk.ac.ebi.arrayexpress2.sampletab.datamodel.MSI;
 import uk.ac.ebi.arrayexpress2.sampletab.handler.msi.MSIReadHandler;
 
 public class MSIParser extends AbstractParser<MSI> {
-
+    public static String DEFAULT_ENCODING = "UTF-8";
+    
     public MSI parse(InputStream msiIn) throws ParseException {
         return parse(msiIn, new MSI());
     }

@@ -24,6 +24,8 @@ import uk.ac.ebi.arrayexpress2.sampletab.datamodel.SCD;
 import uk.ac.ebi.arrayexpress2.sampletab.handler.scd.SCDReadHandler;
 
 public class SCDParser extends AbstractParser<SCD> {
+    public static String DEFAULT_ENCODING = "UTF-8";
+    
     public SCD parse(InputStream scdIn) throws ParseException {
         return parse(scdIn, new SCD());
     }
