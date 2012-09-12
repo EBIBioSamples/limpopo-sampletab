@@ -1,471 +1,471 @@
 [MSI]
-Submission Title	International Mouse Strain Resource - MRC
+Submission Title	International Mouse Strain Resource - Mammalian Genetics Laboratory
 Submission Identifier	GMS-HAR
-Submission Description	The IMSR is a searchable online database of mouse strains and stocks available worldwide, including inbred, mutant, and genetically engineered mice. The goal of the IMSR is to assist the international scientific community in locating and obtaining mouse resources for research. These samples are held by MRC
-Submission Version	1.0
+Submission Description	The IMSR is a searchable online database of mouse strains and stocks available worldwide, including inbred, mutant, and genetically engineered mice. The goal of the IMSR is to assist the international scientific community in locating and obtaining mouse resources for research. These samples are held by Mammalian Genetics Laboratory
+Submission Version	1.2
 Submission Reference Layer	true
-Submission Release Date	2012/01/16
-Submission Update Date	
-Organization Name	International Mouse Strain Resource	MRC
-Organization Address		
-Organization URI	http://www.findmice.org/	
-Organization Email		
-Organization Role	Submitter	Biomaterial Provider
-Person Last Name
-Person Initials
-Person First Name
-Person Email
-Person Role
-Publication DOI
-Publication PubMed ID
-Term Source Name	NEWT	EFO
-Term Source URI	http://www.ebi.ac.uk/newt/	http://www.ebi.ac.uk/efo/
-Term Source Version		2.13.1
-Database Name	IMSR
-Database URI	
+Submission Release Date	2011/11/10
+Submission Update Date	2012/02/13
+Organization Name	Mammalian Genetics Laboratory	International Mouse Strain Resource	
+Organization Address			
+Organization URI	http://www.findmice.org/	http://www.findmice.org/	
+Organization Email			
+Organization Role	Biomaterial Provider		
+Person Last Name	
+Person Initials	
+Person First Name	
+Person Email	
+Person Role	
+Publication PubMed ID	
+Publication DOI	
+Term Source Name	NCBI Taxonomy	EFO	
+Term Source URI	http://www.ncbi.nlm.nih.gov/Taxonomy/	http://www.ebi.ac.uk/efo	
+Term Source Version		2.13.1	
+Database Name	
 Database ID	
+Database URI	
 
 [SCD]
-Sample Name	Comment[Synonym]	Material	Characteristic[Mutation Chromosome]	Characteristic[Mutation Type]	Characteristic[Allele Symbol]	Characteristic[Allele Name]	Characteristic[Gene Name]	Comment[Synonym]	Characteristic[Mutation Chromosome]	Characteristic[Mutation Type]	Characteristic[Allele Symbol]	Characteristic[Allele Name]	Characteristic[Gene Name]	Characteristic[Mutation Chromosome]	Characteristic[Mutation Type]	Characteristic[Allele Symbol]	Characteristic[Allele Name]	Characteristic[Gene Name]	Comment[Synonym]	Comment[Synonym]	Characteristic[Mutation Chromosome]	Characteristic[Mutation Type]	Characteristic[Allele Symbol]	Characteristic[Allele Name]	Characteristic[Gene Name]	Characteristic[Mutation Chromosome]	Characteristic[Mutation Type]	Characteristic[Allele Symbol]	Characteristic[Allele Name]	Characteristic[Gene Name]	Characteristic[Mutation Chromosome]	Characteristic[Mutation Type]	Characteristic[Allele Symbol]	Characteristic[Allele Name]	Characteristic[Gene Name]	Characteristic[Mutation Chromosome]	Characteristic[Mutation Type]	Characteristic[Allele Symbol]	Characteristic[Allele Name]	Characteristic[Gene Name]	Characteristic[Mutation Chromosome]	Characteristic[Mutation Type]	Characteristic[Allele Symbol]	Characteristic[Allele Name]	Characteristic[Gene Name]	Characteristic[Mutation Chromosome]	Characteristic[Mutation Type]	Characteristic[Allele Symbol]	Characteristic[Allele Name]	Characteristic[Gene Name]	Sample Name	Material	
-(B6xCB)F2-Tg(PMP22)MY41Clh/H	 	strain	UN	transgenic	Tg(Pmp22)My41Clh	transgene insertion My41, Clare Huxley	transgene insertion My41, Clare Huxley																																												(B6xCB)F2-Tg(PMP22)MY41Clh/H cryopreserved embryos	cryopreserved embryos	
-(B6xCB)F2-Tg(PMP22)MY41Clh/H	 	strain	UN	transgenic	Tg(Pmp22)My41Clh	transgene insertion My41, Clare Huxley	transgene insertion My41, Clare Huxley																																												(B6xCB)F2-Tg(PMP22)MY41Clh/H cryopreserved or freeze-dried sperm	cryopreserved or freeze-dried sperm	
-102/H	 	strain	 	 	 	 	 																																												102/H cryopreserved embryos	cryopreserved embryos	
-102/H	 	strain	 	 	 	 	 																																												102/H cryopreserved or freeze-dried sperm	cryopreserved or freeze-dried sperm	
-129/SvEv-Tln1<tm1Crit>/CritH	 	cryopreserved embryos	4	targeted mutation	Tln1<tm1Crit>	targeted mutation 1, David R Critchley	talin 1																																														
-129P2/OlaHsd	129/OlaHsd	cryopreserved embryos	 	 	 	 	 	129P2																																													
-129P2/OlaHsd-Mkrn1<Gt(RRB087)Byg>/H	 	strain	6	gene trap	Mkrn1<Gt(RRB087)Byg>	gene trap mutation RRB087, BayGenomics	makorin, ring finger protein, 1																																												129P2/OlaHsd-Mkrn1<Gt(RRB087)Byg>/H cryopreserved embryos	cryopreserved embryos	
-129P2/OlaHsd-Mkrn1<Gt(RRB087)Byg>/H	 	strain	6	gene trap	Mkrn1<Gt(RRB087)Byg>	gene trap mutation RRB087, BayGenomics	makorin, ring finger protein, 1																																												129P2/OlaHsd-Mkrn1<Gt(RRB087)Byg>/H cryopreserved or freeze-dried sperm	cryopreserved or freeze-dried sperm	
-129P2/OlaHsd-Prnp/Prnd<tm1Dwm>/H	 	cryopreserved embryos	2	targeted mutation	Prnp/Prnd<tm1Dwm>	targeted mutation 1, David W Melton	prion protein																																														
-129P2/OlaHsd-Tpcn2<Gt(YHD437)Byg>/H	 	strain	7	gene trap	Tpcn2<Gt(YHD437)Byg>	gene trap YHD437, BayGenomics	two pore segment channel 2																																												129P2/OlaHsd-Tpcn2<Gt(YHD437)Byg>/H cryopreserved embryos	cryopreserved embryos	
-129P2/OlaHsd-Tpcn2<Gt(YHD437)Byg>/H	 	strain	7	gene trap	Tpcn2<Gt(YHD437)Byg>	gene trap YHD437, BayGenomics	two pore segment channel 2																																												129P2/OlaHsd-Tpcn2<Gt(YHD437)Byg>/H cryopreserved or freeze-dried sperm	cryopreserved or freeze-dried sperm	
-129S9/SvEvH	129/SvEvH	strain	 	 	 	 	 																																												129S9/SvEvH cryopreserved embryos	cryopreserved embryos	
-129S9/SvEvH	129/SvEvH	strain	 	 	 	 	 																																												129S9/SvEvH cryopreserved or freeze-dried sperm	cryopreserved or freeze-dried sperm	
-129S9/SvEvH.B6-a/H	 	cryopreserved embryos	2	other	a	nonagouti	nonagouti																																														
-ABL	AB/L	cryopreserved embryos	 	 	 	 	 																																														
-B6.129P2-Mro<tm1H>/H	B6.Cg-Mro<tm1H>/H	live mouse	18	targeted mutation	Mro<tm1H>	targeted mutation 1, Harwell	maestro																																														
-B6.129P2-Vnn1<tm1Pna>/H	 	strain	10	targeted mutation	Vnn1<tm1Pna>	targeted mutation 1, Philippe Naquet	vanin 1																																												B6.129P2-Vnn1<tm1Pna>/H cryopreserved embryos	cryopreserved embryos	
-B6.129P2-Vnn1<tm1Pna>/H	 	strain	10	targeted mutation	Vnn1<tm1Pna>	targeted mutation 1, Philippe Naquet	vanin 1																																												B6.129P2-Vnn1<tm1Pna>/H cryopreserved or freeze-dried sperm	cryopreserved or freeze-dried sperm	
-B6.A-Ush1g<js>/J	B6.A-Sans<js>/J	cryopreserved embryos	11	spontaneous mutation	Ush1g<js>	Jackson shaker	Usher syndrome 1G homolog (human)	B6.A-js/+																																													
-B6.Cg-Sfrp2<C50F>/H	 	strain	3	chemically induced mutation	Sfrp2<C50F>	Cys50Phe	secreted frizzled-related protein 2																																												B6.Cg-Sfrp2<C50F>/H cryopreserved embryos	cryopreserved embryos	
-B6.Cg-Sfrp2<C50F>/H	 	strain	3	chemically induced mutation	Sfrp2<C50F>	Cys50Phe	secreted frizzled-related protein 2																																												B6.Cg-Sfrp2<C50F>/H cryopreserved or freeze-dried sperm	cryopreserved or freeze-dried sperm	
-B6.Cg-Sfrp5<Q27stop>/H	 	strain	19	chemically induced mutation	Sfrp5<Q27stop>	Gln27stop	secreted frizzled-related sequence protein 5																																												B6.Cg-Sfrp5<Q27stop>/H cryopreserved embryos	cryopreserved embryos	
-B6.Cg-Sfrp5<Q27stop>/H	 	strain	19	chemically induced mutation	Sfrp5<Q27stop>	Gln27stop	secreted frizzled-related sequence protein 5																																												B6.Cg-Sfrp5<Q27stop>/H cryopreserved or freeze-dried sperm	cryopreserved or freeze-dried sperm	
-B6.Cg-Tg(Wnt1-cre)11Rth/H	 	strain	11	recombinase(cre/flp)	Tg(Wnt1-cre)11Rth	transgene insertion 11, David H Rowitch	transgene insertion 11, David H Rowitch																																												B6.Cg-Tg(Wnt1-cre)11Rth/H cryopreserved embryos	cryopreserved embryos	
-B6.Cg-Tg(Wnt1-cre)11Rth/H	 	strain	11	recombinase(cre/flp)	Tg(Wnt1-cre)11Rth	transgene insertion 11, David H Rowitch	transgene insertion 11, David H Rowitch																																												B6.Cg-Tg(Wnt1-cre)11Rth/H cryopreserved or freeze-dried sperm	cryopreserved or freeze-dried sperm	
-B6129-Tg(Wap-cre)11738Mam	 	cryopreserved embryos	UN	recombinase(cre/flp)	Tg(Wap-cre)11738Mam	transgene insertion 11738, Lothar Hennighausen	transgene insertion 11738, Lothar Hennighausen																																														
-B6;129-Isl1<tm1(cre)Cos>	 	strain	13	recombinase(cre/flp)	Isl1<tm1(cre)Tmj>	targeted mutation 1, Thomas M Jessell	ISL1 transcription factor, LIM/homeodomain																																												B6;129-Isl1<tm1(cre)Cos> cryopreserved embryos	cryopreserved embryos	
-B6;129-Isl1<tm1(cre)Cos>	 	strain	13	recombinase(cre/flp)	Isl1<tm1(cre)Tmj>	targeted mutation 1, Thomas M Jessell	ISL1 transcription factor, LIM/homeodomain																																												B6;129-Isl1<tm1(cre)Cos> cryopreserved or freeze-dried sperm	cryopreserved or freeze-dried sperm	
-B6;129-Myl2<tm1(cre)Krc>/H	 	strain	5	recombinase(cre/flp)	Myl2<tm1(cre)Krc>	targeted mutation 1, Kenneth R Chien	myosin, light polypeptide 2, regulatory, cardiac, slow																																												B6;129-Myl2<tm1(cre)Krc>/H cryopreserved embryos	cryopreserved embryos	
-B6;129-Myl2<tm1(cre)Krc>/H	 	strain	5	recombinase(cre/flp)	Myl2<tm1(cre)Krc>	targeted mutation 1, Kenneth R Chien	myosin, light polypeptide 2, regulatory, cardiac, slow																																												B6;129-Myl2<tm1(cre)Krc>/H cryopreserved or freeze-dried sperm	cryopreserved or freeze-dried sperm	
-B6;129-Nkx2-5<tm1(cre)Rjs>/H	 	strain	17	recombinase(cre/flp)	Nkx2-5<tm1(cre)Rjs>	targeted mutation 1, Robert J Schwartz	NK2 transcription factor related, locus 5 (Drosophila)																																												B6;129-Nkx2-5<tm1(cre)Rjs>/H cryopreserved embryos	cryopreserved embryos	
-B6;129-Nkx2-5<tm1(cre)Rjs>/H	 	strain	17	recombinase(cre/flp)	Nkx2-5<tm1(cre)Rjs>	targeted mutation 1, Robert J Schwartz	NK2 transcription factor related, locus 5 (Drosophila)																																												B6;129-Nkx2-5<tm1(cre)Rjs>/H cryopreserved or freeze-dried sperm	cryopreserved or freeze-dried sperm	
-B6;CB-Mesp1<tm2(cre)Ysa>/H	 	strain	7	recombinase(cre/flp)	Mesp1<tm2(cre)Ysa>	targeted mutation 2, Yumiko Saga	mesoderm posterior 1																																												B6;CB-Mesp1<tm2(cre)Ysa>/H cryopreserved embryos	cryopreserved embryos	
-B6;CB-Mesp1<tm2(cre)Ysa>/H	 	strain	7	recombinase(cre/flp)	Mesp1<tm2(cre)Ysa>	targeted mutation 2, Yumiko Saga	mesoderm posterior 1																																												B6;CB-Mesp1<tm2(cre)Ysa>/H cryopreserved or freeze-dried sperm	cryopreserved or freeze-dried sperm	
-B6;CBA-Dmd<mdx>Tg(ACTA1-Utrn)1Ked/Ked	 	strain	X	transgenic	Dmd<mdx>	X linked muscular dystrophy	dystrophin, muscular dystrophy																																												B6;CBA-Dmd<mdx>Tg(ACTA1-Utrn)1Ked/Ked cryopreserved embryos	cryopreserved embryos	
-B6;CBA-Dmd<mdx>Tg(ACTA1-Utrn)1Ked/Ked	 	strain	X	transgenic	Dmd<mdx>	X linked muscular dystrophy	dystrophin, muscular dystrophy																																												B6;CBA-Dmd<mdx>Tg(ACTA1-Utrn)1Ked/Ked cryopreserved or freeze-dried sperm	cryopreserved or freeze-dried sperm	
-B6C3-Tg(HD82Gln)81Dbo/H	 	cryopreserved embryos	UN	transgenic	Tg(HD82Gln)81Dbo	transgene insertion 81, David R Borchelt	transgene insertion 81, David R Borchelt																																														
-B6CB-Tg(PMP22)C1Clh/H	 	cryopreserved embryos	7	transgenic	Tg(PMP22)C1Clh	transgene insertion C1, Clare Huxley	transgene insertion C1, Clare Huxley																																														
-B6CB-Tg(PMP22)C61Clh/H	 	cryopreserved embryos	 	 	 	 	 																																														
-B6CB-Tg(PMP22)JP18Clh/H	 	cryopreserved embryos	 	 	 	 	 																																														
-B6CB-Tg(pUHG16)JU2Clh/H	 	cryopreserved embryos	 	 	 	 	 																																														
-B6CB-Tg(yCFTR)A10Clh/H	 	cryopreserved embryos	 	 	 	 	 																																														
-B6CB-Tg(yCFTR)T30Clh/H	 	cryopreserved embryos	 	 	 	 	 																																														
-B6CB-Tg(yCFTR)T57Clh/H	 	cryopreserved embryos	 	 	 	 	 																																														
-B6CB-TgN(PMP22)C58Clh/H	 	cryopreserved embryos	 	 	 	 	 																																														
-B6CBA-Tg(HDexon1)61Gpb	 	cryopreserved embryos	UN	transgenic	Tg(HDexon1)61Gpb	transgene insertion 61, Gillian Bates	transgene insertion 61, Gillian Bates																																														
-BALB/cOla	 	cryopreserved embryos	 	 	 	 	 																																														
-C.Cg-Lpk/H	Longpockets	strain	UN	chemically induced mutation	Lpk	longpockets	longpockets																																												C.Cg-Lpk/H cryopreserved embryos	cryopreserved embryos	
-C.Cg-Lpk/H	Longpockets	strain	UN	chemically induced mutation	Lpk	longpockets	longpockets																																												C.Cg-Lpk/H cryopreserved or freeze-dried sperm	cryopreserved or freeze-dried sperm	
-C.Cg-Ostes/H	 	strain	UN	chemically induced mutation	Ostes	ostes	ostes																																												C.Cg-Ostes/H cryopreserved embryos	cryopreserved embryos	
-C.Cg-Ostes/H	 	strain	UN	chemically induced mutation	Ostes	ostes	ostes																																												C.Cg-Ostes/H cryopreserved or freeze-dried sperm	cryopreserved or freeze-dried sperm	
-C3.D2-Pax6<Coop>/H	 	cryopreserved embryos	2	chemically induced mutation	Pax6<Coop>	corneal opacity	paired box gene 6																																														
-C3H-Cat2/H	 	cryopreserved embryos	1	radiation induced mutation	Cat2	dominant cataract 2	dominant cataract 2																																														
-C3H-Crygb<nop>/H	 	cryopreserved embryos	1	 	Crygb<nop>	nuclear opacity	crystallin, gamma B																																														
-C3H-Foxq1<sa>/H	 	cryopreserved embryos	13	radiation induced mutation	Foxq1<sa>	satin	forkhead box Q1																																														
-C3H-Maf<Ofl>/H	 	cryopreserved embryos	8	radiation induced mutation	Maf<Ofl>	opaque flecks in lens	avian musculoaponeurotic fibrosarcoma (v-maf) AS42 oncogene homolog																																														
-C3H-Npp/H	 	cryopreserved embryos	5	chemically induced mutation	Npp	nuclear posterior polar opacity	nuclear posterior polar opacity																																														
-C3H-nr/H	 	cryopreserved embryos	8	spontaneous mutation	nr	nervous	nervous																																														
-C3H-Paf/H	 	cryopreserved embryos	X	 	Paf	patchy fur	patchy fur																																														
-C3H.Cg-Cat5<To2>/H	 	cryopreserved embryos	10	chemically induced mutation	Cat5<To2>	total opacity	dominant cataract 5																																														
-C3H.Cg-Kit<W-28H>/H	 	cryopreserved embryos	5	chemically induced mutation	Kit<W-28H>	dominant spotting 28 Harwell	kit oncogene																																														
-C3H.Cg-Kit<W-29H>/H	 	cryopreserved embryos	5	chemically induced mutation	Kit<W-29H>	dominant spotting 29 Harwell	kit oncogene																																														
-C3H.Cg-Koa/H	 	cryopreserved embryos	15	radiation induced mutation	Koa	koala	koala																																														
-C3H101H-a<16H>a<l>/H	 	cryopreserved embryos	2	chemically induced mutation	a<l>	nonagouti lethal	nonagouti		2	chemically induced mutation	a<16H>	nonagouti 16 Harwell	nonagouti																																								
-C3H101H-a<da>/H	 	cryopreserved embryos	2	radiation induced mutation	a<da>	nonagouti with dark agouti belly	nonagouti																																														
-C3H101H-a<t>Tyrp1<b-cH>Tyr<c-ch>/H	 	cryopreserved embryos	7	 	Tyr<c-ch>	chinchilla	tyrosinase		2	 	a<t>	black and tan	nonagouti	4	 	Tyrp1<b-cH>	cordovan Harwell	tyrosinase-related protein 1																																			
-C3H101H-a<u>/H	 	cryopreserved embryos	2	radiation induced mutation	a<u>	agouti umbrous	nonagouti																																														
-C3H101H-Aifm1<Hq>/H	C3H101H-Pdcd8<Hq>/H	cryopreserved embryos	X	spontaneous mutation	Aifm1<Hq>	harlequin	apoptosis-inducing factor, mitochondrion-associated 1																																														
-C3H101H-Atp7a<Mo-10H>/H	C3H101H-Atp7a<Mo-10H>	cryopreserved embryos	X	radiation induced mutation	Atp7a<Mo-10H>	mottled 10 Harwell	ATPase, Cu++ transporting, alpha polypeptide																																														
-C3H101H-Atp7a<Mo-11H>/H	C3H101H-Atp7a<Mo-11H>	cryopreserved embryos	X	radiation induced mutation	Atp7a<Mo-11H>	mottled 11 Harwell	ATPase, Cu++ transporting, alpha polypeptide																																														
-C3H101H-Atp7a<Mo-12H>/H	C3H101H-Atp7a<Mo-12H>	cryopreserved embryos	X	spontaneous mutation	Atp7a<Mo-12H>	mottled 12 Harwell	ATPase, Cu++ transporting, alpha polypeptide																																														
-C3H101H-Atp7a<Mo-13H>/H	C3H101H-Atp7a<Mo-13H>	cryopreserved embryos	X	spontaneous mutation	Atp7a<Mo-13H>	mottled 13 Harwell	ATPase, Cu++ transporting, alpha polypeptide																																														
-C3H101H-Atp7a<Mo-14H>/H	C3H101H-Atp7a<Mo-14H>	cryopreserved embryos	X	spontaneous mutation	Atp7a<Mo-14H>	mottled 14 Harwell	ATPase, Cu++ transporting, alpha polypeptide																																														
-C3H101H-Atp7a<Mo-17H>/H	 	cryopreserved embryos	X	chemically induced mutation	Atp7a<Mo-17H>	mottled 17 Harwell	ATPase, Cu++ transporting, alpha polypeptide																																														
-C3H101H-Atp7a<Mo-blo>/H	 	cryopreserved embryos	X	spontaneous mutation	Atp7a<Mo-blo>	blotchy	ATPase, Cu++ transporting, alpha polypeptide																																														
-C3H101H-Atp7a<Mo-ca>/H	 	cryopreserved embryos	X	spontaneous mutation	Atp7a<Mo-ca>	candy	ATPase, Cu++ transporting, alpha polypeptide																																														
-C3H101H-Atp7a<Mo-dp>/H	 	cryopreserved embryos	X	spontaneous mutation	Atp7a<Mo-dp>	dappled	ATPase, Cu++ transporting, alpha polypeptide																																														
-C3H101H-Atp7a<Mo-spt>/H	 	cryopreserved embryos	X	spontaneous mutation	Atp7a<Mo-spot>	mottled spot	ATPase, Cu++ transporting, alpha polypeptide																																														
-C3H101H-Atp7a<Mo-to>/H	 	cryopreserved embryos	X	spontaneous mutation	Atp7a<Mo-to>	tortoiseshell	ATPase, Cu++ transporting, alpha polypeptide																																														
-C3H101H-Atp7a<Mo-vbr>/H	 	cryopreserved embryos	X	spontaneous mutation	Atp7a<Mo-vbr>	mottled viable brindled	ATPase, Cu++ transporting, alpha polypeptide																																														
-C3H101H-Axin1<Fu-kb>/H	 	cryopreserved embryos	17	spontaneous mutation	Axin1<Fu-kb>	knobbly	axin 1																																														
-C3H101H-Bhd +/+ Pou3f4<Slf>/H	 	cryopreserved embryos	X	radiation induced mutation	Bhd	broad headed	broad headed																																														
-C3H101H-Br/H	 	cryopreserved embryos	17	radiation induced mutation	Br	brachyrrhine	brachyrrhine																																														
-C3H101H-Cacna1a<tg>/H	 	strain	8	spontaneous mutation	Cacna1a<tg>	tottering	calcium channel, voltage-dependent, P/Q type, alpha 1A subunit																																												C3H101H-Cacna1a<tg>/H cryopreserved embryos	cryopreserved embryos	
-C3H101H-Cacna1a<tg>/H	 	strain	8	spontaneous mutation	Cacna1a<tg>	tottering	calcium channel, voltage-dependent, P/Q type, alpha 1A subunit																																												C3H101H-Cacna1a<tg>/H cryopreserved or freeze-dried sperm	cryopreserved or freeze-dried sperm	
-C3H101H-Crm/H	 	cryopreserved embryos	X	spontaneous mutation	Crm	cream	cream																																														
-C3H101H-Cryga<tol>/H	C3H101H-Cat2<tol>/H	cryopreserved embryos	1	chemically induced mutation	Cryga<tol>	total opacity with lens vacuoles	crystallin, gamma A																																														
-C3H101H-Dct<slt>/H	 	cryopreserved embryos	14	spontaneous mutation	Dct<slt>	slaty	dopachrome tautomerase																																														
-C3H101H-Del(1)27H/H	 	cryopreserved embryos	 	 	 	 	 																																														
-C3H101H-Del(1)33H/H	 	cryopreserved embryos	 	 	 	 	 																																														
-C3H101H-Del(1)42H	 	cryopreserved embryos	 	 	 	 	 																																														
-C3H101H-Del(1)55H/H	C3H101H-Del(1)55H	cryopreserved embryos	 	 	 	 	 																																														
-C3H101H-Del(1)57H/H	C3H101H-Del(1)57H	cryopreserved embryos	 	 	 	 	 																																														
-C3H101H-Del(1)58H/H	C3H101H-Del(1)58H	cryopreserved embryos	 	 	 	 	 																																														
-C3H101H-Del(1)66H/H	C3H101H-Del(1)66H	cryopreserved embryos	 	 	 	 	 																																														
-C3H101H-Del(1)6H/H	 	cryopreserved embryos	 	 	 	 	 																																														
-C3H101H-Del(1)70H/H	C3H101H-Del(1)70H	cryopreserved embryos	 	 	 	 	 																																														
-C3H101H-Del(10)69H/H	C3H101H-Del(10)69H	cryopreserved embryos	 	 	 	 	 																																														
-C3H101H-Del(12)75H/H	C3H101H-Del(12)75H	cryopreserved embryos	 	 	 	 	 																																														
-C3H101H-Del(13)36H/H	 	strain	 	 	 	 	 																																												C3H101H-Del(13)36H/H cryopreserved embryos	cryopreserved embryos	
-C3H101H-Del(13)36H/H	 	strain	 	 	 	 	 																																												C3H101H-Del(13)36H/H cryopreserved or freeze-dried sperm	cryopreserved or freeze-dried sperm	
-C3H101H-Del(13)52H/H	C3H101H-Del(13)52H	cryopreserved embryos	 	 	 	 	 																																														
-C3H101H-Del(16)51H/H	C3H101H-Del(16)51H	cryopreserved embryos	 	 	 	 	 																																														
-C3H101H-Del(18)20H/H	 	cryopreserved embryos	 	 	 	 	 																																														
-C3H101H-Del(2)35H/H	 	cryopreserved embryos	 	 	 	 	 																																														
-C3H101H-Del(2)59H/H	C3H101H-Del(2)59H	cryopreserved embryos	 	 	 	 	 																																														
-C3H101H-Del(3)48H/H	 	cryopreserved embryos	 	 	 	 	 																																														
-C3H101H-Del(3)64H/H	 	cryopreserved embryos	 	 	 	 	 																																														
-C3H101H-Del(4)17H/H	 	cryopreserved embryos	 	 	 	 	 																																														
-C3H101H-Del(5)68H/H	C3H101H-Del(5)68H	cryopreserved embryos	 	 	 	 	 																																														
-C3H101H-Del(6)26H/H	 	cryopreserved embryos	 	 	 	 	 																																														
-C3H101H-Del(7)49H/H	C3H101H-Del(7)49H	cryopreserved embryos	 	 	 	 	 																																														
-C3H101H-Del(7)56H/H	C3H101H-Del(7)56H	cryopreserved embryos	 	 	 	 	 																																														
-C3H101H-Del(8)50H/H	C3H101H-Del(8)50H	cryopreserved embryos	 	 	 	 	 																																														
-C3H101H-Del(8)62H/H	C3H101H-Del(8)62H	cryopreserved embryos	 	 	 	 	 																																														
-C3H101H-Del(8)72H/H	C3H101H-Del(8)72H	cryopreserved embryos	 	 	 	 	 																																														
-C3H101H-Del(8)74H/H	 	cryopreserved embryos	 	 	 	 	 																																														
-C3H101H-Del(8)7H/H	 	cryopreserved embryos	 	 	 	 	 																																														
-C3H101H-Del(9)4H/H	 	cryopreserved embryos	 	 	 	 	 																																														
-C3H101H-Dh/H	 	cryopreserved embryos	1	spontaneous mutation	Dh	dominant hemimelia	dominant hemimelia																																														
-C3H101H-Dkf/H	 	cryopreserved embryos	 	 	 	 	 																																														
-C3H101H-Dp(1)6H	 	cryopreserved embryos	 	 	 	 	 																																														
-C3H101H-Dp(12)7H	 	cryopreserved embryos	 	 	 	 	 																																														
-C3H101H-Dp(12)9H	 	cryopreserved embryos	 	 	 	 	 																																														
-C3H101H-Dp(13)17H	 	cryopreserved embryos	 	 	 	 	 																																														
-C3H101H-Dp(14)18H	 	cryopreserved embryos	 	 	 	 	 																																														
-C3H101H-Dp(14)2H	 	cryopreserved embryos	 	 	 	 	 																																														
-C3H101H-Dp(15)5H	 	cryopreserved embryos	 	 	 	 	 																																														
-C3H101H-Dp(16)15H	 	cryopreserved embryos	 	 	 	 	 																																														
-C3H101H-Dp(16)8H	 	cryopreserved embryos	 	 	 	 	 																																														
-C3H101H-Dp(18)4H	 	cryopreserved embryos	 	 	 	 	 																																														
-C3H101H-Dp(2)11H	 	cryopreserved embryos	 	 	 	 	 																																														
-C3H101H-Dp(3)10H	 	cryopreserved embryos	 	 	 	 	 																																														
-C3H101H-Dp(4)20H	 	cryopreserved embryos	 	 	 	 	 																																														
-C3H101H-Dp(7)16H	 	cryopreserved embryos	 	 	 	 	 																																														
-C3H101H-Dp(7)19H	 	cryopreserved embryos	 	 	 	 	 																																														
-C3H101H-Dp(7)1H	 	cryopreserved embryos	 	 	 	 	 																																														
-C3H101H-Dp(9)12H	 	cryopreserved embryos	 	 	 	 	 																																														
-C3H101H-Dp(9)14H	 	cryopreserved embryos	 	 	 	 	 																																														
-C3H101H-Dp(9)3H	 	cryopreserved embryos	 	 	 	 	 																																														
-C3H101H-Eda<Ta-23H>/H	 	cryopreserved embryos	X	chemically induced mutation	Eda<Ta-23H>	tabby 23 Harwell	ectodysplasin-A																																														
-C3H101H-Eda<Ta-25H>/H	 	cryopreserved embryos	X	radiation induced mutation	Eda<Ta-25H>	tabby 25 Harwell	ectodysplasin-A																																														
-C3H101H-Eda<Ta-26H>/H	 	cryopreserved embryos	X	spontaneous mutation	Eda<Ta-26H>	tabby 26 Harwell	ectodysplasin-A																																														
-C3H101H-Eda<Ta-29H>/H	 	cryopreserved embryos	X	radiation induced mutation	Eda<Ta-29H>	tabby 29 Harwell	ectodysplasin-A																																														
-C3H101H-Eda<Ta-30H>/H	 	cryopreserved embryos	X	radiation induced mutation	Eda<Ta-30H>	tabby 30 Harwell	ectodysplasin-A																																														
-C3H101H-Eda<Ta-32H>	 	cryopreserved embryos	X	radiation induced mutation	Eda<Ta-32H>	tabby 32 Harwell	ectodysplasin-A																																														
-C3H101H-Eda<Ta-33H>	 	cryopreserved embryos	X	spontaneous mutation	Eda<Ta-33H>	tabby 33 Harwell	ectodysplasin-A																																														
-C3H101H-Edar<Dl-slk>/H	 	cryopreserved embryos	10	spontaneous mutation	Edar<Dl-slk>	downless sleek	ectodysplasin-A receptor																																														
-C3H101H-Eef1a2<wst>/H	 	strain	2	spontaneous mutation	Eef1a2<wst>	wasted	eukaryotic translation elongation factor 1 alpha 2																																												C3H101H-Eef1a2<wst>/H cryopreserved embryos	cryopreserved embryos	
-C3H101H-Eef1a2<wst>/H	 	strain	2	spontaneous mutation	Eef1a2<wst>	wasted	eukaryotic translation elongation factor 1 alpha 2																																												C3H101H-Eef1a2<wst>/H cryopreserved or freeze-dried sperm	cryopreserved or freeze-dried sperm	
-C3H101H-Es3<c-nH>/H	C3H101H-Es3<c-nH>	cryopreserved embryos	11	radiation induced mutation	Es3<c-nH>	c null Harwell	esterase 3																																														
-C3H101H-Fnld/H	 	cryopreserved embryos	X	radiation induced mutation	Fnld	faint-lined	faint-lined																																														
-C3H101H-Gli3<Xt-2H>/H	 	cryopreserved embryos	13	radiation induced mutation	Gli3<Xt-2H>	extra toes 2 Harwell	GLI-Kruppel family member GLI3																																														
-C3H101H-Gli3<Xt>/H	 	cryopreserved embryos	13	radiation induced mutation	Gli3<Xt>	extra toes	GLI-Kruppel family member GLI3																																														
-C3H101H-Gnas<Oedsml>/H	C3H101H-Gnas<Oedsml-mat>/H	strain	2	chemically induced mutation	Gnas<Oedsml>	oedematous-small	GNAS (guanine nucleotide binding protein, alpha stimulating) complex locus																																												C3H101H-Gnas<Oedsml>/H cryopreserved embryos	cryopreserved embryos	
-C3H101H-Gnas<Oedsml>/H	C3H101H-Gnas<Oedsml-mat>/H	strain	2	chemically induced mutation	Gnas<Oedsml>	oedematous-small	GNAS (guanine nucleotide binding protein, alpha stimulating) complex locus																																												C3H101H-Gnas<Oedsml>/H cryopreserved or freeze-dried sperm	cryopreserved or freeze-dried sperm	
-C3H101H-Gnrh1<hpg>/H	 	cryopreserved embryos	14	spontaneous mutation	Gnrh1<hpg>	hypogonadal	gonadotropin releasing hormone 1																																														
-C3H101H-Gpi1<a-m1H>/H	C3H101H-Gpi1<a-m1H>	cryopreserved embryos	7	chemically induced mutation	Gpi1<a-m1H>	mutant 1, Harwell	glucose phosphate isomerase 1																																														
-C3H101H-Gpi1<c>/H	 	cryopreserved embryos	7	other	Gpi1<c>	c variant	glucose phosphate isomerase 1																																														
-C3H101H-Gs/H	 	cryopreserved embryos	X	spontaneous mutation	Gs	greasy	greasy																																														
-C3H101H-Gsdma3<Bsk>/H	C3H101H-Gsdm3<Bsk>/H	cryopreserved embryos	11	chemically induced mutation	Gsdma3<Bsk>	bareskin	gasdermin A3																																														
-C3H101H-Hbb<d4>/H	 	cryopreserved embryos	7	chemically induced mutation	Hbb<d4>	diffuse 4	hemoglobin beta chain complex																																														
-C3H101H-Hps5<ru2>	 	cryopreserved embryos	7	spontaneous mutation	Hps5<ru2>	ruby-eye 2	Hermansky-Pudlak syndrome 5 homolog (human)																																														
-C3H101H-Hr<hr>Ednrb<s>/H	 	cryopreserved embryos	14	spontaneous mutation	Hr<hr>	hairless	hairless																																														
-C3H101H-Hum/H	 	cryopreserved embryos	 	 	 	 	 																																														
-C3H101H-In(1)5H	 	cryopreserved embryos	 	 	 	 	 																																														
-C3H101H-Is(In7;X)1Ct-Xce<a>/H	 	cryopreserved embryos	X	insertion	Xic<a>	X Chromosome controlling element a	X chromosome inactivation center																																														
-C3H101H-Is(In7;X)1Ct-Xce<b>/H	 	cryopreserved embryos	X	insertion	Xic<b>	X Chromosome controlling element b	X chromosome inactivation center																																														
-C3H101H-Is(In7;X)1Ct/H	 	cryopreserved embryos	 	 	 	 	 																																														
-C3H101H-Kit<W-36H>/H	 	cryopreserved embryos	5	spontaneous mutation	Kit<W-36H>	dominant spotting 36 Harwell	kit oncogene																																														
-C3H101H-Kit<W-ct>/H	 	cryopreserved embryos	5	spontaneous mutation	Kit<W-ct>	Cattanach''s dominant spotting	kit oncogene																																														
-C3H101H-Kit<W-sh>/H	 	cryopreserved embryos	5	spontaneous mutation	Kit<W-sh>	sash	kit oncogene																																														
-C3H101H-Kitl<Sl-10H>/H	 	cryopreserved embryos	10	radiation induced mutation	Kitl<Sl-10H>	steel 10 Harwell	kit ligand																																														
-C3H101H-Kitl<Sl-12H>/H	 	cryopreserved embryos	10	radiation induced mutation	Kitl<Sl-12H>	steel 12 Harwell	kit ligand																																														
-C3H101H-Kitl<Sl-17H>/H	 	cryopreserved embryos	10	radiation induced mutation	Kitl<Sl-17H>	steel 17 Harwell	kit ligand																																														
-C3H101H-Kitl<Sl-18H>/H	 	cryopreserved embryos	10	radiation induced mutation	Kitl<Sl-18H>	steel 18 Harwell	kit ligand																																														
-C3H101H-Kitl<Sl-25H>/H	 	cryopreserved embryos	10	radiation induced mutation	Kitl<Sl-25H>	steel 25 Harwell	kit ligand																																														
-C3H101H-Kitl<Sl-8H>/H	 	cryopreserved embryos	10	radiation induced mutation	Kitl<Sl-8H>	steel 8 Harwell	kit ligand																																														
-C3H101H-Kitl<Sl-9H>/H	 	cryopreserved embryos	10	radiation induced mutation	Kitl<Sl-9H>	steel 9 Harwell	kit ligand																																														
-C3H101H-Kitl<Sl-pan>/H	 	cryopreserved embryos	10	radiation induced mutation	Kitl<Sl-pan>	steel panda	kit ligand																																														
-C3H101H-Klf1<Nan>/H	C3H101H-Nan/H	cryopreserved embryos	8	chemically induced mutation	Klf1<Nan>	neonatal anemia	Kruppel-like factor 1 (erythroid)																																														
-C3H101H-Li/H	 	cryopreserved embryos	X	radiation induced mutation	Li	lined	lined																																														
-C3H101H-Lnp<Ul>/H	 	cryopreserved embryos	2	radiation induced mutation	Lnp<Ul>	ulnaless	limb and neural patterns																																														
-C3H101H-ma-Mcoln3<Va>/H	 	cryopreserved embryos	3	other	ma	matted	matted		3	other	Mcoln3<Va>	varitint waddler	mucolipin 3																																								
-C3H101H-Mc1r<E-tob>/H	 	cryopreserved embryos	8	spontaneous mutation	Mc1r<e>	recessive yellow	melanocortin 1 receptor		8	spontaneous mutation	Mc1r<E-tob>	tobacco darkening	melanocortin 1 receptor																																								
-C3H101H-Mdh1<am1H>/H	C3H101H-Mdh1<am1H>	cryopreserved embryos	11	chemically induced mutation	Mdh1<am1H>	mutant 1 Harwell	malate dehydrogenase 1, NAD (soluble)																																														
-C3H101H-Mgrn1<md-nc>/H	 	cryopreserved embryos	16	chemically induced mutation	Mgrn1<md-nc>	nonagouti curly	mahogunin, ring finger 1																																														
-C3H101H-Minute/H	C3H101H-Minute<pat>/H	cryopreserved embryos	7	radiation induced mutation	Minute	minute imprinted gene in the Igf2 region	minute imprinted gene in the Igf2 region																																														
-C3H101H-MUT1152/H	 	cryopreserved embryos	 	 	 	 	 																																														
-C3H101H-Nsdhl<Bpa-1H>	 	cryopreserved embryos	X	spontaneous mutation	Nsdhl<Bpa-1H>	bare patches 1 Harwell	NAD(P) dependent steroid dehydrogenase-like																																														
-C3H101H-Nsdhl<Bpa-3H>	 	cryopreserved embryos	X	radiation induced mutation	Nsdhl<Bpa-3H>	bare patches 3 Harwell	NAD(P) dependent steroid dehydrogenase-like																																														
-C3H101H-Nsdhl<Bpa-4H>/H	Bpa<4H>	cryopreserved embryos	X	spontaneous mutation	Nsdhl<Bpa-4H>	bare patches 4 Harwell	NAD(P) dependent steroid dehydrogenase-like																																														
-C3H101H-Nsdhl<Bpa-5H>/H	C3H101H-Nsdhl<Bpa-5H>	cryopreserved embryos	X	spontaneous mutation	Nsdhl<Bpa-5H>	bare patches 5 Harwell	NAD(P) dependent steroid dehydrogenase-like	Bpa<5H>																																													
-C3H101H-Nsdhl<Bpa-6H>	 	cryopreserved embryos	X	radiation induced mutation	Nsdhl<Bpa-6H>	bare patches 6 Harwell	NAD(P) dependent steroid dehydrogenase-like																																														
-C3H101H-Nsdhl<Str-2H>/H	Str<2H>	cryopreserved embryos	X	spontaneous mutation	Nsdhl<Str-2H>	striated 2 Harwell	NAD(P) dependent steroid dehydrogenase-like																																														
-C3H101H-Oca2<p-81H>/Oca2<p-d>/H	C3H101H-p<81H>	cryopreserved embryos	7	radiation induced mutation	Oca2<p-81H>	pink-eyed dilution 81 Harwell	oculocutaneous albinism II	C3H101H-Oca2<p-81H>/H											p<81H>	C3H101H-p<81H>/H																																	
-C3H101H-Oca2<p-82H>/Oca2<p-d>/H	C3H101H-p<82H>	cryopreserved embryos	7	radiation induced mutation	Oca2<p-82H>	pink-eyed dilution 82 Harwell	oculocutaneous albinism II	C3H101H-p<82H>/H											p<82H>	C3H101H-Oca2<p-82H>/H																																	
-C3H101H-Oca2<p-86H>/H	C3H101H-p<86H>/H	cryopreserved embryos	7	radiation induced mutation	Oca2<p-86H>	pink-eyed dilution 86 Harwell	oculocutaneous albinism II																																														
-C3H101H-Oca2<p-88H>/H	C3H101H-p<88H>/H	cryopreserved embryos	7	radiation induced mutation	Oca2<p-88H>	pink-eyed dilution 88 Harwell	oculocutaneous albinism II																																														
-C3H101H-Oca2<p-bs>/H	C3H101H-Herc2<p-bs>/H	cryopreserved embryos	7	radiation induced mutation	Oca2<p-bs>	pink-eyed dilution black eyed sterile	oculocutaneous albinism II	C3H101H-p<bs>/H																																													
-C3H101H-Oca2<p-dn>/H	C3H101H-p<dn>/H	cryopreserved embryos	 	 	 	 	 																																														
-C3H101H-Oca2<p-un>/H	C3H101H-p<un>/H	cryopreserved embryos	9	spontaneous mutation	Myo5a<d>	dilute	myosin VA																																														
-C3H101H-Oca2<p-x>/H	C3H101H-p<x>/H	cryopreserved embryos	7	spontaneous mutation	Oca2<p-x>	pink-eyed dilution extra dark	oculocutaneous albinism II																																														
-C3H101H-p<In(7p;Sox6)100H>	 	cryopreserved embryos	7	radiation induced mutation	In(7p;7Sox6)100H	inversion, Chr 7, Harwell 100	inversion, Chr 7, Harwell 100		7	radiation induced mutation	Oca2<p-d>	dark pink eye	oculocutaneous albinism II																																								
-C3H101H-Papss2<bm>/H	 	cryopreserved embryos	19	spontaneous mutation	Papss2<bm>	brachymorphic	3''-phosphoadenosine 5''-phosphosulfate synthase 2																																														
-C3H101H-Pax3<Sp-1H>/H	Sp<1H>	cryopreserved embryos	1	radiation induced mutation	Pax3<Sp-1H>	splotch 1 Harwell	paired box gene 3																																														
-C3H101H-Pax3<Sp-4H>/H	 	cryopreserved embryos	1	radiation induced mutation	Pax3<Sp-4H>	splotch 4 Harwell	paired box gene 3																																														
-C3H101H-Pax3<Sp-5H>/H	 	cryopreserved embryos	1	radiation induced mutation	Pax3<Sp-5H>	splotch 5 Harwell	paired box gene 3																																														
-C3H101H-Pax6<Sey-3H>	 	cryopreserved embryos	2	chemically induced mutation	Pax6<Sey-3H>	small eye, 3 Harwell	paired box gene 6																																														
-C3H101H-Ph/H	 	cryopreserved embryos	5	spontaneous mutation	Ph	patch	patch deletion region																																														
-C3H101H-Ph<3H>	 	cryopreserved embryos	5	radiation induced mutation	Ph<3H>	patch 3 Harwell	patch deletion region																																														
-C3H101H-Plp1<jp-rsh>/H	 	cryopreserved embryos	X	spontaneous mutation	Plp1<jp-rsh>	rumpshaker	proteolipid protein (myelin) 1																																														
-C3H101H-Plp1<jp>/H	C3H101H-Plp1<jp>	cryopreserved embryos	X	spontaneous mutation	Plp1<jp>	jimpy	proteolipid protein (myelin) 1																																														
-C3H101H-Pou3f4<Slf>/H	 	cryopreserved embryos	X	radiation induced mutation	Pou3f4<Slf>	sex linked fidget	POU domain, class 3, transcription factor 4																																														
-C3H101H-Rb(12.13)3Ct	 	cryopreserved embryos	 	 	 	 	 																																														
-C3H101H-Rb(4.14)8H	 	cryopreserved embryos	 	 	 	 	 																																														
-C3H101H-Rb(4.16)10H	 	cryopreserved embryos	 	 	 	 	 																																														
-C3H101H-Rb(6.13)3Rma	 	cryopreserved embryos	 	 	 	 	 																																														
-C3H101H-Rb(8.12)5Bnr	 	cryopreserved embryos	 	 	 	 	 																																														
-C3H101H-rst/H	 	cryopreserved embryos	UN	spontaneous mutation	rst	rosette	rosette																																														
-C3H101H-scb/H	 	cryopreserved embryos	8	spontaneous mutation	scb	scabby	scabby																																														
-C3H101H-skimp/H	 	cryopreserved embryos	7	chemically induced mutation	skimp	skijumper	skijumper																																														
-C3H101H-Sme/H	Sme	cryopreserved embryos	UN	 	Sme	small ear	small ear																																														
-C3H101H-Sox<lcc>/H	 	cryopreserved embryos	3	radiation induced mutation	Sox2<lcc>	light coat and circling	SRY-box containing gene 2																																														
-C3H101H-T(10;18)18H	 	cryopreserved embryos	 	 	 	 	 																																														
-C3H101H-T(11;13)41Ad	 	cryopreserved embryos	 	 	 	 	 																																														
-C3H101H-T(11;13)56H	 	cryopreserved embryos	 	 	 	 	 																																														
-C3H101H-T(11;19)42H	 	cryopreserved embryos	 	 	 	 	 																																														
-C3H101H-T(13;14)69H	 	cryopreserved embryos	 	 	 	 	 																																														
-C3H101H-T(1;12)52H/H	T52H	cryopreserved embryos	 	 	 	 	 																																														
-C3H101H-T(1;4)71H	 	cryopreserved embryos	 	 	 	 	 																																														
-C3H101H-T(1;6)42Ad	 	cryopreserved embryos	 	 	 	 	 																																														
-C3H101H-T(1;7)49H	 	cryopreserved embryos	 	 	 	 	 																																														
-C3H101H-T(1;8)63H	 	cryopreserved embryos	 	 	 	 	 																																														
-C3H101H-T(2;15)45Ad/H	 	cryopreserved embryos	 	 	 	 	 																																														
-C3H101H-T(2;3)24H	 	cryopreserved embryos	 	 	 	 	 																																														
-C3H101H-T(2;4)13H	 	cryopreserved embryos	 	 	 	 	 																																														
-C3H101H-T(3;10)61H	 	cryopreserved embryos	 	 	 	 	 																																														
-C3H101H-T(3;12)58H	 	cryopreserved embryos	 	 	 	 	 																																														
-C3H101H-T(3;19)25Ad	 	cryopreserved embryos	 	 	 	 	 																																														
-C3H101H-T(3;8)56Ad	 	cryopreserved embryos	 	 	 	 	 																																														
-C3H101H-T(4;5)46H	 	cryopreserved embryos	 	 	 	 	 																																														
-C3H101H-T(5;12)31H	 	cryopreserved embryos	 	 	 	 	 																																														
-C3H101H-T(5;7)30Ad	 	cryopreserved embryos	 	 	 	 	 																																														
-C3H101H-T(6;12)32H	 	cryopreserved embryos	 	 	 	 	 																																														
-C3H101H-T(6;13)6Ad	 	cryopreserved embryos	 	 	 	 	 																																														
-C3H101H-T(7;13)7Ad/H	 	cryopreserved embryos	 	 	 	 	 																																														
-C3H101H-T(7;16)67H	 	cryopreserved embryos	 	 	 	 	 																																														
-C3H101H-T(9;10)62H	 	cryopreserved embryos	 	 	 	 	 																																														
-C3H101H-T<22H>	 	cryopreserved embryos	17	radiation induced mutation	T<22H>	brachyury 22 Harwell	brachyury																																														
-C3H101H-T<29H>	 	cryopreserved embryos	17	radiation induced mutation	T<29H>	brachyury 29 Harwell	brachyury																																														
-C3H101H-T<30H> +/+ tf/H	Del(17)T30H85H	cryopreserved embryos	17	radiation induced mutation	T<30H>	brachyury 30 Harwell	brachyury	C3H101H-T<30H>/H											T<30H>																																		
-C3H101H-T<31H>	 	cryopreserved embryos	17	 	T<31H>	brachyury 31 Harwell	brachyury																																														
-C3H101H-T<32H>/H	 	cryopreserved embryos	17	radiation induced mutation	T<32H>	brachyury 32 Harwell	brachyury																																														
-C3H101H-T<33H>	 	cryopreserved embryos	17	 	T<33H>	brachyury 33 Harwell	brachyury																																														
-C3H101H-T<34H>	 	cryopreserved embryos	17	spontaneous mutation	T<34H>	brachyury 34 Harwell	brachyury																																														
-C3H101H-T<36H>	 	cryopreserved embryos	17	 	T<36H>	brachury 36 Harwell	brachyury																																														
-C3H101H-T<c-2H>	 	cryopreserved embryos	17	 	T<c-2H>	curtailed 2 Harwell	brachyury																																														
-C3H101H-t<h17>	 	cryopreserved embryos	17	radiation induced mutation	t<h17>	t, Harwell 17	t-complex																																														
-C3H101H-Tal/H	 	cryopreserved embryos	14	radiation induced mutation	Tal	talipes	talipes																																														
-C3H101H-Tks/H	 	cryopreserved embryos	9	radiation induced mutation	Tks	radiation induced tail kinks	radiation induced tail kinks																																														
-C3H101H-Tp(Y)1Ct<Sxr-b>/H	 	cryopreserved embryos	Y	 	Tp(Y)1Ct<Sxr-b>	Sex reversed, b variant	transposition, Chr Y, Cattanach 1																																														
-C3H101H-Tyr<c-40H>/H	 	cryopreserved embryos	2	chemically induced mutation	a	nonagouti	nonagouti																																														
-C3H101H-Tyr<c-44H>	 	cryopreserved embryos	7	radiation induced mutation	Tyr<c-44H>	albino 44 Harwell	tyrosinase																																														
-C3H101H-Tyr<c-45H>	 	cryopreserved embryos	7	radiation induced mutation	Tyr<c-45H>	albino 45 Harwell	tyrosinase																																														
-C3H101H-Tyr<c-46H>	 	cryopreserved embryos	7	radiation induced mutation	Tyr<c-46H>	albino 46 Harwell	tyrosinase																																														
-C3H101H-Tyr<c-m>/H	 	cryopreserved embryos	7	radiation induced mutation	Tyr<c-m>	chinchilla mottled	tyrosinase																																														
-C3H101H-Tyr<c-r>/H	 	cryopreserved embryos	7	spontaneous mutation	Tyr<c-r>	ruby eyed dilute	tyrosinase																																														
-C3H101H-Xic<a>/H	C3H101H-Xce<a>/H	cryopreserved embryos	X	spontaneous mutation	Xic<a>	X Chromosome controlling element a	X chromosome inactivation center																																														
-C3H;101H-a<t-2H>/H	C3H101H-a<t-2H>/H	cryopreserved embryos	2	radiation induced mutation	a<t-2H>	black and tan 2 Harwell	nonagouti	C3H101H-a<t-2H>																																													
-C3H;B6-Tulp3<hhkr>/H	 	strain	6	chemically induced mutation	Tulp3<hhkr>	hitchhiker	tubby-like protein 3																																												C3H;B6-Tulp3<hhkr>/H cryopreserved embryos	cryopreserved embryos	
-C3H;B6-Tulp3<hhkr>/H	 	strain	6	chemically induced mutation	Tulp3<hhkr>	hitchhiker	tubby-like protein 3																																												C3H;B6-Tulp3<hhkr>/H cryopreserved or freeze-dried sperm	cryopreserved or freeze-dried sperm	
-C3H;C-GENA119/H	 	strain	 	 	 	 	 																																												C3H;C-GENA119/H cryopreserved embryos	cryopreserved embryos	
-C3H;C-GENA119/H	 	strain	 	 	 	 	 																																												C3H;C-GENA119/H cryopreserved or freeze-dried sperm	cryopreserved or freeze-dried sperm	
-C3H;C-GENA140/H	 	strain	 	 	 	 	 																																												C3H;C-GENA140/H cryopreserved embryos	cryopreserved embryos	
-C3H;C-GENA140/H	 	strain	 	 	 	 	 																																												C3H;C-GENA140/H cryopreserved or freeze-dried sperm	cryopreserved or freeze-dried sperm	
-C3H;C-GENA144/H	 	strain	 	 	 	 	 																																												C3H;C-GENA144/H cryopreserved embryos	cryopreserved embryos	
-C3H;C-GENA144/H	 	strain	 	 	 	 	 																																												C3H;C-GENA144/H cryopreserved or freeze-dried sperm	cryopreserved or freeze-dried sperm	
-C3H;C-GENA15/H	 	strain	 	 	 	 	 																																												C3H;C-GENA15/H cryopreserved embryos	cryopreserved embryos	
-C3H;C-GENA15/H	 	strain	 	 	 	 	 																																												C3H;C-GENA15/H cryopreserved or freeze-dried sperm	cryopreserved or freeze-dried sperm	
-C3H;C-GENA151/H	 	strain	 	 	 	 	 																																												C3H;C-GENA151/H cryopreserved embryos	cryopreserved embryos	
-C3H;C-GENA151/H	 	strain	 	 	 	 	 																																												C3H;C-GENA151/H cryopreserved or freeze-dried sperm	cryopreserved or freeze-dried sperm	
-c3H;C-GENA185/H	 	strain	 	 	 	 	 																																												c3H;C-GENA185/H cryopreserved embryos	cryopreserved embryos	
-c3H;C-GENA185/H	 	strain	 	 	 	 	 																																												c3H;C-GENA185/H cryopreserved or freeze-dried sperm	cryopreserved or freeze-dried sperm	
-C3H;C-GENA217/H	 	strain	 	 	 	 	 																																												C3H;C-GENA217/H cryopreserved embryos	cryopreserved embryos	
-C3H;C-GENA217/H	 	strain	 	 	 	 	 																																												C3H;C-GENA217/H cryopreserved or freeze-dried sperm	cryopreserved or freeze-dried sperm	
-C3H;C-GENA327/H	 	cryopreserved embryos	 	 	 	 	 																																														
-C3H;C-GENA342/H	 	strain	 	 	 	 	 																																												C3H;C-GENA342/H cryopreserved embryos	cryopreserved embryos	
-C3H;C-GENA342/H	 	strain	 	 	 	 	 																																												C3H;C-GENA342/H cryopreserved or freeze-dried sperm	cryopreserved or freeze-dried sperm	
-C3H;C-GENA382/H	 	strain	 	 	 	 	 																																												C3H;C-GENA382/H cryopreserved embryos	cryopreserved embryos	
-C3H;C-GENA382/H	 	strain	 	 	 	 	 																																												C3H;C-GENA382/H cryopreserved or freeze-dried sperm	cryopreserved or freeze-dried sperm	
-C3H;C-Kit<W-39H>/H	 	strain	5	chemically induced mutation	Kit<W-39H>	dominant spotting 39 Harwell	kit oncogene																																												C3H;C-Kit<W-39H>/H cryopreserved embryos	cryopreserved embryos	
-C3H;C-Kit<W-39H>/H	 	strain	5	chemically induced mutation	Kit<W-39H>	dominant spotting 39 Harwell	kit oncogene																																												C3H;C-Kit<W-39H>/H cryopreserved or freeze-dried sperm	cryopreserved or freeze-dried sperm	
-C3H;C-Mitf<Mi-H>/H	 	strain	6	chemically induced mutation	Mitf<Mi-H>	microphthalmia Harwell	microphthalmia-associated transcription factor																																												C3H;C-Mitf<Mi-H>/H cryopreserved embryos	cryopreserved embryos	
-C3H;C-Mitf<Mi-H>/H	 	strain	6	chemically induced mutation	Mitf<Mi-H>	microphthalmia Harwell	microphthalmia-associated transcription factor																																												C3H;C-Mitf<Mi-H>/H cryopreserved or freeze-dried sperm	cryopreserved or freeze-dried sperm	
-C3H;C-Sfrp2<C50F>/H	 	strain	3	chemically induced mutation	Sfrp2<C50F>	Cys50Phe	secreted frizzled-related protein 2																																												C3H;C-Sfrp2<C50F>/H cryopreserved embryos	cryopreserved embryos	
-C3H;C-Sfrp2<C50F>/H	 	strain	3	chemically induced mutation	Sfrp2<C50F>	Cys50Phe	secreted frizzled-related protein 2																																												C3H;C-Sfrp2<C50F>/H cryopreserved or freeze-dried sperm	cryopreserved or freeze-dried sperm	
-C3H;C-Strg/H	 	strain	X	chemically induced mutation	Strg	striped greasy	striped greasy																																												C3H;C-Strg/H cryopreserved embryos	cryopreserved embryos	
-C3H;C-Strg/H	 	strain	X	chemically induced mutation	Strg	striped greasy	striped greasy																																												C3H;C-Strg/H cryopreserved or freeze-dried sperm	cryopreserved or freeze-dried sperm	
-C57BL-Eh/H	 	cryopreserved embryos	15	radiation induced mutation	Eh	hairy ears	hairy ears																																														
-C57BL-Kit<W-v>/H	 	cryopreserved embryos	5	spontaneous mutation	Kit<W-v>	viable dominant spotting	kit oncogene																																														
-C57BL/6-Lep<ob>/H	 	cryopreserved embryos	6	spontaneous mutation	Lep<ob>	obese	leptin																																														
-C57BL/6J-A<vy>/H	 	cryopreserved embryos	2	spontaneous mutation	A<vy>	agouti viable yellow	nonagouti																																														
-C57BL/6J-Kitl<Sl-d>/H	 	cryopreserved embryos	10	spontaneous mutation	Kitl<Sl-d>	steel Dickie	kit ligand																																														
-C57BL/6J-Krt25<Re>/H	 	cryopreserved embryos	11	spontaneous mutation	Krt25<Re>	rex	keratin 25																																														
-C57BL/6J-Nox3<het>/H	 	cryopreserved embryos	17	spontaneous mutation	Nox3<het>	head-tilt	NADPH oxidase 3																																														
-C57BL/6J-Ucp1<m1H>/H	TRI	strain	8	spontaneous mutation	Ucp1<m1H>	mutation 1, Harwell	uncoupling protein 1 (mitochondrial, proton carrier)	C57BL/6J-Ucp1<1H>/H																																											C57BL/6J-Ucp1<m1H>/H cryopreserved embryos	cryopreserved embryos	
-C57BL/6J-Ucp1<m1H>/H	TRI	strain	8	spontaneous mutation	Ucp1<m1H>	mutation 1, Harwell	uncoupling protein 1 (mitochondrial, proton carrier)	C57BL/6J-Ucp1<1H>/H																																											C57BL/6J-Ucp1<m1H>/H cryopreserved or freeze-dried sperm	cryopreserved or freeze-dried sperm	
-C58-Tyrp1<B-lt>/H	 	cryopreserved embryos	4	spontaneous mutation	Tyrp1<B-lt>	light	tyrosinase-related protein 1																																														
-CAST/EiJH	 	cryopreserved embryos	 	 	 	 	 																																														
-CBA/CaH	 	cryopreserved embryos	X	other	Xic<a>	X Chromosome controlling element a	X chromosome inactivation center																																														
-CBA/H-Kit<W-27H>/H	 	cryopreserved embryos	5	spontaneous mutation	Kit<W-27H>	dominant spotting 27 Harwell	kit oncogene																																														
-CBA/H-Pdss2<kd>/H	 	cryopreserved embryos	10	spontaneous mutation	Pdss2<kd>	kidney disease	prenyl (solanesyl) diphosphate synthase, subunit 2																																														
-CBA/H-T(14;15)6Ca	CBA/H-T6	cryopreserved embryos	 	 	 	 	 																																														
-CBB6-Tg(runx1/MTG8)ICH10Fc/H	 	cryopreserved embryos	 	 	 	 	 																																														
-CBB6-Tg(runx1/MTG8)ICH11Fc/H	 	cryopreserved embryos	 	 	 	 	 																																														
-CBB6-Tg(runx1/MTG8)ICH12Fc/H	 	cryopreserved embryos	 	 	 	 	 																																														
-CBB6-Tg(runx1/MTG8)ICH7Fc/H	 	cryopreserved embryos	 	 	 	 	 																																														
-CBB6-Tg(runx1/MTG8)ICH8Fc/H	 	cryopreserved embryos	 	 	 	 	 																																														
-CBB6-Tg(runx1/MTG8)ICH9Fc/H	 	cryopreserved embryos	 	 	 	 	 																																														
-GENA214	 	strain	 	 	 	 	 																																												GENA214 cryopreserved embryos	cryopreserved embryos	
-GENA214	 	strain	 	 	 	 	 																																												GENA214 cryopreserved or freeze-dried sperm	cryopreserved or freeze-dried sperm	
-Hoxa3<tm1(cre)Moon>	 	strain	6	recombinase(cre/flp)	Hoxa3<tm1(cre)Moon>	targeted mutation 1, Anne M Moon	homeobox A3																																												Hoxa3<tm1(cre)Moon> cryopreserved embryos	cryopreserved embryos	
-Hoxa3<tm1(cre)Moon>	 	strain	6	recombinase(cre/flp)	Hoxa3<tm1(cre)Moon>	targeted mutation 1, Anne M Moon	homeobox A3																																												Hoxa3<tm1(cre)Moon> cryopreserved or freeze-dried sperm	cryopreserved or freeze-dried sperm	
-Isl1<tm1(cre)Sev>	 	strain	13	recombinase(cre/flp)	Isl1<tm1(cre)Sev>	targeted mutation 1, Sylvia Evans	ISL1 transcription factor, LIM/homeodomain																																												Isl1<tm1(cre)Sev> cryopreserved embryos	cryopreserved embryos	
-Isl1<tm1(cre)Sev>	 	strain	13	recombinase(cre/flp)	Isl1<tm1(cre)Sev>	targeted mutation 1, Sylvia Evans	ISL1 transcription factor, LIM/homeodomain																																												Isl1<tm1(cre)Sev> cryopreserved or freeze-dried sperm	cryopreserved or freeze-dried sperm	
-JUN-T(1;2)5Ca	 	cryopreserved embryos	 	 	 	 	 																																														
-MB	 	cryopreserved embryos	 	 	 	 	 																																														
-Nespas<tm1Jop>	 	cryopreserved embryos	2	targeted mutation	Nespas<tm1Jop>	targeted mutation 1, Jo Peters	neuroendocrine secretory protein antisense																																														
-PT	 	cryopreserved embryos	9	other	Myo5a<d>	dilute	myosin VA		9	other	Bmp5<se>	short ear	bone morphogenetic protein 5	7	other	Oca2<p>	pink-eyed dilution	oculocutaneous albinism II			14	other	Ednrb<s>	piebald	endothelin receptor type B	4	other	Tyrp1<b>	brown	tyrosinase-related protein 1	7	other	Tyr<c-ch>	chinchilla	tyrosinase																		
-PTP/H	 	cryopreserved embryos	2	other	a	nonagouti	nonagouti		9	other	Myo5a<d>	dilute	myosin VA	7	other	Gpi1<a>	a variant	glucose phosphate isomerase 1			7	other	Hbb<s>	single	hemoglobin beta chain complex	9	other	Bmp5<se>	short ear	bone morphogenetic protein 5	7	other	Oca2<p>	pink-eyed dilution	oculocutaneous albinism II	14	other	Ednrb<s>	piebald	endothelin receptor type B	4	other	Tyrp1<b>	brown	tyrosinase-related protein 1	7	other	Tyr<c-ch>	chinchilla	tyrosinase			
-Qk<qk>	 	cryopreserved embryos	17	spontaneous mutation	Qk<qk-v>	quaking viable	quaking																																														
-Sfrp2<l153N	 	strain	3	chemically induced mutation	Sfrp2<I153N>	Ile153Asn	secreted frizzled-related protein 2																																												Sfrp2<l153N cryopreserved embryos	cryopreserved embryos	
-Sfrp2<l153N	 	strain	3	chemically induced mutation	Sfrp2<I153N>	Ile153Asn	secreted frizzled-related protein 2																																												Sfrp2<l153N cryopreserved or freeze-dried sperm	cryopreserved or freeze-dried sperm	
-STOCK a<18H>/H	 	cryopreserved embryos	2	chemically induced mutation	a<18H>	18 Harwell	nonagouti																																														
-STOCK a<t>/H	 	cryopreserved embryos	2	spontaneous mutation	a<t>	black and tan	nonagouti																																														
-STOCK A<y>/H	 	cryopreserved embryos	2	spontaneous mutation	A<y>	agouti yellow	nonagouti																																														
-STOCK Ar<Tfm>/H	 	cryopreserved embryos	X	spontaneous mutation	Ar<Tfm>	testicular feminization	androgen receptor																																														
-STOCK Dmd<mdx-3Cv>/H	 	cryopreserved embryos	X	chemically induced mutation	Dmd<mdx-3Cv>	X linked muscular dystrophy 3, Verne Chapman	dystrophin, muscular dystrophy																																														
-STOCK hsh/H	hsh	cryopreserved embryos	3	spontaneous mutation	hsh	hind shaker	hind shaker																																														
-STOCK In(2)2H	 	cryopreserved embryos	2	inversion	As	agouti suppressor	agouti suppressor		2	inversion	A<w>	white-bellied agouti	nonagouti																																								
-STOCK In(2)5Rk	 	cryopreserved embryos	2	inversion	Pax1<un>	undulated	paired box gene 1		2	inversion	Pldn<pa>	pallid	pallidin	2	inversion	a<t>	black and tan	nonagouti																																			
-STOCK In(X)1H	 	cryopreserved embryos	 	 	 	 	 																																														
-STOCK In(X)3H	 	cryopreserved embryos	X	inversion	Eda<Ta>	tabby	ectodysplasin-A		X	inversion	Atp7a<Mo-blo>	blotchy	ATPase, Cu++ transporting, alpha polypeptide																																								
-STOCK Kit<W>/H	 	cryopreserved embryos	5	 	Kit<W>	dominant spotting	kit oncogene																																														
-STOCK Lmx1a<dr-J>	 	cryopreserved embryos	1	spontaneous mutation	Lmx1a<dr-J>	dreher Jackson	LIM homeobox transcription factor 1 alpha																																														
-STOCK Lop4/H	 	cryopreserved embryos	2	chemically induced mutation	Lop4	lens opacity 4	lens opacity 4																																														
-STOCK Lop6/H	 	cryopreserved embryos	UN	chemically induced mutation	Lop6	lens opacity 6	lens opacity 6																																														
-STOCK Lop9/H	 	cryopreserved embryos	UN	chemically induced mutation	Lop9	lens opacity 9	lens opacity 9																																														
-STOCK Muted<mu>/H	 	cryopreserved embryos	13	spontaneous mutation	Muted<mu>	muted	muted																																														
-STOCK Myo6<sv>/H	 	cryopreserved embryos	9	 	Myo6<sv>	Snell''s waltzer	myosin VI																																														
-STOCK Oca2<p-84H>/H	 	cryopreserved embryos	7	radiation induced mutation	Oca2<p-84H>	pink-eyed dilution 84 Harwell	oculocutaneous albinism II																																														
-STOCK Oca2<p-dn>/H	 	cryopreserved embryos	7	chemically induced mutation	Oca2<p-dn>	pink-eyed dilution darkening	oculocutaneous albinism II																																														
-STOCK Oca2<p>Tyr<c-ch>Myo7a<sh1>Prss8<fr>/H	 	cryopreserved embryos	7	other	Prss8<fr>	frizzy	protease, serine, 8 (prostasin)		7	other	Myo7a<sh1>	shaker 1	myosin VIIA	7	other	Oca2<p>	pink-eyed dilution	oculocutaneous albinism II			7	other	Tyr<c-ch>	chinchilla	tyrosinase																												
-STOCK Phex<Gy>/H	 	cryopreserved embryos	X	radiation induced mutation	Gy	gyro	gyro deletion region																																														
-STOCK Phex<Hyp>/H	 	cryopreserved embryos	X	spontaneous mutation	Phex<Hyp>	hypophosphatemia	phosphate regulating gene with homologies to endopeptidases on the X chromosome (hypophosphatemia, vitamin D resistant rickets)																																														
-STOCK Rb(1.15)2Ct Rb(2.18)6Rma Rb(6.13)3Rma Rb(11.16)2H/H	 	cryopreserved embryos	 	 	 	 	 																																														
-STOCK Rb(1.2)5H	 	cryopreserved embryos	 	 	 	 	 																																														
-STOCK Rb(10.11)8Bnr	 	cryopreserved embryos	 	 	 	 	 																																														
-STOCK Rb(11.13)4Bnr	 	cryopreserved embryos	 	 	 	 	 																																														
-STOCK Rb(11.16)2H	 	cryopreserved embryos	 	 	 	 	 																																														
-STOCK Rb(2.17)11Rma	 	cryopreserved embryos	 	 	 	 	 																																														
-STOCK Rb(2.17)4H	 	cryopreserved embryos	 	 	 	 	 																																														
-STOCK Rb(2.18)6Rma	 	cryopreserved embryos	 	 	 	 	 																																														
-STOCK Rb(2.8)6Rma-Rb(6.15)1Ald-Rb(9.19)163H/H	 	cryopreserved embryos	 	 	 	 	 																																														
-STOCK Rb(4.18)3H	 	cryopreserved embryos	 	 	 	 	 																																														
-STOCK Rb(5.15)3Bnr/H	 	cryopreserved embryos	 	 	 	 	 																																														
-STOCK Rb(5.19)1Wh	 	cryopreserved embryos	 	 	 	 	 																																														
-STOCK Rb(6.13)1H	 	cryopreserved embryos	 	 	 	 	 																																														
-STOCK Rb(6.15)1Ald	 	cryopreserved embryos	 	 	 	 	 																																														
-STOCK Rb(6.15)1Ald-Mip<Cat-Lop>/H	 	cryopreserved embryos	10	spontaneous mutation	Mip<Cat-Lop>	cataract lens opacity	major intrinsic protein of eye lens fiber																																														
-STOCK Rb(X.9)6H	 	cryopreserved embryos	 	 	 	 	 																																														
-STOCK Rn/H	 	cryopreserved embryos	14	spontaneous mutation	Rn	roan	roan																																														
-STOCK Rn<fkl>	 	cryopreserved embryos	14	spontaneous mutation	Rn<fkl>	freckled	roan																																														
-STOCK Scr/H	 	cryopreserved embryos	6	radiation induced mutation	Scr	scruffy	scruffy																																														
-STOCK Sd/H	 	cryopreserved embryos	2	spontaneous mutation	Sd	Danforth''s short tail	Danforth''s short tail																																														
-STOCK Sts<->/H	 	cryopreserved embryos	 	 	 	 	 																																														
-STOCK T(1;13)70H	 	cryopreserved embryos	 	 	 	 	 																																														
-STOCK T(6;7)51H	 	cryopreserved embryos	 	 	 	 	 																																														
-STOCK T(9;17)138Ca	 	cryopreserved embryos	 	 	 	 	 																																														
-STOCK T(X;7)3Neu	 	cryopreserved embryos	 	 	 	 	 																																														
-STOCK t<6>/H	 	cryopreserved embryos	17	 	t<6>	t, 6	t-complex																																														
-STOCK t<h20>	 	cryopreserved embryos	17	 	t<h20>	t, Harwell 20	t-complex																																														
-STOCK t<h44>	 	cryopreserved embryos	17	 	t<h44>	t, Harwell 44	t-complex																																														
-STOCK t<h49>	 	cryopreserved embryos	17	 	t<h49>	t, Harwell 49	t-complex																																														
-STOCK t<h50>	 	cryopreserved embryos	17	 	t<h50>	t, Harwell 50	t-complex																																														
-STOCK t<h51>	 	cryopreserved embryos	17	 	t<h51>	t, Harwell 51	t-complex																																														
-STOCK t<h7>	 	strain	17	 	t<h7>	t, Harwell 7	t-complex																																												STOCK t<h7> cryopreserved embryos	cryopreserved embryos	
-STOCK t<h7>	 	strain	17	 	t<h7>	t, Harwell 7	t-complex																																												STOCK t<h7> cryopreserved or freeze-dried sperm	cryopreserved or freeze-dried sperm	
-STOCK T<hp>/H	 	strain	17	spontaneous mutation	T<hp>	hairpin tail	brachyury																																												STOCK T<hp>/H cryopreserved embryos	cryopreserved embryos	
-STOCK T<hp>/H	 	strain	17	spontaneous mutation	T<hp>	hairpin tail	brachyury																																												STOCK T<hp>/H cryopreserved or freeze-dried sperm	cryopreserved or freeze-dried sperm	
-STOCK t<lowH>	 	cryopreserved embryos	17	 	t<lowH>	t, low Harwell	t-complex																																														
-STOCK t<lub2>/H	 	cryopreserved embryos	17	 	t<Lub2>	t, Lubeck 2	t-complex																																														
-STOCK t<s6>/H	 	cryopreserved embryos	17	 	t<s6>	t, sterility factor 6	t-complex																																														
-STOCK t<w32>/H	 	cryopreserved embryos	17	spontaneous mutation	t<w32>	t, wild 32	t-complex																																														
-STOCK Wnt3a<vt>Foxq1<sa>Muted<mu>/H	 	cryopreserved embryos	13	other	Foxq1<sa>	satin	forkhead box Q1		11	other	Wnt3a<vt>	vestigial tail	wingless-related MMTV integration site 3A	13	other	Muted<mu>	muted	muted																																			
-STOCK-Icst/H	 	cryopreserved embryos	2	chemically induced mutation	Icst	iris-corneal strands	iris-corneal strands																																														
-STOCK-T(2;16)28H	 	cryopreserved embryos	 	 	 	 	 																																														
-t<low3H>	 	cryopreserved embryos	17	 	t<low3H>	t, low Harwell 3	t-complex																																														
-Tg(ACTA1-Utrn)2Ked	 	strain	X	transgenic	Dmd<mdx>	X linked muscular dystrophy	dystrophin, muscular dystrophy																																												Tg(ACTA1-Utrn)2Ked cryopreserved embryos	cryopreserved embryos	
-Tg(ACTA1-Utrn)2Ked	 	strain	X	transgenic	Dmd<mdx>	X linked muscular dystrophy	dystrophin, muscular dystrophy																																												Tg(ACTA1-Utrn)2Ked cryopreserved or freeze-dried sperm	cryopreserved or freeze-dried sperm	
-Tg(ACTA1-Utrn*)1Ked	 	strain	X	transgenic	Dmd<mdx>	X linked muscular dystrophy	dystrophin, muscular dystrophy																																												Tg(ACTA1-Utrn*)1Ked cryopreserved embryos	cryopreserved embryos	
-Tg(ACTA1-Utrn*)1Ked	 	strain	X	transgenic	Dmd<mdx>	X linked muscular dystrophy	dystrophin, muscular dystrophy																																												Tg(ACTA1-Utrn*)1Ked cryopreserved or freeze-dried sperm	cryopreserved or freeze-dried sperm	
-Tg(ACTA1-Utrn*)2Ked	 	strain	X	transgenic	Dmd<mdx>	X linked muscular dystrophy	dystrophin, muscular dystrophy																																												Tg(ACTA1-Utrn*)2Ked cryopreserved embryos	cryopreserved embryos	
-Tg(ACTA1-Utrn*)2Ked	 	strain	X	transgenic	Dmd<mdx>	X linked muscular dystrophy	dystrophin, muscular dystrophy																																												Tg(ACTA1-Utrn*)2Ked cryopreserved or freeze-dried sperm	cryopreserved or freeze-dried sperm	
-Tg(ACTA1-Utrn*)3Ked	 	strain	X	transgenic	Dmd<mdx>	X linked muscular dystrophy	dystrophin, muscular dystrophy																																												Tg(ACTA1-Utrn*)3Ked cryopreserved embryos	cryopreserved embryos	
-Tg(ACTA1-Utrn*)3Ked	 	strain	X	transgenic	Dmd<mdx>	X linked muscular dystrophy	dystrophin, muscular dystrophy																																												Tg(ACTA1-Utrn*)3Ked cryopreserved or freeze-dried sperm	cryopreserved or freeze-dried sperm	
-Tg(ACTA1-Utrn*)4Ked	 	strain	X	transgenic	Dmd<mdx>	X linked muscular dystrophy	dystrophin, muscular dystrophy																																												Tg(ACTA1-Utrn*)4Ked cryopreserved embryos	cryopreserved embryos	
-Tg(ACTA1-Utrn*)4Ked	 	strain	X	transgenic	Dmd<mdx>	X linked muscular dystrophy	dystrophin, muscular dystrophy																																												Tg(ACTA1-Utrn*)4Ked cryopreserved or freeze-dried sperm	cryopreserved or freeze-dried sperm	
-Tg(ACTA1-Utrn*)5Ked	 	strain	X	transgenic	Dmd<mdx>	X linked muscular dystrophy	dystrophin, muscular dystrophy																																												Tg(ACTA1-Utrn*)5Ked cryopreserved embryos	cryopreserved embryos	
-Tg(ACTA1-Utrn*)5Ked	 	strain	X	transgenic	Dmd<mdx>	X linked muscular dystrophy	dystrophin, muscular dystrophy																																												Tg(ACTA1-Utrn*)5Ked cryopreserved or freeze-dried sperm	cryopreserved or freeze-dried sperm	
-Tg(ACTA1-Utrn*)6Ked	 	strain	X	transgenic	Dmd<mdx>	X linked muscular dystrophy	dystrophin, muscular dystrophy																																												Tg(ACTA1-Utrn*)6Ked cryopreserved embryos	cryopreserved embryos	
-Tg(ACTA1-Utrn*)6Ked	 	strain	X	transgenic	Dmd<mdx>	X linked muscular dystrophy	dystrophin, muscular dystrophy																																												Tg(ACTA1-Utrn*)6Ked cryopreserved or freeze-dried sperm	cryopreserved or freeze-dried sperm	
-Tg(bTGTRfs)1Vkc	 	cryopreserved embryos	 	 	 	 	 																																														
-Tg(Leftb-cre)1Hmd	 	strain	UN	recombinase(cre/flp)	Tg(Leftb-cre)1Hmd	transgene insertion 1, Hiroshi Hamada	transgene insertion 1, Hiroshi Hamada																																												Tg(Leftb-cre)1Hmd cryopreserved embryos	cryopreserved embryos	
-Tg(Leftb-cre)1Hmd	 	strain	UN	recombinase(cre/flp)	Tg(Leftb-cre)1Hmd	transgene insertion 1, Hiroshi Hamada	transgene insertion 1, Hiroshi Hamada																																												Tg(Leftb-cre)1Hmd cryopreserved or freeze-dried sperm	cryopreserved or freeze-dried sperm	
-Tg(Sox2-cre)1Amc	 	strain	UN	recombinase(cre/flp)	Tg(Sox2-cre)1Amc	transgene insertion 1, Andrew P McMahon	transgene insertion 1, Andrew P McMahon																																												Tg(Sox2-cre)1Amc cryopreserved embryos	cryopreserved embryos	
-Tg(Sox2-cre)1Amc	 	strain	UN	recombinase(cre/flp)	Tg(Sox2-cre)1Amc	transgene insertion 1, Andrew P McMahon	transgene insertion 1, Andrew P McMahon																																												Tg(Sox2-cre)1Amc cryopreserved or freeze-dried sperm	cryopreserved or freeze-dried sperm	
-Tg(T-cre)1Lwd	 	strain	UN	recombinase(cre/flp)	Tg(T-cre)1Lwd	transgene insertion 1, Mark Lewandoski	transgene insertion 1, Mark Lewandoski																																												Tg(T-cre)1Lwd cryopreserved embryos	cryopreserved embryos	
-Tg(T-cre)1Lwd	 	strain	UN	recombinase(cre/flp)	Tg(T-cre)1Lwd	transgene insertion 1, Mark Lewandoski	transgene insertion 1, Mark Lewandoski																																												Tg(T-cre)1Lwd cryopreserved or freeze-dried sperm	cryopreserved or freeze-dried sperm	
-Tg(Thy1-Dusp6)1Ked	 	strain	 	 	 	 	 																																												Tg(Thy1-Dusp6)1Ked cryopreserved embryos	cryopreserved embryos	
-Tg(Thy1-Dusp6)1Ked	 	strain	 	 	 	 	 																																												Tg(Thy1-Dusp6)1Ked cryopreserved or freeze-dried sperm	cryopreserved or freeze-dried sperm	
-Tg(Thy1-Dusp6)2Ked	 	strain	 	 	 	 	 																																												Tg(Thy1-Dusp6)2Ked cryopreserved embryos	cryopreserved embryos	
-Tg(Thy1-Dusp6)2Ked	 	strain	 	 	 	 	 																																												Tg(Thy1-Dusp6)2Ked cryopreserved or freeze-dried sperm	cryopreserved or freeze-dried sperm	
-Tg(Thy1-Dusp6)3Ked	 	strain	 	 	 	 	 																																												Tg(Thy1-Dusp6)3Ked cryopreserved embryos	cryopreserved embryos	
-Tg(Thy1-Dusp6)3Ked	 	strain	 	 	 	 	 																																												Tg(Thy1-Dusp6)3Ked cryopreserved or freeze-dried sperm	cryopreserved or freeze-dried sperm	
-Tg(UBC-Utrn)1Ked	 	strain	X	transgenic	Dmd<mdx>	X linked muscular dystrophy	dystrophin, muscular dystrophy																																												Tg(UBC-Utrn)1Ked cryopreserved embryos	cryopreserved embryos	
-Tg(UBC-Utrn)1Ked	 	strain	X	transgenic	Dmd<mdx>	X linked muscular dystrophy	dystrophin, muscular dystrophy																																												Tg(UBC-Utrn)1Ked cryopreserved or freeze-dried sperm	cryopreserved or freeze-dried sperm	
-Tg(UBC-Utrn)2Ked	 	strain	X	transgenic	Dmd<mdx>	X linked muscular dystrophy	dystrophin, muscular dystrophy																																												Tg(UBC-Utrn)2Ked cryopreserved embryos	cryopreserved embryos	
-Tg(UBC-Utrn)2Ked	 	strain	X	transgenic	Dmd<mdx>	X linked muscular dystrophy	dystrophin, muscular dystrophy																																												Tg(UBC-Utrn)2Ked cryopreserved or freeze-dried sperm	cryopreserved or freeze-dried sperm	
-Tg(UBC-Utrn)3Ked	 	strain	X	transgenic	Dmd<mdx>	X linked muscular dystrophy	dystrophin, muscular dystrophy																																												Tg(UBC-Utrn)3Ked cryopreserved embryos	cryopreserved embryos	
-Tg(UBC-Utrn)3Ked	 	strain	X	transgenic	Dmd<mdx>	X linked muscular dystrophy	dystrophin, muscular dystrophy																																												Tg(UBC-Utrn)3Ked cryopreserved or freeze-dried sperm	cryopreserved or freeze-dried sperm	
-Tg(UBC-Utrn)4Ked	 	strain	X	transgenic	Dmd<mdx>	X linked muscular dystrophy	dystrophin, muscular dystrophy																																												Tg(UBC-Utrn)4Ked cryopreserved embryos	cryopreserved embryos	
-Tg(UBC-Utrn)4Ked	 	strain	X	transgenic	Dmd<mdx>	X linked muscular dystrophy	dystrophin, muscular dystrophy																																												Tg(UBC-Utrn)4Ked cryopreserved or freeze-dried sperm	cryopreserved or freeze-dried sperm	
-TgN(DSPM36)1327OxAnat	 	strain	 	 	 	 	 																																												TgN(DSPM36)1327OxAnat cryopreserved embryos	cryopreserved embryos	
-TgN(DSPM36)1327OxAnat	 	strain	 	 	 	 	 																																												TgN(DSPM36)1327OxAnat cryopreserved or freeze-dried sperm	cryopreserved or freeze-dried sperm	
-TgN(DSPM36)1668OxAnat	 	strain	 	 	 	 	 																																												TgN(DSPM36)1668OxAnat cryopreserved embryos	cryopreserved embryos	
-TgN(DSPM36)1668OxAnat	 	strain	 	 	 	 	 																																												TgN(DSPM36)1668OxAnat cryopreserved or freeze-dried sperm	cryopreserved or freeze-dried sperm	
-TgN(DSPM36)1886OxAnat	 	strain	 	 	 	 	 																																												TgN(DSPM36)1886OxAnat cryopreserved embryos	cryopreserved embryos	
-TgN(DSPM36)1886OxAnat	 	strain	 	 	 	 	 																																												TgN(DSPM36)1886OxAnat cryopreserved or freeze-dried sperm	cryopreserved or freeze-dried sperm	
-TgN(DSPM36)1892OxAnat	 	strain	 	 	 	 	 																																												TgN(DSPM36)1892OxAnat cryopreserved embryos	cryopreserved embryos	
-TgN(DSPM36)1892OxAnat	 	strain	 	 	 	 	 																																												TgN(DSPM36)1892OxAnat cryopreserved or freeze-dried sperm	cryopreserved or freeze-dried sperm	
+Sample Name	Material	Characteristic[Allele Symbol]	Characteristic[Allele Name]	Characteristic[Gene Name]	Comment[Synonym]	Characteristic[Allele Symbol]	Characteristic[Allele Name]	Characteristic[Gene Name]	Characteristic[Allele Symbol]	Characteristic[Allele Name]	Characteristic[Gene Name]	Characteristic[Allele Symbol]	Characteristic[Allele Name]	Characteristic[Gene Name]	Characteristic[Allele Symbol]	Characteristic[Allele Name]	Characteristic[Gene Name]	Characteristic[Allele Symbol]	Characteristic[Allele Name]	Characteristic[Gene Name]	Characteristic[Allele Symbol]	Characteristic[Allele Name]	Characteristic[Gene Name]	Characteristic[Allele Symbol]	Characteristic[Allele Name]	Characteristic[Gene Name]	Characteristic[Allele Symbol]	Characteristic[Allele Name]	Characteristic[Gene Name]	Sample Name	Material	
+(B6xCB)F2-Tg(PMP22)MY41Clh/H	strain	Tg(Pmp22)My41Clh	transgene insertion My41, Clare Huxley	transgene insertion My41, Clare Huxley																										(B6xCB)F2-Tg(PMP22)MY41Clh/H embryo	embryo	
+(B6xCB)F2-Tg(PMP22)MY41Clh/H	strain	Tg(Pmp22)My41Clh	transgene insertion My41, Clare Huxley	transgene insertion My41, Clare Huxley																										(B6xCB)F2-Tg(PMP22)MY41Clh/H sperm	sperm	
+102/H	strain																													102/H embryo	embryo	
+102/H	strain																													102/H sperm	sperm	
+129/SvEv-Tln1<tm1Crit>/CritH	embryo	Tln1<tm1Crit>	targeted mutation 1, David R Critchley	talin 1																												
+129P2/OlaHsd	embryo				129P2, 129/OlaHsd																											
+129P2/OlaHsd-Mkrn1<Gt(RRB087)Byg>/H	strain	Mkrn1<Gt(RRB087)Byg>	gene trap mutation RRB087, BayGenomics	makorin, ring finger protein, 1																										129P2/OlaHsd-Mkrn1<Gt(RRB087)Byg>/H embryo	embryo	
+129P2/OlaHsd-Mkrn1<Gt(RRB087)Byg>/H	strain	Mkrn1<Gt(RRB087)Byg>	gene trap mutation RRB087, BayGenomics	makorin, ring finger protein, 1																										129P2/OlaHsd-Mkrn1<Gt(RRB087)Byg>/H sperm	sperm	
+129P2/OlaHsd-Prnp/Prnd<tm1Dwm>/H	embryo	Prnp/Prnd<tm1Dwm>	targeted mutation 1, David W Melton	prion protein																												
+129P2/OlaHsd-Tpcn2<Gt(YHD437)Byg>/H	strain	Tpcn2<Gt(YHD437)Byg>	gene trap YHD437, BayGenomics	two pore segment channel 2																										129P2/OlaHsd-Tpcn2<Gt(YHD437)Byg>/H embryo	embryo	
+129P2/OlaHsd-Tpcn2<Gt(YHD437)Byg>/H	strain	Tpcn2<Gt(YHD437)Byg>	gene trap YHD437, BayGenomics	two pore segment channel 2																										129P2/OlaHsd-Tpcn2<Gt(YHD437)Byg>/H sperm	sperm	
+129S9/SvEvH	strain				129/SvEvH																									129S9/SvEvH embryo	embryo	
+129S9/SvEvH	strain				129/SvEvH																									129S9/SvEvH sperm	sperm	
+129S9/SvEvH.B6-a/H	embryo	a	nonagouti	nonagouti																												
+ABL	embryo				AB/L																											
+B6.129P2-Mro<tm1H>/H	live	Mro<tm1H>	targeted mutation 1, Harwell	maestro	B6.Cg-Mro<tm1H>/H																											
+B6.129P2-Vnn1<tm1Pna>/H	strain	Vnn1<tm1Pna>	targeted mutation 1, Philippe Naquet	vanin 1																										B6.129P2-Vnn1<tm1Pna>/H embryo	embryo	
+B6.129P2-Vnn1<tm1Pna>/H	strain	Vnn1<tm1Pna>	targeted mutation 1, Philippe Naquet	vanin 1																										B6.129P2-Vnn1<tm1Pna>/H sperm	sperm	
+B6.A-Ush1g<js>/J	embryo	Ush1g<js>	Jackson shaker	Usher syndrome 1G homolog (human)	B6.A-js/+, B6.A-Sans<js>/J																											
+B6.Cg-Sfrp2<C50F>/H	strain	Sfrp2<C50F>	Cys50Phe	secreted frizzled-related protein 2																										B6.Cg-Sfrp2<C50F>/H embryo	embryo	
+B6.Cg-Sfrp2<C50F>/H	strain	Sfrp2<C50F>	Cys50Phe	secreted frizzled-related protein 2																										B6.Cg-Sfrp2<C50F>/H sperm	sperm	
+B6.Cg-Sfrp5<Q27stop>/H	strain	Sfrp5<Q27stop>	Gln27stop	secreted frizzled-related sequence protein 5																										B6.Cg-Sfrp5<Q27stop>/H embryo	embryo	
+B6.Cg-Sfrp5<Q27stop>/H	strain	Sfrp5<Q27stop>	Gln27stop	secreted frizzled-related sequence protein 5																										B6.Cg-Sfrp5<Q27stop>/H sperm	sperm	
+B6.Cg-Tg(Wnt1-cre)11Rth/H	strain	Tg(Wnt1-cre)11Rth	transgene insertion 11, David H Rowitch	transgene insertion 11, David H Rowitch																										B6.Cg-Tg(Wnt1-cre)11Rth/H embryo	embryo	
+B6.Cg-Tg(Wnt1-cre)11Rth/H	strain	Tg(Wnt1-cre)11Rth	transgene insertion 11, David H Rowitch	transgene insertion 11, David H Rowitch																										B6.Cg-Tg(Wnt1-cre)11Rth/H sperm	sperm	
+B6129-Tg(Wap-cre)11738Mam	embryo	Tg(Wap-cre)11738Mam	transgene insertion 11738, Lothar Hennighausen	transgene insertion 11738, Lothar Hennighausen																												
+B6;129-Isl1<tm1(cre)Cos>	strain	Isl1<tm1(cre)Tmj>	targeted mutation 1, Thomas M Jessell	ISL1 transcription factor, LIM/homeodomain																										B6;129-Isl1<tm1(cre)Cos> embryo	embryo	
+B6;129-Isl1<tm1(cre)Cos>	strain	Isl1<tm1(cre)Tmj>	targeted mutation 1, Thomas M Jessell	ISL1 transcription factor, LIM/homeodomain																										B6;129-Isl1<tm1(cre)Cos> sperm	sperm	
+B6;129-Myl2<tm1(cre)Krc>/H	strain	Myl2<tm1(cre)Krc>	targeted mutation 1, Kenneth R Chien	myosin, light polypeptide 2, regulatory, cardiac, slow																										B6;129-Myl2<tm1(cre)Krc>/H embryo	embryo	
+B6;129-Myl2<tm1(cre)Krc>/H	strain	Myl2<tm1(cre)Krc>	targeted mutation 1, Kenneth R Chien	myosin, light polypeptide 2, regulatory, cardiac, slow																										B6;129-Myl2<tm1(cre)Krc>/H sperm	sperm	
+B6;129-Nkx2-5<tm1(cre)Rjs>/H	strain	Nkx2-5<tm1(cre)Rjs>	targeted mutation 1, Robert J Schwartz	NK2 transcription factor related, locus 5 (Drosophila)																										B6;129-Nkx2-5<tm1(cre)Rjs>/H embryo	embryo	
+B6;129-Nkx2-5<tm1(cre)Rjs>/H	strain	Nkx2-5<tm1(cre)Rjs>	targeted mutation 1, Robert J Schwartz	NK2 transcription factor related, locus 5 (Drosophila)																										B6;129-Nkx2-5<tm1(cre)Rjs>/H sperm	sperm	
+B6;CB-Mesp1<tm2(cre)Ysa>/H	strain	Mesp1<tm2(cre)Ysa>	targeted mutation 2, Yumiko Saga	mesoderm posterior 1																										B6;CB-Mesp1<tm2(cre)Ysa>/H embryo	embryo	
+B6;CB-Mesp1<tm2(cre)Ysa>/H	strain	Mesp1<tm2(cre)Ysa>	targeted mutation 2, Yumiko Saga	mesoderm posterior 1																										B6;CB-Mesp1<tm2(cre)Ysa>/H sperm	sperm	
+B6;CBA-Dmd<mdx>Tg(ACTA1-Utrn)1Ked/Ked	strain	Dmd<mdx>	X linked muscular dystrophy	dystrophin, muscular dystrophy																										B6;CBA-Dmd<mdx>Tg(ACTA1-Utrn)1Ked/Ked embryo	embryo	
+B6;CBA-Dmd<mdx>Tg(ACTA1-Utrn)1Ked/Ked	strain	Dmd<mdx>	X linked muscular dystrophy	dystrophin, muscular dystrophy																										B6;CBA-Dmd<mdx>Tg(ACTA1-Utrn)1Ked/Ked sperm	sperm	
+B6C3-Tg(HD82Gln)81Dbo/H	embryo	Tg(HD82Gln)81Dbo	transgene insertion 81, David R Borchelt	transgene insertion 81, David R Borchelt																												
+B6CB-Tg(PMP22)C1Clh/H	embryo	Tg(PMP22)C1Clh	transgene insertion C1, Clare Huxley	transgene insertion C1, Clare Huxley																												
+B6CB-Tg(PMP22)C61Clh/H	embryo																															
+B6CB-Tg(PMP22)JP18Clh/H	embryo																															
+B6CB-Tg(pUHG16)JU2Clh/H	embryo																															
+B6CB-Tg(yCFTR)A10Clh/H	embryo																															
+B6CB-Tg(yCFTR)T30Clh/H	embryo																															
+B6CB-Tg(yCFTR)T57Clh/H	embryo																															
+B6CB-TgN(PMP22)C58Clh/H	embryo																															
+B6CBA-Tg(HDexon1)61Gpb	embryo	Tg(HDexon1)61Gpb	transgene insertion 61, Gillian Bates	transgene insertion 61, Gillian Bates																												
+BALB/cOla	embryo																															
+C.Cg-Lpk/H	strain	Lpk	longpockets	longpockets	Longpockets																									C.Cg-Lpk/H embryo	embryo	
+C.Cg-Lpk/H	strain	Lpk	longpockets	longpockets	Longpockets																									C.Cg-Lpk/H sperm	sperm	
+C.Cg-Ostes/H	strain	Ostes	ostes	ostes																										C.Cg-Ostes/H embryo	embryo	
+C.Cg-Ostes/H	strain	Ostes	ostes	ostes																										C.Cg-Ostes/H sperm	sperm	
+C3.D2-Pax6<Coop>/H	embryo	Pax6<Coop>	corneal opacity	paired box gene 6																												
+C3H-Cat2/H	embryo	Cat2	dominant cataract 2	dominant cataract 2																												
+C3H-Crygb<nop>/H	embryo	Crygb<nop>	nuclear opacity	crystallin, gamma B																												
+C3H-Foxq1<sa>/H	embryo	Foxq1<sa>	satin	forkhead box Q1																												
+C3H-Maf<Ofl>/H	embryo	Maf<Ofl>	opaque flecks in lens	avian musculoaponeurotic fibrosarcoma (v-maf) AS42 oncogene homolog																												
+C3H-Npp/H	embryo	Npp	nuclear posterior polar opacity	nuclear posterior polar opacity																												
+C3H-nr/H	embryo	nr	nervous	nervous																												
+C3H-Paf/H	embryo	Paf	patchy fur	patchy fur																												
+C3H.Cg-Cat5<To2>/H	embryo	Cat5<To2>	total opacity	dominant cataract 5																												
+C3H.Cg-Kit<W-28H>/H	embryo	Kit<W-28H>	dominant spotting 28 Harwell	kit oncogene																												
+C3H.Cg-Kit<W-29H>/H	embryo	Kit<W-29H>	dominant spotting 29 Harwell	kit oncogene																												
+C3H.Cg-Koa/H	embryo	Koa	koala	koala																												
+C3H101H-a<16H>a<l>/H	embryo	a<l>	nonagouti lethal	nonagouti		a<16H>	nonagouti 16 Harwell	nonagouti																								
+C3H101H-a<da>/H	embryo	a<da>	nonagouti with dark agouti belly	nonagouti																												
+C3H101H-a<t>Tyrp1<b-cH>Tyr<c-ch>/H	embryo	a<t>	black and tan	nonagouti		Tyrp1<b-cH>	cordovan Harwell	tyrosinase-related protein 1	Tyr<c-ch>	chinchilla	tyrosinase																					
+C3H101H-a<u>/H	embryo	a<u>	agouti umbrous	nonagouti																												
+C3H101H-Aifm1<Hq>/H	embryo	Aifm1<Hq>	harlequin	apoptosis-inducing factor, mitochondrion-associated 1	C3H101H-Pdcd8<Hq>/H																											
+C3H101H-Atp7a<Mo-10H>/H	embryo	Atp7a<Mo-10H>	mottled 10 Harwell	ATPase, Cu++ transporting, alpha polypeptide	C3H101H-Atp7a<Mo-10H>																											
+C3H101H-Atp7a<Mo-11H>/H	embryo	Atp7a<Mo-11H>	mottled 11 Harwell	ATPase, Cu++ transporting, alpha polypeptide	C3H101H-Atp7a<Mo-11H>																											
+C3H101H-Atp7a<Mo-12H>/H	embryo	Atp7a<Mo-12H>	mottled 12 Harwell	ATPase, Cu++ transporting, alpha polypeptide	C3H101H-Atp7a<Mo-12H>																											
+C3H101H-Atp7a<Mo-13H>/H	embryo	Atp7a<Mo-13H>	mottled 13 Harwell	ATPase, Cu++ transporting, alpha polypeptide	C3H101H-Atp7a<Mo-13H>																											
+C3H101H-Atp7a<Mo-14H>/H	embryo	Atp7a<Mo-14H>	mottled 14 Harwell	ATPase, Cu++ transporting, alpha polypeptide	C3H101H-Atp7a<Mo-14H>																											
+C3H101H-Atp7a<Mo-17H>/H	embryo	Atp7a<Mo-17H>	mottled 17 Harwell	ATPase, Cu++ transporting, alpha polypeptide																												
+C3H101H-Atp7a<Mo-blo>/H	embryo	Atp7a<Mo-blo>	blotchy	ATPase, Cu++ transporting, alpha polypeptide																												
+C3H101H-Atp7a<Mo-ca>/H	embryo	Atp7a<Mo-ca>	candy	ATPase, Cu++ transporting, alpha polypeptide																												
+C3H101H-Atp7a<Mo-dp>/H	embryo	Atp7a<Mo-dp>	dappled	ATPase, Cu++ transporting, alpha polypeptide																												
+C3H101H-Atp7a<Mo-spt>/H	embryo	Atp7a<Mo-spot>	mottled spot	ATPase, Cu++ transporting, alpha polypeptide																												
+C3H101H-Atp7a<Mo-to>/H	embryo	Atp7a<Mo-to>	tortoiseshell	ATPase, Cu++ transporting, alpha polypeptide																												
+C3H101H-Atp7a<Mo-vbr>/H	embryo	Atp7a<Mo-vbr>	mottled viable brindled	ATPase, Cu++ transporting, alpha polypeptide																												
+C3H101H-Axin1<Fu-kb>/H	embryo	Axin1<Fu-kb>	knobbly	axin 1																												
+C3H101H-Bhd +/+ Pou3f4<Slf>/H	embryo	Bhd	broad headed	broad headed																												
+C3H101H-Br/H	embryo	Br	brachyrrhine	brachyrrhine																												
+C3H101H-Cacna1a<tg>/H	strain	Cacna1a<tg>	tottering	calcium channel, voltage-dependent, P/Q type, alpha 1A subunit																										C3H101H-Cacna1a<tg>/H embryo	embryo	
+C3H101H-Cacna1a<tg>/H	strain	Cacna1a<tg>	tottering	calcium channel, voltage-dependent, P/Q type, alpha 1A subunit																										C3H101H-Cacna1a<tg>/H sperm	sperm	
+C3H101H-Crm/H	embryo	Crm	cream	cream																												
+C3H101H-Cryga<tol>/H	embryo	Cryga<tol>	total opacity with lens vacuoles	crystallin, gamma A	C3H101H-Cat2<tol>/H																											
+C3H101H-Dct<slt>/H	embryo	Dct<slt>	slaty	dopachrome tautomerase																												
+C3H101H-Del(1)27H/H	embryo																															
+C3H101H-Del(1)33H/H	embryo																															
+C3H101H-Del(1)42H	embryo																															
+C3H101H-Del(1)55H/H	embryo				C3H101H-Del(1)55H																											
+C3H101H-Del(1)57H/H	embryo				C3H101H-Del(1)57H																											
+C3H101H-Del(1)58H/H	embryo				C3H101H-Del(1)58H																											
+C3H101H-Del(1)66H/H	embryo				C3H101H-Del(1)66H																											
+C3H101H-Del(1)6H/H	embryo																															
+C3H101H-Del(1)70H/H	embryo				C3H101H-Del(1)70H																											
+C3H101H-Del(10)69H/H	embryo				C3H101H-Del(10)69H																											
+C3H101H-Del(12)75H/H	embryo				C3H101H-Del(12)75H																											
+C3H101H-Del(13)36H/H	strain																													C3H101H-Del(13)36H/H embryo	embryo	
+C3H101H-Del(13)36H/H	strain																													C3H101H-Del(13)36H/H sperm	sperm	
+C3H101H-Del(13)52H/H	embryo				C3H101H-Del(13)52H																											
+C3H101H-Del(16)51H/H	embryo				C3H101H-Del(16)51H																											
+C3H101H-Del(18)20H/H	embryo																															
+C3H101H-Del(2)35H/H	embryo																															
+C3H101H-Del(2)59H/H	embryo				C3H101H-Del(2)59H																											
+C3H101H-Del(3)48H/H	embryo																															
+C3H101H-Del(3)64H/H	embryo																															
+C3H101H-Del(4)17H/H	embryo																															
+C3H101H-Del(5)68H/H	embryo				C3H101H-Del(5)68H																											
+C3H101H-Del(6)26H/H	embryo																															
+C3H101H-Del(7)49H/H	embryo				C3H101H-Del(7)49H																											
+C3H101H-Del(7)56H/H	embryo				C3H101H-Del(7)56H																											
+C3H101H-Del(8)50H/H	embryo				C3H101H-Del(8)50H																											
+C3H101H-Del(8)62H/H	embryo				C3H101H-Del(8)62H																											
+C3H101H-Del(8)72H/H	embryo				C3H101H-Del(8)72H																											
+C3H101H-Del(8)74H/H	embryo																															
+C3H101H-Del(8)7H/H	embryo																															
+C3H101H-Del(9)4H/H	embryo																															
+C3H101H-Dh/H	embryo	Dh	dominant hemimelia	dominant hemimelia																												
+C3H101H-Dkf/H	embryo																															
+C3H101H-Dp(1)6H	embryo																															
+C3H101H-Dp(12)7H	embryo																															
+C3H101H-Dp(12)9H	embryo																															
+C3H101H-Dp(13)17H	embryo																															
+C3H101H-Dp(14)18H	embryo																															
+C3H101H-Dp(14)2H	embryo																															
+C3H101H-Dp(15)5H	embryo																															
+C3H101H-Dp(16)15H	embryo																															
+C3H101H-Dp(16)8H	embryo																															
+C3H101H-Dp(18)4H	embryo																															
+C3H101H-Dp(2)11H	embryo																															
+C3H101H-Dp(3)10H	embryo																															
+C3H101H-Dp(4)20H	embryo																															
+C3H101H-Dp(7)16H	embryo																															
+C3H101H-Dp(7)19H	embryo																															
+C3H101H-Dp(7)1H	embryo																															
+C3H101H-Dp(9)12H	embryo																															
+C3H101H-Dp(9)14H	embryo																															
+C3H101H-Dp(9)3H	embryo																															
+C3H101H-Eda<Ta-23H>/H	embryo	Eda<Ta-23H>	tabby 23 Harwell	ectodysplasin-A																												
+C3H101H-Eda<Ta-25H>/H	embryo	Eda<Ta-25H>	tabby 25 Harwell	ectodysplasin-A																												
+C3H101H-Eda<Ta-26H>/H	embryo	Eda<Ta-26H>	tabby 26 Harwell	ectodysplasin-A																												
+C3H101H-Eda<Ta-29H>/H	embryo	Eda<Ta-29H>	tabby 29 Harwell	ectodysplasin-A																												
+C3H101H-Eda<Ta-30H>/H	embryo	Eda<Ta-30H>	tabby 30 Harwell	ectodysplasin-A																												
+C3H101H-Eda<Ta-32H>	embryo	Eda<Ta-32H>	tabby 32 Harwell	ectodysplasin-A																												
+C3H101H-Eda<Ta-33H>	embryo	Eda<Ta-33H>	tabby 33 Harwell	ectodysplasin-A																												
+C3H101H-Edar<Dl-slk>/H	embryo	Edar<Dl-slk>	downless sleek	ectodysplasin-A receptor																												
+C3H101H-Eef1a2<wst>/H	strain	Eef1a2<wst>	wasted	eukaryotic translation elongation factor 1 alpha 2																										C3H101H-Eef1a2<wst>/H embryo	embryo	
+C3H101H-Eef1a2<wst>/H	strain	Eef1a2<wst>	wasted	eukaryotic translation elongation factor 1 alpha 2																										C3H101H-Eef1a2<wst>/H sperm	sperm	
+C3H101H-Es3<c-nH>/H	embryo	Es3<c-nH>	c null Harwell	esterase 3	C3H101H-Es3<c-nH>																											
+C3H101H-Fnld/H	embryo	Fnld	faint-lined	faint-lined																												
+C3H101H-Gli3<Xt-2H>/H	embryo	Gli3<Xt-2H>	extra toes 2 Harwell	GLI-Kruppel family member GLI3																												
+C3H101H-Gli3<Xt>/H	embryo	Gli3<Xt>	extra toes	GLI-Kruppel family member GLI3																												
+C3H101H-Gnas<Oedsml>/H	strain	Gnas<Oedsml>	oedematous-small	GNAS (guanine nucleotide binding protein, alpha stimulating) complex locus	C3H101H-Gnas<Oedsml-mat>/H																									C3H101H-Gnas<Oedsml>/H embryo	embryo	
+C3H101H-Gnas<Oedsml>/H	strain	Gnas<Oedsml>	oedematous-small	GNAS (guanine nucleotide binding protein, alpha stimulating) complex locus	C3H101H-Gnas<Oedsml-mat>/H																									C3H101H-Gnas<Oedsml>/H sperm	sperm	
+C3H101H-Gnrh1<hpg>/H	embryo	Gnrh1<hpg>	hypogonadal	gonadotropin releasing hormone 1																												
+C3H101H-Gpi1<a-m1H>/H	embryo	Gpi1<a-m1H>	mutant 1, Harwell	glucose phosphate isomerase 1	C3H101H-Gpi1<a-m1H>																											
+C3H101H-Gpi1<c>/H	embryo	Gpi1<c>	c variant	glucose phosphate isomerase 1																												
+C3H101H-Gs/H	embryo	Gs	greasy	greasy																												
+C3H101H-Gsdma3<Bsk>/H	embryo	Gsdma3<Bsk>	bareskin	gasdermin A3	C3H101H-Gsdm3<Bsk>/H																											
+C3H101H-Hbb<d4>/H	embryo	Hbb<d4>	diffuse 4	hemoglobin beta chain complex																												
+C3H101H-Hps5<ru2>	embryo	Hps5<ru2>	ruby-eye 2	Hermansky-Pudlak syndrome 5 homolog (human)																												
+C3H101H-Hr<hr>Ednrb<s>/H	embryo	Hr<hr>	hairless	hairless																												
+C3H101H-Hum/H	embryo																															
+C3H101H-In(1)5H	embryo																															
+C3H101H-Is(In7;X)1Ct-Xce<a>/H	embryo	Xic<a>	X Chromosome controlling element a	X chromosome inactivation center																												
+C3H101H-Is(In7;X)1Ct-Xce<b>/H	embryo	Xic<b>	X Chromosome controlling element b	X chromosome inactivation center																												
+C3H101H-Is(In7;X)1Ct/H	embryo																															
+C3H101H-Kit<W-36H>/H	embryo	Kit<W-36H>	dominant spotting 36 Harwell	kit oncogene																												
+C3H101H-Kit<W-ct>/H	embryo	Kit<W-ct>	Cattanach''s dominant spotting	kit oncogene																												
+C3H101H-Kit<W-sh>/H	embryo	Kit<W-sh>	sash	kit oncogene																												
+C3H101H-Kitl<Sl-10H>/H	embryo	Kitl<Sl-10H>	steel 10 Harwell	kit ligand																												
+C3H101H-Kitl<Sl-12H>/H	embryo	Kitl<Sl-12H>	steel 12 Harwell	kit ligand																												
+C3H101H-Kitl<Sl-17H>/H	embryo	Kitl<Sl-17H>	steel 17 Harwell	kit ligand																												
+C3H101H-Kitl<Sl-18H>/H	embryo	Kitl<Sl-18H>	steel 18 Harwell	kit ligand																												
+C3H101H-Kitl<Sl-25H>/H	embryo	Kitl<Sl-25H>	steel 25 Harwell	kit ligand																												
+C3H101H-Kitl<Sl-8H>/H	embryo	Kitl<Sl-8H>	steel 8 Harwell	kit ligand																												
+C3H101H-Kitl<Sl-9H>/H	embryo	Kitl<Sl-9H>	steel 9 Harwell	kit ligand																												
+C3H101H-Kitl<Sl-pan>/H	embryo	Kitl<Sl-pan>	steel panda	kit ligand																												
+C3H101H-Klf1<Nan>/H	embryo	Klf1<Nan>	neonatal anemia	Kruppel-like factor 1 (erythroid)	C3H101H-Nan/H																											
+C3H101H-Li/H	embryo	Li	lined	lined																												
+C3H101H-Lnp<Ul>/H	embryo	Lnp<Ul>	ulnaless	limb and neural patterns																												
+C3H101H-ma-Mcoln3<Va>/H	embryo	Mcoln3<Va>	varitint waddler	mucolipin 3		ma	matted	matted																								
+C3H101H-Mc1r<E-tob>/H	embryo	Mc1r<E-tob>	tobacco darkening	melanocortin 1 receptor		Mc1r<e>	recessive yellow	melanocortin 1 receptor																								
+C3H101H-Mdh1<am1H>/H	embryo	Mdh1<am1H>	mutant 1 Harwell	malate dehydrogenase 1, NAD (soluble)	C3H101H-Mdh1<am1H>																											
+C3H101H-Mgrn1<md-nc>/H	embryo	Mgrn1<md-nc>	nonagouti curly	mahogunin, ring finger 1																												
+C3H101H-Minute/H	embryo	Minute	minute imprinted gene in the Igf2 region	minute imprinted gene in the Igf2 region	C3H101H-Minute<pat>/H																											
+C3H101H-MUT1152/H	embryo																															
+C3H101H-Nsdhl<Bpa-1H>	embryo	Nsdhl<Bpa-1H>	bare patches 1 Harwell	NAD(P) dependent steroid dehydrogenase-like																												
+C3H101H-Nsdhl<Bpa-3H>	embryo	Nsdhl<Bpa-3H>	bare patches 3 Harwell	NAD(P) dependent steroid dehydrogenase-like																												
+C3H101H-Nsdhl<Bpa-4H>/H	embryo	Nsdhl<Bpa-4H>	bare patches 4 Harwell	NAD(P) dependent steroid dehydrogenase-like	Bpa<4H>																											
+C3H101H-Nsdhl<Bpa-5H>/H	embryo	Nsdhl<Bpa-5H>	bare patches 5 Harwell	NAD(P) dependent steroid dehydrogenase-like	Bpa<5H>, C3H101H-Nsdhl<Bpa-5H>																											
+C3H101H-Nsdhl<Bpa-6H>	embryo	Nsdhl<Bpa-6H>	bare patches 6 Harwell	NAD(P) dependent steroid dehydrogenase-like																												
+C3H101H-Nsdhl<Str-2H>/H	embryo	Nsdhl<Str-2H>	striated 2 Harwell	NAD(P) dependent steroid dehydrogenase-like	Str<2H>																											
+C3H101H-Oca2<p-81H>/Oca2<p-d>/H	embryo	Oca2<p-81H>	pink-eyed dilution 81 Harwell	oculocutaneous albinism II	C3H101H-p<81H>/H, p<81H>, C3H101H-Oca2<p-81H>/H, C3H101H-p<81H>																											
+C3H101H-Oca2<p-82H>/Oca2<p-d>/H	embryo	Oca2<p-82H>	pink-eyed dilution 82 Harwell	oculocutaneous albinism II	C3H101H-Oca2<p-82H>/H, p<82H>, C3H101H-p<82H>/H, C3H101H-p<82H>																											
+C3H101H-Oca2<p-86H>/H	embryo	Oca2<p-86H>	pink-eyed dilution 86 Harwell	oculocutaneous albinism II	C3H101H-p<86H>/H																											
+C3H101H-Oca2<p-88H>/H	embryo	Oca2<p-88H>	pink-eyed dilution 88 Harwell	oculocutaneous albinism II	C3H101H-p<88H>/H																											
+C3H101H-Oca2<p-bs>/H	embryo	Oca2<p-bs>	pink-eyed dilution black eyed sterile	oculocutaneous albinism II	C3H101H-p<bs>/H, C3H101H-Herc2<p-bs>/H																											
+C3H101H-Oca2<p-dn>/H	embryo				C3H101H-p<dn>/H																											
+C3H101H-Oca2<p-un>/H	embryo	Myo5a<d>	dilute	myosin VA	C3H101H-p<un>/H																											
+C3H101H-Oca2<p-x>/H	embryo	Oca2<p-x>	pink-eyed dilution extra dark	oculocutaneous albinism II	C3H101H-p<x>/H																											
+C3H101H-p<In(7p;Sox6)100H>	embryo	In(7p;7Sox6)100H	inversion, Chr 7, Harwell 100	inversion, Chr 7, Harwell 100		Oca2<p-d>	dark pink eye	oculocutaneous albinism II																								
+C3H101H-Papss2<bm>/H	embryo	Papss2<bm>	brachymorphic	3''-phosphoadenosine 5''-phosphosulfate synthase 2																												
+C3H101H-Pax3<Sp-1H>/H	embryo	Pax3<Sp-1H>	splotch 1 Harwell	paired box gene 3	Sp<1H>																											
+C3H101H-Pax3<Sp-4H>/H	embryo	Pax3<Sp-4H>	splotch 4 Harwell	paired box gene 3																												
+C3H101H-Pax3<Sp-5H>/H	embryo	Pax3<Sp-5H>	splotch 5 Harwell	paired box gene 3																												
+C3H101H-Pax6<Sey-3H>	embryo	Pax6<Sey-3H>	small eye, 3 Harwell	paired box gene 6																												
+C3H101H-Ph/H	embryo	Ph	patch	patch deletion region																												
+C3H101H-Ph<3H>	embryo	Ph<3H>	patch 3 Harwell	patch deletion region																												
+C3H101H-Plp1<jp-rsh>/H	embryo	Plp1<jp-rsh>	rumpshaker	proteolipid protein (myelin) 1																												
+C3H101H-Plp1<jp>/H	embryo	Plp1<jp>	jimpy	proteolipid protein (myelin) 1	C3H101H-Plp1<jp>																											
+C3H101H-Pou3f4<Slf>/H	embryo	Pou3f4<Slf>	sex linked fidget	POU domain, class 3, transcription factor 4																												
+C3H101H-Rb(12.13)3Ct	embryo																															
+C3H101H-Rb(4.14)8H	embryo																															
+C3H101H-Rb(4.16)10H	embryo																															
+C3H101H-Rb(6.13)3Rma	embryo																															
+C3H101H-Rb(8.12)5Bnr	embryo																															
+C3H101H-rst/H	embryo	rst	rosette	rosette																												
+C3H101H-scb/H	embryo	scb	scabby	scabby																												
+C3H101H-skimp/H	embryo	skimp	skijumper	skijumper																												
+C3H101H-Sme/H	embryo	Sme	small ear	small ear	Sme																											
+C3H101H-Sox<lcc>/H	embryo	Sox2<lcc>	light coat and circling	SRY-box containing gene 2																												
+C3H101H-T(10;18)18H	embryo																															
+C3H101H-T(11;13)41Ad	embryo																															
+C3H101H-T(11;13)56H	embryo																															
+C3H101H-T(11;19)42H	embryo																															
+C3H101H-T(13;14)69H	embryo																															
+C3H101H-T(1;12)52H/H	embryo				T52H																											
+C3H101H-T(1;4)71H	embryo																															
+C3H101H-T(1;6)42Ad	embryo																															
+C3H101H-T(1;7)49H	embryo																															
+C3H101H-T(1;8)63H	embryo																															
+C3H101H-T(2;15)45Ad/H	embryo																															
+C3H101H-T(2;3)24H	embryo																															
+C3H101H-T(2;4)13H	embryo																															
+C3H101H-T(3;10)61H	embryo																															
+C3H101H-T(3;12)58H	embryo																															
+C3H101H-T(3;19)25Ad	embryo																															
+C3H101H-T(3;8)56Ad	embryo																															
+C3H101H-T(4;5)46H	embryo																															
+C3H101H-T(5;12)31H	embryo																															
+C3H101H-T(5;7)30Ad	embryo																															
+C3H101H-T(6;12)32H	embryo																															
+C3H101H-T(6;13)6Ad	embryo																															
+C3H101H-T(7;13)7Ad/H	embryo																															
+C3H101H-T(7;16)67H	embryo																															
+C3H101H-T(9;10)62H	embryo																															
+C3H101H-T<22H>	embryo	T<22H>	brachyury 22 Harwell	brachyury																												
+C3H101H-T<29H>	embryo	T<29H>	brachyury 29 Harwell	brachyury																												
+C3H101H-T<30H> +/+ tf/H	embryo	T<30H>	brachyury 30 Harwell	brachyury	T<30H>, C3H101H-T<30H>/H, Del(17)T30H85H																											
+C3H101H-T<31H>	embryo	T<31H>	brachyury 31 Harwell	brachyury																												
+C3H101H-T<32H>/H	embryo	T<32H>	brachyury 32 Harwell	brachyury																												
+C3H101H-T<33H>	embryo	T<33H>	brachyury 33 Harwell	brachyury																												
+C3H101H-T<34H>	embryo	T<34H>	brachyury 34 Harwell	brachyury																												
+C3H101H-T<36H>	embryo	T<36H>	brachury 36 Harwell	brachyury																												
+C3H101H-T<c-2H>	embryo	T<c-2H>	curtailed 2 Harwell	brachyury																												
+C3H101H-t<h17>	embryo	t<h17>	t, Harwell 17	t-complex																												
+C3H101H-Tal/H	embryo	Tal	talipes	talipes																												
+C3H101H-Tks/H	embryo	Tks	radiation induced tail kinks	radiation induced tail kinks																												
+C3H101H-Tp(Y)1Ct<Sxr-b>/H	embryo	Tp(Y)1Ct<Sxr-b>	Sex reversed, b variant	transposition, Chr Y, Cattanach 1																												
+C3H101H-Tyr<c-40H>/H	embryo	a	nonagouti	nonagouti																												
+C3H101H-Tyr<c-44H>	embryo	Tyr<c-44H>	albino 44 Harwell	tyrosinase																												
+C3H101H-Tyr<c-45H>	embryo	Tyr<c-45H>	albino 45 Harwell	tyrosinase																												
+C3H101H-Tyr<c-46H>	embryo	Tyr<c-46H>	albino 46 Harwell	tyrosinase																												
+C3H101H-Tyr<c-m>/H	embryo	Tyr<c-m>	chinchilla mottled	tyrosinase																												
+C3H101H-Tyr<c-r>/H	embryo	Tyr<c-r>	ruby eyed dilute	tyrosinase																												
+C3H101H-Xic<a>/H	embryo	Xic<a>	X Chromosome controlling element a	X chromosome inactivation center	C3H101H-Xce<a>/H																											
+C3H;101H-a<t-2H>/H	embryo	a<t-2H>	black and tan 2 Harwell	nonagouti	C3H101H-a<t-2H>, C3H101H-a<t-2H>/H																											
+C3H;B6-Tulp3<hhkr>/H	strain	Tulp3<hhkr>	hitchhiker	tubby-like protein 3																										C3H;B6-Tulp3<hhkr>/H embryo	embryo	
+C3H;B6-Tulp3<hhkr>/H	strain	Tulp3<hhkr>	hitchhiker	tubby-like protein 3																										C3H;B6-Tulp3<hhkr>/H sperm	sperm	
+C3H;C-GENA119/H	strain																													C3H;C-GENA119/H embryo	embryo	
+C3H;C-GENA119/H	strain																													C3H;C-GENA119/H sperm	sperm	
+C3H;C-GENA140/H	strain																													C3H;C-GENA140/H embryo	embryo	
+C3H;C-GENA140/H	strain																													C3H;C-GENA140/H sperm	sperm	
+C3H;C-GENA144/H	strain																													C3H;C-GENA144/H embryo	embryo	
+C3H;C-GENA144/H	strain																													C3H;C-GENA144/H sperm	sperm	
+C3H;C-GENA15/H	strain																													C3H;C-GENA15/H embryo	embryo	
+C3H;C-GENA15/H	strain																													C3H;C-GENA15/H sperm	sperm	
+C3H;C-GENA151/H	strain																													C3H;C-GENA151/H embryo	embryo	
+C3H;C-GENA151/H	strain																													C3H;C-GENA151/H sperm	sperm	
+c3H;C-GENA185/H	strain																													c3H;C-GENA185/H embryo	embryo	
+c3H;C-GENA185/H	strain																													c3H;C-GENA185/H sperm	sperm	
+C3H;C-GENA217/H	strain																													C3H;C-GENA217/H embryo	embryo	
+C3H;C-GENA217/H	strain																													C3H;C-GENA217/H sperm	sperm	
+C3H;C-GENA327/H	embryo																															
+C3H;C-GENA342/H	strain																													C3H;C-GENA342/H embryo	embryo	
+C3H;C-GENA342/H	strain																													C3H;C-GENA342/H sperm	sperm	
+C3H;C-GENA382/H	strain																													C3H;C-GENA382/H embryo	embryo	
+C3H;C-GENA382/H	strain																													C3H;C-GENA382/H sperm	sperm	
+C3H;C-Kit<W-39H>/H	strain	Kit<W-39H>	dominant spotting 39 Harwell	kit oncogene																										C3H;C-Kit<W-39H>/H embryo	embryo	
+C3H;C-Kit<W-39H>/H	strain	Kit<W-39H>	dominant spotting 39 Harwell	kit oncogene																										C3H;C-Kit<W-39H>/H sperm	sperm	
+C3H;C-Mitf<Mi-H>/H	strain	Mitf<Mi-H>	microphthalmia Harwell	microphthalmia-associated transcription factor																										C3H;C-Mitf<Mi-H>/H embryo	embryo	
+C3H;C-Mitf<Mi-H>/H	strain	Mitf<Mi-H>	microphthalmia Harwell	microphthalmia-associated transcription factor																										C3H;C-Mitf<Mi-H>/H sperm	sperm	
+C3H;C-Sfrp2<C50F>/H	strain	Sfrp2<C50F>	Cys50Phe	secreted frizzled-related protein 2																										C3H;C-Sfrp2<C50F>/H embryo	embryo	
+C3H;C-Sfrp2<C50F>/H	strain	Sfrp2<C50F>	Cys50Phe	secreted frizzled-related protein 2																										C3H;C-Sfrp2<C50F>/H sperm	sperm	
+C3H;C-Strg/H	strain	Strg	striped greasy	striped greasy																										C3H;C-Strg/H embryo	embryo	
+C3H;C-Strg/H	strain	Strg	striped greasy	striped greasy																										C3H;C-Strg/H sperm	sperm	
+C57BL-Eh/H	embryo	Eh	hairy ears	hairy ears																												
+C57BL-Kit<W-v>/H	embryo	Kit<W-v>	viable dominant spotting	kit oncogene																												
+C57BL/6-Lep<ob>/H	embryo	Lep<ob>	obese	leptin																												
+C57BL/6J-A<vy>/H	embryo	A<vy>	agouti viable yellow	nonagouti																												
+C57BL/6J-Kitl<Sl-d>/H	embryo	Kitl<Sl-d>	steel Dickie	kit ligand																												
+C57BL/6J-Krt25<Re>/H	embryo	Krt25<Re>	rex	keratin 25																												
+C57BL/6J-Nox3<het>/H	embryo	Nox3<het>	head-tilt	NADPH oxidase 3																												
+C57BL/6J-Ucp1<m1H>/H	strain	Ucp1<m1H>	mutation 1, Harwell	uncoupling protein 1 (mitochondrial, proton carrier)	C57BL/6J-Ucp1<1H>/H, TRI																									C57BL/6J-Ucp1<m1H>/H embryo	embryo	
+C57BL/6J-Ucp1<m1H>/H	strain	Ucp1<m1H>	mutation 1, Harwell	uncoupling protein 1 (mitochondrial, proton carrier)	C57BL/6J-Ucp1<1H>/H, TRI																									C57BL/6J-Ucp1<m1H>/H sperm	sperm	
+C58-Tyrp1<B-lt>/H	embryo	Tyrp1<B-lt>	light	tyrosinase-related protein 1																												
+CAST/EiJH	embryo																															
+CBA/CaH	embryo	Xic<a>	X Chromosome controlling element a	X chromosome inactivation center																												
+CBA/H-Kit<W-27H>/H	embryo	Kit<W-27H>	dominant spotting 27 Harwell	kit oncogene																												
+CBA/H-Pdss2<kd>/H	embryo	Pdss2<kd>	kidney disease	prenyl (solanesyl) diphosphate synthase, subunit 2																												
+CBA/H-T(14;15)6Ca	embryo				CBA/H-T6																											
+CBB6-Tg(runx1/MTG8)ICH10Fc/H	embryo																															
+CBB6-Tg(runx1/MTG8)ICH11Fc/H	embryo																															
+CBB6-Tg(runx1/MTG8)ICH12Fc/H	embryo																															
+CBB6-Tg(runx1/MTG8)ICH7Fc/H	embryo																															
+CBB6-Tg(runx1/MTG8)ICH8Fc/H	embryo																															
+CBB6-Tg(runx1/MTG8)ICH9Fc/H	embryo																															
+GENA214	strain																													GENA214 embryo	embryo	
+GENA214	strain																													GENA214 sperm	sperm	
+Hoxa3<tm1(cre)Moon>	strain	Hoxa3<tm1(cre)Moon>	targeted mutation 1, Anne M Moon	homeobox A3																										Hoxa3<tm1(cre)Moon> embryo	embryo	
+Hoxa3<tm1(cre)Moon>	strain	Hoxa3<tm1(cre)Moon>	targeted mutation 1, Anne M Moon	homeobox A3																										Hoxa3<tm1(cre)Moon> sperm	sperm	
+Isl1<tm1(cre)Sev>	strain	Isl1<tm1(cre)Sev>	targeted mutation 1, Sylvia Evans	ISL1 transcription factor, LIM/homeodomain																										Isl1<tm1(cre)Sev> embryo	embryo	
+Isl1<tm1(cre)Sev>	strain	Isl1<tm1(cre)Sev>	targeted mutation 1, Sylvia Evans	ISL1 transcription factor, LIM/homeodomain																										Isl1<tm1(cre)Sev> sperm	sperm	
+JUN-T(1;2)5Ca	embryo																															
+MB	embryo																															
+Nespas<tm1Jop>	embryo	Nespas<tm1Jop>	targeted mutation 1, Jo Peters	neuroendocrine secretory protein antisense																												
+PT	embryo	Oca2<p>	pink-eyed dilution	oculocutaneous albinism II		Bmp5<se>	short ear	bone morphogenetic protein 5	Myo5a<d>	dilute	myosin VA	Ednrb<s>	piebald	endothelin receptor type B	Tyr<c-ch>	chinchilla	tyrosinase	Tyrp1<b>	brown	tyrosinase-related protein 1												
+PTP/H	embryo	Gpi1<a>	a variant	glucose phosphate isomerase 1		Oca2<p>	pink-eyed dilution	oculocutaneous albinism II	Hbb<s>	single	hemoglobin beta chain complex	a	nonagouti	nonagouti	Bmp5<se>	short ear	bone morphogenetic protein 5	Myo5a<d>	dilute	myosin VA	Ednrb<s>	piebald	endothelin receptor type B	Tyr<c-ch>	chinchilla	tyrosinase	Tyrp1<b>	brown	tyrosinase-related protein 1			
+Qk<qk>	embryo	Qk<qk-v>	quaking viable	quaking																												
+Sfrp2<l153N	strain	Sfrp2<I153N>	Ile153Asn	secreted frizzled-related protein 2																										Sfrp2<l153N embryo	embryo	
+Sfrp2<l153N	strain	Sfrp2<I153N>	Ile153Asn	secreted frizzled-related protein 2																										Sfrp2<l153N sperm	sperm	
+STOCK a<18H>/H	embryo	a<18H>	18 Harwell	nonagouti																												
+STOCK a<t>/H	embryo	a<t>	black and tan	nonagouti																												
+STOCK A<y>/H	embryo	A<y>	agouti yellow	nonagouti																												
+STOCK Ar<Tfm>/H	embryo	Ar<Tfm>	testicular feminization	androgen receptor																												
+STOCK Dmd<mdx-3Cv>/H	embryo	Dmd<mdx-3Cv>	X linked muscular dystrophy 3, Verne Chapman	dystrophin, muscular dystrophy																												
+STOCK hsh/H	embryo	hsh	hind shaker	hind shaker	hsh																											
+STOCK In(2)2H	embryo	A<w>	white-bellied agouti	nonagouti		As	agouti suppressor	agouti suppressor																								
+STOCK In(2)5Rk	embryo	a<t>	black and tan	nonagouti		Pldn<pa>	pallid	pallidin	Pax1<un>	undulated	paired box gene 1																					
+STOCK In(X)1H	embryo																															
+STOCK In(X)3H	embryo	Eda<Ta>	tabby	ectodysplasin-A		Atp7a<Mo-blo>	blotchy	ATPase, Cu++ transporting, alpha polypeptide																								
+STOCK Kit<W>/H	embryo	Kit<W>	dominant spotting	kit oncogene																												
+STOCK Lmx1a<dr-J>	embryo	Lmx1a<dr-J>	dreher Jackson	LIM homeobox transcription factor 1 alpha																												
+STOCK Lop4/H	embryo	Lop4	lens opacity 4	lens opacity 4																												
+STOCK Lop6/H	embryo	Lop6	lens opacity 6	lens opacity 6																												
+STOCK Lop9/H	embryo	Lop9	lens opacity 9	lens opacity 9																												
+STOCK Muted<mu>/H	embryo	Muted<mu>	muted	muted																												
+STOCK Myo6<sv>/H	embryo	Myo6<sv>	Snell''s waltzer	myosin VI																												
+STOCK Oca2<p-84H>/H	embryo	Oca2<p-84H>	pink-eyed dilution 84 Harwell	oculocutaneous albinism II																												
+STOCK Oca2<p-dn>/H	embryo	Oca2<p-dn>	pink-eyed dilution darkening	oculocutaneous albinism II																												
+STOCK Oca2<p>Tyr<c-ch>Myo7a<sh1>Prss8<fr>/H	embryo	Oca2<p>	pink-eyed dilution	oculocutaneous albinism II		Prss8<fr>	frizzy	protease, serine, 8 (prostasin)	Myo7a<sh1>	shaker 1	myosin VIIA	Tyr<c-ch>	chinchilla	tyrosinase																		
+STOCK Phex<Gy>/H	embryo	Gy	gyro	gyro deletion region																												
+STOCK Phex<Hyp>/H	embryo	Phex<Hyp>	hypophosphatemia	phosphate regulating gene with homologies to endopeptidases on the X chromosome (hypophosphatemia, vitamin D resistant rickets)																												
+STOCK Rb(1.15)2Ct Rb(2.18)6Rma Rb(6.13)3Rma Rb(11.16)2H/H	embryo																															
+STOCK Rb(1.2)5H	embryo																															
+STOCK Rb(10.11)8Bnr	embryo																															
+STOCK Rb(11.13)4Bnr	embryo																															
+STOCK Rb(11.16)2H	embryo																															
+STOCK Rb(2.17)11Rma	embryo																															
+STOCK Rb(2.17)4H	embryo																															
+STOCK Rb(2.18)6Rma	embryo																															
+STOCK Rb(2.8)6Rma-Rb(6.15)1Ald-Rb(9.19)163H/H	embryo																															
+STOCK Rb(4.18)3H	embryo																															
+STOCK Rb(5.15)3Bnr/H	embryo																															
+STOCK Rb(5.19)1Wh	embryo																															
+STOCK Rb(6.13)1H	embryo																															
+STOCK Rb(6.15)1Ald	embryo																															
+STOCK Rb(6.15)1Ald-Mip<Cat-Lop>/H	embryo	Mip<Cat-Lop>	cataract lens opacity	major intrinsic protein of eye lens fiber																												
+STOCK Rb(X.9)6H	embryo																															
+STOCK Rn/H	embryo	Rn	roan	roan																												
+STOCK Rn<fkl>	embryo	Rn<fkl>	freckled	roan																												
+STOCK Scr/H	embryo	Scr	scruffy	scruffy																												
+STOCK Sd/H	embryo	Sd	Danforth''s short tail	Danforth''s short tail																												
+STOCK Sts<->/H	embryo																															
+STOCK T(1;13)70H	embryo																															
+STOCK T(6;7)51H	embryo																															
+STOCK T(9;17)138Ca	embryo																															
+STOCK T(X;7)3Neu	embryo																															
+STOCK t<6>/H	embryo	t<6>	t, 6	t-complex																												
+STOCK t<h20>	embryo	t<h20>	t, Harwell 20	t-complex																												
+STOCK t<h44>	embryo	t<h44>	t, Harwell 44	t-complex																												
+STOCK t<h49>	embryo	t<h49>	t, Harwell 49	t-complex																												
+STOCK t<h50>	embryo	t<h50>	t, Harwell 50	t-complex																												
+STOCK t<h51>	embryo	t<h51>	t, Harwell 51	t-complex																												
+STOCK t<h7>	strain	t<h7>	t, Harwell 7	t-complex																										STOCK t<h7> embryo	embryo	
+STOCK t<h7>	strain	t<h7>	t, Harwell 7	t-complex																										STOCK t<h7> sperm	sperm	
+STOCK T<hp>/H	strain	T<hp>	hairpin tail	brachyury																										STOCK T<hp>/H embryo	embryo	
+STOCK T<hp>/H	strain	T<hp>	hairpin tail	brachyury																										STOCK T<hp>/H sperm	sperm	
+STOCK t<lowH>	embryo	t<lowH>	t, low Harwell	t-complex																												
+STOCK t<lub2>/H	embryo	t<Lub2>	t, Lubeck 2	t-complex																												
+STOCK t<s6>/H	embryo	t<s6>	t, sterility factor 6	t-complex																												
+STOCK t<w32>/H	embryo	t<w32>	t, wild 32	t-complex																												
+STOCK Wnt3a<vt>Foxq1<sa>Muted<mu>/H	embryo	Wnt3a<vt>	vestigial tail	wingless-related MMTV integration site 3A		Muted<mu>	muted	muted	Foxq1<sa>	satin	forkhead box Q1																					
+STOCK-Icst/H	embryo	Icst	iris-corneal strands	iris-corneal strands																												
+STOCK-T(2;16)28H	embryo																															
+t<low3H>	embryo	t<low3H>	t, low Harwell 3	t-complex																												
+Tg(ACTA1-Utrn)2Ked	strain	Dmd<mdx>	X linked muscular dystrophy	dystrophin, muscular dystrophy																										Tg(ACTA1-Utrn)2Ked embryo	embryo	
+Tg(ACTA1-Utrn)2Ked	strain	Dmd<mdx>	X linked muscular dystrophy	dystrophin, muscular dystrophy																										Tg(ACTA1-Utrn)2Ked sperm	sperm	
+Tg(ACTA1-Utrn*)1Ked	strain	Dmd<mdx>	X linked muscular dystrophy	dystrophin, muscular dystrophy																										Tg(ACTA1-Utrn*)1Ked embryo	embryo	
+Tg(ACTA1-Utrn*)1Ked	strain	Dmd<mdx>	X linked muscular dystrophy	dystrophin, muscular dystrophy																										Tg(ACTA1-Utrn*)1Ked sperm	sperm	
+Tg(ACTA1-Utrn*)2Ked	strain	Dmd<mdx>	X linked muscular dystrophy	dystrophin, muscular dystrophy																										Tg(ACTA1-Utrn*)2Ked embryo	embryo	
+Tg(ACTA1-Utrn*)2Ked	strain	Dmd<mdx>	X linked muscular dystrophy	dystrophin, muscular dystrophy																										Tg(ACTA1-Utrn*)2Ked sperm	sperm	
+Tg(ACTA1-Utrn*)3Ked	strain	Dmd<mdx>	X linked muscular dystrophy	dystrophin, muscular dystrophy																										Tg(ACTA1-Utrn*)3Ked embryo	embryo	
+Tg(ACTA1-Utrn*)3Ked	strain	Dmd<mdx>	X linked muscular dystrophy	dystrophin, muscular dystrophy																										Tg(ACTA1-Utrn*)3Ked sperm	sperm	
+Tg(ACTA1-Utrn*)4Ked	strain	Dmd<mdx>	X linked muscular dystrophy	dystrophin, muscular dystrophy																										Tg(ACTA1-Utrn*)4Ked embryo	embryo	
+Tg(ACTA1-Utrn*)4Ked	strain	Dmd<mdx>	X linked muscular dystrophy	dystrophin, muscular dystrophy																										Tg(ACTA1-Utrn*)4Ked sperm	sperm	
+Tg(ACTA1-Utrn*)5Ked	strain	Dmd<mdx>	X linked muscular dystrophy	dystrophin, muscular dystrophy																										Tg(ACTA1-Utrn*)5Ked embryo	embryo	
+Tg(ACTA1-Utrn*)5Ked	strain	Dmd<mdx>	X linked muscular dystrophy	dystrophin, muscular dystrophy																										Tg(ACTA1-Utrn*)5Ked sperm	sperm	
+Tg(ACTA1-Utrn*)6Ked	strain	Dmd<mdx>	X linked muscular dystrophy	dystrophin, muscular dystrophy																										Tg(ACTA1-Utrn*)6Ked embryo	embryo	
+Tg(ACTA1-Utrn*)6Ked	strain	Dmd<mdx>	X linked muscular dystrophy	dystrophin, muscular dystrophy																										Tg(ACTA1-Utrn*)6Ked sperm	sperm	
+Tg(bTGTRfs)1Vkc	embryo																															
+Tg(Leftb-cre)1Hmd	strain	Tg(Leftb-cre)1Hmd	transgene insertion 1, Hiroshi Hamada	transgene insertion 1, Hiroshi Hamada																										Tg(Leftb-cre)1Hmd embryo	embryo	
+Tg(Leftb-cre)1Hmd	strain	Tg(Leftb-cre)1Hmd	transgene insertion 1, Hiroshi Hamada	transgene insertion 1, Hiroshi Hamada																										Tg(Leftb-cre)1Hmd sperm	sperm	
+Tg(Sox2-cre)1Amc	strain	Tg(Sox2-cre)1Amc	transgene insertion 1, Andrew P McMahon	transgene insertion 1, Andrew P McMahon																										Tg(Sox2-cre)1Amc embryo	embryo	
+Tg(Sox2-cre)1Amc	strain	Tg(Sox2-cre)1Amc	transgene insertion 1, Andrew P McMahon	transgene insertion 1, Andrew P McMahon																										Tg(Sox2-cre)1Amc sperm	sperm	
+Tg(T-cre)1Lwd	strain	Tg(T-cre)1Lwd	transgene insertion 1, Mark Lewandoski	transgene insertion 1, Mark Lewandoski																										Tg(T-cre)1Lwd embryo	embryo	
+Tg(T-cre)1Lwd	strain	Tg(T-cre)1Lwd	transgene insertion 1, Mark Lewandoski	transgene insertion 1, Mark Lewandoski																										Tg(T-cre)1Lwd sperm	sperm	
+Tg(Thy1-Dusp6)1Ked	strain																													Tg(Thy1-Dusp6)1Ked embryo	embryo	
+Tg(Thy1-Dusp6)1Ked	strain																													Tg(Thy1-Dusp6)1Ked sperm	sperm	
+Tg(Thy1-Dusp6)2Ked	strain																													Tg(Thy1-Dusp6)2Ked embryo	embryo	
+Tg(Thy1-Dusp6)2Ked	strain																													Tg(Thy1-Dusp6)2Ked sperm	sperm	
+Tg(Thy1-Dusp6)3Ked	strain																													Tg(Thy1-Dusp6)3Ked embryo	embryo	
+Tg(Thy1-Dusp6)3Ked	strain																													Tg(Thy1-Dusp6)3Ked sperm	sperm	
+Tg(UBC-Utrn)1Ked	strain	Dmd<mdx>	X linked muscular dystrophy	dystrophin, muscular dystrophy																										Tg(UBC-Utrn)1Ked embryo	embryo	
+Tg(UBC-Utrn)1Ked	strain	Dmd<mdx>	X linked muscular dystrophy	dystrophin, muscular dystrophy																										Tg(UBC-Utrn)1Ked sperm	sperm	
+Tg(UBC-Utrn)2Ked	strain	Dmd<mdx>	X linked muscular dystrophy	dystrophin, muscular dystrophy																										Tg(UBC-Utrn)2Ked embryo	embryo	
+Tg(UBC-Utrn)2Ked	strain	Dmd<mdx>	X linked muscular dystrophy	dystrophin, muscular dystrophy																										Tg(UBC-Utrn)2Ked sperm	sperm	
+Tg(UBC-Utrn)3Ked	strain	Dmd<mdx>	X linked muscular dystrophy	dystrophin, muscular dystrophy																										Tg(UBC-Utrn)3Ked embryo	embryo	
+Tg(UBC-Utrn)3Ked	strain	Dmd<mdx>	X linked muscular dystrophy	dystrophin, muscular dystrophy																										Tg(UBC-Utrn)3Ked sperm	sperm	
+Tg(UBC-Utrn)4Ked	strain	Dmd<mdx>	X linked muscular dystrophy	dystrophin, muscular dystrophy																										Tg(UBC-Utrn)4Ked embryo	embryo	
+Tg(UBC-Utrn)4Ked	strain	Dmd<mdx>	X linked muscular dystrophy	dystrophin, muscular dystrophy																										Tg(UBC-Utrn)4Ked sperm	sperm	
+TgN(DSPM36)1327OxAnat	strain																													TgN(DSPM36)1327OxAnat embryo	embryo	
+TgN(DSPM36)1327OxAnat	strain																													TgN(DSPM36)1327OxAnat sperm	sperm	
+TgN(DSPM36)1668OxAnat	strain																													TgN(DSPM36)1668OxAnat embryo	embryo	
+TgN(DSPM36)1668OxAnat	strain																													TgN(DSPM36)1668OxAnat sperm	sperm	
+TgN(DSPM36)1886OxAnat	strain																													TgN(DSPM36)1886OxAnat embryo	embryo	
+TgN(DSPM36)1886OxAnat	strain																													TgN(DSPM36)1886OxAnat sperm	sperm	
+TgN(DSPM36)1892OxAnat	strain																													TgN(DSPM36)1892OxAnat embryo	embryo	
+TgN(DSPM36)1892OxAnat	strain																													TgN(DSPM36)1892OxAnat sperm	sperm	

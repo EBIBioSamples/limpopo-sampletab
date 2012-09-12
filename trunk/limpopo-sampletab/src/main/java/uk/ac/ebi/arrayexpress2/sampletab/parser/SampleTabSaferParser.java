@@ -40,7 +40,7 @@ public class SampleTabSaferParser {
         });
     }
 
-    public SampleData parse(File msiFile) throws ParseException {
+    public synchronized SampleData parse(File msiFile) throws ParseException {
         try {
             return parse(msiFile.toURI().toURL());
         }
@@ -49,7 +49,7 @@ public class SampleTabSaferParser {
         }
     }
 
-    public SampleData parse(URL msiURL) throws ParseException {
+    public synchronized SampleData parse(URL msiURL) throws ParseException {
         try {
             return parse(msiURL.openStream());
         }
@@ -58,21 +58,22 @@ public class SampleTabSaferParser {
         }
     }
     
-    public SampleData parse(String filename) throws ParseException {
+    public synchronized SampleData parse(String filename) throws ParseException {
         log.debug("Starting parsing "+filename+"...");
         return parse(new File(filename));
     }
     
-    public SampleData parse(InputStream dataIn) throws ParseException {
+    public synchronized SampleData parse(InputStream dataIn) throws ParseException {
         return parse(dataIn, new SampleData());
     }
     
-    public SampleData parse(InputStream dataIn, SampleData target)
+    public synchronized SampleData parse(InputStream dataIn, SampleData target)
 			throws ParseException {      
         
 
         SampleData sd = null;
         ExecutorService service = Executors.newSingleThreadExecutor();
+        errorItems.clear();
         
         try { 
             sd = parser.parse(dataIn, target, service);
