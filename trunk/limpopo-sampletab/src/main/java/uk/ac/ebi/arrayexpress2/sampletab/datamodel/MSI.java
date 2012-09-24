@@ -97,4 +97,20 @@ public class MSI {
 	    }
 	    return termSource.getName();
 	}
+    
+    /**
+     * Convinently lookup a term source by its name
+     * 
+     *  @return TermSource
+     */
+    public TermSource getTermSource(String name){
+        for (TermSource ts : termSources){
+            if (ts.getName() != null && ts.getName().equals(name)){
+                return ts;
+            }
+        }
+        return null;
+    }
+	
+	
 }
