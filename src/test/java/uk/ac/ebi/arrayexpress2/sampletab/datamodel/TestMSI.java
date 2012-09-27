@@ -1,4 +1,4 @@
-package uk.ac.ebi.arrayexpress2.sampletab.datamodel.msi;
+package uk.ac.ebi.arrayexpress2.sampletab.datamodel;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -11,16 +11,22 @@ import org.slf4j.LoggerFactory;
 
 import junit.framework.TestCase;
 
-public class TestPerson extends TestCase {
+public class TestMSI extends TestCase {
 
-    private Person a1;
-    private Person a2;
-    private Person b;
+    private MSI a1;
+    private MSI a2;
+    private MSI b;
     
     public void setUp() {
-		a1 = new Person("a", "", "A", "", "");
-        a2 = new Person("a", null, "A", null, null);
-        b = new Person("b", "", "B", null, null);
+		a1 = new MSI();
+		a1.submissionIdentifier = "A";
+        a2 = new MSI();
+        a2.submissionIdentifier = "A";
+        a2.submissionUpdateDate = a1.submissionUpdateDate;
+        a2.submissionReleaseDate = a1.submissionReleaseDate;
+        b = new MSI();
+        b.submissionIdentifier = "B";
+        //TODO expand to cover many other possible comparisons
     }
     
     public void tearDown() throws Exception{
@@ -41,7 +47,7 @@ public class TestPerson extends TestCase {
         //collisions are possible, but not desirable
         //assertFalse("hash different", a1.hashCode() != b.hashCode());
 
-        Set<Person> testset = new HashSet<Person>();
+        Set<MSI> testset = new HashSet<MSI>();
         
         testset.add(a1);
         assertTrue("same objects contains", testset.contains(a1));
@@ -57,18 +63,18 @@ public class TestPerson extends TestCase {
         assertEquals("greater than", 1, b.compareTo(a1));
         assertEquals("equal to", 0, a1.compareTo(a2));
         
-        List<Person> personsSort = new ArrayList<Person>();
-        personsSort.add(b);
-        personsSort.add(a1);
-        personsSort.add(a2);
-        Collections.sort(personsSort);
-        List<Person> personsTarget = new ArrayList<Person>();
-        personsTarget.add(a1);
-        personsTarget.add(a2);
-        personsTarget.add(b);
+        List<MSI> sorted = new ArrayList<MSI>();
+        sorted.add(b);
+        sorted.add(a1);
+        sorted.add(a2);
+        Collections.sort(sorted);
+        List<MSI> target = new ArrayList<MSI>();
+        target.add(a1);
+        target.add(a2);
+        target.add(b);
         
         
-        assertEquals("sorted lists equal", personsTarget, personsSort);
+        assertEquals("sorted lists equal", target, sorted);
     }
 	
 }

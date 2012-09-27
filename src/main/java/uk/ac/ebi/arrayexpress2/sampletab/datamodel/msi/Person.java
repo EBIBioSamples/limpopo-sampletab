@@ -1,5 +1,6 @@
 package uk.ac.ebi.arrayexpress2.sampletab.datamodel.msi;
 
+import org.apache.commons.lang.builder.CompareToBuilder;
 import org.apache.commons.lang.builder.EqualsBuilder;
 import org.apache.commons.lang.builder.HashCodeBuilder;
 
@@ -10,7 +11,7 @@ import org.apache.commons.lang.builder.HashCodeBuilder;
  * 
  * @author Adam Faulconbridge
  */
-public class Person {
+public class Person implements Comparable<Person> {
 	private final String lastname;
 	private final String initials;
 	private final String firstname;
@@ -98,5 +99,21 @@ public class Person {
 			.append(this.getRole())
 			.toHashCode();
 	}
+
+    public int compareTo(Person other) {
+        if (other == null) {
+            return -1;
+        } else if (other == this) {
+            return 0;
+        } else {
+            return new CompareToBuilder()
+                .append(this.getFirstName(), other.getFirstName())
+                .append(this.getInitials(), other.getInitials())
+                .append(this.getLastName(), other.getLastName())
+                .append(this.getEmail(), other.getEmail())
+                .append(this.getRole(), other.getRole())
+                .toComparison();
+        }
+    }
 
 }

@@ -11,16 +11,16 @@ import org.slf4j.LoggerFactory;
 
 import junit.framework.TestCase;
 
-public class TestPerson extends TestCase {
+public class TestOrganization extends TestCase {
 
-    private Person a1;
-    private Person a2;
-    private Person b;
+    private Organization a1;
+    private Organization a2;
+    private Organization b;
     
     public void setUp() {
-		a1 = new Person("a", "", "A", "", "");
-        a2 = new Person("a", null, "A", null, null);
-        b = new Person("b", "", "B", null, null);
+		a1 = new Organization("a", "", "A", "", "");
+        a2 = new Organization("a", null, "A", null, null);
+        b = new Organization("b", "", "B", null, null);
     }
     
     public void tearDown() throws Exception{
@@ -41,7 +41,7 @@ public class TestPerson extends TestCase {
         //collisions are possible, but not desirable
         //assertFalse("hash different", a1.hashCode() != b.hashCode());
 
-        Set<Person> testset = new HashSet<Person>();
+        Set<Organization> testset = new HashSet<Organization>();
         
         testset.add(a1);
         assertTrue("same objects contains", testset.contains(a1));
@@ -57,18 +57,18 @@ public class TestPerson extends TestCase {
         assertEquals("greater than", 1, b.compareTo(a1));
         assertEquals("equal to", 0, a1.compareTo(a2));
         
-        List<Person> personsSort = new ArrayList<Person>();
-        personsSort.add(b);
-        personsSort.add(a1);
-        personsSort.add(a2);
-        Collections.sort(personsSort);
-        List<Person> personsTarget = new ArrayList<Person>();
-        personsTarget.add(a1);
-        personsTarget.add(a2);
-        personsTarget.add(b);
+        List<Organization> sorted = new ArrayList<Organization>();
+        sorted.add(b);
+        sorted.add(a1);
+        sorted.add(a2);
+        Collections.sort(sorted);
+        List<Organization> target = new ArrayList<Organization>();
+        target.add(a1);
+        target.add(a2);
+        target.add(b);
         
         
-        assertEquals("sorted lists equal", personsTarget, personsSort);
+        assertEquals("sorted lists equal", target, sorted);
     }
 	
 }

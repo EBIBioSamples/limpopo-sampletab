@@ -4,9 +4,16 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.SortedSet;
+import java.util.TreeSet;
+
+import org.apache.commons.lang.builder.CompareToBuilder;
+import org.apache.commons.lang.builder.EqualsBuilder;
+import org.apache.commons.lang.builder.HashCodeBuilder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import uk.ac.ebi.arrayexpress2.sampletab.comparator.ComparatorSortedSet;
 import uk.ac.ebi.arrayexpress2.sampletab.datamodel.msi.Database;
 import uk.ac.ebi.arrayexpress2.sampletab.datamodel.msi.Organization;
 import uk.ac.ebi.arrayexpress2.sampletab.datamodel.msi.Person;
@@ -24,7 +31,7 @@ import uk.ac.ebi.arrayexpress2.sampletab.datamodel.msi.TermSource;
  * Read from a SampleTab file by {@Link uk.ac.ebi.arrayexpress2.sampletab.parser.MSIParser} and written out
  * by {@link uk.ac.ebi.arrayexpress2.renderer.MSIWriter}.
  */
-public class MSI {
+public class MSI implements Comparable<MSI> {
 	
 	public volatile String submissionTitle = null;
 	public volatile String submissionDescription = null;
@@ -43,11 +50,7 @@ public class MSI {
 	public List<Database> databases = new ArrayList<Database>();
 
 	private Logger log = LoggerFactory.getLogger(getClass());
-	
-	protected Logger getLog() {
-		return log;
-	}
-	
+		
 	/**
 	 * Returns the submission release date in a yyy/MM/dd format, or 
 	 * the current date if no release date is specified. 
@@ -110,6 +113,152 @@ public class MSI {
             }
         }
         return null;
+    }
+
+    @Override
+    public boolean equals(Object other) {
+        if (other == null) {
+            return false;
+        } else if (other == this) {
+            return true;
+        } else if (!MSI.class.isInstance(other)){
+            return false;
+        } else {
+            MSI mother = (MSI) other;
+
+            //convert to sorted sets for comparisons
+            
+            SortedSet<Organization> sso1 = new TreeSet<Organization>();
+            sso1.addAll(this.organizations);
+            SortedSet<Organization> sso2 = new TreeSet<Organization>();
+            sso2.addAll(mother.organizations);
+            
+            SortedSet<Person> ssp1 = new TreeSet<Person>();
+            ssp1.addAll(this.persons);
+            SortedSet<Person> ssp2 = new TreeSet<Person>();
+            ssp2.addAll(mother.persons);
+
+            SortedSet<Publication> ssu1 = new TreeSet<Publication>();
+            ssu1.addAll(this.publications);
+            SortedSet<Publication> ssu2 = new TreeSet<Publication>();
+            ssu2.addAll(mother.publications);
+            
+            SortedSet<TermSource> sst1 = new TreeSet<TermSource>();
+            sst1.addAll(this.termSources);
+            SortedSet<TermSource> sst2 = new TreeSet<TermSource>();
+            sst2.addAll(mother.termSources);
+            
+            SortedSet<Database> ssd1 = new TreeSet<Database>();
+            ssd1.addAll(this.databases);
+            SortedSet<Database> ssd2 = new TreeSet<Database>();
+            ssd2.addAll(mother.databases);
+            
+            return new EqualsBuilder()
+            .append(this.submissionIdentifier, mother.submissionIdentifier)
+            .append(this.submissionTitle, mother.submissionTitle)
+            .append(this.submissionReferenceLayer, mother.submissionReferenceLayer)
+            .append(this.submissionDescription, mother.submissionDescription)
+            .append(this.submissionReleaseDate, mother.submissionReleaseDate)
+            .append(this.submissionUpdateDate, mother.submissionUpdateDate)
+            .append(this.submissionVersion, mother.submissionVersion)
+            .append(sso1, sso2)
+            .append(ssp1, ssp2)
+            .append(ssu1, ssu2)
+            .append(sst1, sst2)
+            .append(ssd1, ssd2)
+                .isEquals();
+        }
+    }
+
+    public int hashCode() {
+        //convert to sorted sets for comparisons
+        
+        SortedSet<Organization> sso = new TreeSet<Organization>();
+        sso.addAll(this.organizations);
+        
+        SortedSet<Person> ssp = new TreeSet<Person>();
+        ssp.addAll(this.persons);
+
+        SortedSet<Publication> ssu = new TreeSet<Publication>();
+        ssu.addAll(this.publications);
+        
+        SortedSet<TermSource> sst = new TreeSet<TermSource>();
+        sst.addAll(this.termSources);
+        
+        SortedSet<Database> ssd = new TreeSet<Database>();
+        ssd.addAll(this.databases);
+        
+        return new HashCodeBuilder(7, 31) // two randomly chosen prime numbers
+        .append(this.submissionIdentifier)
+        .append(this.submissionTitle)
+        .append(this.submissionReferenceLayer)
+        .append(this.submissionDescription)
+        .append(this.submissionReleaseDate)
+        .append(this.submissionUpdateDate)
+        .append(this.submissionVersion)
+        .append(sso)
+        .append(ssp)
+        .append(ssu)
+        .append(sst)
+        .append(ssd)
+            .toHashCode();
+    }
+
+    public int compareTo(MSI other) {
+        if (other == null) {
+            return -1;
+        } else if (this.equals(other)){
+            return 0;
+        } else {
+
+            //convert to sorted sets for comparisons
+            
+            SortedSet<Organization> sso1 = new TreeSet<Organization>();
+            sso1.addAll(this.organizations);
+            SortedSet<Organization> sso2 = new TreeSet<Organization>();
+            sso2.addAll(other.organizations);
+            ComparatorSortedSet<Organization> co = new ComparatorSortedSet<Organization>();
+            
+            SortedSet<Person> ssp1 = new TreeSet<Person>();
+            ssp1.addAll(this.persons);
+            SortedSet<Person> ssp2 = new TreeSet<Person>();
+            ssp2.addAll(other.persons);
+            ComparatorSortedSet<Person> cp = new ComparatorSortedSet<Person>();
+
+            SortedSet<Publication> ssu1 = new TreeSet<Publication>();
+            ssu1.addAll(this.publications);
+            SortedSet<Publication> ssu2 = new TreeSet<Publication>();
+            ssu2.addAll(other.publications);
+            ComparatorSortedSet<Publication> cu = new ComparatorSortedSet<Publication>();
+            
+            SortedSet<TermSource> sst1 = new TreeSet<TermSource>();
+            sst1.addAll(this.termSources);
+            SortedSet<TermSource> sst2 = new TreeSet<TermSource>();
+            sst2.addAll(other.termSources);
+            ComparatorSortedSet<TermSource> ct = new ComparatorSortedSet<TermSource>();
+            
+            SortedSet<Database> ssd1 = new TreeSet<Database>();
+            ssd1.addAll(this.databases);
+            SortedSet<Database> ssd2 = new TreeSet<Database>();
+            ssd2.addAll(other.databases);
+            ComparatorSortedSet<Database> cd = new ComparatorSortedSet<Database>();
+            
+            
+            return new CompareToBuilder()
+                .append(this.submissionIdentifier, other.submissionIdentifier)
+                .append(this.submissionTitle, other.submissionTitle)
+                .append(this.submissionReferenceLayer, other.submissionReferenceLayer)
+                .append(this.submissionDescription, other.submissionDescription)
+                .append(this.submissionReleaseDate, other.submissionReleaseDate)
+                .append(this.submissionUpdateDate, other.submissionUpdateDate)
+                .append(this.submissionVersion, other.submissionVersion)
+                .append(sso1, sso2, co)
+                .append(ssp1, ssp2, cp)
+                .append(ssu1, ssu2, cu)
+                .append(sst1, sst2, ct)
+                .append(ssd1, ssd2, cd)
+                .toComparison();
+        }
     }
 	
 	

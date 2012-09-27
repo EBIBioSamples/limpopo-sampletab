@@ -11,16 +11,16 @@ import org.slf4j.LoggerFactory;
 
 import junit.framework.TestCase;
 
-public class TestPerson extends TestCase {
+public class TestPublication extends TestCase {
 
-    private Person a1;
-    private Person a2;
-    private Person b;
+    private Publication a1;
+    private Publication a2;
+    private Publication b;
     
     public void setUp() {
-		a1 = new Person("a", "", "A", "", "");
-        a2 = new Person("a", null, "A", null, null);
-        b = new Person("b", "", "B", null, null);
+		a1 = new Publication("1", "" );
+        a2 = new Publication("1", null);
+        b = new Publication("2", "");
     }
     
     public void tearDown() throws Exception{
@@ -41,7 +41,7 @@ public class TestPerson extends TestCase {
         //collisions are possible, but not desirable
         //assertFalse("hash different", a1.hashCode() != b.hashCode());
 
-        Set<Person> testset = new HashSet<Person>();
+        Set<Publication> testset = new HashSet<Publication>();
         
         testset.add(a1);
         assertTrue("same objects contains", testset.contains(a1));
@@ -57,18 +57,18 @@ public class TestPerson extends TestCase {
         assertEquals("greater than", 1, b.compareTo(a1));
         assertEquals("equal to", 0, a1.compareTo(a2));
         
-        List<Person> personsSort = new ArrayList<Person>();
-        personsSort.add(b);
-        personsSort.add(a1);
-        personsSort.add(a2);
-        Collections.sort(personsSort);
-        List<Person> personsTarget = new ArrayList<Person>();
-        personsTarget.add(a1);
-        personsTarget.add(a2);
-        personsTarget.add(b);
+        List<Publication> sorted = new ArrayList<Publication>();
+        sorted.add(b);
+        sorted.add(a1);
+        sorted.add(a2);
+        Collections.sort(sorted);
+        List<Publication> target = new ArrayList<Publication>();
+        target.add(a1);
+        target.add(a2);
+        target.add(b);
         
         
-        assertEquals("sorted lists equal", personsTarget, personsSort);
+        assertEquals("sorted lists equal", target, sorted);
     }
 	
 }

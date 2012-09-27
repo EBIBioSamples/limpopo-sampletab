@@ -1,5 +1,13 @@
 package uk.ac.ebi.arrayexpress2.sampletab.datamodel;
 
+
+import org.apache.commons.lang.builder.CompareToBuilder;
+import org.apache.commons.lang.builder.EqualsBuilder;
+import org.apache.commons.lang.builder.HashCodeBuilder;
+
+import uk.ac.ebi.arrayexpress2.sampletab.comparator.ComparatorSCD;
+
+
 /**
  * Root class of the SampleTab representation and holds together a pair of MSI and SCD objects.
  */
@@ -18,4 +26,5 @@ public class SampleData {
         msi = new MSI();
         scd = new SCD();
     }
+    
 }

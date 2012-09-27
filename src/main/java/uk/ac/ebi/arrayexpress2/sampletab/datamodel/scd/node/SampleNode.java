@@ -17,9 +17,18 @@ import uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node.attribute.SCDNodeAtt
  * must be called to function correctly.
  */
 public class SampleNode extends AbstractSCDNode {
-	private String sampleDescription = null;
+
+    private String sampleDescription = null;
 	private String sampleAccession = null;
 
+    public SampleNode() {
+        super();
+    }
+    
+    public SampleNode(String name) {
+        super(name);
+    }
+	
 	public String[] headers() {
 		List<String> headersList = new ArrayList<String>();
 		headersList.add("Sample Name");
