@@ -7,15 +7,23 @@ import java.util.List;
 import org.isatools.tablib.export.graph2tab.TabValueGroup;
 //import org.isatools.tablib.export.graph2tab.DefaultAbstractNode;
 import uk.ac.ebi.arrayexpress2.magetab.datamodel.graph.AbstractNode;
+import uk.ac.ebi.arrayexpress2.sampletab.comparator.scd.node.attribute.SCDNodeAttributeComparator;
 import uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node.attribute.SCDNodeAttribute;
-import uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node.attribute.SCDNodeAttributeComparator;
 
 
 
 public abstract class AbstractSCDNode extends AbstractNode implements SCDNode {
-    
+
     public final List<SCDNodeAttribute> attributes = new ArrayList<SCDNodeAttribute>();
-	
+
+    public AbstractSCDNode() {
+        super();
+    }
+    
+    public AbstractSCDNode(String name) {
+        super(name);
+    }
+    
     public String toString() {
         StringBuilder hb = new StringBuilder();
         for (String header : headers()) {

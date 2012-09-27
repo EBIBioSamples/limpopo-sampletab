@@ -1,5 +1,6 @@
 package uk.ac.ebi.arrayexpress2.sampletab.datamodel.msi;
 
+import org.apache.commons.lang.builder.CompareToBuilder;
 import org.apache.commons.lang.builder.EqualsBuilder;
 import org.apache.commons.lang.builder.HashCodeBuilder;
 
@@ -10,7 +11,7 @@ import org.apache.commons.lang.builder.HashCodeBuilder;
  * 
  * @author Adam Faulconbridge
  */
-public class TermSource {
+public class TermSource implements Comparable<TermSource> {
 	private final String name;
 	private final String uri;
 	private final String version;
@@ -75,5 +76,19 @@ public class TermSource {
 			//.append(this.getVersion())
 			.toHashCode();
 	}
+
+    public int compareTo(TermSource other) {
+        if (other == null) {
+            return -1;
+        } else if (other == this) {
+            return 0;
+        } else {
+            return new CompareToBuilder()
+                .append(this.getName(), other.getName())
+                //.append(this.tsother.getURI(), other.tsother.getURI())
+                //.append(this.getVersion(), other.getVersion())
+                .toComparison();
+        }
+    }
 
 }

@@ -1,5 +1,6 @@
 package uk.ac.ebi.arrayexpress2.sampletab.datamodel.msi;
 
+import org.apache.commons.lang.builder.CompareToBuilder;
 import org.apache.commons.lang.builder.EqualsBuilder;
 import org.apache.commons.lang.builder.HashCodeBuilder;
 
@@ -10,7 +11,7 @@ import org.apache.commons.lang.builder.HashCodeBuilder;
  * 
  * @author Adam Faulconbridge
  */
-public class Database {
+public class Database implements Comparable<Database> {
 	private final String name;
 	private final String id;
 	private final String uri;
@@ -73,5 +74,19 @@ public class Database {
 			.append(this.getID())
 			.toHashCode();
 	}
+
+    public int compareTo(Database other) {
+        if (other == null) {
+            return -1;
+        } else if (other == this) {
+            return 0;
+        } else {
+            return new CompareToBuilder()
+                .append(this.getName(), other.getName())
+                .append(this.getURI(), other.getURI())
+                .append(this.getID(), other.getID())
+                .toComparison();
+        }
+    }
 
 }

@@ -1,4 +1,7 @@
-package uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node.attribute;
+package uk.ac.ebi.arrayexpress2.sampletab.comparator.scd.node.attribute;
+
+import uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node.attribute.AbstractNodeAttributeOntology;
+import uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node.attribute.SCDNodeAttribute;
 
 public class SCDNodeAttributeComparator implements java.util.Comparator<SCDNodeAttribute> {
 

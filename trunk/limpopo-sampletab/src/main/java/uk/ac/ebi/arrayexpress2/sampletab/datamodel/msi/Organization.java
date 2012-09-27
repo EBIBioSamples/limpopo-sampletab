@@ -1,5 +1,6 @@
 package uk.ac.ebi.arrayexpress2.sampletab.datamodel.msi;
 
+import org.apache.commons.lang.builder.CompareToBuilder;
 import org.apache.commons.lang.builder.EqualsBuilder;
 import org.apache.commons.lang.builder.HashCodeBuilder;
 
@@ -10,7 +11,7 @@ import org.apache.commons.lang.builder.HashCodeBuilder;
  * 
  * @author Adam Faulconbridge
  */
-public class Organization {
+public class Organization implements Comparable<Organization> {
 	private final String name;
 	private final String address;
 	private final String uri;
@@ -75,7 +76,7 @@ public class Organization {
 			return false;
 		} else if (other == this) {
 			return true;
-        } else if (!this.getClass().isInstance(other)){
+        } else if (!Organization.class.isInstance(other)){
             return false;
         } else {
         	Organization oother = (Organization) other;
@@ -98,5 +99,21 @@ public class Organization {
 			.append(this.getRole())
 			.toHashCode();
 	}
+
+    public int compareTo(Organization other) {
+        if (other == null) {
+            return -1;
+        } else if (other == this) {
+            return 0;
+        } else {
+            return new CompareToBuilder()
+                .append(this.getName(), other.getName())
+                .append(this.getAddress(), other.getAddress())
+                .append(this.getURI(), other.getURI())
+                .append(this.getEmail(), other.getEmail())
+                .append(this.getRole(), other.getRole())
+                .toComparison();
+        }
+    }
 
 }
