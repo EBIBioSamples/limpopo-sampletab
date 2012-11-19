@@ -16,6 +16,11 @@
 	
 	<repositories>
 		<repository>
+			<id>ebi-repo</id>
+			<name>EBI repo</name>
+			<url>http://www.ebi.ac.uk/~maven/m2repo</url>
+		</repository>
+		<repository>
 			<id>hasbanana-repo</id>
 			<url>http://www.hasbanana.com/maven/repo</url>
 			<snapshots>
@@ -30,11 +35,6 @@
 			<snapshots>
 				<enabled>true</enabled>
 			</snapshots>
-		</repository>
-		<repository>
-			<id>oerc</id>
-			<name>Oxford e-Research Center</name>
-			<url>http://frog.oerc.ox.ac.uk:8080/artifactory/repo/</url>
 		</repository>
 		<repository>
 			<id>erroritem-repo</id>
