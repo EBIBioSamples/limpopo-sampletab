@@ -70,9 +70,11 @@ public class CharacteristicAttributeReader implements SCDAttributeReader {
                 // now do the rest
                 for (int i = 1; i < data.length;) {
                     if (header[i].startsWith("unit")) {
-                        String unit_type =
+                        String unit_type = null;
+                        if (header[i].contains("[")){
                                 header[i].substring(header[i].lastIndexOf("[") + 1,
                                                     header[i].lastIndexOf("]"));
+                        }
                         if (data[i] != null && !data[i].equals("")) {
                             UnitAttribute unit = new UnitAttribute();
                             unit.setAttributeValue(data[i]);

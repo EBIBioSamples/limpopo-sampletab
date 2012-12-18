@@ -6,14 +6,22 @@ import java.util.List;
 
 public class UnitAttribute extends AbstractNodeAttributeOntology {
     public String type;
-
+    
     public String getAttributeType() {
-        return "unit[" + type + "]";
+        if (type == null){
+            return "unit";
+        } else {
+            return "unit[" + type + "]";
+        }
     }
 
     public String[] headers() {
         List<String> headersList = new ArrayList<String>();
-        headersList.add("Unit[" + type + "]");
+        if (type == null){
+            headersList.add("Unit");
+        }else {
+            headersList.add("Unit[" + type + "]");
+        }
         if (getTermSourceREF() != null) {
             headersList.add("Term Source REF");
         }
