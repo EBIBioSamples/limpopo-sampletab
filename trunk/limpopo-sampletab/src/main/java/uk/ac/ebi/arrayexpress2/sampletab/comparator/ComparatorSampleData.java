@@ -17,20 +17,20 @@ public class ComparatorSampleData implements Comparator<SampleData> {
     public int compare(SampleData arg1, SampleData arg2) {
         int score;
         
-        log.info("comparing MSIs");
+        log.debug("comparing MSIs");
         
         score = arg1.msi.compareTo(arg2.msi);
         if (score != 0) return score;
         
-        log.info("MSI is the same");
+        log.debug("MSI is the same");
         
-        log.info("comparing SCDs");
+        log.debug("comparing SCDs");
         
         score = comparatorscd.compare(arg1.scd, arg2.scd);
         if (score != 0) return score;
         
 
-        log.info("SCD is the same");
+        log.debug("SCD is the same");
 
         
         return 0;
