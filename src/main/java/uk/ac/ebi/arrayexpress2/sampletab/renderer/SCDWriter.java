@@ -47,10 +47,8 @@ public class SCDWriter extends Writer {
         for (List<String> row : table) {
         	for (String value : row){
     			if (value != null){
-    			    //purge all stange characters
-    			    value = value.replace("\"", "");
-                    value = value.replace("\n", "");
-                    value = value.replace("\t", "");
+    			    value = SampleTabWriter.sanitize(value);
+                    
     				writer.write(value);
     			}
     	    	writer.write("\t");        		

@@ -78,6 +78,7 @@ public class MSIWriter extends Writer {
 		if (value != null) {
 			writer.write(heading);
 			writer.write("\t");
+            value = SampleTabWriter.sanitize(value);
 			writer.write(value);
 			writer.write("\n");
 		}
@@ -90,10 +91,7 @@ public class MSIWriter extends Writer {
 			for (String value : values) {
 				writer.write("\t");
 				if (value != null) {
-                    //purge all stange characters
-				    value = value.replace("\"", "");
-                    value = value.replace("\n", "");
-                    value = value.replace("\t", "");
+                    value = SampleTabWriter.sanitize(value);
 					writer.write(value);
 				}
 			}
