@@ -50,14 +50,14 @@ public class SampleTabWriter extends Writer {
     
     public static String sanitize(String value){
         //purge all strange characters not-quite-whitespace
-        //note, you can find these unicode codes by pasting the character into python
+        //note, you can find these unicode codes by pasting u"the character" into python
         value = value.replace("\"", "");
         value = value.replace("\n", "");
         value = value.replace("\t", "");
-        value = value.replaceAll("\u2009", " "); //thin space
-        value = value.replaceAll("\u00A0", " "); //non-breaking space
-        value = value.replaceAll("\uff09", ") "); //full-width right parenthesis
-        value = value.replaceAll("\uff08", " ("); //full-width left parenthesis
+        value = value.replace("\u2009", " "); //thin space
+        value = value.replace("\u00A0", " "); //non-breaking space
+        value = value.replace("\uff09", ") "); //full-width right parenthesis
+        value = value.replace("\uff08", " ("); //full-width left parenthesis
         return value;
     }
 }
