@@ -98,8 +98,11 @@ public class SampleNode extends AbstractSCDNode {
     public void setSampleAccession(String sampleAccession) {
         if (sampleAccession != null){
             sampleAccession = sampleAccession.trim();
-            if (sampleAccession.length() == 0)
+            if (sampleAccession.length() == 0) {
                 sampleAccession = null;
+            } else if (!sampleAccession.matches("SAM[EN]A?[0-9]+")){
+                throw new IllegalArgumentException(sampleAccession+" is not a valid sample accession");
+            }
         }
         this.sampleAccession = sampleAccession;
     }
