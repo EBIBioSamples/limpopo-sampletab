@@ -1,11 +1,15 @@
 package uk.ac.ebi.arrayexpress2.sampletab.parser;
 
+import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.io.StringWriter;
+import java.io.UnsupportedEncodingException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -36,7 +40,7 @@ import uk.ac.ebi.arrayexpress2.sampletab.renderer.SampleTabWriter;
 public class TestSampleTabParser extends TestCase {
     private SampleTabParser<SampleData> parser;
 
-    private URL resource;
+    private URL resource_dummy;
     private URL resource_broken;
     private URL resource_ae;
     private URL resource_corriel;
@@ -46,6 +50,8 @@ public class TestSampleTabParser extends TestCase {
     private URL resource_groups;
 
     private List<ErrorItem> errorItems;
+    
+    private Logger log = LoggerFactory.getLogger(getClass());
 
     public void setUp() {
         resource_ae = getClass().getClassLoader().getResource("GAE-MEXP-986/sampletab.pre.txt");
@@ -54,7 +60,7 @@ public class TestSampleTabParser extends TestCase {
         resource_dgva = getClass().getClassLoader().getResource("GVA-estd1/sampletab.pre.txt");
         resource_sra = getClass().getClassLoader().getResource("GEN-ERP001075/sampletab.pre.txt");
         
-        resource = getClass().getClassLoader().getResource("dummy/sampletab.txt");
+        resource_dummy = getClass().getClassLoader().getResource("dummy/sampletab.txt");
         resource_broken = getClass().getClassLoader().getResource("broken/sampletab.txt");
         resource_groups = getClass().getClassLoader().getResource("groups/sampletab.txt");
         parser = new SampleTabParser<SampleData>();
@@ -71,13 +77,40 @@ public class TestSampleTabParser extends TestCase {
         parser = null;
         errorItems = null;
     }
+    
+    public void testUTF8() {
+        try {
+            String input = "11° 53′ N, 15° 34′ W";
+            log.info(input);
+            byte[] bytes = null;
+            bytes = input.getBytes("ISO-8859-1");
+            
+            ByteArrayInputStream bytearrayinputstream = new ByteArrayInputStream(bytes);
+        
+            BufferedReader reader = new BufferedReader(new InputStreamReader(bytearrayinputstream, "UTF-8"));
+            
+
+            String line = reader.readLine();
+            while (line != null) {
+                log.info(line);
+                line = reader.readLine();
+            }
+            
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+            fail();
+        } catch (IOException e) {
+            e.printStackTrace();
+            fail();
+        }
+    }
 
     public void testParse() {
         SampleData st = null;
         try {
-            st = doParse(resource.openStream());
+            st = doParse(resource_dummy.openStream());
         } catch (ParseException e) {
-            e.printStackTrace();
+            log.error("failed to parse dummy resource", e);
             fail();
         } catch (IOException e) {
             e.printStackTrace();
@@ -89,13 +122,26 @@ public class TestSampleTabParser extends TestCase {
         assertNotSame("Node sampleA is not null", null, node);
         String dbname = null;
         SCDNodeAttribute dbattr = null;
+        String utf8key = null;
         for (SCDNodeAttribute attr : node.getAttributes()) {
-            if (attr.getAttributeType().equals("Database Name"))
+            //check database nane
+            if (attr.getAttributeType().equals("Database Name")){
                 dbattr = attr;
+            }
+            //check UTF-8
+            log.info(attr.getAttributeType());
+            if (attr.getAttributeType().equals("characteristic[UTF-8]")){
+                utf8key = attr.getAttributeValue();
+            }
         }
         assertNotSame("Attribute DatabaseName is not null", null, dbattr);
         dbname = dbattr.getAttributeValue();
         assertEquals("Check parsed DatabaseName", "bobdb", dbname);
+        
+
+        log.info(utf8key);
+        log.info("11° 53′ N, 15° 34′ W");
+        assertEquals("UTF-8 encoding test", "11° 53′ N, 15° 34′ W", utf8key);
         
         List<Publication> pubs = new ArrayList<Publication>();
         pubs.addAll(st.msi.publications);
@@ -107,6 +153,9 @@ public class TestSampleTabParser extends TestCase {
 
         // check submission reference layer handler
         assertSame("Submission Reference Layer", true, st.msi.submissionReferenceLayer);
+        
+        
+        
     }
     
     public void testGroups() {
@@ -115,7 +164,7 @@ public class TestSampleTabParser extends TestCase {
         try {
             st = doParse(resource_groups.openStream());
         } catch (ParseException e) {
-            e.printStackTrace();
+            log.error("failed to parse groups resource", e);
             fail();
         } catch (IOException e) {
             e.printStackTrace();
@@ -130,7 +179,7 @@ public class TestSampleTabParser extends TestCase {
         try {
             SampleData st = doParse(resource_ae.openStream());
         } catch (ParseException e) {
-            e.printStackTrace();
+            log.error("failed to parse AE resource", e);
             fail();
         } catch (IOException e) {
             e.printStackTrace();
@@ -143,7 +192,7 @@ public class TestSampleTabParser extends TestCase {
         try {
             st = doParse(resource_sra.openStream());
         } catch (ParseException e) {
-            e.printStackTrace();
+            log.error("failed to parse SRA resource", e);
             fail();
             return;
         } catch (IOException e) {
@@ -180,9 +229,9 @@ public class TestSampleTabParser extends TestCase {
     public void testParseBroken() {
         try {
             SampleData st = doParse(resource_broken.openStream());
+            log.error("parsed broken resource");
             fail(); // if exception not thrown
         } catch (ParseException e) {
-            System.out.println(e);
         } catch (IOException e) {
             e.printStackTrace();
             fail();
@@ -193,7 +242,7 @@ public class TestSampleTabParser extends TestCase {
         try {
             SampleData st = doParse(resource_corriel.openStream());
         } catch (ParseException e) {
-            e.printStackTrace();
+            log.error("failed to parse coriell resource", e);
             fail();
         } catch (IOException e) {
             e.printStackTrace();

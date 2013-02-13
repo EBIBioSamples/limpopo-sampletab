@@ -25,6 +25,6 @@ Database URI
 Database ID
 
 [SCD]
-Sample Name	Organism	Sample Name	Organism	Database Name	Database ID	Database URI	Child Of 
-childA	human	sampleA	also human	bobdb	bob101	www.bob.ac.uk/101	parentB
+Sample Name	Organism	Sample Name	Organism	Database Name	Database ID	Database URI	Child Of	Characteristic[UTF-8]
+childA	human	sampleA	also human	bobdb	bob101	www.bob.ac.uk/101	parentB	11° 53′ N, 15° 34′ W
 parentB	human			
