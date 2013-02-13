@@ -42,14 +42,17 @@ public class SCDWriter extends Writer {
         writer.write("[SCD]\n");
         List<List<String>> table;
         //need to ensure only one thread is doing this at a time
+        
         synchronized(SCDNodeFactory.class){
         	SCDTableBuilder tb = new SCDTableBuilder(scd.getRootNodes());
     		log.debug("Starting to assemble table...");
         	table = tb.getTable(); 
     		log.debug("Table assembled");
+    		
             //recreate the node factory to flush its internal cache
-            SCDNodeFactory.clear();
+    		SCDNodeFactory.clear();
         }
+        
         //now we can write to disk at leisure
         for (List<String> row : table) {
             for (String value : row){

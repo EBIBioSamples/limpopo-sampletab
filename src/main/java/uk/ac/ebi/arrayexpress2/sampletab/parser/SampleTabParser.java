@@ -6,9 +6,11 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.StringBufferInputStream;
+import java.io.UnsupportedEncodingException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.concurrent.Callable;
+import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
@@ -22,6 +24,7 @@ import uk.ac.ebi.arrayexpress2.magetab.listener.ProgressEvent;
 import uk.ac.ebi.arrayexpress2.magetab.listener.ProgressListener;
 import uk.ac.ebi.arrayexpress2.magetab.listener.ProgressListenerAdapter;
 import uk.ac.ebi.arrayexpress2.magetab.parser.AbstractParser;
+import uk.ac.ebi.arrayexpress2.magetab.utils.MAGETABUtils;
 import uk.ac.ebi.arrayexpress2.magetab.validator.Validator;
 import uk.ac.ebi.arrayexpress2.sampletab.converter.SampleTabConverter;
 import uk.ac.ebi.arrayexpress2.sampletab.datamodel.MSI;
@@ -36,6 +39,8 @@ public class SampleTabParser<O> extends AbstractParser<SampleData> {
 
     private final MSIParser msiParser;
     private final SCDParser scdParser;
+    
+    public static String DEFAULT_ENCODING = "UTF-8";
 
     public SampleTabParser() {
         this(null, null, null);
@@ -178,36 +183,30 @@ public class SampleTabParser<O> extends AbstractParser<SampleData> {
         scdParser.addProgressListener(scdListener);
 
         // trigger MSI read
-        // TODO replace this with true stream splitting, but need to make sure the parser doesnt close the underlying streams first 
-        StringBuffer msiBuffer = new StringBuffer();
-        StringBuffer scdBuffer = new StringBuffer();
-        StringBuffer buffer = null;
-        BufferedReader in = new BufferedReader(new InputStreamReader(dataIn));
+        
+        
+        String[][] msiData = null;
+        String[][] scdData = null;
         
         try {
-        	String line;
-	        while ((line = in.readLine()) != null) {
-	        		if (buffer == null && line.contains("[MSI]")){
-	        			buffer = msiBuffer;
-	        		} else if (buffer == msiBuffer && line.contains("[SCD]")){
-	        			buffer = scdBuffer;
-	        		} else if (buffer != null){
-	        			buffer.append(line);
-	        			buffer.append("\n");
-	        		}
-	        }
+            msiData = MAGETABUtils.readMergedTabDelimitedInputStream(dataIn, DEFAULT_ENCODING, isStrippingEscaping(), false, "[MSI]", "[SCD]");
+            scdData = MAGETABUtils.readMergedTabDelimitedInputStream(dataIn, DEFAULT_ENCODING, isStrippingEscaping(), false, "[MSI]", "[SCD]");
         } catch (IOException e) {
-            e.printStackTrace();
+            throw new ParseException("Problem parsing input stream", e);
         }
-        getLog().debug("read from source");
         
-        String msiString = msiBuffer.toString();
-        InputStream msiInput = new StringBufferInputStream(msiString);
-        readMSI(msiInput, target.msi, service, flag);
         
-        String scdString = scdBuffer.toString();
-        InputStream scdInput = new StringBufferInputStream(scdString);
-        readSCD(scdInput, target.scd, service, flag);
+        try {
+            msiParser.read(msiData, target.msi, service);
+        } catch (ExecutionException e) {
+            throw new ParseException("Problem executing MSI parser", e);
+        }
+        
+        try {
+            scdParser.read(scdData, target.scd, service);
+        } catch (ExecutionException e) {
+            throw new ParseException("Problem executing SCD parser", e);
+        }
         
 
         // we must not return until all tasks have been added -
