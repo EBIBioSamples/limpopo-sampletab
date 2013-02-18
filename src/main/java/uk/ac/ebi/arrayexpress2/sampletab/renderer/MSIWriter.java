@@ -103,6 +103,9 @@ public class MSIWriter extends Writer {
         throws IOException {
         if (organizations != null){
             List<Organization> orgs = new ArrayList<Organization>(new HashSet<Organization>(organizations));
+            while (orgs.contains(null)){
+                orgs.remove(null);
+            }
             writer.write("Organization Name\t");
             for (Organization org : orgs){
                 if (org.getName() != null){
@@ -150,6 +153,9 @@ public class MSIWriter extends Writer {
         throws IOException {
         if (persons != null){
             List<Person> pers = new ArrayList<Person>(new HashSet<Person>(persons));
+            while (pers.contains(null)){
+                pers.remove(null);
+            }
             writer.write("Person Last Name\t");
             for (Person per : pers){
                 if (per.getLastName() != null){
@@ -202,6 +208,9 @@ public class MSIWriter extends Writer {
             pubset.addAll(publications);
             List<Publication> pubs = new ArrayList<Publication>();
             pubs.addAll(pubset);
+            while (pubs.contains(null)){
+                pubs.remove(null);
+            }
             writer.write("Publication PubMed ID\t");
             for (Publication pub : pubs){
                 if (pub.getPubMedID() != null){
@@ -230,6 +239,9 @@ public class MSIWriter extends Writer {
                 if (!tss.contains(ts)){
                     tss.add(ts);
                 }
+            }
+            while (tss.contains(null)){
+                tss.remove(null);
             }
             
 	        writer.write("Term Source Name\t");
@@ -267,6 +279,9 @@ public class MSIWriter extends Writer {
         throws IOException {
         if (databases != null){
             List<Database> dbs = new ArrayList<Database>(new HashSet<Database>(databases));
+            while (dbs.contains(null)){
+                dbs.remove(null);
+            }
             writer.write("Database Name\t");
             for (Database db : dbs){
                 if (db.getName() != null){
