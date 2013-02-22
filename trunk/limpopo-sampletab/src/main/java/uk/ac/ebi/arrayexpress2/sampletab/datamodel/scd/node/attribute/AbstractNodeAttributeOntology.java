@@ -9,6 +9,9 @@ public abstract class AbstractNodeAttributeOntology extends AbstractNodeAttribut
     }
 
     public void setTermSourceREF(String termSourceREF) {
+        if (termSourceREF.length() == 0){
+            termSourceREF = null;
+        }
         this.termSourceREF = termSourceREF;
     }
 
@@ -17,6 +20,9 @@ public abstract class AbstractNodeAttributeOntology extends AbstractNodeAttribut
     }
 
     public void setTermSourceID(String termSourceID) {
+        if (termSourceID.length() == 0){
+            termSourceID = null;
+        }
         this.termSourceID = termSourceID;
     }
     

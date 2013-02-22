@@ -79,13 +79,13 @@ public class CharacteristicAttributeReader implements SCDAttributeReader {
                             UnitAttribute unit = new UnitAttribute();
                             unit.setAttributeValue(data[i]);
                             unit.type = unit_type;
-                        	/*
+                        	
                             for (int j = i + 1; j < data.length; j++) {
                                 if (header[j].equals("termsourceref")) {
-                                    unit.termSourceREF = data[j];
+                                    unit.setTermSourceREF(data[j]);
                                 }
                                 else if (header[j].equals("termsourceid")) {
-                                    unit.termSourceID = data[j];
+                                    unit.setTermSourceID(data[j]);
                                 }
                                 else if (header[i + 1].equals("")) {
                                     // skip the case where the header is an empty string
@@ -97,7 +97,7 @@ public class CharacteristicAttributeReader implements SCDAttributeReader {
                                 // update i to j
                                 i = j;
                             }
-							*/
+							
                             // and set the unit
                             attribute.unit = unit;
                         }
