@@ -214,16 +214,4 @@
 			</plugin>
 		</plugins>
 	</build>
-	<distributionManagement>
-		<repository>
-			<id>coconut.ebi.ac.uk-releases</id>
-			<name>coconut.ebi.ac.uk-releases</name>
-			<url>http://coconut.ebi.ac.uk:8081/artifactory/local-repo</url>
-		</repository>
-		<snapshotRepository>
-			<id>coconut.ebi.ac.uk-snapshots</id>
-			<name>coconut.ebi.ac.uk-snapshots</name>
-			<url>http://coconut.ebi.ac.uk:8081/artifactory/local-repo</url>
-		</snapshotRepository>
-	</distributionManagement>
 </project>
