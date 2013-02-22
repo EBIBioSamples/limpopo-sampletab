@@ -32,6 +32,8 @@ import uk.ac.ebi.arrayexpress2.sampletab.datamodel.msi.TermSource;
 import uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node.GroupNode;
 import uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node.SCDNode;
 import uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node.SampleNode;
+import uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node.attribute.AbstractNodeAttributeOntology;
+import uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node.attribute.CharacteristicAttribute;
 import uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node.attribute.DatabaseAttribute;
 import uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node.attribute.OrganismAttribute;
 import uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node.attribute.SCDNodeAttribute;
@@ -149,11 +151,20 @@ public class TestSampleTabParser extends TestCase {
         
         Set<TermSource> tss = new HashSet<TermSource>();
         tss.addAll(st.msi.termSources);
-        assertEquals("Check term source similarity", 1, tss.size());
+        assertEquals("Check term source similarity", 2, tss.size());
 
         // check submission reference layer handler
         assertSame("Submission Reference Layer", true, st.msi.submissionReferenceLayer);
         
+        //check that unit ontology terms is correct
+        SCDNode sampleA = st.scd.getNode("sampleA", SampleNode.class);
+        for (SCDNodeAttribute attr : sampleA.getAttributes()) {
+            if (attr.getAttributeType().equals("characteristic[Age]")){
+                CharacteristicAttribute a = (CharacteristicAttribute) attr;
+                assertEquals("Characteristic[Age] TermSourceRef", null, a.getTermSourceREF());
+                assertEquals("Characteristic[Age] unit TermSourceRef", "EFO", a.unit.getTermSourceREF());
+            }
+        }
         
         
     }

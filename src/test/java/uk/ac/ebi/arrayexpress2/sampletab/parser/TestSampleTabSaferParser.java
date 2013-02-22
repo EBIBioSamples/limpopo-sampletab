@@ -1,10 +1,7 @@
 package uk.ac.ebi.arrayexpress2.sampletab.parser;
 
-import java.io.BufferedWriter;
-import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.OutputStreamWriter;
 import java.io.StringWriter;
 import java.net.URL;
 import java.util.ArrayList;
@@ -14,14 +11,10 @@ import java.util.Set;
 
 import junit.framework.TestCase;
 
-import org.mged.magetab.error.ErrorCode;
 import org.mged.magetab.error.ErrorItem;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import uk.ac.ebi.arrayexpress2.magetab.datamodel.graph.UnresolvedPlaceholderNode;
 import uk.ac.ebi.arrayexpress2.magetab.exception.ParseException;
-import uk.ac.ebi.arrayexpress2.magetab.listener.ErrorItemListener;
 import uk.ac.ebi.arrayexpress2.sampletab.datamodel.SampleData;
 import uk.ac.ebi.arrayexpress2.sampletab.datamodel.msi.Publication;
 import uk.ac.ebi.arrayexpress2.sampletab.datamodel.msi.TermSource;
@@ -45,8 +38,6 @@ public class TestSampleTabSaferParser extends TestCase {
     private URL resource_sra;
     private URL resource_groups;
 
-    private List<ErrorItem> errorItems;
-
     public void setUp() {
         resource_ae = getClass().getClassLoader().getResource("GAE-MEXP-986/sampletab.pre.txt");
         resource_corriel = getClass().getClassLoader().getResource("GCR-autism/sampletab.pre.txt");
@@ -63,7 +54,6 @@ public class TestSampleTabSaferParser extends TestCase {
 
     public void tearDown() {
         parser = null;
-        errorItems = null;
     }
 
     public void testParse() {
@@ -97,7 +87,7 @@ public class TestSampleTabSaferParser extends TestCase {
         
         Set<TermSource> tss = new HashSet<TermSource>();
         tss.addAll(st.msi.termSources);
-        assertEquals("Check term source similarity", 1, tss.size());
+        assertEquals("Check term source similarity", 2, tss.size());
 
         // check submission reference layer handler
         assertSame("Submission Reference Layer", true, st.msi.submissionReferenceLayer);

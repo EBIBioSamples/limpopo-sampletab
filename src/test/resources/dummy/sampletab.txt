@@ -25,6 +25,6 @@ Database URI
 Database ID											
 											
 [SCD]											
-Sample Name	Organism	Sample Name	Organism	Characteristic[Age]	Unit[Time Unit]	Term Source REF	Term Source ID	Database Name	Database ID	Database URI	Child Of 
-childA	human	sampleA	also human	68	year	EFO	http://www.ebi.ac.uk/efo/EFO_0001725	bobdb	bob101	www.bob.ac.uk/101	parentB
+Sample Name	Organism	Sample Name	Organism	Characteristic[Age]	Unit[Time Unit]	Term Source REF	Term Source ID	Characteristic[UTF-8]	Database Name	Database ID	Database URI	Child Of 
+childA	human	sampleA	also human	68	year	EFO	http://www.ebi.ac.uk/efo/EFO_0001725	11° 53′ N, 15° 34′ W	bobdb	bob101	www.bob.ac.uk/101	parentB
 parentB	human										
