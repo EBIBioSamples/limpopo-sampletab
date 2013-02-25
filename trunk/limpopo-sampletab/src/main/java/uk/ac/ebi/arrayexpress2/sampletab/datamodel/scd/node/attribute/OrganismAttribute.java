@@ -1,5 +1,6 @@
 package uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node.attribute;
 
+import uk.ac.ebi.arrayexpress2.sampletab.datamodel.msi.TermSource;
 import uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node.attribute.AbstractNamedAttribute ;
 
 public class OrganismAttribute extends AbstractNamedAttribute {
@@ -13,6 +14,12 @@ public class OrganismAttribute extends AbstractNamedAttribute {
     public OrganismAttribute(String taxname, String termsourceref, Integer termsourceid) {
         super(taxname);
         this.setTermSourceREF(termsourceref);
+        this.setTermSourceID(termsourceid.toString());
+    }
+    
+    public OrganismAttribute(String taxname, TermSource termsource, Integer termsourceid) {
+        super(taxname);
+        this.setTermSourceREF(termsource.getName());
         this.setTermSourceID(termsourceid.toString());
     }
 

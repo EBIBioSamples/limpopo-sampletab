@@ -39,7 +39,7 @@ public class SampleTabParser<O> extends AbstractParser<SampleData> {
     public static String DEFAULT_ENCODING = "UTF-8";
 
     public SampleTabParser() {
-        this(null, null, null);
+        this(null, null, (O[]) null);
     }
     
     public SampleTabParser(O... outputResources) {
