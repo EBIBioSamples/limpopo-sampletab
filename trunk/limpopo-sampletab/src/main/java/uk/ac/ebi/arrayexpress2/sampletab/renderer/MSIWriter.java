@@ -48,7 +48,7 @@ public class MSIWriter extends Writer {
 	public void write(MSI msi) throws IOException {
 		writer.write("[MSI]\n");
 		writeSingleField("Submission Title", msi.submissionTitle);
-		if(msi.submissionIdentifier == null || msi.submissionIdentifier.trim().length() == 0){
+		if(msi.submissionIdentifier == null || msi.submissionIdentifier.trim().length() == 0) {
 		    log.error("Submission Identifier is invalid");
 		}
 		writeSingleField("Submission Identifier", msi.submissionIdentifier);
@@ -101,46 +101,46 @@ public class MSIWriter extends Writer {
     
     public void writeOrganizations(Collection<Organization> organizations)
         throws IOException {
-        if (organizations != null){
+        if (organizations != null && organizations.size() > 0) {
             List<Organization> orgs = new ArrayList<Organization>(new HashSet<Organization>(organizations));
-            while (orgs.contains(null)){
+            while (orgs.contains(null)) {
                 orgs.remove(null);
             }
             writer.write("Organization Name\t");
-            for (Organization org : orgs){
-                if (org.getName() != null){
+            for (Organization org : orgs) {
+                if (org.getName() != null) {
                     writer.write(org.getName());
                 }
                 writer.write("\t");
             }
             writer.write("\n");
             writer.write("Organization Address\t");
-            for (Organization org : orgs){
-                if (org.getAddress() != null){
+            for (Organization org : orgs) {
+                if (org.getAddress() != null) {
                     writer.write(org.getAddress());
                 }
                 writer.write("\t");
             }
             writer.write("\n");
             writer.write("Organization URI\t");
-            for (Organization org : orgs){
-                if (org.getURI() != null){
+            for (Organization org : orgs) {
+                if (org.getURI() != null) {
                     writer.write(org.getURI());
                 }
                 writer.write("\t");
             }
             writer.write("\n");
             writer.write("Organization Email\t");
-            for (Organization org : orgs){
-                if (org.getEmail() != null){
+            for (Organization org : orgs) {
+                if (org.getEmail() != null) {
                     writer.write(org.getEmail());
                 }
                 writer.write("\t");
             }
             writer.write("\n");
             writer.write("Organization Role\t");
-            for (Organization org : orgs){
-                if (org.getRole() != null){
+            for (Organization org : orgs) {
+                if (org.getRole() != null) {
                     writer.write(org.getRole());
                 }
                 writer.write("\t");
@@ -151,46 +151,46 @@ public class MSIWriter extends Writer {
 
     public void writePersons(Collection<Person> persons)
         throws IOException {
-        if (persons != null){
+        if (persons != null && persons.size() > 0) {
             List<Person> pers = new ArrayList<Person>(new HashSet<Person>(persons));
             while (pers.contains(null)){
                 pers.remove(null);
             }
             writer.write("Person Last Name\t");
-            for (Person per : pers){
-                if (per.getLastName() != null){
+            for (Person per : pers) {
+                if (per.getLastName() != null) {
                     writer.write(per.getLastName());
                 }
                 writer.write("\t");
             }
             writer.write("\n");
             writer.write("Person Initials\t");
-            for (Person per : pers){
-                if (per.getInitials() != null){
+            for (Person per : pers) {
+                if (per.getInitials() != null) {
                     writer.write(per.getInitials());
                 }
                 writer.write("\t");
             }
             writer.write("\n");
             writer.write("Person First Name\t");
-            for (Person per : pers){
-                if (per.getFirstName() != null){
+            for (Person per : pers) {
+                if (per.getFirstName() != null) {
                     writer.write(per.getFirstName());
                 }
                 writer.write("\t");
             }
             writer.write("\n");
             writer.write("Person Email\t");
-            for (Person per : pers){
-                if (per.getEmail() != null){
+            for (Person per : pers) {
+                if (per.getEmail() != null) {
                     writer.write(per.getEmail());
                 }
                 writer.write("\t");
             }
             writer.write("\n");
             writer.write("Person Role\t");
-            for (Person per : pers){
-                if (per.getRole() != null){
+            for (Person per : pers) {
+                if (per.getRole() != null) {
                     writer.write(per.getRole());
                 }
                 writer.write("\t");
@@ -201,7 +201,7 @@ public class MSIWriter extends Writer {
     
     public void writePublications(Collection<Publication> publications)
         throws IOException {
-        if (publications != null){
+        if (publications != null && publications.size() > 0) {
             //convert to hashset to remove duplicates
             //convert back so it has consistent order
             Set<Publication> pubset = new HashSet<Publication>();
@@ -232,29 +232,29 @@ public class MSIWriter extends Writer {
 	
 	public void writeTermSources(Collection<TermSource> termsources)
         throws IOException {
-	    if (termsources != null){
+	    if (termsources != null && termsources.size() > 0) {
             //remove duplicates with consistent order
             List<TermSource> tss = new ArrayList<TermSource>();
-            for (TermSource ts : termsources){
-                if (!tss.contains(ts)){
+            for (TermSource ts : termsources) {
+                if (!tss.contains(ts)) {
                     tss.add(ts);
                 }
             }
-            while (tss.contains(null)){
+            while (tss.contains(null)) {
                 tss.remove(null);
             }
             
 	        writer.write("Term Source Name\t");
-	        for (TermSource ts : tss){
-                if (ts.getName() != null && ts.getName().trim().length() > 0){
+	        for (TermSource ts : tss) {
+                if (ts.getName() != null && ts.getName().trim().length() > 0) {
                     writer.write(ts.getName());
                     writer.write("\t");
                 }
 	        }
             writer.write("\n");
             writer.write("Term Source URI\t");
-            for (TermSource ts : tss){
-                if (ts.getName() != null && ts.getName().trim().length() > 0){
+            for (TermSource ts : tss) {
+                if (ts.getName() != null && ts.getName().trim().length() > 0) {
                     if (ts.getURI() != null){
                         writer.write(ts.getURI());
                     }
@@ -263,8 +263,8 @@ public class MSIWriter extends Writer {
             }
             writer.write("\n");
             writer.write("Term Source Version\t");
-            for (TermSource ts : tss){
-                if (ts.getName() != null && ts.getName().trim().length() > 0){
+            for (TermSource ts : tss) {
+                if (ts.getName() != null && ts.getName().trim().length() > 0) {
                     if (ts.getVersion() != null){
                         writer.write(ts.getVersion());
                     }
@@ -277,30 +277,30 @@ public class MSIWriter extends Writer {
     
     public void writeDatabases(Collection<Database> databases)
         throws IOException {
-        if (databases != null){
+        if (databases != null && databases.size() > 0) {
             List<Database> dbs = new ArrayList<Database>(new HashSet<Database>(databases));
-            while (dbs.contains(null)){
+            while (dbs.contains(null)) {
                 dbs.remove(null);
             }
             writer.write("Database Name\t");
-            for (Database db : dbs){
-                if (db.getName() != null){
+            for (Database db : dbs) {
+                if (db.getName() != null) {
                     writer.write(db.getName());
                 }
                 writer.write("\t");
             }
             writer.write("\n");
             writer.write("Database ID\t");
-            for (Database db : dbs){
-                if (db.getID() != null){
+            for (Database db : dbs) {
+                if (db.getID() != null) {
                     writer.write(db.getID());
                 }
                 writer.write("\t");
             }
             writer.write("\n");
             writer.write("Database URI\t");
-            for (Database db : dbs){
-                if (db.getURI() != null){
+            for (Database db : dbs) {
+                if (db.getURI() != null) {
                     writer.write(db.getURI());
                 }
                 writer.write("\t");
