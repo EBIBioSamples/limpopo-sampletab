@@ -3,7 +3,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<artifactId>limpopo-sampletab</artifactId>
-	<version>1.1.3</version>
+	<version>1.1.4-SNAPSHOT</version>
 	<name>Limpopo SampleTab</name>
 	<description>Limopop parser extension for SampleTab file format</description>
 	<groupId>uk.ac.ebi.arrayexpress2</groupId>
@@ -52,7 +52,7 @@
 		<dependency>
 			<groupId>uk.ac.ebi.arrayexpress2</groupId>
 			<artifactId>limpopo</artifactId>
-			<version>1.1.3</version>
+			<version>1.1.4-SNAPSHOT</version>
 			<exclusions>
 				<exclusion>
 					<groupId>org.isatools</groupId>
@@ -138,35 +138,24 @@
 	</licenses>
 
 	<!-- Maven repository deploy -->
-	<distributionManagement>
-		<downloadUrl>http://limpopo.sourceforge.net/maven/repo</downloadUrl>
-		<repository>
-			<id>limpopo-repo</id>
-			<name>Limpopo Mini-SF Repository</name>
-			<url>
+    <distributionManagement>
+        <repository>
+            <id>limpopo-repo</id>
+            <name>Limpopo Mini-SF Repository</name>
+            <url>
                 scp://shell.sourceforge.net/home/project-web/limpopo/htdocs/maven/repo
             </url>
-		</repository>
-<!-- 		<snapshotRepository> -->
-<!-- 			<id>limpopo-repo</id> -->
-<!-- 			<name>Limpopo Mini-SF Repository</name> -->
-<!-- 			<url> -->
-<!--                 scp://shell.sourceforge.net/home/project-web/limpopo/htdocs/maven/repo -->
-<!--             </url> -->
-<!-- 		</snapshotRepository> -->
-		<snapshotRepository>
-			<id>coconut.ebi.ac.uk-snapshots</id>
-			<name>Coconut Snapshot Repository</name>
-			<url>
-                http://coconut.ebi.ac.uk:8081/artifactory/local-repo/
-            </url>
-		</snapshotRepository>
-		<site>
-			<id>limpopo.sf.net</id>
-			<url>scp://shell.sourceforge.net/home/project-web/limpopo/htdocs/sampletab</url>
-		</site>
-	</distributionManagement>
-
+        </repository>
+        <snapshotRepository>
+            <id>coconut.ebi.ac.uk-snapshots</id>
+            <name>coconut.ebi.ac.uk-snapshots</name>
+            <url>http://coconut.ebi.ac.uk:8081/artifactory/local-repo</url>
+        </snapshotRepository>
+        <site>
+            <id>limpopo.sf.net</id>
+            <url>scp://shell.sourceforge.net/home/project-web/limpopo/htdocs/sampletab</url>
+        </site>
+    </distributionManagement>
 
 	<developers>
 		<developer>
