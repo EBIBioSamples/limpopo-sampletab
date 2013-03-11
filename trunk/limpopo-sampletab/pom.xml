@@ -14,6 +14,12 @@
 	</scm>
 	<url>http://limpopo.sourceforge.net</url>
 
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.build.resourceEncoding>UTF-8</project.build.resourceEncoding>
+		<maven.compile.encoding>UTF-8</maven.compile.encoding>
+	</properties>	
+	
 	<repositories>
 		<repository>
 			<id>ebi-repo</id>
@@ -182,6 +188,7 @@
 					<fork>true</fork>
 					<source>1.5</source>
 					<target>1.5</target>  <!-- may need to be 1.7 eventually -->
+					<encoding>utf-8</encoding>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -201,6 +208,16 @@
 					</execution>
 				</executions>
 			</plugin>
+			
+      <plugin>
+	      <groupId>org.apache.maven.plugins</groupId>
+	      <artifactId>maven-surefire-plugin</artifactId>
+	      <version>2.14</version>
+	      <configuration>
+					<argLine>-Dfile.encoding=UTF-8 -Xms512m -Xmx2G -XX:PermSize=128m -XX:MaxPermSize=1G</argLine>					      
+	      </configuration>
+      </plugin>
+      			
 		</plugins>
         <extensions>
             <!-- Enabling the use of SCP -->
