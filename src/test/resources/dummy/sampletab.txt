@@ -1,5 +1,5 @@
 [MSI]											
-Submission Title	"something is a dummy"										
+Submission Title	This is a dummy title										
 Submission Identifier	AnIdent										
 Submission Description											
 Submission Version	1.0										
@@ -16,7 +16,7 @@ Person First Name
 Person Email											
 Person Role											
 Publication DOI	doi										
-Publication PubMed ID	666										
+Publication PubMed ID	22096232										
 Term Source Name	The MGED Ontology	The MGED Ontology	EFO								
 Term Source URI	http://mged.sourceforge.net/ontologies/MGEDontology.php	http://mged.sourceforge.net/ontologies/MGEDontology.php	http://www.ebi.ac.uk/efo/								
 Term Source Version			2.23								
@@ -26,5 +26,5 @@ Database ID
 											
 [SCD]											
 Sample Name	Organism	Sample Name	Organism	Characteristic[Age]	Unit[Time Unit]	Term Source REF	Term Source ID	Characteristic[UTF-8]	Database Name	Database ID	Database URI	Child Of 
-childA	human	sampleA	also human	68	year	EFO	http://www.ebi.ac.uk/efo/EFO_0001725	11° 53′ N, 15° 34′ W	bobdb	bob101	www.bob.ac.uk/101	parentB
+childA	human	sampleA	also human	68	year	EFO	http://www.ebi.ac.uk/efo/EFO_0001725	11° 53′ N, 15° 34′ W	test	test101	www.test.ac.uk/101	parentB
 parentB	human										

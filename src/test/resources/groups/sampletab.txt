@@ -1,5 +1,5 @@
 [MSI]
-Submission Title	"something is a dummy"
+Submission Title	This is a dummy title
 Submission Identifier	AnIdent
 Submission Description	
 Submission Version	1.0
@@ -16,7 +16,7 @@ Person First Name
 Person Email
 Person Role
 Publication DOI	doi
-Publication PubMed ID	666
+Publication PubMed ID	22096232
 Term Source Name	The MGED Ontology	The MGED Ontology
 Term Source URI	http://mged.sourceforge.net/ontologies/MGEDontology.php	http://mged.sourceforge.net/ontologies/MGEDontology.php
 Term Source Version
@@ -25,16 +25,16 @@ Database URI
 Database ID
 
 [SCD]
-Sample Name	Organism	Group Name 
-A	Homo sapiens	1
-B	Homo sapiens	1
-C	Homo sapiens	1
-D	Homo sapiens	1
+Sample Name	Organism	Group Name	Count Comment[test]
+A	Homo sapiens	1		test
+B	Homo sapiens	1		test
+C	Homo sapiens	1		test
+D	Homo sapiens	1		test
 E	Homo sapiens	2
 F	Homo sapiens	2
 G	Homo sapiens	2
 H	Homo sapiens	2
 I	Homo sapiens	2
-J	Homo sapiens	3
-		4
+J	Homo sapiens	3		test
+		4	5	test
 		

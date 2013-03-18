@@ -1,5 +1,5 @@
 [MSI]
-Submission Title	dummy
+Submission Title	This is a dummy title
 Submission Identifier	
 Submission Description	
 Submission Version	1.0
@@ -26,5 +26,5 @@ Database ID
 
 [SCD]
 Sample Name	Organism	Sample Name	Organism	
-parentA	human	childA	also human	bobdb	bob101	www.bob.ac.uk/101
+parentA	human	childA	also human	test	test101	www.test.ac.uk/101
 nonparentB	human			
