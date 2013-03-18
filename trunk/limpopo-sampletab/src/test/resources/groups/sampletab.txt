@@ -25,7 +25,7 @@ Database URI
 Database ID
 
 [SCD]
-Sample Name	Organism	Group Name	Count Comment[test]
+Sample Name	Organism	Group Name	Count	Comment[test]
 A	Homo sapiens	1		test
 B	Homo sapiens	1		test
 C	Homo sapiens	1		test
