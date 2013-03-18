@@ -5,13 +5,13 @@ Submission Description
 Submission Version	1.0										
 Submission Reference Layer	true										
 Submission Release Date	2100/04/01										
-Organization Name											
-Organization Address											
-Organization URI											
-Organization Email											
-Organization Role											
-Person Last Name											
-Person Initials											
+Organization Name	Test Inc										
+Organization Address	test road										
+Organization URI	www.test.com										
+Organization Email	test@test.com										
+Organization Role	tester										
+Person Last Name	Other										
+Person Initials		A. N.									
 Person First Name											
 Person Email											
 Person Role											
@@ -20,9 +20,9 @@ Publication PubMed ID	22096232
 Term Source Name	The MGED Ontology	The MGED Ontology	EFO								
 Term Source URI	http://mged.sourceforge.net/ontologies/MGEDontology.php	http://mged.sourceforge.net/ontologies/MGEDontology.php	http://www.ebi.ac.uk/efo/								
 Term Source Version			2.23								
-Database Name											
-Database URI											
-Database ID											
+Database Name	test										
+Database URI	www.test.ac.uk/101										
+Database ID	test101										
 											
 [SCD]											
 Sample Name	Organism	Sample Name	Organism	Characteristic[Age]	Unit[Time Unit]	Term Source REF	Term Source ID	Characteristic[UTF-8]	Database Name	Database ID	Database URI	Child Of 

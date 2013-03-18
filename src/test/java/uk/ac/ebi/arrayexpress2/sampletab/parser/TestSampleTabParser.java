@@ -138,7 +138,7 @@ public class TestSampleTabParser extends TestCase {
         }
         assertNotSame("Attribute DatabaseName is not null", null, dbattr);
         dbname = dbattr.getAttributeValue();
-        assertEquals("Check parsed DatabaseName", "bobdb", dbname);
+        assertEquals("Check parsed DatabaseName", "test", dbname);
         
 
         log.info(utf8key);
@@ -147,7 +147,7 @@ public class TestSampleTabParser extends TestCase {
         
         List<Publication> pubs = new ArrayList<Publication>();
         pubs.addAll(st.msi.publications);
-        assertEquals("Check PubMedID", "666", pubs.get(0).getPubMedID());
+        assertEquals("Check PubMedID", "22096232", pubs.get(0).getPubMedID());
         
         Set<TermSource> tss = new HashSet<TermSource>();
         tss.addAll(st.msi.termSources);
