@@ -22,6 +22,8 @@ import uk.ac.ebi.arrayexpress2.sampletab.datamodel.msi.Publication;
 import uk.ac.ebi.arrayexpress2.sampletab.datamodel.msi.TermSource;
 import uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node.SCDNode;
 import uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node.attribute.AbstractNodeAttributeOntology;
+import uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node.attribute.CharacteristicAttribute;
+import uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node.attribute.CommentAttribute;
 import uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node.attribute.DatabaseAttribute;
 import uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node.attribute.SCDNodeAttribute;
 
@@ -63,13 +65,43 @@ public class SampleTabValidator extends AbstractValidator<SampleData> {
         Set<String> usedTsNames = new HashSet<String>();
         for (SCDNode scdnode : sampledata.scd.getAllNodes()){
             for (SCDNodeAttribute attr : scdnode.getAttributes()){
-                if (AbstractNodeAttributeOntology.class.isInstance(attr)){
+                //need to cast attribute to one that has an ontology term attached
+                if (AbstractNodeAttributeOntology.class.isInstance(attr)) {
                     AbstractNodeAttributeOntology attrOnt = (AbstractNodeAttributeOntology) attr;
                     //if this attribute has a term source at all
-                    if (attrOnt.getTermSourceREF() != null && attrOnt.getTermSourceREF().trim().length() > 0){
+                    if (attrOnt.getTermSourceREF() != null 
+                            && attrOnt.getTermSourceREF().trim().length() > 0){
                         //add it to the pool
                         usedTsNames.add(attrOnt.getTermSourceREF().trim());
                     }
+                }
+                //check for ontologies used by units
+                if (CommentAttribute.class.isInstance(attr)) {
+                    CommentAttribute comm = (CommentAttribute) attr;
+                    if (comm.unit != null) {
+
+                        //if this attribute has a term source at all
+                        if (comm.unit.getTermSourceREF() != null 
+                                && comm.unit.getTermSourceREF().trim().length() > 0) {
+                            //add it to the pool
+                            usedTsNames.add(comm.unit.getTermSourceREF().trim());
+                            log.info("Found unit Term Source REF "+comm.unit.getTermSourceREF());
+                        }
+                    }
+                    
+                } else if (CharacteristicAttribute.class.isInstance(attr)) {
+                    CharacteristicAttribute charatt = (CharacteristicAttribute) attr;
+                    if (charatt.unit != null) {
+
+                        //if this attribute has a term source at all
+                        if (charatt.unit.getTermSourceREF() != null 
+                                && charatt.unit.getTermSourceREF().trim().length() > 0) {
+                            //add it to the pool
+                            usedTsNames.add(charatt.unit.getTermSourceREF().trim());
+                            log.info("Found unit Term Source REF "+charatt.unit.getTermSourceREF());
+                        }
+                    }
+                    
                 }
             }
         }
@@ -143,8 +175,8 @@ public class SampleTabValidator extends AbstractValidator<SampleData> {
                 if (AbstractNodeAttributeOntology.class.isInstance(attr)){
                     AbstractNodeAttributeOntology attrOnt = (AbstractNodeAttributeOntology) attr;
 
-                    if (attrOnt.getTermSourceREF() != null && attrOnt.getTermSourceREF().trim().length() > 0){
-                        if (attrOnt.getTermSourceID() == null || attrOnt.getTermSourceID().trim().length() == 0){
+                    if (attrOnt.getTermSourceREF() != null && attrOnt.getTermSourceREF().trim().length() > 0) {
+                        if (attrOnt.getTermSourceID() == null || attrOnt.getTermSourceID().trim().length() == 0) {
                             errors.add(getErrorItemFromCode(attrOnt.getTermSourceREF()+" : "+attrOnt.getAttributeValue(), 1538));
                         }
                     }
