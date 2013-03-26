@@ -38,12 +38,12 @@ public class SCDWriter extends Writer {
 	public void write(char[] cbuf, int off, int len) throws IOException {
 	}
 
-    public void write(SCD scd) throws IOException{
+    public void write(SCD scd) throws IOException {
         writer.write("[SCD]\n");
         List<List<String>> table;
         //need to ensure only one thread is doing this at a time
         
-        synchronized(SCDNodeFactory.class){
+        synchronized(SCDNodeFactory.class) {
         	SCDTableBuilder tb = new SCDTableBuilder(scd.getRootNodes());
     		log.debug("Starting to assemble table...");
         	table = tb.getTable(); 
@@ -55,8 +55,8 @@ public class SCDWriter extends Writer {
         
         //now we can write to disk at leisure
         for (List<String> row : table) {
-            for (String value : row){
-                if (value != null){
+            for (String value : row) {
+                if (value != null) {
                     value = SampleTabWriter.sanitize(value);
                     
                     writer.write(value);
