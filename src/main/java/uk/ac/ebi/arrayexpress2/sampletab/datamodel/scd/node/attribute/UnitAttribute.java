@@ -14,6 +14,16 @@ public class UnitAttribute extends AbstractNodeAttributeOntology {
             return "unit[" + type + "]";
         }
     }
+    
+    public UnitAttribute() {
+        super();
+    }
+    
+    public UnitAttribute(String value) {
+        this();
+        this.type = null;
+        this.setAttributeValue(value);
+    }
 
     public String[] headers() {
         List<String> headersList = new ArrayList<String>();
