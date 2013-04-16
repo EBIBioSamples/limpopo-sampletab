@@ -85,12 +85,23 @@ public class SampleTabParser<O> extends AbstractParser<SampleData> {
     }
 
     public SampleData parse(URL msiURL) throws ParseException {
+        InputStream is = null;
+        SampleData sd = null;
         try {
-            return parse(msiURL.openStream());
-        }
-        catch (IOException e) {
+            is = msiURL.openStream();
+            sd = parse(is);
+        } catch (IOException e) {
             throw new ParseException("Could not open a connection to " + msiURL.toString(), e);
+        } finally {
+            if (is != null) {
+                try {
+                    is.close();
+                } catch (IOException e) {
+                    //do nothing
+                }
+            }
         }
+        return sd;
     }
     
     public SampleData parse(String filename) throws ParseException {
