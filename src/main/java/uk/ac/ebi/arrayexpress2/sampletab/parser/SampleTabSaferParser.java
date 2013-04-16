@@ -39,28 +39,38 @@ public class SampleTabSaferParser {
             }
         });
     }
+    
+    public synchronized SampleData parse(String filename) throws ParseException {
+        log.debug("Starting parsing "+filename+"...");
+        return parse(new File(filename));
+    }
 
     public synchronized SampleData parse(File msiFile) throws ParseException {
         try {
             return parse(msiFile.toURI().toURL());
-        }
-        catch (MalformedURLException e) {
+        } catch (MalformedURLException e) {
             throw new ParseException("File '" + msiFile.getAbsolutePath() + " could not be resolved to a valid URL", e);
         }
     }
 
     public synchronized SampleData parse(URL msiURL) throws ParseException {
+        SampleData sd = null;
+        InputStream is = null;
         try {
-            return parse(msiURL.openStream());
-        }
-        catch (IOException e) {
+            is = msiURL.openStream();
+            sd = parse(is);
+        } catch (IOException e) {
             throw new ParseException("Could not open a connection to " + msiURL.toString(), e);
+        } finally {
+            if (is != null) {
+                try {
+                    is.close();
+                } catch (IOException e) {
+                    //do nothing
+                }
+            }
         }
-    }
-    
-    public synchronized SampleData parse(String filename) throws ParseException {
-        log.debug("Starting parsing "+filename+"...");
-        return parse(new File(filename));
+        return sd;
     }
     
     public synchronized SampleData parse(InputStream dataIn) throws ParseException {
@@ -80,16 +90,13 @@ public class SampleTabSaferParser {
             if (errorItems.size() > 0){
                 throw new ParseException(true, errorItems.size()+" error items detected", errorItems.toArray(new ErrorItem[]{}));
             }
-        }
-        catch (InterruptedException e) {
+        } catch (InterruptedException e) {
             throw new ParseException("Parsing was interrupted", e);
-        }
-        finally {
+        } finally {
             service.shutdown();
             try {
                 service.awaitTermination(Integer.MAX_VALUE, TimeUnit.SECONDS);
-            }
-            catch (InterruptedException e) {
+            } catch (InterruptedException e) {
                 // take drastic measures to terminate
                 log.warn("Service shutdown was interrupted, forcing termination");
                 service.shutdownNow();
