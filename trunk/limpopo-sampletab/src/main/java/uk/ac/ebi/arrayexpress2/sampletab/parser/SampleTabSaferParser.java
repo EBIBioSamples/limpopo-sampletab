@@ -54,12 +54,12 @@ public class SampleTabSaferParser {
     }
 
     public synchronized SampleData parse(URL url) throws ParseException {
-        SampleData sd = null;
+        SampleData sd = new SampleData();
         sd.setLocation(url);
         InputStream is = null;
         try {
             is = url.openStream();
-            sd = parse(is);
+            sd = parse(is, sd);
         } catch (IOException e) {
             throw new ParseException("Could not open a connection to " + url.toString(), e);
         } finally {
