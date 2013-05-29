@@ -53,14 +53,15 @@ public class SampleTabSaferParser {
         }
     }
 
-    public synchronized SampleData parse(URL msiURL) throws ParseException {
+    public synchronized SampleData parse(URL url) throws ParseException {
         SampleData sd = null;
+        sd.setLocation(url);
         InputStream is = null;
         try {
-            is = msiURL.openStream();
+            is = url.openStream();
             sd = parse(is);
         } catch (IOException e) {
-            throw new ParseException("Could not open a connection to " + msiURL.toString(), e);
+            throw new ParseException("Could not open a connection to " + url.toString(), e);
         } finally {
             if (is != null) {
                 try {
@@ -87,7 +88,7 @@ public class SampleTabSaferParser {
         
         try { 
             sd = parser.parse(dataIn, target, service);
-            if (errorItems.size() > 0){
+            if (errorItems.size() > 0) {
                 throw new ParseException(true, errorItems.size()+" error items detected", errorItems.toArray(new ErrorItem[]{}));
             }
         } catch (InterruptedException e) {
