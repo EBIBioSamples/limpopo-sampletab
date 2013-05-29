@@ -56,7 +56,7 @@ public class MSI implements Comparable<MSI> {
 	private Logger log = LoggerFactory.getLogger(getClass());
 
     public void setLocation(URL location) {
-        if (location != null ) {
+        if (this.location != null ) {
             throw new IllegalArgumentException("Can only specify location once");
         }
         this.location = location;
