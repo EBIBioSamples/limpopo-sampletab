@@ -1,5 +1,6 @@
 package uk.ac.ebi.arrayexpress2.sampletab.datamodel;
 
+import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -49,8 +50,22 @@ public class MSI implements Comparable<MSI> {
 	public List<Publication> publications = new ArrayList<Publication>();
 	public List<Database> databases = new ArrayList<Database>();
 
+	//for internal use in error logs
+	private URL location = null;
+    
 	private Logger log = LoggerFactory.getLogger(getClass());
-		
+
+    public void setLocation(URL location) {
+        if (location != null ) {
+            throw new IllegalArgumentException("Can only specify location once");
+        }
+        this.location = location;
+    }
+    
+    public URL getLocation() {
+        return location;
+    }
+    
 	/**
 	 * Returns the submission release date in a yyy/MM/dd format, or 
 	 * the current date if no release date is specified. 

@@ -1,5 +1,10 @@
 package uk.ac.ebi.arrayexpress2.sampletab.datamodel;
 
+import java.net.URL;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import uk.ac.ebi.arrayexpress2.magetab.datamodel.graph.AbstractGraph;
 import uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node.SCDNode;
 
@@ -11,4 +16,19 @@ import uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node.SCDNode;
  */
 public class SCD extends AbstractGraph<SCDNode> {
 
+    //for internal use in error logs
+    private URL location = null;
+    
+    private Logger log = LoggerFactory.getLogger(getClass());
+
+    public void setLocation(URL location) {
+        if (location != null ) {
+            throw new IllegalArgumentException("Can only specify location once");
+        }
+        this.location = location;
+    }
+    
+    public URL getLocation() {
+        return location;
+    }
 }
