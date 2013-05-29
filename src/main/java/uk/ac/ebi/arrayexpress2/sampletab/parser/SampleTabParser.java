@@ -84,14 +84,15 @@ public class SampleTabParser<O> extends AbstractParser<SampleData> {
         }
     }
 
-    public SampleData parse(URL msiURL) throws ParseException {
+    public SampleData parse(URL url) throws ParseException {
         InputStream is = null;
-        SampleData sd = null;
+        SampleData sd = new SampleData();
+        sd.setLocation(url);
         try {
-            is = msiURL.openStream();
-            sd = parse(is);
+            is = url.openStream();
+            sd = parse(is, sd);
         } catch (IOException e) {
-            throw new ParseException("Could not open a connection to " + msiURL.toString(), e);
+            throw new ParseException("Could not open a connection to " + url.toString(), e);
         } finally {
             if (is != null) {
                 try {
@@ -182,11 +183,11 @@ public class SampleTabParser<O> extends AbstractParser<SampleData> {
         final ProgressFlag flag = new ProgressFlag();
 
         // create an msi progress listener, and register it to the MSI
-        ProgressListener msiListener = new MSIProgressListener(flag, target, service);
+        ProgressListener msiListener = new MSIProgressListener(flag, target);
         msiParser.addProgressListener(msiListener);
 
         // create an scd progress listener, and register it to the SCD
-        ProgressListener scdListener = new SCDProgressListener(flag);
+        ProgressListener scdListener = new SCDProgressListener(flag, target);
         scdParser.addProgressListener(scdListener);
 
         // trigger MSI read
@@ -347,12 +348,10 @@ public class SampleTabParser<O> extends AbstractParser<SampleData> {
     private class MSIProgressListener extends ProgressListenerAdapter {
         private final ProgressFlag flag;
         private final SampleData data;
-        private final ExecutorService service;
 
-        public MSIProgressListener(ProgressFlag flag, SampleData data, ExecutorService service) {
+        public MSIProgressListener(ProgressFlag flag, SampleData data) {
             this.flag = flag;
             this.data = data;
-            this.service = service;
         }
 
         public void parsingStarted(ProgressEvent evt) {
@@ -373,7 +372,7 @@ public class SampleTabParser<O> extends AbstractParser<SampleData> {
         public void parsingFailed(ProgressEvent evt) {
             // cascade event up to this parsers progress listener
             fireParsingFailedEvent(evt);
-            getLog().error("Failed to parse MSI");
+            getLog().error("Failed to parse MSI ("+data.getLocation()+")");
             flag.setMSITasksAdded(true);
             flag.setMSIFinished(true);
         }
@@ -381,9 +380,11 @@ public class SampleTabParser<O> extends AbstractParser<SampleData> {
 
     private class SCDProgressListener extends ProgressListenerAdapter {
         private final ProgressFlag flag;
+        private final SampleData data;
 
-        public SCDProgressListener(ProgressFlag flag) {
+        public SCDProgressListener(ProgressFlag flag, SampleData data) {
             this.flag = flag;
+            this.data = data;
         }
 
         public void parsingStarted(ProgressEvent evt) {
@@ -403,8 +404,7 @@ public class SampleTabParser<O> extends AbstractParser<SampleData> {
         public void parsingFailed(ProgressEvent evt) {
             // cascade event up to this parsers progress listener
             fireParsingFailedEvent(evt);
-
-            getLog().error("Failed to parse SCD");
+            getLog().error("Failed to parse SCD ("+data.getLocation()+")");
             flag.setSCDFinished(true);
         }
 
