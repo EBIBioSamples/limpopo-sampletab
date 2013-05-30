@@ -85,7 +85,7 @@ public class SampleTabValidator extends AbstractValidator<SampleData> {
                                 && comm.unit.getTermSourceREF().trim().length() > 0) {
                             //add it to the pool
                             usedTsNames.add(comm.unit.getTermSourceREF().trim());
-                            log.info("Found unit Term Source REF "+comm.unit.getTermSourceREF());
+                            log.trace("Found unit Term Source REF "+comm.unit.getTermSourceREF());
                         }
                     }
                     
@@ -98,7 +98,7 @@ public class SampleTabValidator extends AbstractValidator<SampleData> {
                                 && charatt.unit.getTermSourceREF().trim().length() > 0) {
                             //add it to the pool
                             usedTsNames.add(charatt.unit.getTermSourceREF().trim());
-                            log.info("Found unit Term Source REF "+charatt.unit.getTermSourceREF());
+                            log.trace("Found unit Term Source REF "+charatt.unit.getTermSourceREF());
                         }
                     }
                     
