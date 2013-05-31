@@ -28,10 +28,7 @@ import uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node.attribute.DatabaseAt
 import uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node.attribute.SCDNodeAttribute;
 
 public class SampleTabValidator extends AbstractValidator<SampleData> {
-    
-
-    protected final List<ErrorItem> errors = new ArrayList<ErrorItem>();
-    
+        
     private Logger log = LoggerFactory.getLogger(getClass());
     
     private ErrorItemFactory errorFactory = ErrorItemFactory.getErrorItemFactory(); 
@@ -51,12 +48,12 @@ public class SampleTabValidator extends AbstractValidator<SampleData> {
 
         //Submission Update Date must be in the past
         if (sampledata.msi.submissionUpdateDate != null && sampledata.msi.submissionUpdateDate.after(now)){
-            errors.add(getErrorItemFromCode(1529));
+            fireErrorItemEvent(getErrorItemFromCode(1529));
         }
         
         //Submission Release Date must be specified
         if (sampledata.msi.submissionReleaseDate == null){
-            errors.add(getErrorItemFromCode(1534));
+            fireErrorItemEvent(getErrorItemFromCode(1534));
         }
         
         
@@ -112,25 +109,25 @@ public class SampleTabValidator extends AbstractValidator<SampleData> {
         for (TermSource ts : sampledata.msi.termSources){
             //all should be unique
             if (tsNames.contains(ts.getName())){
-                errors.add(getErrorItemFromCode(ts.getName(), 1532));
+                fireErrorItemEvent(getErrorItemFromCode(ts.getName(), 1532));
             }
             //add the name to the pile of seen names
             tsNames.add(ts.getName());
             
             //all should have unique & valid URIs
             if (ts.getURI() == null){ 
-                errors.add(getErrorItemFromCode(ts.getURI(), 1533));
+                fireErrorItemEvent(getErrorItemFromCode(ts.getURI(), 1533));
             } else {
                 URI tsURI = null;
                 try { 
                     tsURI = new URI(ts.getURI());
                 } catch (URISyntaxException e) {
                     //invalid format URI
-                    errors.add(getErrorItemFromCode(ts.getURI(), 1533));
+                    fireErrorItemEvent(getErrorItemFromCode(ts.getURI(), 1533));
                 }
                 if (tsURI != null){
                     if (tsURIs.contains(tsURI)){
-                        errors.add(getErrorItemFromCode(ts.getURI(), 1535));
+                        fireErrorItemEvent(getErrorItemFromCode(ts.getURI(), 1535));
                     }
                     tsURIs.add(tsURI);
                 }
@@ -140,13 +137,13 @@ public class SampleTabValidator extends AbstractValidator<SampleData> {
         //check used names are defined
         for (String usedTsName : usedTsNames){
             if (!tsNames.contains(usedTsName)){
-                errors.add(getErrorItemFromCode(usedTsName, 1530));
+                fireErrorItemEvent(getErrorItemFromCode(usedTsName, 1530));
             }
         }
         //check defined names are used
         for (String tsName : tsNames){
             if (!usedTsNames.contains(tsName)){
-                errors.add(getErrorItemFromCode(tsName, 1531));
+                fireErrorItemEvent(getErrorItemFromCode(tsName, 1531));
             }
         }
         
@@ -161,10 +158,10 @@ public class SampleTabValidator extends AbstractValidator<SampleData> {
         for (SCDNode scdnode : sampledata.scd.getAllNodes()){
             for (SCDNodeAttribute attr : scdnode.getAttributes()){
                 if (attr.getAttributeType() == null || attr.getAttributeType().trim().length() == 0){
-                    errors.add(getErrorItemFromCode(scdnode.getNodeName(), 1536));
+                    fireErrorItemEvent(getErrorItemFromCode(scdnode.getNodeName(), 1536));
                 }
                 if (attr.getAttributeValue() == null || attr.getAttributeValue().trim().length() == 0){
-                    errors.add(getErrorItemFromCode(scdnode.getNodeName()+":"+attr.getAttributeType(), 1537));
+                    fireErrorItemEvent(getErrorItemFromCode(scdnode.getNodeName()+":"+attr.getAttributeType(), 1537));
                 }
             }
         }
@@ -177,7 +174,7 @@ public class SampleTabValidator extends AbstractValidator<SampleData> {
 
                     if (attrOnt.getTermSourceREF() != null && attrOnt.getTermSourceREF().trim().length() > 0) {
                         if (attrOnt.getTermSourceID() == null || attrOnt.getTermSourceID().trim().length() == 0) {
-                            errors.add(getErrorItemFromCode(attrOnt.getTermSourceREF()+" : "+attrOnt.getAttributeValue(), 1538));
+                            fireErrorItemEvent(getErrorItemFromCode(attrOnt.getTermSourceREF()+" : "+attrOnt.getAttributeValue(), 1538));
                         }
                     }
                 }
@@ -192,7 +189,7 @@ public class SampleTabValidator extends AbstractValidator<SampleData> {
                             new URI(attrDb.databaseURI);
                         } catch (URISyntaxException e) {
                             //invalid URI 
-                            errors.add(getErrorItemFromCode(attrDb.databaseURI, 1540));
+                            fireErrorItemEvent(getErrorItemFromCode(attrDb.databaseURI, 1540));
                         }
                     }
                 }
@@ -206,7 +203,7 @@ public class SampleTabValidator extends AbstractValidator<SampleData> {
                     new URI(o.getURI());
                 } catch (URISyntaxException e) {
                     //invalid URI 
-                    errors.add(getErrorItemFromCode(o.getURI(), 1539));
+                    fireErrorItemEvent(getErrorItemFromCode(o.getURI(), 1539));
                 }
             }
         }
@@ -221,35 +218,9 @@ public class SampleTabValidator extends AbstractValidator<SampleData> {
                     new URI(d.getURI());
                 } catch (URISyntaxException e) {
                     //invalid URI 
-                    errors.add(getErrorItemFromCode(d.getURI(), 1540));
+                    fireErrorItemEvent(getErrorItemFromCode(d.getURI(), 1540));
                 }
             }
-        }
-        
-        //some warnings...
-        if (sampledata.msi.submissionTitle == null){
-            log.warn("Submission Title is null");
-        } else if (sampledata.msi.submissionTitle.length() < 10){
-            log.warn("Submission Title is under 10 characters long");
-        }
-
-        if (sampledata.msi.submissionDescription == null){
-            log.warn("Submission Description is null");
-        } else if (sampledata.msi.submissionDescription.length() < 10){
-            log.warn("Submission Description is under 10 characters long");
-        }
-        
-      
-        
-        //if we have errors, throw an exception for them
-        if (errors.size() > 0){
-            //log errors for tracking
-            for (ErrorItem error : errors){
-                log.error(error.reportString());
-            }
-            ErrorItem[] errorsArray = new ErrorItem[errors.size()];
-            errors.toArray(errorsArray);
-            throw new ValidateException(false, errorsArray);
         }
        
 	}
