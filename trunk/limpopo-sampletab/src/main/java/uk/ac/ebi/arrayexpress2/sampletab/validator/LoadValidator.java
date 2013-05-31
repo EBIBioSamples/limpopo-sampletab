@@ -14,13 +14,8 @@ public class LoadValidator extends SampleTabValidator {
     private Logger log = LoggerFactory.getLogger(getClass());
     
     public synchronized void validate(SampleData sampledata) throws ValidateException {
-        errors.clear();
         
-        try {
-            super.validate(sampledata);
-        } catch (ValidateException e){
-            errors.addAll(e.getErrorItems());
-        }
+        super.validate(sampledata);
         
         Date now = new Date();
 
@@ -32,16 +27,5 @@ public class LoadValidator extends SampleTabValidator {
         }
         
         //TODO check all samples are in at least one group
-        
-        //if we have errors, throw an exception for them
-        if (errors.size() > 0){
-            //log errors for tracking
-            for (ErrorItem error : errors){
-                log.error(error.reportString());
-            }
-            ErrorItem[] errorsArray = new ErrorItem[errors.size()];
-            errors.toArray(errorsArray);
-            throw new ValidateException(false, errorsArray);
-        }
     }
 }
