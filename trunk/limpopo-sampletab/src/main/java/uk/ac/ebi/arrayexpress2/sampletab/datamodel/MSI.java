@@ -3,6 +3,7 @@ package uk.ac.ebi.arrayexpress2.sampletab.datamodel;
 import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Date;
 import java.util.List;
 import java.util.SortedSet;
@@ -128,6 +129,27 @@ public class MSI implements Comparable<MSI> {
             }
         }
         return null;
+    }
+    
+    /**
+     * Conviniently lookup PubMed IDs
+     * 
+     *  @return Collection<Integer>
+     */
+    public Collection<Integer> getPubmedIDs() {
+        Collection<Integer> pubmedids = new ArrayList<Integer>();
+        for (Publication p : publications) {
+            Integer pubmedid = null;
+            try {
+                pubmedid = Integer.parseInt(p.getPubMedID());
+            } catch (NumberFormatException e) {
+                //do nothing
+            }
+            if (pubmedid != null && !pubmedids.contains(pubmedid)){
+                pubmedids.add(pubmedid);
+            }
+        }
+        return pubmedids;
     }
 
     @Override
