@@ -7,29 +7,29 @@ public class SCDNodeAttributeComparator implements java.util.Comparator<SCDNodeA
 
     public int compare(SCDNodeAttribute arg0, SCDNodeAttribute arg1) {
         //handle nulls
-        if (arg0 == null){
-            if (arg1 == null){
+        if (arg0 == null) {
+            if (arg1 == null) {
                 return 0;
             } else { 
                 return 1;
             }
-        } else if (arg1 == null){
+        } else if (arg1 == null) {
             return -1;
         }
         
-        if (arg0.getAttributeType().equals(arg1.getAttributeType())){
-            if (arg0.getAttributeValue().equals(arg1.getAttributeValue())){
+        if (arg0.getAttributeType().equals(arg1.getAttributeType())) {
+            if (arg0.getAttributeValue().equals(arg1.getAttributeValue())) {
                 //at his point, one or both of them may be ontology terms.
                 //cast and behave accordingly
                 
                 boolean hasOntology = false;
-                synchronized(AbstractNodeAttributeOntology.class){
-                    if (AbstractNodeAttributeOntology.class.isInstance(arg0) && AbstractNodeAttributeOntology.class.isInstance(arg0)){
+                synchronized(AbstractNodeAttributeOntology.class) {
+                    if (AbstractNodeAttributeOntology.class.isInstance(arg0) && AbstractNodeAttributeOntology.class.isInstance(arg0)) {
                         hasOntology = true;
                     }
                 }
                 
-                if (hasOntology){
+                if (hasOntology) {
                     AbstractNodeAttributeOntology ont0 = (AbstractNodeAttributeOntology) arg0;
                     AbstractNodeAttributeOntology ont1 = (AbstractNodeAttributeOntology) arg1;
                 

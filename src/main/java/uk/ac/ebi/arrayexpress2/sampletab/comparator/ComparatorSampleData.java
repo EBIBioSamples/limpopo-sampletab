@@ -10,9 +10,17 @@ import uk.ac.ebi.arrayexpress2.sampletab.datamodel.SampleData;
 
 public class ComparatorSampleData implements Comparator<SampleData> {
 
-    private Comparator<SCD> comparatorscd = new ComparatorSCD();
+    private final Comparator<SCD> comparatorscd;
 
     private Logger log = LoggerFactory.getLogger(getClass());
+        
+    public ComparatorSampleData() {
+        comparatorscd = new ComparatorSCD(true);
+    }
+
+    public ComparatorSampleData(boolean ordered) {
+        comparatorscd = new ComparatorSCD(ordered);
+    }
     
     public int compare(SampleData arg1, SampleData arg2) {
         int score;

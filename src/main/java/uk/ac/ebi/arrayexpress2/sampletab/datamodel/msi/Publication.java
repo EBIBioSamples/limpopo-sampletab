@@ -3,6 +3,8 @@ package uk.ac.ebi.arrayexpress2.sampletab.datamodel.msi;
 import org.apache.commons.lang.builder.CompareToBuilder;
 import org.apache.commons.lang.builder.EqualsBuilder;
 import org.apache.commons.lang.builder.HashCodeBuilder;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * Representation of an publication as used in {@link SampleTab} {@link MSI}.
@@ -15,21 +17,37 @@ public class Publication implements Comparable<Publication>{
 	private final String doi;
 	private final String pubmedid;
 
+    // logging
+    private Logger log = LoggerFactory.getLogger(getClass());
+    
     /**
      * Will accept null values and convert zero-length strings to null. This is needed 
      * so that they can be built up line-by-line when reading from a file.
      */
 	public Publication(String pubmedid, String doi) {
-        if (doi == null || doi.trim().length() == 0)
+        if (doi == null || doi.trim().length() == 0) {
             this.doi = null;
-        else
+        } else { 
             this.doi = doi.trim();
+        }
 
-        if (pubmedid == null || pubmedid.trim().length() == 0)
+        if (pubmedid == null || pubmedid.trim().length() == 0) {
+            
             this.pubmedid = null;
-        else
-            //TODO cut to integer only
-            this.pubmedid = pubmedid.trim();
+        } else {
+            //cut down to integers only
+            Integer number = null;
+            try {
+                number = Integer.parseInt(pubmedid);
+            } catch (NumberFormatException e) {
+                log.warn("Non-numeric pubmedid "+pubmedid);
+            }
+            if (number == null) {
+                this.pubmedid = null;
+            } else {
+                this.pubmedid = number.toString();
+            }
+        }
 	}
 
 	public String getDOI() {
