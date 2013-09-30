@@ -1,17 +1,19 @@
 package uk.ac.ebi.arrayexpress2.sampletab.comparator;
 
-import java.util.Collection;
 import java.util.Comparator;
 import java.util.SortedSet;
 import java.util.TreeSet;
 
 import uk.ac.ebi.arrayexpress2.sampletab.datamodel.SCD;
-import uk.ac.ebi.arrayexpress2.sampletab.datamodel.msi.Organization;
 import uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node.SCDNode;
 
 public class ComparatorSCD implements Comparator<SCD> {
 
-    private Comparator<SCDNode> comparatorscdnode = new ComparatorSCDNode();
+    private final Comparator<SCDNode> comparatorscdnode;
+    
+    public ComparatorSCD(boolean ordered) {
+        comparatorscdnode = new ComparatorSCDNode(ordered);
+    }
     
     public int compare(SCD arg1, SCD arg2) {
         

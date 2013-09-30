@@ -22,7 +22,7 @@ public class TestComparatorSCDNode extends TestCase {
     private SCDNode a1;
     private SCDNode a2;
     private SCDNode b;
-    private ComparatorSCDNode comp = new ComparatorSCDNode();
+    private ComparatorSCDNode comp = new ComparatorSCDNode(true);
     
     public void setUp() {
 		a1 = new SampleNode("A");

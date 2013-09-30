@@ -21,7 +21,7 @@ public class TestComparatorSCD extends TestCase {
     private SCD a1;
     private SCD a2;
     private SCD b;
-    private ComparatorSCD comp = new ComparatorSCD();
+    private ComparatorSCD comp = new ComparatorSCD(true);
     
     public void setUp() {
 		a1 = new SCD();
