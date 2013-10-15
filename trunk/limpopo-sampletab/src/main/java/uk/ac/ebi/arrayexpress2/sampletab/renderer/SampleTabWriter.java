@@ -58,6 +58,34 @@ public class SampleTabWriter extends Writer {
         value = value.replace("\u00A0", " "); //non-breaking space
         value = value.replace("\uff09", ") "); //full-width right parenthesis
         value = value.replace("\uff08", " ("); //full-width left parenthesis
+        
+        //strip other non-XML valid control characters
+        value = stripNonValidXMLCharacters(value);
+        
         return value;
     }
+    
+    public static String stripNonValidXMLCharacters(String in) {
+        //from http://blog.mark-mclaren.info/2007/02/invalid-xml-characters-when-valid-utf8_5873.html
+
+        if (in == null){ 
+            return null;
+        }
+        
+        StringBuffer out = new StringBuffer(); // Used to hold the output.
+        char current; // Used to reference the current character.
+        
+        for (int i = 0; i < in.length(); i++) {
+            current = in.charAt(i); // NOTE: No IndexOutOfBoundsException caught here; it should not happen.
+            if ((current == 0x9) ||
+                (current == 0xA) ||
+                (current == 0xD) ||
+                ((current >= 0x20) && (current <= 0xD7FF)) ||
+                ((current >= 0xE000) && (current <= 0xFFFD)) ||
+                ((current >= 0x10000) && (current <= 0x10FFFF))){
+                out.append(current);
+            }
+        }
+        return out.toString();
+    } 
 }
