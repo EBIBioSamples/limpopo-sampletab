@@ -4,7 +4,7 @@ Submission Identifier	AnIdent
 Submission Description											
 Submission Version	1.0										
 Submission Reference Layer	true										
-Submission Release Date	2100/04/01										
+Submission Release Date	2015/02/12									
 Organization Name	Test Inc										
 Organization Address	test road										
 Organization URI	www.test.com										
