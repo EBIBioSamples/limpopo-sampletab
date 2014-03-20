@@ -118,7 +118,7 @@ public class MSI implements Comparable<MSI> {
 	}
     
     /**
-     * Convinently lookup a term source by its name
+     * Conveniently lookup a term source by its name
      * 
      *  @return TermSource
      */
@@ -132,7 +132,7 @@ public class MSI implements Comparable<MSI> {
     }
     
     /**
-     * Conviniently lookup PubMed IDs
+     * Conveniently lookup PubMed IDs
      * 
      *  @return Collection<Integer>
      */
