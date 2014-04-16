@@ -13,9 +13,9 @@ public class DatabaseAttribute extends AbstractNodeAttribute {
 
     public DatabaseAttribute(String name, String id, String uri) {
         this();
-        this.setAttributeValue(name);
-        this.databaseID = id;
-        this.databaseURI = uri;
+        this.setAttributeValue(name.trim());
+        this.databaseID = id.trim();
+        this.databaseURI = uri.trim();
     }
 
     public String getAttributeType() {
