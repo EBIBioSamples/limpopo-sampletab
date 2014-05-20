@@ -5,7 +5,7 @@ import org.apache.commons.lang.builder.EqualsBuilder;
 import org.apache.commons.lang.builder.HashCodeBuilder;
 
 /**
- * Representation of an term source (ontolgoy) as used in {@link SampleTab} {@link MSI}.
+ * Representation of an term source (ontology) as used in {@link SampleTab} {@link MSI}.
  * 
  * Is immutable, comparable, and hashable.
  * 
@@ -22,7 +22,7 @@ public class TermSource implements Comparable<TermSource> {
      */
 	public TermSource(String name, String uri, String version) {
 		if (name == null || name.trim().length() == 0)
-		    this.name = null;
+		    throw new IllegalArgumentException("Must specify a name");
 		else
 		    this.name = name.trim();
 
