@@ -22,7 +22,7 @@ public class TermSource implements Comparable<TermSource> {
      */
 	public TermSource(String name, String uri, String version) {
 		if (name == null || name.trim().length() == 0)
-		    throw new IllegalArgumentException("Must specify a name");
+		    this.name = null;
 		else
 		    this.name = name.trim();
 
