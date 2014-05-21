@@ -19,18 +19,40 @@ public class SCDNodeAttributeComparator implements java.util.Comparator<SCDNodeA
         }
         
         //compare based on the headers and values of the attribute
-        if (arg0.headers().length < arg0.headers().length) {
+        if (arg0.headers().length < arg1.headers().length) {
             return -1;
-        } else if (arg0.headers().length > arg0.headers().length) {
+        } else if (arg0.headers().length > arg1.headers().length) {
             return 1;
         } else {
             for (int i = 0; i < arg0.headers().length; i++) {
-                int j = arg0.headers()[i].compareTo(arg1.headers()[i]);
-                if (j != 0) return j;
+                if (arg0.headers()[i] == null 
+                    && arg1.headers()[i] != null) {
+                    return 1;
+                } else if (arg0.headers()[i] != null 
+                    && arg1.headers()[i] == null) {
+                    return -1;
+                } else if (arg0.headers()[i] == null 
+                    && arg1.headers()[i] == null) {
+                    //continue and don't check
+                } else {
+                    int j = arg0.headers()[i].compareTo(arg1.headers()[i]);
+                    if (j != 0) return j;
+                }
             }
             for (int i = 0; i < arg0.values().length; i++) {
-                int j = arg0.values()[i].compareTo(arg1.values()[i]);
-                if (j != 0) return j;
+                if (arg0.values()[i] == null 
+                    && arg1.values()[i] != null) {
+                    return 1;
+                } else if (arg0.values()[i] != null 
+                    && arg1.values()[i] == null) {
+                    return -1;
+                } else if (arg0.values()[i] == null 
+                    && arg1.values()[i] == null) {
+                    //continue and don't check
+                } else {
+                    int j = arg0.values()[i].compareTo(arg1.values()[i]);
+                    if (j != 0) return j;
+                }
             }
             return 0;
         }
