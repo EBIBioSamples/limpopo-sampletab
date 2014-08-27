@@ -112,7 +112,7 @@ public class SampleTabValidator extends AbstractValidator<SampleData> {
                 fireErrorItemEvent(getErrorItemFromCode(ts.getName(), 1532));
             }
             //add the name to the pile of seen names
-            tsNames.add(ts.getName());
+            tsNames.add(ts.getName().trim());
             
             //all should have unique & valid URIs
             if (ts.getURI() == null){ 
