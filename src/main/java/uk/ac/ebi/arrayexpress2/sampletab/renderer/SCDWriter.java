@@ -4,6 +4,8 @@ import java.io.IOException;
 import java.io.Writer;
 import java.util.List;
 
+import org.apache.commons.lang.NotImplementedException;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -36,13 +38,14 @@ public class SCDWriter extends Writer {
 
 	@Override
 	public void write(char[] cbuf, int off, int len) throws IOException {
+	    throw new NotImplementedException();
 	}
 
     public void write(SCD scd) throws IOException {
         writer.write("[SCD]\n");
         List<List<String>> table;
-        //need to ensure only one thread is doing this at a time
         
+        //need to ensure only one thread is doing this at a time
         synchronized(SCDNodeFactory.class) {
         	SCDTableBuilder tb = new SCDTableBuilder(scd.getRootNodes());
     		log.debug("Starting to assemble table...");
