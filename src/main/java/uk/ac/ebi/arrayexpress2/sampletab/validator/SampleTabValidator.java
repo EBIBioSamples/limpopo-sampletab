@@ -60,14 +60,14 @@ public class SampleTabValidator extends AbstractValidator<SampleData> {
         //Term Source checks
         //get the names used in SCD
         Set<String> usedTsNames = new HashSet<String>();
-        for (SCDNode scdnode : sampledata.scd.getAllNodes()){
-            for (SCDNodeAttribute attr : scdnode.getAttributes()){
+        for (SCDNode scdnode : sampledata.scd.getAllNodes()) {
+            for (SCDNodeAttribute attr : scdnode.getAttributes()) {
                 //need to cast attribute to one that has an ontology term attached
                 if (AbstractNodeAttributeOntology.class.isInstance(attr)) {
                     AbstractNodeAttributeOntology attrOnt = (AbstractNodeAttributeOntology) attr;
                     //if this attribute has a term source at all
                     if (attrOnt.getTermSourceREF() != null 
-                            && attrOnt.getTermSourceREF().trim().length() > 0){
+                            && attrOnt.getTermSourceREF().trim().length() > 0) {
                         //add it to the pool
                         usedTsNames.add(attrOnt.getTermSourceREF().trim());
                     }
