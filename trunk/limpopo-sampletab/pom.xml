@@ -33,15 +33,6 @@
 				<enabled>true</enabled>
 			</snapshots>
 		</repository>
-		<!--  internal repository -->
-		<repository>
-			<id>coconut.ebi.ac.uk-snapshots</id>
-			<name>Coconut Snapshot Repository</name>
-			<url>http://coconut.ebi.ac.uk:8081/artifactory/local-repo/</url>
-			<snapshots>
-				<enabled>true</enabled>
-			</snapshots>
-		</repository>
 		<repository>
 			<id>erroritem-repo</id>
 			<name>ErrorItem Mini-SF Repository</name>
@@ -148,14 +139,12 @@
         <repository>
             <id>limpopo-repo</id>
             <name>Limpopo Mini-SF Repository</name>
-            <url>
-                scp://shell.sourceforge.net/home/project-web/limpopo/htdocs/maven/repo
-            </url>
+            <url>scp://shell.sourceforge.net/home/project-web/limpopo/htdocs/maven/repo</url>
         </repository>
         <snapshotRepository>
-            <id>coconut.ebi.ac.uk-snapshots</id>
-            <name>coconut.ebi.ac.uk-snapshots</name>
-            <url>http://coconut.ebi.ac.uk:8081/artifactory/local-repo</url>
+            <id>limpopo-repo</id>
+            <name>Limpopo Mini-SF Repository</name>
+            <url>scp://shell.sourceforge.net/home/project-web/limpopo/htdocs/maven/repo</url>
         </snapshotRepository>
         <site>
             <id>limpopo.sf.net</id>
