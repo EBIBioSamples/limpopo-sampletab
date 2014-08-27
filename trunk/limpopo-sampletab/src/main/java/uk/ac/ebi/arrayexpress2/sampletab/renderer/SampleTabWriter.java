@@ -62,6 +62,9 @@ public class SampleTabWriter extends Writer {
         //strip other non-XML valid control characters
         value = stripNonValidXMLCharacters(value);
         
+        //strip # because Limpopo interprets these as comments
+        value = value.replace("#", "");
+        
         return value;
     }
     
