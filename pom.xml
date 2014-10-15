@@ -151,9 +151,9 @@
             <url>scp://shell.sourceforge.net/home/project-web/limpopo/htdocs/maven/repo</url>
         </repository>
         <snapshotRepository>
-            <id>limpopo-repo</id>
-            <name>Limpopo Mini-SF Repository</name>
-            <url>scp://shell.sourceforge.net/home/project-web/limpopo/htdocs/maven/repo</url>
+            <id>coconut.ebi.ac.uk-snapshots</id>
+            <name>coconut.ebi.ac.uk-snapshots</name>
+            <url>http://coconut.ebi.ac.uk:8081/artifactory/local-repo</url>
         </snapshotRepository>
         <site>
             <id>limpopo.sf.net</id>
