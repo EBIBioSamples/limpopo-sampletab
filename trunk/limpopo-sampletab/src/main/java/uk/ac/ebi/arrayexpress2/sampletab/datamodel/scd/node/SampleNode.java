@@ -100,7 +100,7 @@ public class SampleNode extends AbstractSCDNode {
             sampleAccession = sampleAccession.trim();
             if (sampleAccession.length() == 0) {
                 sampleAccession = null;
-            } else if (!sampleAccession.matches("SAM[EN]A?[0-9]+")){
+            } else if (!sampleAccession.matches("SAM[END]A?[0-9]+")){
                 throw new IllegalArgumentException(sampleAccession+" is not a valid sample accession");
             }
         }
