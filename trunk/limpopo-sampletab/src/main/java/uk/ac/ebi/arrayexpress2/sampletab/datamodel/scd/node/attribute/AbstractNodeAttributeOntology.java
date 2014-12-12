@@ -20,7 +20,7 @@ public abstract class AbstractNodeAttributeOntology extends AbstractNodeAttribut
     }
 
     public void setTermSourceID(String termSourceID) {
-        if (termSourceID.length() == 0){
+        if (termSourceID != null && termSourceID.length() == 0){
             termSourceID = null;
         }
         this.termSourceID = termSourceID;
