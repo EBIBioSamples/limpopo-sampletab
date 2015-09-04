@@ -6,12 +6,12 @@ import org.mged.magetab.error.ErrorItemFactory;
 import uk.ac.ebi.arrayexpress2.magetab.exception.IllegalLineLengthException;
 import uk.ac.ebi.arrayexpress2.magetab.exception.ParseException;
 import uk.ac.ebi.arrayexpress2.magetab.handler.AbstractHandler;
-import uk.ac.ebi.arrayexpress2.magetab.handler.ReadHandler;
+import uk.ac.ebi.arrayexpress2.magetab.handler.IReadHandler;
 import uk.ac.ebi.arrayexpress2.magetab.handler.listener.HandlerEvent;
 import uk.ac.ebi.arrayexpress2.magetab.utils.MAGETABUtils;
 import uk.ac.ebi.arrayexpress2.sampletab.datamodel.MSI;
 
-public abstract class MSIReadHandler extends AbstractHandler implements ReadHandler<String, String[], MSI> {
+public abstract class MSIReadHandler extends AbstractHandler implements IReadHandler<String, String[], MSI> {
     public boolean canRead(Object header) {
         return header instanceof String && canReadHeader((String) header);
     }

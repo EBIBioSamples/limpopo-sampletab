@@ -9,7 +9,7 @@ import org.mged.magetab.error.ErrorItem;
 
 import uk.ac.ebi.arrayexpress2.magetab.converter.AbstractConverter;
 import uk.ac.ebi.arrayexpress2.magetab.exception.ConversionException;
-import uk.ac.ebi.arrayexpress2.magetab.handler.ConversionHandler;
+import uk.ac.ebi.arrayexpress2.magetab.handler.IConversionHandler;
 import uk.ac.ebi.arrayexpress2.magetab.handler.HandlerLoader;
 import uk.ac.ebi.arrayexpress2.magetab.listener.ProgressEvent;
 import uk.ac.ebi.arrayexpress2.sampletab.datamodel.SCD;
@@ -24,19 +24,19 @@ import uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node.SCDNode;
 public class SCDConverter<O> extends AbstractConverter<SCD, O> {
     public void convert(SCD scd, O outputResource) throws ConversionException {
         // find any conversion handlers
-        Collection<ConversionHandler<?, ?>> handlers = HandlerLoader.getHandlerLoader().getConversionHandlers();
+        Collection<IConversionHandler<?, ?>> handlers = HandlerLoader.getHandlerLoader().getConversionHandlers();
 
         // use any appropriate handlers to convert the whole scd
-        for (ConversionHandler conversionHandler : handlers) {
-            if (conversionHandler.canConvert(scd, outputResource)) {
+        for (IConversionHandler conversionHandler : handlers) {
+            if (conversionHandler.canConvert(scd.getClass(), outputResource.getClass())) {
                 conversionHandler.convert(scd, outputResource);
             }
         }
 
         // and use any appropriate handlers to validate each scd node
         for (SCDNode node : scd.getAllNodes()) {
-            for (ConversionHandler conversionHandler : handlers) {
-                if (conversionHandler.canConvert(node, outputResource)) {
+            for (IConversionHandler conversionHandler : handlers) {
+                if (conversionHandler.canConvert(node.getClass(), outputResource.getClass())) {
                     conversionHandler.convert(node, outputResource);
                 }
             }
@@ -52,22 +52,22 @@ public class SCDConverter<O> extends AbstractConverter<SCD, O> {
         }
     }
 
-    private Collection<Callable<Void>> createConversionHandlerTasks(SCD scd, O outputResource) {
+    protected Collection<Callable<Void>> createConversionHandlerTasks(SCD scd, O outputResource) {
         // find any convert handlers
-        Collection<ConversionHandler<?, ?>> handlers = HandlerLoader.getHandlerLoader().getConversionHandlers();
+        Collection<IConversionHandler<?, ?>> handlers = HandlerLoader.getHandlerLoader().getConversionHandlers();
 
         // create a callable for each handler
         Collection<Callable<Void>> conversionHandlerTasks = new HashSet<Callable<Void>>();
-        for (ConversionHandler<?, ?> conversionHandler : handlers) {
-            if (conversionHandler.canConvert(scd, outputResource)) {
+        for (IConversionHandler<?, ?> conversionHandler : handlers) {
+            if (conversionHandler.canConvert(scd.getClass(), outputResource.getClass())) {
                 conversionHandlerTasks.add(createConversionHandlerTask(scd, outputResource, conversionHandler));
             }
         }
 
         // create a callable for each handler to convert each scd node
         for (SCDNode node : scd.getAllNodes()) {
-            for (ConversionHandler conversionHandler : handlers) {
-                if (conversionHandler.canConvert(node, outputResource)) {
+            for (IConversionHandler conversionHandler : handlers) {
+                if (conversionHandler.canConvert(node.getClass(), outputResource.getClass())) {
                     conversionHandlerTasks.add(createConversionHandlerTask(scd, outputResource, conversionHandler));
                 }
             }
@@ -76,9 +76,9 @@ public class SCDConverter<O> extends AbstractConverter<SCD, O> {
         return conversionHandlerTasks;
     }
 
-    private Callable<Void> createConversionHandlerTask(final SCD scd,
+    protected Callable<Void> createConversionHandlerTask(final SCD scd,
                                                        final O outputResource,
-                                                       final ConversionHandler conversionHandler) {
+                                                       final IConversionHandler conversionHandler) {
         return new Callable<Void>() {
             public Void call() throws ConversionException {
                 try {

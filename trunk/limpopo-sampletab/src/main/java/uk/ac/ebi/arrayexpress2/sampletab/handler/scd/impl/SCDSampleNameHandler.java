@@ -1,6 +1,6 @@
 package uk.ac.ebi.arrayexpress2.sampletab.handler.scd.impl;
 
-import net.sourceforge.fluxion.spi.ServiceProvider;
+import uk.ac.ebi.arrayexpress2.magetab.handler.Handler;
 import uk.ac.ebi.arrayexpress2.magetab.exception.ParseException;
 import uk.ac.ebi.arrayexpress2.sampletab.datamodel.SCD;
 import uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node.SampleNode;
@@ -15,7 +15,7 @@ import uk.ac.ebi.arrayexpress2.sampletab.handler.scd.node.attribute.OrganismAttr
 import uk.ac.ebi.arrayexpress2.sampletab.handler.scd.node.attribute.SameAsAttributeReader;
 import uk.ac.ebi.arrayexpress2.sampletab.handler.scd.node.attribute.SexAttributeReader;
 
-@ServiceProvider
+@Handler
 public class SCDSampleNameHandler extends SCDReadHandler {
     private final CharacteristicAttributeReader characteristicAttributeReader;
     private final CommentAttributeReader commentAttributeReader;

@@ -1,10 +1,10 @@
 package uk.ac.ebi.arrayexpress2.sampletab.handler.msi.impl;
 
-import net.sourceforge.fluxion.spi.ServiceProvider;
+import uk.ac.ebi.arrayexpress2.magetab.handler.Handler;
 import uk.ac.ebi.arrayexpress2.sampletab.datamodel.MSI;
 import uk.ac.ebi.arrayexpress2.sampletab.handler.msi.MSIReadHandler;
 
-@ServiceProvider
+@Handler
 public class SubmissionTitleHandler extends MSIReadHandler {
     @Override
     public int getAllowedLength() {

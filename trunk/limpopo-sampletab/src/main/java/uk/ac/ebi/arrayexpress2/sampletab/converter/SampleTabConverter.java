@@ -8,8 +8,9 @@ import org.mged.magetab.error.ErrorItem;
 
 import uk.ac.ebi.arrayexpress2.magetab.converter.AbstractConverter;
 import uk.ac.ebi.arrayexpress2.magetab.exception.ConversionException;
-import uk.ac.ebi.arrayexpress2.magetab.handler.ConversionHandler;
+import uk.ac.ebi.arrayexpress2.magetab.handler.IConversionHandler;
 import uk.ac.ebi.arrayexpress2.magetab.handler.HandlerLoader;
+import uk.ac.ebi.arrayexpress2.magetab.handler.IConversionHandler;
 import uk.ac.ebi.arrayexpress2.magetab.listener.ErrorItemListener;
 import uk.ac.ebi.arrayexpress2.magetab.listener.ProgressEvent;
 import uk.ac.ebi.arrayexpress2.sampletab.datamodel.SampleData;
@@ -26,12 +27,12 @@ public class SampleTabConverter<O> extends AbstractConverter<SampleData, O> {
     public void convert(SampleData sampledata, O outputResource) throws ConversionException {
         // check for any convert handlers that convert the investigation as a whole
         // find any convert handlers
-        Collection<ConversionHandler<?, ?>> handlers = HandlerLoader.getHandlerLoader().getConversionHandlers();
+        Collection<IConversionHandler<?, ?>> handlers = HandlerLoader.getHandlerLoader().getConversionHandlers();
 
         // invoke each handler
-        for (final ConversionHandler conversionHandler : handlers) {
+        for (final IConversionHandler conversionHandler : handlers) {
             // is it a convert handler, and can it handle this investigation?
-            if (conversionHandler.canConvert(sampledata, outputResource)) {
+            if (conversionHandler.canConvert(sampledata.getClass(), outputResource.getClass())) {
                 try {
                     conversionHandler.convert(sampledata, outputResource);
                 }
@@ -66,12 +67,12 @@ public class SampleTabConverter<O> extends AbstractConverter<SampleData, O> {
             throws ConversionException, InterruptedException {
         // check for any convert handlers that convert the investigation as a whole
         // find any convert handlers
-        Collection<ConversionHandler<?, ?>> handlers = HandlerLoader.getHandlerLoader().getConversionHandlers();
+        Collection<IConversionHandler<?, ?>> handlers = HandlerLoader.getHandlerLoader().getConversionHandlers();
 
         // create a callable for each handler
-        for (final ConversionHandler conversionHandler : handlers) {
+        for (final IConversionHandler conversionHandler : handlers) {
             // is it a convert handler, and can it handle this investigation?
-            if (conversionHandler.canConvert(sampledata, outputResource)) {
+            if (conversionHandler.canConvert(sampledata.getClass(), outputResource.getClass())) {
                 service.submit(new Callable<Void>() {
                     public Void call() throws Exception {
                         try {
