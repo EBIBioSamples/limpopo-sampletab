@@ -52,8 +52,8 @@ public class SCDNodeWrapper extends DefaultAbstractNode {
         }
 
         //create a value group for the node itself
-        TabValueGroup tail = null;
-        TabValueGroup head = null;
+        DefaultTabValueGroup tail = null;
+        DefaultTabValueGroup head = null;
         for (int i = firstAttrHeaderIndex-1; i >= 0; i--) {
             if (tail == null){
                 head = new DefaultTabValueGroup(headers[i], values[i]);
@@ -62,9 +62,9 @@ public class SCDNodeWrapper extends DefaultAbstractNode {
             }
             tail = head;
         }
-        if (head != null){
-            result.add(head);
-        }
+        
+        DefaultTabValueGroup start = head;
+        result.add(start);
         
         //now create value groups for each of the node attributes
         //e.g.
@@ -103,9 +103,11 @@ public class SCDNodeWrapper extends DefaultAbstractNode {
                 tail = head;
             }
             if (head != null){
-                result.add(head);
+                start.append(head);
             }
         }
+        
+        
         
         return result;
     }
