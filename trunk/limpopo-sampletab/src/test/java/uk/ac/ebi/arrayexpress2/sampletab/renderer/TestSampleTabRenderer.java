@@ -1,7 +1,10 @@
 package uk.ac.ebi.arrayexpress2.sampletab.renderer;
 
+import java.io.BufferedWriter;
 import java.io.IOException;
+import java.io.OutputStreamWriter;
 import java.io.StringWriter;
+import java.io.Writer;
 import java.net.URL;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -11,8 +14,10 @@ import uk.ac.ebi.arrayexpress2.magetab.datamodel.graph.Node;
 import uk.ac.ebi.arrayexpress2.magetab.datamodel.graph.UnresolvedPlaceholderNode;
 import uk.ac.ebi.arrayexpress2.magetab.exception.ParseException;
 import uk.ac.ebi.arrayexpress2.sampletab.datamodel.SampleData;
+import uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node.GroupNode;
 import uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node.SampleNode;
 import uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node.attribute.CommentAttribute;
+import uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node.attribute.DatabaseAttribute;
 import junit.framework.TestCase;
 
 public class TestSampleTabRenderer extends TestCase {
@@ -24,21 +29,14 @@ public class TestSampleTabRenderer extends TestCase {
 		out = new StringWriter();
 		//create a dummy file content to use
 		sampledata = new SampleData();
+		sampledata.msi.submissionIdentifier = "TST";
         sampledata.msi.submissionTitle = "dummy";
         
-        SampleNode parent = new SampleNode();
-        parent.setNodeName("parent");
-        CommentAttribute comment = new CommentAttribute();
-        comment.type = "stuff";
-        comment.setAttributeValue("stuff");
-        parent.addAttribute(comment);
+        SampleNode parent = new SampleNode("parent");
+        parent.addAttribute(new CommentAttribute("stuff", "stuff"));
         
-        SampleNode child = new SampleNode();
-        child.setNodeName("child");
-        comment = new CommentAttribute();
-        comment.type = "morestuff";
-        comment.setAttributeValue("morestuff");
-        child.addAttribute(comment);
+        SampleNode child = new SampleNode("child");
+        child.addAttribute(new CommentAttribute("morestuff", "morestuff"));
 
         child.addParentNode(parent);
         parent.addChildNode(child);
@@ -50,14 +48,25 @@ public class TestSampleTabRenderer extends TestCase {
             fail();
         }  
         
-        parent = new SampleNode();
-        parent.setNodeName("nonparent");
+        parent = new SampleNode("nonparent");
+        parent.addAttribute(new CommentAttribute("stuff", "morestuff"));
+        parent.addAttribute(new DatabaseAttribute("name", "id", "foo"));
         try {
             sampledata.scd.addNode(parent);
         } catch (ParseException e) {
             e.printStackTrace();
             fail();
         }  
+        
+        GroupNode g = new GroupNode("group");
+        g.addAttribute(new CommentAttribute("stuff", "group stuff"));
+        g.addAttribute(new DatabaseAttribute("name", "id", "foo"));
+        try {
+			sampledata.scd.addNode(g);
+		} catch (ParseException e) {
+            e.printStackTrace();
+            fail();
+		}
 		
     }
     
@@ -94,6 +103,8 @@ public class TestSampleTabRenderer extends TestCase {
     
 	public void testRender() {
 		sampletabwriter = new SampleTabWriter(out);
+		//sampletabwriter = new SampleTabWriter(new BufferedWriter(new OutputStreamWriter(System.out)));
+		
 		try {
 			sampletabwriter.write(sampledata);
             //System.out.println(out.toString());
