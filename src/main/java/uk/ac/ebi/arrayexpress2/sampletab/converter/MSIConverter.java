@@ -9,7 +9,7 @@ import org.mged.magetab.error.ErrorItem;
 
 import uk.ac.ebi.arrayexpress2.magetab.converter.AbstractConverter;
 import uk.ac.ebi.arrayexpress2.magetab.exception.ConversionException;
-import uk.ac.ebi.arrayexpress2.magetab.handler.ConversionHandler;
+import uk.ac.ebi.arrayexpress2.magetab.handler.IConversionHandler;
 import uk.ac.ebi.arrayexpress2.magetab.handler.HandlerLoader;
 import uk.ac.ebi.arrayexpress2.magetab.listener.ProgressEvent;
 import uk.ac.ebi.arrayexpress2.sampletab.datamodel.MSI;
@@ -23,11 +23,11 @@ import uk.ac.ebi.arrayexpress2.sampletab.datamodel.MSI;
 public class MSIConverter<O> extends AbstractConverter<MSI, O> {
     public void convert(MSI msi, O outputResource) throws ConversionException {
         // find any conversion handlers
-        Collection<ConversionHandler<?, ?>> handlers = HandlerLoader.getHandlerLoader().getConversionHandlers();
+        Collection<IConversionHandler<?, ?>> handlers = HandlerLoader.getHandlerLoader().getConversionHandlers();
 
         // use any appropriate handlers to convert
-        for (ConversionHandler conversionHandler : handlers) {
-            if (conversionHandler.canConvert(msi, outputResource)) {
+        for (IConversionHandler conversionHandler : handlers) {
+            if (conversionHandler.canConvert(msi.getClass(), outputResource.getClass())) {
                 conversionHandler.convert(msi, outputResource);
             }
         }
@@ -41,23 +41,23 @@ public class MSIConverter<O> extends AbstractConverter<MSI, O> {
         }
     }
 
-    private Collection<Callable<Void>> createConversionHandlerTasks(MSI msi, O outputResource) {
+    protected Collection<Callable<Void>> createConversionHandlerTasks(MSI msi, O outputResource) {
         // find any convert handlers
-        Collection<ConversionHandler<?, ?>> handlers = HandlerLoader.getHandlerLoader().getConversionHandlers();
+        Collection<IConversionHandler<?, ?>> handlers = HandlerLoader.getHandlerLoader().getConversionHandlers();
 
         // create a callable for each handler
         Collection<Callable<Void>> writeHandlerTasks = new HashSet<Callable<Void>>();
-        for (ConversionHandler conversionHandler : handlers) {
-            if (conversionHandler.canConvert(msi, outputResource)) {
+        for (IConversionHandler conversionHandler : handlers) {
+            if (conversionHandler.canConvert(msi.getClass(), outputResource.getClass())) {
                 writeHandlerTasks.add(createConversionHandlerTask(msi, outputResource, conversionHandler));
             }
         }
         return writeHandlerTasks;
     }
 
-    private Callable<Void> createConversionHandlerTask(final MSI msi,
+    protected Callable<Void> createConversionHandlerTask(final MSI msi,
                                                        final O outputResource,
-                                                       final ConversionHandler conversionHandler) {
+                                                       final IConversionHandler conversionHandler) {
         return new Callable<Void>() {
             public Void call() throws ConversionException {
                 try {

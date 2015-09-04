@@ -7,14 +7,14 @@ import uk.ac.ebi.arrayexpress2.magetab.exception.IllegalLineLengthException;
 import uk.ac.ebi.arrayexpress2.magetab.exception.ParseException;
 import uk.ac.ebi.arrayexpress2.magetab.exception.UnmatchedTagException;
 import uk.ac.ebi.arrayexpress2.magetab.handler.AbstractHandler;
-import uk.ac.ebi.arrayexpress2.magetab.handler.ReadHandler;
+import uk.ac.ebi.arrayexpress2.magetab.handler.IReadHandler;
 import uk.ac.ebi.arrayexpress2.magetab.handler.listener.HandlerEvent;
 import uk.ac.ebi.arrayexpress2.magetab.utils.MAGETABUtils;
 import uk.ac.ebi.arrayexpress2.sampletab.datamodel.SCD;
 import uk.ac.ebi.arrayexpress2.sampletab.datamodel.scd.node.SCDNode;
 import uk.ac.ebi.arrayexpress2.sampletab.handler.scd.node.attribute.SCDAttributeReader;
 
-public abstract class SCDReadHandler extends AbstractHandler implements ReadHandler<String[], String[], SCD> {
+public abstract class SCDReadHandler extends AbstractHandler implements IReadHandler<String[], String[], SCD> {
 
     public boolean canRead(Object header) {
         return header instanceof String[] && canReadHeader((String[]) header);

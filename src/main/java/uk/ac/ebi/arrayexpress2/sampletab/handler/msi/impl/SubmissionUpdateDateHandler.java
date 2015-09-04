@@ -6,12 +6,12 @@ import java.util.Date;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import net.sourceforge.fluxion.spi.ServiceProvider;
+import uk.ac.ebi.arrayexpress2.magetab.handler.Handler;
 import uk.ac.ebi.arrayexpress2.magetab.exception.ParseException;
 import uk.ac.ebi.arrayexpress2.sampletab.datamodel.MSI;
 import uk.ac.ebi.arrayexpress2.sampletab.handler.msi.MSIReadHandler;
 
-@ServiceProvider
+@Handler
 public class SubmissionUpdateDateHandler extends MSIReadHandler {
     
     private Logger log = LoggerFactory.getLogger(getClass());
